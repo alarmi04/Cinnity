@@ -27,5 +27,11 @@ namespace Proyecto_Cinnity
             FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
             frm1.ShowDialog();
         }
+
+        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+            FrmCrearCuenta frmcuenta = new FrmCrearCuenta();
+            frmcuenta.ShowDialog();
+        }
     }
 }

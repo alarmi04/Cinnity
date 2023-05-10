@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCrearCuenta.Designer.cs">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionDeEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCrearCuenta.resx">
+      <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionDeEntradas.resx">
       <DependentUpon>FrmGestionDeEntradas.cs</DependentUpon>
     </EmbeddedResource>
