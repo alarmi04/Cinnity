@@ -66,7 +66,7 @@
             this.pnlMenu.Controls.Add(this.btnMiPerfil);
             this.pnlMenu.Location = new System.Drawing.Point(-9, -3);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(294, 755);
+            this.pnlMenu.Size = new System.Drawing.Size(294, 796);
             this.pnlMenu.TabIndex = 1;
             // 
             // txtBuscar
@@ -227,15 +227,16 @@
             this.btnEntradas.Text = "ENTRADAS";
             this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntradas.UseVisualStyleBackColor = true;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
             // 
             // btnMiPerfil
             // 
             this.btnMiPerfil.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
             this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMiPerfil.Location = new System.Drawing.Point(5, 280);
+            this.btnMiPerfil.Location = new System.Drawing.Point(5, 277);
             this.btnMiPerfil.Name = "btnMiPerfil";
-            this.btnMiPerfil.Size = new System.Drawing.Size(289, 49);
+            this.btnMiPerfil.Size = new System.Drawing.Size(289, 52);
             this.btnMiPerfil.TabIndex = 1;
             this.btnMiPerfil.Text = "MI PERFIL";
             this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

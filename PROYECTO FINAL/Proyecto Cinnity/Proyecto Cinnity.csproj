@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmGestionDeEntradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionDeEntradas.Designer.cs">
+      <DependentUpon>FrmGestionDeEntradas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicioDeSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmGestionDeEntradas.resx">
+      <DependentUpon>FrmGestionDeEntradas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicioDeSesion.resx">
       <DependentUpon>FrmInicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +149,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

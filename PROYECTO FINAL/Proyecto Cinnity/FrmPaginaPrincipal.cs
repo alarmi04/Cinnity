@@ -39,5 +39,11 @@ namespace Proyecto_Cinnity
         {
             txtBuscar.Text = "";
         }
+
+        private void btnEntradas_Click(object sender, EventArgs e)
+        {
+            FrmGestionDeEntradas gestionDeEntradas = new FrmGestionDeEntradas();
+            gestionDeEntradas.ShowDialog();
+        }
     }
 }

@@ -38,7 +38,6 @@
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +115,7 @@
             this.btnIniciarSesion.TabIndex = 7;
             this.btnIniciarSesion.Text = "INICIAR SESIÓN";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnCrearCuenta
             // 
@@ -148,23 +148,12 @@
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(610, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmInicioDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(735, 691);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.btnIniciarSesion);
@@ -195,7 +184,6 @@
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnIdioma;
-        private System.Windows.Forms.Button button1;
     }
 }
 
