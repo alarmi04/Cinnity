@@ -9,3 +9,4 @@ C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\
 C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CoreCompileInputs.cache
 C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe
 C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmPaginaPrincipal.resources

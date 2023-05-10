@@ -21,5 +21,11 @@ namespace Proyecto_Cinnity
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+            frm1.ShowDialog();
+        }
     }
 }
