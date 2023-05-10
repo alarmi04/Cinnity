@@ -1,0 +1,11 @@
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe.config
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.pdb
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.AssemblyReference.cache
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmInicioDeSesion.resources
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Properties.Resources.resources
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.GenerateResource.cache
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CoreCompileInputs.cache
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb
