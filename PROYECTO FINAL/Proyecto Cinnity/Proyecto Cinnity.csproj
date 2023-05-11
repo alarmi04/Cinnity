@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Proyecto_Cinnity</RootNamespace>
     <AssemblyName>Proyecto Cinnity</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -198,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\perfil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pelicula-super-mario-bros-la-pelicula.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

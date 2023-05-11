@@ -46,6 +46,7 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -244,12 +245,23 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(641, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1187, 790);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.grbPeliculas);
@@ -295,5 +307,6 @@
         private System.Windows.Forms.GroupBox grbPeliculas;
         private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Button btnIdioma;
+        private System.Windows.Forms.Button button1;
     }
 }
