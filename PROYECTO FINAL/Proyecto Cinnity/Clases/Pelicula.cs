@@ -21,7 +21,18 @@ namespace Proyecto_Cinnity
         private Cartelera carteleraAsociada;
 
 
-        public Pelicula(string nom, string gene, string )
+        public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat, Cartelera cartel)
+        {
+            nombre = nom;
+            genero = gene;
+            director = direc;
+            reparto = repar;
+            duracionMinutos = dura;
+            sinopsis = sinop;
+            fechaEstreno = estreno;
+            caratula = carat;
+            carteleraAsociada = cartel;
+        }
     }
 
 }
