@@ -21,5 +21,11 @@ namespace Proyecto_Cinnity
         {
 
         }
+
+        private void btnMiPerfil_Click(object sender, EventArgs e)
+        {
+            FrmMiPerfil frm1 = new FrmMiPerfil();
+            frm1.Show();
+        }
     }
 }

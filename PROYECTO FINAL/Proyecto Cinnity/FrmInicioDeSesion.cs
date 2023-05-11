@@ -25,13 +25,16 @@ namespace Proyecto_Cinnity
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
-            frm1.ShowDialog();
+            this.Hide();
+            frm1.Show();
+
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             FrmCrearCuenta frmcuenta = new FrmCrearCuenta();
-            frmcuenta.ShowDialog();
+            this.Hide();
+            frmcuenta.Show();
         }
     }
 }

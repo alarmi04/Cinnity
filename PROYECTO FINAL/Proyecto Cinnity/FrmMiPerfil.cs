@@ -10,39 +10,25 @@ using System.Windows.Forms;
 
 namespace Proyecto_Cinnity
 {
-    public partial class FrmCarrito : Form
+    public partial class FrmMiPerfil : Form
     {
-        public FrmCarrito()
+        public FrmMiPerfil()
         {
             InitializeComponent();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnVolverPrincipal_Click(object sender, EventArgs e)
         {
             FrmPaginaPrincipal frm1= new FrmPaginaPrincipal();
             this.Hide();
-            frm1.Show();
-        }
-
-        private void btnVolverPrincipal_Click(object sender, EventArgs e)
-        {
-            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
-            this.Hide();
-            frm1.Show();
+            frm1.ShowDialog();
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
             this.Hide();
-            frm1.Show();
-        }
-
-        private void btnMiPerfil_Click(object sender, EventArgs e)
-        {
-            FrmMiPerfil frm1 = new FrmMiPerfil();
-            this.Hide();
-            frm1.Show();
+            frm1.ShowDialog();
         }
     }
 }

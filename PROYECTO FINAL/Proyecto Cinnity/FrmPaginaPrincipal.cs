@@ -43,7 +43,22 @@ namespace Proyecto_Cinnity
         private void btnEntradas_Click(object sender, EventArgs e)
         {
             FrmGestionDeEntradas gestionDeEntradas = new FrmGestionDeEntradas();
-            gestionDeEntradas.ShowDialog();
+            this.Hide();
+            gestionDeEntradas.Show();
+        }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            FrmCarrito frm1= new FrmCarrito();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void btnMiPerfil_Click(object sender, EventArgs e)
+        {
+            FrmMiPerfil frm1= new FrmMiPerfil();
+            this.Hide();
+            frm1.Show();
         }
     }
 }

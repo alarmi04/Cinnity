@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaginaPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnEntradas = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.clbFiltrar = new System.Windows.Forms.CheckedListBox();
@@ -41,19 +46,14 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnEntradas = new System.Windows.Forms.Button();
-            this.btnMiPerfil = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.grbPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -68,116 +68,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 796);
             this.pnlMenu.TabIndex = 1;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Candara Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(291, 120);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(270, 40);
-            this.txtBuscar.TabIndex = 6;
-            this.txtBuscar.Text = "Buscar";
-            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // clbFiltrar
-            // 
-            this.clbFiltrar.FormattingEnabled = true;
-            this.clbFiltrar.Items.AddRange(new object[] {
-            "Terror",
-            "Acción",
-            "Comedia",
-            "Mayor de edad"});
-            this.clbFiltrar.Location = new System.Drawing.Point(276, 9);
-            this.clbFiltrar.Name = "clbFiltrar";
-            this.clbFiltrar.Size = new System.Drawing.Size(180, 174);
-            this.clbFiltrar.TabIndex = 8;
-            // 
-            // grbPeliculas
-            // 
-            this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.grbPeliculas.Controls.Add(this.clbFiltrar);
-            this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
-            this.grbPeliculas.Name = "grbPeliculas";
-            this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
-            this.grbPeliculas.TabIndex = 13;
-            this.grbPeliculas.TabStop = false;
-            // 
-            // btnCarrito
-            // 
-            this.btnCarrito.Image = global::Proyecto_Cinnity.Properties.Resources.carrito_de_compras;
-            this.btnCarrito.Location = new System.Drawing.Point(1076, 12);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(99, 89);
-            this.btnCarrito.TabIndex = 15;
-            this.btnCarrito.UseVisualStyleBackColor = true;
-            // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Image = global::Proyecto_Cinnity.Properties.Resources.traductor;
-            this.btnIdioma.Location = new System.Drawing.Point(955, 12);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(101, 89);
-            this.btnIdioma.TabIndex = 14;
-            this.btnIdioma.UseVisualStyleBackColor = true;
-            // 
-            // ptbEmail
-            // 
-            this.ptbEmail.Image = ((System.Drawing.Image)(resources.GetObject("ptbEmail.Image")));
-            this.ptbEmail.Location = new System.Drawing.Point(1100, 720);
-            this.ptbEmail.Name = "ptbEmail";
-            this.ptbEmail.Size = new System.Drawing.Size(32, 32);
-            this.ptbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbEmail.TabIndex = 12;
-            this.ptbEmail.TabStop = false;
-            // 
-            // ptbTwitter
-            // 
-            this.ptbTwitter.Image = ((System.Drawing.Image)(resources.GetObject("ptbTwitter.Image")));
-            this.ptbTwitter.Location = new System.Drawing.Point(1046, 720);
-            this.ptbTwitter.Name = "ptbTwitter";
-            this.ptbTwitter.Size = new System.Drawing.Size(32, 32);
-            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbTwitter.TabIndex = 11;
-            this.ptbTwitter.TabStop = false;
-            // 
-            // ptbFacebook
-            // 
-            this.ptbFacebook.Image = ((System.Drawing.Image)(resources.GetObject("ptbFacebook.Image")));
-            this.ptbFacebook.Location = new System.Drawing.Point(993, 720);
-            this.ptbFacebook.Name = "ptbFacebook";
-            this.ptbFacebook.Size = new System.Drawing.Size(32, 32);
-            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbFacebook.TabIndex = 10;
-            this.ptbFacebook.TabStop = false;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Image = global::Proyecto_Cinnity.Properties.Resources.filtrar;
-            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFiltrar.Location = new System.Drawing.Point(567, 120);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(150, 44);
-            this.btnFiltrar.TabIndex = 9;
-            this.btnFiltrar.Text = "Filtrar...";
-            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
-            // 
-            // ptbInsta
-            // 
-            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
-            this.ptbInsta.Location = new System.Drawing.Point(939, 720);
-            this.ptbInsta.Name = "ptbInsta";
-            this.ptbInsta.Size = new System.Drawing.Size(32, 32);
-            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbInsta.TabIndex = 2;
-            this.ptbInsta.TabStop = false;
             // 
             // ptbLogo
             // 
@@ -241,6 +131,118 @@
             this.btnMiPerfil.Text = "MI PERFIL";
             this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMiPerfil.UseVisualStyleBackColor = true;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Font = new System.Drawing.Font("Candara Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(291, 120);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(270, 40);
+            this.txtBuscar.TabIndex = 6;
+            this.txtBuscar.Text = "Buscar";
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // clbFiltrar
+            // 
+            this.clbFiltrar.FormattingEnabled = true;
+            this.clbFiltrar.Items.AddRange(new object[] {
+            "Terror",
+            "Acción",
+            "Comedia",
+            "Mayor de edad"});
+            this.clbFiltrar.Location = new System.Drawing.Point(276, 9);
+            this.clbFiltrar.Name = "clbFiltrar";
+            this.clbFiltrar.Size = new System.Drawing.Size(180, 174);
+            this.clbFiltrar.TabIndex = 8;
+            // 
+            // grbPeliculas
+            // 
+            this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.grbPeliculas.Controls.Add(this.clbFiltrar);
+            this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
+            this.grbPeliculas.Name = "grbPeliculas";
+            this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
+            this.grbPeliculas.TabIndex = 13;
+            this.grbPeliculas.TabStop = false;
+            // 
+            // btnCarrito
+            // 
+            this.btnCarrito.Image = global::Proyecto_Cinnity.Properties.Resources.carrito_de_compras;
+            this.btnCarrito.Location = new System.Drawing.Point(1076, 12);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(99, 89);
+            this.btnCarrito.TabIndex = 15;
+            this.btnCarrito.UseVisualStyleBackColor = true;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
+            // 
+            // btnIdioma
+            // 
+            this.btnIdioma.Image = global::Proyecto_Cinnity.Properties.Resources.traductor;
+            this.btnIdioma.Location = new System.Drawing.Point(955, 12);
+            this.btnIdioma.Name = "btnIdioma";
+            this.btnIdioma.Size = new System.Drawing.Size(101, 89);
+            this.btnIdioma.TabIndex = 14;
+            this.btnIdioma.UseVisualStyleBackColor = true;
+            // 
+            // ptbEmail
+            // 
+            this.ptbEmail.Image = ((System.Drawing.Image)(resources.GetObject("ptbEmail.Image")));
+            this.ptbEmail.Location = new System.Drawing.Point(1100, 720);
+            this.ptbEmail.Name = "ptbEmail";
+            this.ptbEmail.Size = new System.Drawing.Size(32, 32);
+            this.ptbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbEmail.TabIndex = 12;
+            this.ptbEmail.TabStop = false;
+            // 
+            // ptbTwitter
+            // 
+            this.ptbTwitter.Image = ((System.Drawing.Image)(resources.GetObject("ptbTwitter.Image")));
+            this.ptbTwitter.Location = new System.Drawing.Point(1046, 720);
+            this.ptbTwitter.Name = "ptbTwitter";
+            this.ptbTwitter.Size = new System.Drawing.Size(32, 32);
+            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbTwitter.TabIndex = 11;
+            this.ptbTwitter.TabStop = false;
+            // 
+            // ptbFacebook
+            // 
+            this.ptbFacebook.Image = ((System.Drawing.Image)(resources.GetObject("ptbFacebook.Image")));
+            this.ptbFacebook.Location = new System.Drawing.Point(993, 720);
+            this.ptbFacebook.Name = "ptbFacebook";
+            this.ptbFacebook.Size = new System.Drawing.Size(32, 32);
+            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbFacebook.TabIndex = 10;
+            this.ptbFacebook.TabStop = false;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Image = global::Proyecto_Cinnity.Properties.Resources.filtrar;
+            this.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFiltrar.Location = new System.Drawing.Point(567, 120);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(150, 44);
+            this.btnFiltrar.TabIndex = 9;
+            this.btnFiltrar.Text = "Filtrar...";
+            this.btnFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // ptbInsta
+            // 
+            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
+            this.ptbInsta.Location = new System.Drawing.Point(939, 720);
+            this.ptbInsta.Name = "ptbInsta";
+            this.ptbInsta.Size = new System.Drawing.Size(32, 32);
+            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbInsta.TabIndex = 2;
+            this.ptbInsta.TabStop = false;
             // 
             // FrmPaginaPrincipal
             // 
@@ -262,13 +264,13 @@
             this.Text = "Página Principal";
             this.Load += new System.EventHandler(this.FrmPaginaPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.grbPeliculas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
