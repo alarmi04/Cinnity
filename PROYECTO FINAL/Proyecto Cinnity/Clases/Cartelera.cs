@@ -8,5 +8,14 @@ namespace Proyecto_Cinnity
 {
     class Cartelera
     {
+        DateTime fecha;
+        DateTime hora;
+
+
+        public Cartelera(DateTime f, DateTime h)
+        {
+            fecha = f;
+            hora = h;
+        }
     }
 }
