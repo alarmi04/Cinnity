@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Proyecto_Cinnity</RootNamespace>
     <AssemblyName>Proyecto Cinnity</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Clases\Cartelera.cs" />
     <Compile Include="Clases\Entradas.cs" />
+    <Compile Include="FrmCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarrito.Designer.cs">
+      <DependentUpon>FrmCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <EmbeddedResource Include="FrmCarrito.resx">
+      <DependentUpon>FrmCarrito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearCuenta.resx">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>

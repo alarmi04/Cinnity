@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlGestionEntradas = new System.Windows.Forms.Panel();
+            this.pnlMenu = new System.Windows.Forms.Panel();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEntradasActivas = new System.Windows.Forms.Label();
             this.lblIdEntrada = new System.Windows.Forms.Label();
@@ -36,27 +36,24 @@
             this.btnBuscarEntrada = new System.Windows.Forms.Button();
             this.btnVenderEntrada = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ptbVolverPrincipal = new System.Windows.Forms.PictureBox();
-            this.ptbCerrarSesion = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlGestionEntradas.SuspendLayout();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbVolverPrincipal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCerrarSesion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlGestionEntradas
+            // pnlMenu
             // 
-            this.pnlGestionEntradas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.pnlGestionEntradas.Controls.Add(this.ptbVolverPrincipal);
-            this.pnlGestionEntradas.Controls.Add(this.ptbCerrarSesion);
-            this.pnlGestionEntradas.Controls.Add(this.pictureBox1);
-            this.pnlGestionEntradas.Location = new System.Drawing.Point(-2, -4);
-            this.pnlGestionEntradas.Name = "pnlGestionEntradas";
-            this.pnlGestionEntradas.Size = new System.Drawing.Size(1119, 63);
-            this.pnlGestionEntradas.TabIndex = 0;
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
+            this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
+            this.pnlMenu.Controls.Add(this.btnMiPerfil);
+            this.pnlMenu.Location = new System.Drawing.Point(-2, -4);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(1119, 63);
+            this.pnlMenu.TabIndex = 0;
             // 
             // dgvEntradasActivas
             // 
@@ -132,35 +129,38 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // ptbVolverPrincipal
+            // btnMiPerfil
             // 
-            this.ptbVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.ptbVolverPrincipal.Location = new System.Drawing.Point(985, 8);
-            this.ptbVolverPrincipal.Name = "ptbVolverPrincipal";
-            this.ptbVolverPrincipal.Size = new System.Drawing.Size(64, 52);
-            this.ptbVolverPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ptbVolverPrincipal.TabIndex = 2;
-            this.ptbVolverPrincipal.TabStop = false;
+            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
+            this.btnMiPerfil.Location = new System.Drawing.Point(3, 8);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
+            this.btnMiPerfil.TabIndex = 3;
+            this.btnMiPerfil.UseVisualStyleBackColor = false;
             // 
-            // ptbCerrarSesion
+            // btnVolverPrincipal
             // 
-            this.ptbCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.ptbCerrarSesion.Location = new System.Drawing.Point(1055, 8);
-            this.ptbCerrarSesion.Name = "ptbCerrarSesion";
-            this.ptbCerrarSesion.Size = new System.Drawing.Size(61, 52);
-            this.ptbCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.ptbCerrarSesion.TabIndex = 1;
-            this.ptbCerrarSesion.TabStop = false;
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
+            this.btnVolverPrincipal.Location = new System.Drawing.Point(953, 8);
+            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
+            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
+            this.btnVolverPrincipal.TabIndex = 4;
+            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnCerrarSesion
             // 
-            this.pictureBox1.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 57);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1039, 8);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // FrmGestionDeEntradas
             // 
@@ -175,16 +175,13 @@
             this.Controls.Add(this.lblIdEntrada);
             this.Controls.Add(this.lblEntradasActivas);
             this.Controls.Add(this.dgvEntradasActivas);
-            this.Controls.Add(this.pnlGestionEntradas);
+            this.Controls.Add(this.pnlMenu);
             this.Name = "FrmGestionDeEntradas";
             this.Text = "Gestión De Entradas";
             this.Load += new System.EventHandler(this.FrmGestionDeEntradas_Load);
-            this.pnlGestionEntradas.ResumeLayout(false);
+            this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbVolverPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCerrarSesion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,10 +189,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlGestionEntradas;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox ptbCerrarSesion;
-        private System.Windows.Forms.PictureBox ptbVolverPrincipal;
+        private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.DataGridView dgvEntradasActivas;
         private System.Windows.Forms.Label lblEntradasActivas;
         private System.Windows.Forms.Label lblIdEntrada;
@@ -203,5 +197,8 @@
         private System.Windows.Forms.Button btnBuscarEntrada;
         private System.Windows.Forms.Button btnVenderEntrada;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnMiPerfil;
+        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Button btnVolverPrincipal;
     }
 }
