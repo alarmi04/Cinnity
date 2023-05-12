@@ -18,10 +18,9 @@ namespace Proyecto_Cinnity
         private string sinopsis;
         private DateTime fechaEstreno;
         private Image caratula;
-        private Cartelera carteleraAsociada;
 
 
-        public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat, Cartelera cartel)
+        public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat)
         {
             nombre = nom;
             genero = gene;
@@ -31,13 +30,14 @@ namespace Proyecto_Cinnity
             sinopsis = sinop;
             fechaEstreno = estreno;
             caratula = carat;
-            carteleraAsociada = cartel;
         }
 
         //añadir pelicula
         //eliminar pelicula
         //Busqueda por nombre
         //Busqueda por filtro
+
+        //asdasdasdasdasd
     }
 
 }

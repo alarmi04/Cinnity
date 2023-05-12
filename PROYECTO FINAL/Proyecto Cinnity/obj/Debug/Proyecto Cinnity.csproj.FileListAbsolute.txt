@@ -16,3 +16,20 @@ C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmMiPerfil.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarContra.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Resources.StringRecursosIdiomas.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.AssemblyReference.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmAyuda.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarContra.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCarrito.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCrearCuenta.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmGestionAdmin.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmGestionDeEntradas.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmInformacionPelicula.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmInicioDeSesion.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmMiPerfil.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmPaginaPrincipal.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Properties.Resources.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Resources.StringRecursosIdiomas.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.GenerateResource.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CoreCompileInputs.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb
