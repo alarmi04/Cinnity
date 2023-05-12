@@ -37,12 +37,29 @@ namespace Proyecto_Cinnity
             this.lblSesionesDisponibles = new System.Windows.Forms.Label();
             this.lblSesiones = new System.Windows.Forms.Label();
             this.lblCineSeleccionado = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblDirector = new System.Windows.Forms.Label();
+            this.lblReparto = new System.Windows.Forms.Label();
+            this.lblDuracion = new System.Windows.Forms.Label();
+            this.lblSinopsis = new System.Windows.Forms.Label();
+            this.lblFechaEstreno = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInfoPeli
             // 
             this.gbInfoPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.gbInfoPeli.Controls.Add(this.textBox1);
+            this.gbInfoPeli.Controls.Add(this.lblFechaEstreno);
+            this.gbInfoPeli.Controls.Add(this.lblSinopsis);
+            this.gbInfoPeli.Controls.Add(this.lblDuracion);
+            this.gbInfoPeli.Controls.Add(this.lblReparto);
+            this.gbInfoPeli.Controls.Add(this.lblDirector);
+            this.gbInfoPeli.Controls.Add(this.label1);
+            this.gbInfoPeli.Controls.Add(this.lblGenero);
             this.gbInfoPeli.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.gbInfoPeli.Location = new System.Drawing.Point(40, 31);
             this.gbInfoPeli.Name = "gbInfoPeli";
@@ -86,7 +103,7 @@ namespace Proyecto_Cinnity
             this.lblSeleccionCine.AutoSize = true;
             this.lblSeleccionCine.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.lblSeleccionCine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblSeleccionCine.Location = new System.Drawing.Point(815, 524);
+            this.lblSeleccionCine.Location = new System.Drawing.Point(815, 533);
             this.lblSeleccionCine.Name = "lblSeleccionCine";
             this.lblSeleccionCine.Size = new System.Drawing.Size(197, 24);
             this.lblSeleccionCine.TabIndex = 0;
@@ -125,6 +142,87 @@ namespace Proyecto_Cinnity
             this.lblCineSeleccionado.TabIndex = 6;
             this.lblCineSeleccionado.Text = "(Cine)";
             // 
+            // lblGenero
+            // 
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblGenero.Location = new System.Drawing.Point(39, 134);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(77, 24);
+            this.lblGenero.TabIndex = 7;
+            this.lblGenero.Text = "Género:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.label1.Location = new System.Drawing.Point(106, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(465, 46);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "(NOMBRE DE LA PELÍCULA)";
+            // 
+            // lblDirector
+            // 
+            this.lblDirector.AutoSize = true;
+            this.lblDirector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblDirector.Location = new System.Drawing.Point(39, 220);
+            this.lblDirector.Name = "lblDirector";
+            this.lblDirector.Size = new System.Drawing.Size(86, 24);
+            this.lblDirector.TabIndex = 9;
+            this.lblDirector.Text = "Director:";
+            // 
+            // lblReparto
+            // 
+            this.lblReparto.AutoSize = true;
+            this.lblReparto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblReparto.Location = new System.Drawing.Point(39, 311);
+            this.lblReparto.Name = "lblReparto";
+            this.lblReparto.Size = new System.Drawing.Size(84, 24);
+            this.lblReparto.TabIndex = 10;
+            this.lblReparto.Text = "Reparto:";
+            // 
+            // lblDuracion
+            // 
+            this.lblDuracion.AutoSize = true;
+            this.lblDuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblDuracion.Location = new System.Drawing.Point(39, 441);
+            this.lblDuracion.Name = "lblDuracion";
+            this.lblDuracion.Size = new System.Drawing.Size(93, 24);
+            this.lblDuracion.TabIndex = 11;
+            this.lblDuracion.Text = "Duración:";
+            // 
+            // lblSinopsis
+            // 
+            this.lblSinopsis.AutoSize = true;
+            this.lblSinopsis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblSinopsis.Location = new System.Drawing.Point(39, 569);
+            this.lblSinopsis.Name = "lblSinopsis";
+            this.lblSinopsis.Size = new System.Drawing.Size(84, 24);
+            this.lblSinopsis.TabIndex = 12;
+            this.lblSinopsis.Text = "Sinopsis:";
+            // 
+            // lblFechaEstreno
+            // 
+            this.lblFechaEstreno.AutoSize = true;
+            this.lblFechaEstreno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblFechaEstreno.Location = new System.Drawing.Point(39, 502);
+            this.lblFechaEstreno.Name = "lblFechaEstreno";
+            this.lblFechaEstreno.Size = new System.Drawing.Size(159, 24);
+            this.lblFechaEstreno.TabIndex = 13;
+            this.lblFechaEstreno.Text = "Fecha de estreno:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.textBox1.Location = new System.Drawing.Point(43, 605);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(615, 142);
+            this.textBox1.TabIndex = 14;
+            // 
             // FrmInformacionPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,6 +239,8 @@ namespace Proyecto_Cinnity
             this.Controls.Add(this.gbInfoPeli);
             this.Name = "FrmInformacionPelicula";
             this.Text = "FrmInformacionPelicula";
+            this.gbInfoPeli.ResumeLayout(false);
+            this.gbInfoPeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,5 +257,13 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Label lblSesionesDisponibles;
         private System.Windows.Forms.Label lblSesiones;
         private System.Windows.Forms.Label lblCineSeleccionado;
+        private System.Windows.Forms.Label lblFechaEstreno;
+        private System.Windows.Forms.Label lblSinopsis;
+        private System.Windows.Forms.Label lblDuracion;
+        private System.Windows.Forms.Label lblReparto;
+        private System.Windows.Forms.Label lblDirector;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
