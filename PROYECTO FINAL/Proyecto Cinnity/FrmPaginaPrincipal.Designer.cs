@@ -30,11 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaginaPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnEntradas = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.clbFiltrar = new System.Windows.Forms.CheckedListBox();
             this.grbPeliculas = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
@@ -42,19 +46,16 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
-            this.btnEntradas = new System.Windows.Forms.Button();
-            this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.grbPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -69,6 +70,71 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 796);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // ptbLogo
+            // 
+            this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY1;
+            this.ptbLogo.Location = new System.Drawing.Point(48, 0);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(207, 212);
+            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLogo.TabIndex = 5;
+            this.ptbLogo.TabStop = false;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(5, 521);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(289, 50);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "CERRAR SESIÓN";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.Image = global::Proyecto_Cinnity.Properties.Resources.informacion;
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAyuda.Location = new System.Drawing.Point(5, 441);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(289, 53);
+            this.btnAyuda.TabIndex = 3;
+            this.btnAyuda.Text = "AYUDA";
+            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.Image = global::Proyecto_Cinnity.Properties.Resources.billete;
+            this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEntradas.Location = new System.Drawing.Point(5, 359);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Size = new System.Drawing.Size(289, 53);
+            this.btnEntradas.TabIndex = 2;
+            this.btnEntradas.Text = "ENTRADAS";
+            this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradas.UseVisualStyleBackColor = true;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
+            // 
+            // btnMiPerfil
+            // 
+            this.btnMiPerfil.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
+            this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMiPerfil.Location = new System.Drawing.Point(5, 277);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Size = new System.Drawing.Size(289, 52);
+            this.btnMiPerfil.TabIndex = 1;
+            this.btnMiPerfil.Text = "MI PERFIL";
+            this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMiPerfil.UseVisualStyleBackColor = true;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
             // txtBuscar
             // 
@@ -102,23 +168,13 @@
             // grbPeliculas
             // 
             this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.grbPeliculas.Controls.Add(this.dgvPeliculas);
             this.grbPeliculas.Controls.Add(this.clbFiltrar);
             this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
             this.grbPeliculas.Name = "grbPeliculas";
             this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
             this.grbPeliculas.TabIndex = 13;
             this.grbPeliculas.TabStop = false;
-            this.grbPeliculas.Text = "c";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(641, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCarrito
             // 
@@ -192,70 +248,15 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
-            // ptbLogo
+            // dgvPeliculas
             // 
-            this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY1;
-            this.ptbLogo.Location = new System.Drawing.Point(48, 0);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(207, 212);
-            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLogo.TabIndex = 5;
-            this.ptbLogo.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(5, 521);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(289, 50);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "CERRAR SESIÓN";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAyuda.Image = global::Proyecto_Cinnity.Properties.Resources.informacion;
-            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAyuda.Location = new System.Drawing.Point(5, 441);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(289, 53);
-            this.btnAyuda.TabIndex = 3;
-            this.btnAyuda.Text = "AYUDA";
-            this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
-            // 
-            // btnEntradas
-            // 
-            this.btnEntradas.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntradas.Image = global::Proyecto_Cinnity.Properties.Resources.billete;
-            this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntradas.Location = new System.Drawing.Point(5, 359);
-            this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.Size = new System.Drawing.Size(289, 53);
-            this.btnEntradas.TabIndex = 2;
-            this.btnEntradas.Text = "ENTRADAS";
-            this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntradas.UseVisualStyleBackColor = true;
-            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
-            // 
-            // btnMiPerfil
-            // 
-            this.btnMiPerfil.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
-            this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMiPerfil.Location = new System.Drawing.Point(5, 277);
-            this.btnMiPerfil.Name = "btnMiPerfil";
-            this.btnMiPerfil.Size = new System.Drawing.Size(289, 52);
-            this.btnMiPerfil.TabIndex = 1;
-            this.btnMiPerfil.Text = "MI PERFIL";
-            this.btnMiPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMiPerfil.UseVisualStyleBackColor = true;
-            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.RowHeadersWidth = 51;
+            this.dgvPeliculas.RowTemplate.Height = 24;
+            this.dgvPeliculas.Size = new System.Drawing.Size(841, 472);
+            this.dgvPeliculas.TabIndex = 9;
             // 
             // FrmPaginaPrincipal
             // 
@@ -263,7 +264,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.grbPeliculas);
@@ -278,13 +278,14 @@
             this.Text = "Página Principal";
             this.Load += new System.EventHandler(this.FrmPaginaPrincipal_Load);
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.grbPeliculas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +310,6 @@
         private System.Windows.Forms.GroupBox grbPeliculas;
         private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Button btnIdioma;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvPeliculas;
     }
 }
