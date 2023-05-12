@@ -160,16 +160,15 @@
             "Acción",
             "Comedia",
             "Mayor de edad"});
-            this.clbFiltrar.Location = new System.Drawing.Point(276, 9);
+            this.clbFiltrar.Location = new System.Drawing.Point(732, 20);
             this.clbFiltrar.Name = "clbFiltrar";
-            this.clbFiltrar.Size = new System.Drawing.Size(180, 174);
+            this.clbFiltrar.Size = new System.Drawing.Size(180, 140);
             this.clbFiltrar.TabIndex = 8;
             // 
             // grbPeliculas
             // 
             this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.grbPeliculas.Controls.Add(this.dgvPeliculas);
-            this.grbPeliculas.Controls.Add(this.clbFiltrar);
             this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
             this.grbPeliculas.Name = "grbPeliculas";
             this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
@@ -265,6 +264,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
             this.Controls.Add(this.btnCarrito);
+            this.Controls.Add(this.clbFiltrar);
             this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.grbPeliculas);
             this.Controls.Add(this.ptbEmail);
