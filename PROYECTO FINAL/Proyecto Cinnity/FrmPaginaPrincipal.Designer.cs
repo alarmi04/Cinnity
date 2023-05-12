@@ -39,6 +39,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.clbFiltrar = new System.Windows.Forms.CheckedListBox();
             this.grbPeliculas = new System.Windows.Forms.GroupBox();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
@@ -46,16 +47,15 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.grbPeliculas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -160,21 +160,30 @@
             "Acción",
             "Comedia",
             "Mayor de edad"});
-            this.clbFiltrar.Location = new System.Drawing.Point(276, 9);
+            this.clbFiltrar.Location = new System.Drawing.Point(732, 20);
             this.clbFiltrar.Name = "clbFiltrar";
-            this.clbFiltrar.Size = new System.Drawing.Size(180, 174);
+            this.clbFiltrar.Size = new System.Drawing.Size(180, 140);
             this.clbFiltrar.TabIndex = 8;
             // 
             // grbPeliculas
             // 
             this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.grbPeliculas.Controls.Add(this.dgvPeliculas);
-            this.grbPeliculas.Controls.Add(this.clbFiltrar);
             this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
             this.grbPeliculas.Name = "grbPeliculas";
             this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
             this.grbPeliculas.TabIndex = 13;
             this.grbPeliculas.TabStop = false;
+            // 
+            // dgvPeliculas
+            // 
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.RowHeadersWidth = 51;
+            this.dgvPeliculas.RowTemplate.Height = 24;
+            this.dgvPeliculas.Size = new System.Drawing.Size(841, 472);
+            this.dgvPeliculas.TabIndex = 9;
             // 
             // btnCarrito
             // 
@@ -248,16 +257,6 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
-            // dgvPeliculas
-            // 
-            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
-            this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.RowHeadersWidth = 51;
-            this.dgvPeliculas.RowTemplate.Height = 24;
-            this.dgvPeliculas.Size = new System.Drawing.Size(841, 472);
-            this.dgvPeliculas.TabIndex = 9;
-            // 
             // FrmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,6 +264,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
             this.Controls.Add(this.btnCarrito);
+            this.Controls.Add(this.clbFiltrar);
             this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.grbPeliculas);
             this.Controls.Add(this.ptbEmail);
@@ -281,11 +281,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.grbPeliculas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
