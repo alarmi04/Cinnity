@@ -39,6 +39,7 @@
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.clbFiltrar = new System.Windows.Forms.CheckedListBox();
             this.grbPeliculas = new System.Windows.Forms.GroupBox();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
@@ -46,16 +47,15 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.grbPeliculas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -176,6 +176,16 @@
             this.grbPeliculas.TabIndex = 13;
             this.grbPeliculas.TabStop = false;
             // 
+            // dgvPeliculas
+            // 
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.RowHeadersWidth = 51;
+            this.dgvPeliculas.RowTemplate.Height = 24;
+            this.dgvPeliculas.Size = new System.Drawing.Size(841, 472);
+            this.dgvPeliculas.TabIndex = 9;
+            // 
             // btnCarrito
             // 
             this.btnCarrito.Image = global::Proyecto_Cinnity.Properties.Resources.carrito_de_compras;
@@ -248,16 +258,6 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
-            // dgvPeliculas
-            // 
-            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
-            this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.RowHeadersWidth = 51;
-            this.dgvPeliculas.RowTemplate.Height = 24;
-            this.dgvPeliculas.Size = new System.Drawing.Size(841, 472);
-            this.dgvPeliculas.TabIndex = 9;
-            // 
             // FrmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,11 +281,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.grbPeliculas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
