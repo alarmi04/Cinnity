@@ -33,6 +33,11 @@ namespace Proyecto_Cinnity
             caratula = carat;
             carteleraAsociada = cartel;
         }
+
+        //añadir pelicula
+        //eliminar pelicula
+        //Busqueda por nombre
+        //Busqueda por filtro
     }
 
 }

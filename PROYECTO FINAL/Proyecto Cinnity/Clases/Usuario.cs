@@ -24,5 +24,11 @@ namespace Proyecto_Cinnity
             pais = pa;
             fechaNaci = fecha;
         }
+
+        //Registrar usuario
+        //Cambiar contraseña
+        //Validar clave
+        //Validar correo
+
     }
 }

@@ -21,5 +21,9 @@ namespace Proyecto_Cinnity
             fechaCompra = fecha;
             usuarioAsociado = usu;
         }
+
+        //Añadir al carrito
+        //VenderEntrada
+        //BuscarEntrada
     }
 }
