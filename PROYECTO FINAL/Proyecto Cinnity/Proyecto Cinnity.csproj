@@ -67,6 +67,12 @@
     <Compile Include="FrmCrearCuenta.Designer.cs">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionAdmin.Designer.cs">
+      <DependentUpon>FrmGestionAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGestionDeEntradas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCrearCuenta.resx">
       <DependentUpon>FrmCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGestionAdmin.resx">
+      <DependentUpon>FrmGestionAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGestionDeEntradas.resx">
       <DependentUpon>FrmGestionDeEntradas.cs</DependentUpon>
