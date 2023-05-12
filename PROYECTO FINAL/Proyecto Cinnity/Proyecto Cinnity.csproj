@@ -49,6 +49,12 @@
   <ItemGroup>
     <Compile Include="Clases\Cartelera.cs" />
     <Compile Include="Clases\Entradas.cs" />
+    <Compile Include="FrmCambiarContra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambiarContra.Designer.cs">
+      <DependentUpon>FrmCambiarContra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StringRecursosIdiomas.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmCambiarContra.resx">
+      <DependentUpon>FrmCambiarContra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </EmbeddedResource>

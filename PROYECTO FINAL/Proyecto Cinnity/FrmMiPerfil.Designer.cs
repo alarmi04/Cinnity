@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
-            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
-            this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblPrimerAcceso = new System.Windows.Forms.Label();
+            this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
             this.lblUltimoAcceso = new System.Windows.Forms.Label();
+            this.lblPrimerAcceso = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.lblEntradasAdquiridas = new System.Windows.Forms.Label();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEditarInformacion = new System.Windows.Forms.Label();
@@ -58,29 +58,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1211, 70);
             this.pnlMenu.TabIndex = 1;
-            // 
-            // pnlInformacionPerfil
-            // 
-            this.pnlInformacionPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacionPerfil.Controls.Add(this.lblUltimoAcceso);
-            this.pnlInformacionPerfil.Controls.Add(this.lblPrimerAcceso);
-            this.pnlInformacionPerfil.Controls.Add(this.lblCorreo);
-            this.pnlInformacionPerfil.Controls.Add(this.lblNombreUsuario);
-            this.pnlInformacionPerfil.Controls.Add(this.ptbFoto);
-            this.pnlInformacionPerfil.Location = new System.Drawing.Point(48, 91);
-            this.pnlInformacionPerfil.Name = "pnlInformacionPerfil";
-            this.pnlInformacionPerfil.Size = new System.Drawing.Size(472, 549);
-            this.pnlInformacionPerfil.TabIndex = 2;
-            // 
-            // ptbFoto
-            // 
-            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
-            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
-            this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
-            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFoto.TabIndex = 0;
-            this.ptbFoto.TabStop = false;
             // 
             // btnCerrarSesion
             // 
@@ -106,29 +83,30 @@
             this.btnVolverPrincipal.UseVisualStyleBackColor = false;
             this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
-            // lblNombreUsuario
+            // pnlInformacionPerfil
             // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(165, 293);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(147, 37);
-            this.lblNombreUsuario.TabIndex = 1;
-            this.lblNombreUsuario.Text = "Username";
+            this.pnlInformacionPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacionPerfil.Controls.Add(this.lblUltimoAcceso);
+            this.pnlInformacionPerfil.Controls.Add(this.lblPrimerAcceso);
+            this.pnlInformacionPerfil.Controls.Add(this.lblCorreo);
+            this.pnlInformacionPerfil.Controls.Add(this.lblNombreUsuario);
+            this.pnlInformacionPerfil.Controls.Add(this.ptbFoto);
+            this.pnlInformacionPerfil.Location = new System.Drawing.Point(48, 91);
+            this.pnlInformacionPerfil.Name = "pnlInformacionPerfil";
+            this.pnlInformacionPerfil.Size = new System.Drawing.Size(472, 549);
+            this.pnlInformacionPerfil.TabIndex = 2;
             // 
-            // lblCorreo
+            // lblUltimoAcceso
             // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblCorreo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCorreo.Location = new System.Drawing.Point(109, 352);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(266, 37);
-            this.lblCorreo.TabIndex = 2;
-            this.lblCorreo.Text = "correo@gmail.com";
+            this.lblUltimoAcceso.AutoSize = true;
+            this.lblUltimoAcceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblUltimoAcceso.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblUltimoAcceso.Location = new System.Drawing.Point(22, 479);
+            this.lblUltimoAcceso.Name = "lblUltimoAcceso";
+            this.lblUltimoAcceso.Size = new System.Drawing.Size(337, 24);
+            this.lblUltimoAcceso.TabIndex = 4;
+            this.lblUltimoAcceso.Text = "Última vez de acceso: 14 de marzo 2023";
             // 
             // lblPrimerAcceso
             // 
@@ -142,17 +120,39 @@
             this.lblPrimerAcceso.TabIndex = 3;
             this.lblPrimerAcceso.Text = "Primera vez de acceso: 21 de Septiembre de 2010";
             // 
-            // lblUltimoAcceso
+            // lblCorreo
             // 
-            this.lblUltimoAcceso.AutoSize = true;
-            this.lblUltimoAcceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblUltimoAcceso.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblUltimoAcceso.Location = new System.Drawing.Point(22, 479);
-            this.lblUltimoAcceso.Name = "lblUltimoAcceso";
-            this.lblUltimoAcceso.Size = new System.Drawing.Size(337, 24);
-            this.lblUltimoAcceso.TabIndex = 4;
-            this.lblUltimoAcceso.Text = "Última vez de acceso: 14 de marzo 2023";
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblCorreo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblCorreo.Location = new System.Drawing.Point(109, 352);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(266, 37);
+            this.lblCorreo.TabIndex = 2;
+            this.lblCorreo.Text = "correo@gmail.com";
+            // 
+            // lblNombreUsuario
+            // 
+            this.lblNombreUsuario.AutoSize = true;
+            this.lblNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblNombreUsuario.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblNombreUsuario.Location = new System.Drawing.Point(165, 293);
+            this.lblNombreUsuario.Name = "lblNombreUsuario";
+            this.lblNombreUsuario.Size = new System.Drawing.Size(147, 37);
+            this.lblNombreUsuario.TabIndex = 1;
+            this.lblNombreUsuario.Text = "Username";
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
+            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
+            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFoto.TabIndex = 0;
+            this.ptbFoto.TabStop = false;
             // 
             // lblEntradasAdquiridas
             // 
@@ -208,6 +208,7 @@
             this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
             this.lblCambiarContra.TabIndex = 8;
             this.lblCambiarContra.Text = "Cambiar Contraseña";
+            this.lblCambiarContra.Click += new System.EventHandler(this.lblCambiarContra_Click);
             // 
             // lblTotalEntradas
             // 

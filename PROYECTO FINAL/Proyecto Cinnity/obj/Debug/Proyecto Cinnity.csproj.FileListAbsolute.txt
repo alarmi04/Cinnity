@@ -14,3 +14,5 @@ C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCrearCuenta.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCarrito.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmMiPerfil.resources
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarContra.resources
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Resources.StringRecursosIdiomas.resources

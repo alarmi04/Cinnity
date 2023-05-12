@@ -36,5 +36,12 @@ namespace Proyecto_Cinnity
             this.Hide();
             frmcuenta.Show();
         }
+
+        private void lblContraOlvidada_Click(object sender, EventArgs e)
+        {
+            FrmCambiarContra frm1 = new FrmCambiarContra();
+            this.Hide();
+            frm1.Show();
+        }
     }
 }
