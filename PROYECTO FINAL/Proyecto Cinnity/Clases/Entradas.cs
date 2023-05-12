@@ -11,14 +11,15 @@ namespace Proyecto_Cinnity
         private double precio;
         private DateTime fechaCompra;
         private Usuario usuarioAsociado;
-        private Cartelera carteleraAsociada;
+        private DateTime horaEmision;
+        private DateTime fechaEmision;
+        
 
-        public Entradas (double pre, DateTime fecha, Usuario usu, Cartelera carte)
+        public Entradas (double pre, DateTime fecha, Usuario usu, DateTime horaE, DateTime fechaE)
         {
             precio = pre;
             fechaCompra = fecha;
             usuarioAsociado = usu;
-            carteleraAsociada = carte;
         }
     }
 }
