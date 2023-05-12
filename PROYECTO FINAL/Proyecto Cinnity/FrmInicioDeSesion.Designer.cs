@@ -32,7 +32,6 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblContra = new System.Windows.Forms.Label();
             this.txtContra = new System.Windows.Forms.TextBox();
-            this.chbMantenerSesionIniciada = new System.Windows.Forms.CheckBox();
             this.lblContraOlvidada = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
@@ -55,10 +54,11 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(173, 335);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(368, 28);
+            this.txtUsuario.Size = new System.Drawing.Size(368, 21);
             this.txtUsuario.TabIndex = 2;
             // 
             // lblContra
@@ -75,30 +75,19 @@
             // txtContra
             // 
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContra.Location = new System.Drawing.Point(173, 438);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(368, 28);
+            this.txtContra.Size = new System.Drawing.Size(368, 21);
             this.txtContra.TabIndex = 4;
-            // 
-            // chbMantenerSesionIniciada
-            // 
-            this.chbMantenerSesionIniciada.AutoSize = true;
-            this.chbMantenerSesionIniciada.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbMantenerSesionIniciada.ForeColor = System.Drawing.Color.White;
-            this.chbMantenerSesionIniciada.Location = new System.Drawing.Point(173, 499);
-            this.chbMantenerSesionIniciada.Name = "chbMantenerSesionIniciada";
-            this.chbMantenerSesionIniciada.Size = new System.Drawing.Size(254, 26);
-            this.chbMantenerSesionIniciada.TabIndex = 5;
-            this.chbMantenerSesionIniciada.Text = "Mantener sesión iniciada";
-            this.chbMantenerSesionIniciada.UseVisualStyleBackColor = true;
             // 
             // lblContraOlvidada
             // 
             this.lblContraOlvidada.AutoSize = true;
             this.lblContraOlvidada.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraOlvidada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblContraOlvidada.Location = new System.Drawing.Point(241, 560);
+            this.lblContraOlvidada.Location = new System.Drawing.Point(236, 528);
             this.lblContraOlvidada.Name = "lblContraOlvidada";
             this.lblContraOlvidada.Size = new System.Drawing.Size(242, 16);
             this.lblContraOlvidada.TabIndex = 6;
@@ -108,6 +97,7 @@
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnIniciarSesion.Location = new System.Drawing.Point(81, 612);
@@ -121,9 +111,10 @@
             // btnCrearCuenta
             // 
             this.btnCrearCuenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCuenta.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(433, 612);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(444, 612);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
             this.btnCrearCuenta.Size = new System.Drawing.Size(176, 55);
             this.btnCrearCuenta.TabIndex = 8;
@@ -160,7 +151,6 @@
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblContraOlvidada);
-            this.Controls.Add(this.chbMantenerSesionIniciada);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.lblContra);
             this.Controls.Add(this.txtUsuario);
@@ -180,7 +170,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.TextBox txtContra;
-        private System.Windows.Forms.CheckBox chbMantenerSesionIniciada;
         private System.Windows.Forms.Label lblContraOlvidada;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnCrearCuenta;

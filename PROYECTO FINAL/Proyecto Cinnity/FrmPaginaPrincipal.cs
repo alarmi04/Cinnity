@@ -65,5 +65,12 @@ namespace Proyecto_Cinnity
         {
            
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            FrmAyuda frm1 = new FrmAyuda();
+            this.Hide();
+            frm1.Show();
+        }
     }
 }
