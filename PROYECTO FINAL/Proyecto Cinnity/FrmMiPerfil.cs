@@ -30,5 +30,12 @@ namespace Proyecto_Cinnity
             this.Hide();
             frm1.ShowDialog();
         }
+
+        private void lblCambiarContra_Click(object sender, EventArgs e)
+        {
+            FrmCambiarContra frm1= new FrmCambiarContra();
+            this.Hide();
+            frm1.Show();
+        }
     }
 }

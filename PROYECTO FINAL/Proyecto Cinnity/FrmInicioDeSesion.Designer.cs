@@ -103,6 +103,7 @@
             this.lblContraOlvidada.Size = new System.Drawing.Size(242, 16);
             this.lblContraOlvidada.TabIndex = 6;
             this.lblContraOlvidada.Text = "¿HAS OLVIDADO  TU CONTRASEÑA?";
+            this.lblContraOlvidada.Click += new System.EventHandler(this.lblContraOlvidada_Click);
             // 
             // btnIniciarSesion
             // 
