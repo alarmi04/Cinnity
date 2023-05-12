@@ -27,5 +27,15 @@ namespace Proyecto_Cinnity
             FrmMiPerfil frm1 = new FrmMiPerfil();
             frm1.Show();
         }
+
+        private void btnBuscarEntrada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVenderEntrada_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

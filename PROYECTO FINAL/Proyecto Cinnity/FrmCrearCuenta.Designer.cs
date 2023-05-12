@@ -31,11 +31,11 @@
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.grbInformacionPersonal = new System.Windows.Forms.GroupBox();
+            this.cmbPais = new System.Windows.Forms.ComboBox();
             this.txtConfirmarContra = new System.Windows.Forms.TextBox();
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtConfirmarCorreo = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
@@ -45,12 +45,10 @@
             this.lblContra = new System.Windows.Forms.Label();
             this.lblConfirmarCorreo = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
-            this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCrearCuenta = new System.Windows.Forms.Label();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
-            this.cmbPais = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.grbInformacionPersonal.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +80,6 @@
             this.grbInformacionPersonal.Controls.Add(this.txtContra);
             this.grbInformacionPersonal.Controls.Add(this.txtConfirmarCorreo);
             this.grbInformacionPersonal.Controls.Add(this.txtCorreo);
-            this.grbInformacionPersonal.Controls.Add(this.txtNombreUsuario);
             this.grbInformacionPersonal.Controls.Add(this.txtApellidos);
             this.grbInformacionPersonal.Controls.Add(this.txtNombre);
             this.grbInformacionPersonal.Controls.Add(this.dtpFechaNacimiento);
@@ -92,7 +89,6 @@
             this.grbInformacionPersonal.Controls.Add(this.lblContra);
             this.grbInformacionPersonal.Controls.Add(this.lblConfirmarCorreo);
             this.grbInformacionPersonal.Controls.Add(this.lblCorreo);
-            this.grbInformacionPersonal.Controls.Add(this.lblNombreUsuario);
             this.grbInformacionPersonal.Controls.Add(this.lblApellidos);
             this.grbInformacionPersonal.Controls.Add(this.lblNombre);
             this.grbInformacionPersonal.Controls.Add(this.lblCrearCuenta);
@@ -102,6 +98,14 @@
             this.grbInformacionPersonal.Size = new System.Drawing.Size(1035, 507);
             this.grbInformacionPersonal.TabIndex = 2;
             this.grbInformacionPersonal.TabStop = false;
+            // 
+            // cmbPais
+            // 
+            this.cmbPais.FormattingEnabled = true;
+            this.cmbPais.Location = new System.Drawing.Point(84, 215);
+            this.cmbPais.Name = "cmbPais";
+            this.cmbPais.Size = new System.Drawing.Size(402, 24);
+            this.cmbPais.TabIndex = 20;
             // 
             // txtConfirmarContra
             // 
@@ -136,14 +140,6 @@
             this.txtCorreo.TabIndex = 16;
             this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
             // 
-            // txtNombreUsuario
-            // 
-            this.txtNombreUsuario.Font = new System.Drawing.Font("Candara Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(211, 192);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(275, 28);
-            this.txtNombreUsuario.TabIndex = 15;
-            // 
             // txtApellidos
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Candara Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +161,7 @@
             this.dtpFechaNacimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.Color.White;
             this.dtpFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(29, 330);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(29, 299);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(457, 27);
             this.dtpFechaNacimiento.TabIndex = 11;
@@ -174,7 +170,7 @@
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(18, 291);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(18, 260);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(192, 24);
             this.lblFechaNacimiento.TabIndex = 10;
@@ -184,7 +180,7 @@
             // 
             this.lblPais.AutoSize = true;
             this.lblPais.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPais.Location = new System.Drawing.Point(18, 243);
+            this.lblPais.Location = new System.Drawing.Point(18, 212);
             this.lblPais.Name = "lblPais";
             this.lblPais.Size = new System.Drawing.Size(49, 24);
             this.lblPais.TabIndex = 9;
@@ -230,16 +226,6 @@
             this.lblCorreo.TabIndex = 5;
             this.lblCorreo.Text = "Correo Electrónico:";
             // 
-            // lblNombreUsuario
-            // 
-            this.lblNombreUsuario.AutoSize = true;
-            this.lblNombreUsuario.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(14, 196);
-            this.lblNombreUsuario.Name = "lblNombreUsuario";
-            this.lblNombreUsuario.Size = new System.Drawing.Size(180, 24);
-            this.lblNombreUsuario.TabIndex = 4;
-            this.lblNombreUsuario.Text = "Nombre de Usuario:";
-            // 
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
@@ -283,14 +269,6 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
-            // cmbPais
-            // 
-            this.cmbPais.FormattingEnabled = true;
-            this.cmbPais.Location = new System.Drawing.Point(84, 246);
-            this.cmbPais.Name = "cmbPais";
-            this.cmbPais.Size = new System.Drawing.Size(402, 24);
-            this.cmbPais.TabIndex = 20;
-            // 
             // FrmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,7 +296,6 @@
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.TextBox txtConfirmarCorreo;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
@@ -328,7 +305,6 @@
         private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.Label lblConfirmarCorreo;
         private System.Windows.Forms.Label lblCorreo;
-        private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCrearCuenta;

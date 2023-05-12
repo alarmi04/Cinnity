@@ -43,5 +43,10 @@ namespace Proyecto_Cinnity
             this.Hide();
             frm1.Show();
         }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

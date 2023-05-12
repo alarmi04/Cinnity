@@ -30,16 +30,16 @@ namespace Proyecto_Cinnity
         private void InitializeComponent()
         {
             this.gbInfoPeli = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblFechaEstreno = new System.Windows.Forms.Label();
+            this.lblSinopsis = new System.Windows.Forms.Label();
+            this.lblDuracion = new System.Windows.Forms.Label();
+            this.lblReparto = new System.Windows.Forms.Label();
+            this.lblDirector = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.btnAñadirEntrada = new System.Windows.Forms.Button();
             this.lblSesionesDisponibles = new System.Windows.Forms.Label();
-            this.lblGenero = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblDirector = new System.Windows.Forms.Label();
-            this.lblReparto = new System.Windows.Forms.Label();
-            this.lblDuracion = new System.Windows.Forms.Label();
-            this.lblSinopsis = new System.Windows.Forms.Label();
-            this.lblFechaEstreno = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbSesion = new System.Windows.Forms.ComboBox();
             this.dttDiaEmision = new System.Windows.Forms.DateTimePicker();
@@ -65,37 +65,65 @@ namespace Proyecto_Cinnity
             this.gbInfoPeli.TabIndex = 0;
             this.gbInfoPeli.TabStop = false;
             // 
-            // btnAñadirEntrada
+            // textBox1
             // 
-            this.btnAñadirEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnAñadirEntrada.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAñadirEntrada.Location = new System.Drawing.Point(794, 745);
-            this.btnAñadirEntrada.Name = "btnAñadirEntrada";
-            this.btnAñadirEntrada.Size = new System.Drawing.Size(273, 62);
-            this.btnAñadirEntrada.TabIndex = 3;
-            this.btnAñadirEntrada.Text = "Añadir al carrito";
-            this.btnAñadirEntrada.UseVisualStyleBackColor = false;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.textBox1.Location = new System.Drawing.Point(43, 605);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(615, 142);
+            this.textBox1.TabIndex = 14;
             // 
-            // lblSesionesDisponibles
+            // lblFechaEstreno
             // 
-            this.lblSesionesDisponibles.AutoSize = true;
-            this.lblSesionesDisponibles.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.lblSesionesDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblSesionesDisponibles.Location = new System.Drawing.Point(815, 533);
-            this.lblSesionesDisponibles.Name = "lblSesionesDisponibles";
-            this.lblSesionesDisponibles.Size = new System.Drawing.Size(220, 24);
-            this.lblSesionesDisponibles.TabIndex = 4;
-            this.lblSesionesDisponibles.Text = "SESIONES DISPONIBLES:";
+            this.lblFechaEstreno.AutoSize = true;
+            this.lblFechaEstreno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblFechaEstreno.Location = new System.Drawing.Point(39, 502);
+            this.lblFechaEstreno.Name = "lblFechaEstreno";
+            this.lblFechaEstreno.Size = new System.Drawing.Size(159, 24);
+            this.lblFechaEstreno.TabIndex = 13;
+            this.lblFechaEstreno.Text = "Fecha de estreno:";
             // 
-            // lblGenero
+            // lblSinopsis
             // 
-            this.lblGenero.AutoSize = true;
-            this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblGenero.Location = new System.Drawing.Point(39, 134);
-            this.lblGenero.Name = "lblGenero";
-            this.lblGenero.Size = new System.Drawing.Size(77, 24);
-            this.lblGenero.TabIndex = 7;
-            this.lblGenero.Text = "Género:";
+            this.lblSinopsis.AutoSize = true;
+            this.lblSinopsis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblSinopsis.Location = new System.Drawing.Point(39, 569);
+            this.lblSinopsis.Name = "lblSinopsis";
+            this.lblSinopsis.Size = new System.Drawing.Size(84, 24);
+            this.lblSinopsis.TabIndex = 12;
+            this.lblSinopsis.Text = "Sinopsis:";
+            // 
+            // lblDuracion
+            // 
+            this.lblDuracion.AutoSize = true;
+            this.lblDuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblDuracion.Location = new System.Drawing.Point(39, 441);
+            this.lblDuracion.Name = "lblDuracion";
+            this.lblDuracion.Size = new System.Drawing.Size(93, 24);
+            this.lblDuracion.TabIndex = 11;
+            this.lblDuracion.Text = "Duración:";
+            // 
+            // lblReparto
+            // 
+            this.lblReparto.AutoSize = true;
+            this.lblReparto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblReparto.Location = new System.Drawing.Point(39, 311);
+            this.lblReparto.Name = "lblReparto";
+            this.lblReparto.Size = new System.Drawing.Size(84, 24);
+            this.lblReparto.TabIndex = 10;
+            this.lblReparto.Text = "Reparto:";
+            // 
+            // lblDirector
+            // 
+            this.lblDirector.AutoSize = true;
+            this.lblDirector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblDirector.Location = new System.Drawing.Point(39, 220);
+            this.lblDirector.Name = "lblDirector";
+            this.lblDirector.Size = new System.Drawing.Size(86, 24);
+            this.lblDirector.TabIndex = 9;
+            this.lblDirector.Text = "Director:";
             // 
             // label1
             // 
@@ -108,65 +136,38 @@ namespace Proyecto_Cinnity
             this.label1.TabIndex = 8;
             this.label1.Text = "(NOMBRE DE LA PELÍCULA)";
             // 
-            // lblDirector
+            // lblGenero
             // 
-            this.lblDirector.AutoSize = true;
-            this.lblDirector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblDirector.Location = new System.Drawing.Point(39, 220);
-            this.lblDirector.Name = "lblDirector";
-            this.lblDirector.Size = new System.Drawing.Size(86, 24);
-            this.lblDirector.TabIndex = 9;
-            this.lblDirector.Text = "Director:";
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblGenero.Location = new System.Drawing.Point(39, 134);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(77, 24);
+            this.lblGenero.TabIndex = 7;
+            this.lblGenero.Text = "Género:";
             // 
-            // lblReparto
+            // btnAñadirEntrada
             // 
-            this.lblReparto.AutoSize = true;
-            this.lblReparto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblReparto.Location = new System.Drawing.Point(39, 311);
-            this.lblReparto.Name = "lblReparto";
-            this.lblReparto.Size = new System.Drawing.Size(84, 24);
-            this.lblReparto.TabIndex = 10;
-            this.lblReparto.Text = "Reparto:";
+            this.btnAñadirEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnAñadirEntrada.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAñadirEntrada.Location = new System.Drawing.Point(794, 745);
+            this.btnAñadirEntrada.Name = "btnAñadirEntrada";
+            this.btnAñadirEntrada.Size = new System.Drawing.Size(273, 62);
+            this.btnAñadirEntrada.TabIndex = 3;
+            this.btnAñadirEntrada.Text = "Añadir al carrito";
+            this.btnAñadirEntrada.UseVisualStyleBackColor = false;
+            this.btnAñadirEntrada.Click += new System.EventHandler(this.btnAñadirEntrada_Click);
             // 
-            // lblDuracion
+            // lblSesionesDisponibles
             // 
-            this.lblDuracion.AutoSize = true;
-            this.lblDuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblDuracion.Location = new System.Drawing.Point(39, 441);
-            this.lblDuracion.Name = "lblDuracion";
-            this.lblDuracion.Size = new System.Drawing.Size(93, 24);
-            this.lblDuracion.TabIndex = 11;
-            this.lblDuracion.Text = "Duración:";
-            // 
-            // lblSinopsis
-            // 
-            this.lblSinopsis.AutoSize = true;
-            this.lblSinopsis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblSinopsis.Location = new System.Drawing.Point(39, 569);
-            this.lblSinopsis.Name = "lblSinopsis";
-            this.lblSinopsis.Size = new System.Drawing.Size(84, 24);
-            this.lblSinopsis.TabIndex = 12;
-            this.lblSinopsis.Text = "Sinopsis:";
-            // 
-            // lblFechaEstreno
-            // 
-            this.lblFechaEstreno.AutoSize = true;
-            this.lblFechaEstreno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblFechaEstreno.Location = new System.Drawing.Point(39, 502);
-            this.lblFechaEstreno.Name = "lblFechaEstreno";
-            this.lblFechaEstreno.Size = new System.Drawing.Size(159, 24);
-            this.lblFechaEstreno.TabIndex = 13;
-            this.lblFechaEstreno.Text = "Fecha de estreno:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.textBox1.Location = new System.Drawing.Point(43, 605);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(615, 142);
-            this.textBox1.TabIndex = 14;
+            this.lblSesionesDisponibles.AutoSize = true;
+            this.lblSesionesDisponibles.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSesionesDisponibles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblSesionesDisponibles.Location = new System.Drawing.Point(815, 533);
+            this.lblSesionesDisponibles.Name = "lblSesionesDisponibles";
+            this.lblSesionesDisponibles.Size = new System.Drawing.Size(220, 24);
+            this.lblSesionesDisponibles.TabIndex = 4;
+            this.lblSesionesDisponibles.Text = "SESIONES DISPONIBLES:";
             // 
             // pictureBox1
             // 
@@ -197,6 +198,7 @@ namespace Proyecto_Cinnity
             this.dttDiaEmision.Name = "dttDiaEmision";
             this.dttDiaEmision.Size = new System.Drawing.Size(144, 32);
             this.dttDiaEmision.TabIndex = 6;
+            this.dttDiaEmision.ValueChanged += new System.EventHandler(this.dttDiaEmision_ValueChanged);
             // 
             // FrmInformacionPelicula
             // 

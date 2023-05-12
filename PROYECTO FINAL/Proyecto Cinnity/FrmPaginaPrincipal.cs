@@ -21,6 +21,7 @@ namespace Proyecto_Cinnity
         private void FrmPaginaPrincipal_Load(object sender, EventArgs e)
         {
             clbFiltrar.Visible= false;
+            CargarPeliculas();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -39,7 +40,10 @@ namespace Proyecto_Cinnity
         {
             txtBuscar.Text = "";
         }
-
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Pelicula.BuscarPelicula(txtBuscar.Text);
+        }
         private void btnEntradas_Click(object sender, EventArgs e)
         {
             FrmGestionDeEntradas gestionDeEntradas = new FrmGestionDeEntradas();
@@ -72,5 +76,21 @@ namespace Proyecto_Cinnity
             this.Hide();
             frm1.Show();
         }
+
+        private void CargarPeliculas()
+        {
+            string seleccion = "Select * from Pelicula";
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();
+                dgvPeliculas.DataSource = Pelicula.CargarPeliculas(seleccion);
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }
+        }
+    }
     }
 }

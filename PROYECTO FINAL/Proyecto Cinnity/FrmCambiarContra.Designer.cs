@@ -134,6 +134,7 @@
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "ACEPTAR Y CAMBIAR CONTRASEÑA";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // FrmCambiarContra
             // 

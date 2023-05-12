@@ -47,9 +47,10 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblUsuario.Location = new System.Drawing.Point(169, 299);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(88, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(204, 23);
             this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "USUARIO:";
+            this.lblUsuario.Text = "CORREO ELECTRÓNICO:";
+            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // txtUsuario
             // 
@@ -68,7 +69,7 @@
             this.lblContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblContra.Location = new System.Drawing.Point(169, 394);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(123, 22);
+            this.lblContra.Size = new System.Drawing.Size(130, 23);
             this.lblContra.TabIndex = 3;
             this.lblContra.Text = "CONTRASEÑA:";
             // 
@@ -89,7 +90,7 @@
             this.lblContraOlvidada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblContraOlvidada.Location = new System.Drawing.Point(236, 528);
             this.lblContraOlvidada.Name = "lblContraOlvidada";
-            this.lblContraOlvidada.Size = new System.Drawing.Size(242, 16);
+            this.lblContraOlvidada.Size = new System.Drawing.Size(253, 17);
             this.lblContraOlvidada.TabIndex = 6;
             this.lblContraOlvidada.Text = "¿HAS OLVIDADO  TU CONTRASEÑA?";
             this.lblContraOlvidada.Click += new System.EventHandler(this.lblContraOlvidada_Click);

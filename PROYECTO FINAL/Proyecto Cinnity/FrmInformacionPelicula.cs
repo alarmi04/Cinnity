@@ -16,5 +16,15 @@ namespace Proyecto_Cinnity
         {
             InitializeComponent();
         }
+
+        private void btnAñadirEntrada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dttDiaEmision_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
