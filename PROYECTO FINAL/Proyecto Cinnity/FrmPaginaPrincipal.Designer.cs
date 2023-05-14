@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaginaPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,8 @@
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
+            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
@@ -56,6 +59,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -177,7 +182,10 @@
             // 
             // dgvPeliculas
             // 
+            this.dgvPeliculas.AllowUserToOrderColumns = true;
+            this.dgvPeliculas.AutoGenerateColumns = false;
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.DataSource = this.peliculaBindingSource1;
             this.dgvPeliculas.Location = new System.Drawing.Point(20, 21);
             this.dgvPeliculas.Name = "dgvPeliculas";
             this.dgvPeliculas.RowHeadersWidth = 51;
@@ -257,6 +265,14 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
+            // peliculaBindingSource
+            // 
+            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
+            // 
+            // peliculaBindingSource1
+            // 
+            this.peliculaBindingSource1.DataSource = typeof(Proyecto_Cinnity.Pelicula);
+            // 
             // FrmPaginaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,6 +302,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +329,7 @@
         private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.DataGridView dgvPeliculas;
+        private System.Windows.Forms.BindingSource peliculaBindingSource1;
+        private System.Windows.Forms.BindingSource peliculaBindingSource;
     }
 }

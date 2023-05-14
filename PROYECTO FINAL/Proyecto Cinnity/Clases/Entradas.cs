@@ -13,7 +13,8 @@ namespace Proyecto_Cinnity
         private Usuario usuarioAsociado;
         private DateTime horaEmision;
         private DateTime fechaEmision;
-        
+
+        public Usuario Usuario { get; set; }
 
         public Entradas (double pre, DateTime fecha, Usuario usu, DateTime horaE, DateTime fechaE)
         {
@@ -22,8 +23,9 @@ namespace Proyecto_Cinnity
             usuarioAsociado = usu;
         }
 
-        //Añadir al carrito
-        //VenderEntrada
-        //BuscarEntrada
+        //BuscarEntrada ()
+
+
+
     }
 }
