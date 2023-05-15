@@ -23,6 +23,7 @@ namespace Proyecto_Cinnity
         private DateTime fechaEstreno;
         private Image caratula;
 
+        public Image Caratula { get { return caratula; } set { caratula = value; } }
         public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat)
         {
             nombre = nom;
@@ -35,7 +36,7 @@ namespace Proyecto_Cinnity
             caratula = carat;
         }
 
-        public Pelicula() {}
+        public Pelicula() { }
 
         //añadir pelicula
         //eliminar pelicula
@@ -80,55 +81,12 @@ namespace Proyecto_Cinnity
             retorno = comando.ExecuteNonQuery();
             return retorno;
         }
-        
+
 
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli="+nombre+";";
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)   
-            {
-
-                while (reader.Read())
-                {
-                    Pelicula peli = new Pelicula();
-                    peli.nombre = reader.GetString(2);
-                    peli.genero = reader.GetString(3);
-                    peli.director = reader.GetString(4);
-                    peli.reparto = reader.GetString(5);
-                    peli.duracionMinutos = reader.GetInt16(6);
-                    peli.sinopsis = reader.GetString(7);
-                    peli.fechaEstreno = reader.GetDateTime(8);
-
-                    byte[] img = (byte[])(reader["fotoCaratula"]);
-
-
-                    if (img != null)
-                    {
-                        try
-                        {
-                            System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
-                            peli.caratula = (Image)converter.ConvertFrom(img);
-                        }
-                        catch (ArgumentException ex)
-                        {
-                            MessageBox.Show("Error converting image: " + ex.Message);
-                        }
-                    }
-
-                    lista.Add(peli);
-                }
-            }
-            return lista;
-        }
-
-        public List<Pelicula> FiltrarPelicula(string genero)
-        {
-            List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + ";";
+            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli=" + nombre + ";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -168,36 +126,26 @@ namespace Proyecto_Cinnity
             return lista;
         }
 
-        public List<Pelicula> FiltrarPelicula(string genero, string genero2)
+        public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 +";" ;
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
-
                 while (reader.Read())
                 {
                     Pelicula peli = new Pelicula();
-                    peli.nombre = reader.GetString(2);
-                    peli.genero = reader.GetString(3);
-                    peli.director = reader.GetString(4);
-                    peli.reparto = reader.GetString(5);
-                    peli.duracionMinutos = reader.GetInt16(6);
-                    peli.sinopsis = reader.GetString(7);
-                    peli.fechaEstreno = reader.GetDateTime(8);
 
                     byte[] img = (byte[])(reader["fotoCaratula"]);
-
 
                     if (img != null)
                     {
                         try
                         {
                             System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
-                            peli.caratula = (Image)converter.ConvertFrom(img);
+                            peli.Caratula = (Image)converter.ConvertFrom(img);
                         }
                         catch (ArgumentException ex)
                         {
@@ -208,40 +156,31 @@ namespace Proyecto_Cinnity
                     lista.Add(peli);
                 }
             }
+
+            reader.Close();
             return lista;
         }
 
-
-        public List<Pelicula> FiltrarPelicula(string genero, string genero2, string genero3)
+        public static List<Pelicula> FiltrarPelicula(string genero, string consulta)
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 + "|| genero=" + genero3 + ";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
-
                 while (reader.Read())
                 {
                     Pelicula peli = new Pelicula();
-                    peli.nombre = reader.GetString(2);
-                    peli.genero = reader.GetString(3);
-                    peli.director = reader.GetString(4);
-                    peli.reparto = reader.GetString(5);
-                    peli.duracionMinutos = reader.GetInt16(6);
-                    peli.sinopsis = reader.GetString(7);
-                    peli.fechaEstreno = reader.GetDateTime(8);
 
                     byte[] img = (byte[])(reader["fotoCaratula"]);
-
 
                     if (img != null)
                     {
                         try
                         {
                             System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
-                            peli.caratula = (Image)converter.ConvertFrom(img);
+                            peli.Caratula = (Image)converter.ConvertFrom(img);
                         }
                         catch (ArgumentException ex)
                         {
@@ -252,33 +191,12 @@ namespace Proyecto_Cinnity
                     lista.Add(peli);
                 }
             }
+
+            reader.Close();
             return lista;
         }
-
-        public static List<Pelicula> CargarPeliculas(string consulta)
-        {
-            List<Pelicula> lista = new List<Pelicula>();
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                   /* Pelicula peli = new Pelicula(peli.nombre = reader.GetString(2),
-                    peli.genero = reader.GetString(3),
-                    peli.director = reader.GetString(4),
-                    peli.reparto = reader.GetString(5),
-                    peli.duracionMinutos = reader.GetInt16(6),
-                    peli.sinopsis = reader.GetString(7),
-                    peli.fechaEstreno = reader.GetDateTime(8));
-                    lista.Add(peli);*/
-                }
-            }
-            return lista;
-        }
-
-
     }
-
 }
+
+
+

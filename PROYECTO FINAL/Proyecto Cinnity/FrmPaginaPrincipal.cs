@@ -20,22 +20,10 @@ namespace Proyecto_Cinnity
 
         private void FrmPaginaPrincipal_Load(object sender, EventArgs e)
         {
-            clbFiltrar.Visible = false;
             CargarPeliculas();
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            if (clbFiltrar.Visible == true)
-            {
-                clbFiltrar.Visible = false;
-            }
-            else
-            {
-                clbFiltrar.Visible = true;
-            }
 
-        }
 
         private void txtBuscar_Click(object sender, EventArgs e)
         {
@@ -80,16 +68,114 @@ namespace Proyecto_Cinnity
 
         private void CargarPeliculas()
         {
-            string seleccion = "Select * from Pelicula";
             if (ConexionBD.Conexion != null)
             {
                 ConexionBD.AbrirConexion();
-                dgvPeliculas.DataSource = Pelicula.CargarPeliculas(seleccion);
-                ConexionBD.CerrarConexion();
+                List<Pelicula> peliculas = Pelicula.CargarPeliculas();
+
+                if (peliculas != null && peliculas.Count > 0)
+                {
+                    int x = 10, y = 10;
+                    int peliculaCount = 0;
+                    int maxPeliculasPorFila = 5;
+                    pnlPeliculas.Width = 600;
+                    pnlPeliculas.Height = 400;
+                    pnlPeliculas.Text = "";
+                    this.Controls.Add(pnlPeliculas);
+
+                    foreach (Pelicula pelicula in peliculas)
+                    {
+                        PictureBox imagen = new PictureBox();
+                        imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+                        imagen.BorderStyle = BorderStyle.FixedSingle;
+                        imagen.Image = pelicula.Caratula;
+                        imagen.Width = 100;
+                        imagen.Height = 150;
+                        imagen.Location = new Point(x, y);
+                        pnlPeliculas.Controls.Add(imagen);
+                        peliculaCount++;
+
+                        if (peliculaCount % maxPeliculasPorFila == 0)
+                        {
+                            x = 10;
+                            y = imagen.Bottom + 10;
+                        }
+                        else
+                        {
+                            x = imagen.Right + 10;
+                        }
+                    }
+                    ConexionBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("No existe conexión a la Base de datos");
+                }
+            }
+        }
+
+        private void cmbFiltrar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string genero = cmbFiltrar.SelectedItem.ToString();
+            string consulta = "";
+            if (genero == "Todas")
+            {
+                consulta = "SELECT * FROM Pelicula;";
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos");
+                consulta = "SELECT * FROM Pelicula WHERE genero='" + genero + "';";
+
+            }
+
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();
+
+                // Obtener la lista de películas del género seleccionado
+                List<Pelicula> peliculas = Pelicula.FiltrarPelicula(genero, consulta);
+
+                if (peliculas != null && peliculas.Count > 0)
+                {
+                    int x = 10, y = 10;
+                    int peliculaCount = 0;
+                    int maxPeliculasPorFila = 5;
+                    pnlPeliculas.Width = 600;
+                    pnlPeliculas.Height = 400;
+                    pnlPeliculas.Text = "";
+                    pnlPeliculas.Controls.Clear(); // Limpiar PictureBoxes anteriores
+                    pnlPeliculas.AutoScroll = true; // Habilitar el scroll del GroupBox
+                    this.Controls.Add(pnlPeliculas);
+
+                    foreach (Pelicula pelicula in peliculas)
+                    {
+                        PictureBox imagen = new PictureBox();
+                        imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+                        imagen.BorderStyle = BorderStyle.FixedSingle;
+                        imagen.Image = pelicula.Caratula;
+                        imagen.Width = 100;
+                        imagen.Height = 150;
+                        imagen.Location = new Point(x, y);
+                        pnlPeliculas.Controls.Add(imagen);
+                        peliculaCount++;
+
+                        if (peliculaCount % maxPeliculasPorFila == 0)
+                        {
+                            x = 10;
+                            y = imagen.Bottom + 10;
+                        }
+                        else
+                        {
+                            x = imagen.Right + 10;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay películas del género seleccionado.");
+                }
+
+                ConexionBD.CerrarConexion();
             }
         }
     }
