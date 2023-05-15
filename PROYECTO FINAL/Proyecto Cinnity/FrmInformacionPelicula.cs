@@ -26,5 +26,15 @@ namespace Proyecto_Cinnity
         {
 
         }
+
+        private void FrmInformacionPelicula_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void CargarInformacion()
+        {
+           // lblGenero.Text += 
+        }
     }
 }

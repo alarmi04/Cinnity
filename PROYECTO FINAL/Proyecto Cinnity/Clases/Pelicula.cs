@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Proyecto_Cinnity
 {
@@ -24,6 +25,13 @@ namespace Proyecto_Cinnity
         private Image caratula;
 
         public Image Caratula { get { return caratula; } set { caratula = value; } }
+        public string Nombre { get { return nombre; } set { nombre = value; } }
+        public string Genero { get { return genero; } set { genero = value; } }
+        public string Director { get { return director; } set { director = value; } }
+        public string Reparto { get { return reparto; } set { reparto = value; } }
+        public int DuracionMinutos { get { return duracionMinutos; } set { duracionMinutos = value; } }
+        public string Sinopsis { get { return sinopsis; } set { sinopsis = value; } }
+        public DateTime FechaEstreno { get { return fechaEstreno; } set { fechaEstreno = value; } }
         public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat)
         {
             nombre = nom;
@@ -86,7 +94,7 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli=" + nombre + ";";
+            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli='" + nombre + "';";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -129,16 +137,9 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
-<<<<<<< HEAD
+
             MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
-=======
-<<<<<<< HEAD
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 + ";" ;
-=======
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 +";" ;
->>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
->>>>>>> 8e9a2911d10f8315ce8cff9f3eab52e79f47b74c
+
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)

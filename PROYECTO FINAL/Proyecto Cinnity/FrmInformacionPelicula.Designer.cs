@@ -132,7 +132,7 @@ namespace Proyecto_Cinnity
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.label1.Location = new System.Drawing.Point(106, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(465, 46);
+            this.label1.Size = new System.Drawing.Size(456, 45);
             this.label1.TabIndex = 8;
             this.label1.Text = "(NOMBRE DE LA PELÍCULA)";
             // 
@@ -214,6 +214,7 @@ namespace Proyecto_Cinnity
             this.Controls.Add(this.gbInfoPeli);
             this.Name = "FrmInformacionPelicula";
             this.Text = "FrmInformacionPelicula";
+            this.Load += new System.EventHandler(this.FrmInformacionPelicula_Load);
             this.gbInfoPeli.ResumeLayout(false);
             this.gbInfoPeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

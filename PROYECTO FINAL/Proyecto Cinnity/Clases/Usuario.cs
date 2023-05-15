@@ -35,11 +35,8 @@ namespace Proyecto_Cinnity
         {
             bool correcto = false;
             List<Usuario> lista = new List<Usuario>();
-<<<<<<< HEAD
             string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
-=======
-            string consulta = "SELECT * FROM Usuario WHERE";
->>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
+
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -47,9 +44,9 @@ namespace Proyecto_Cinnity
             {
                 correcto = true;
             }
-        }
+        
 
-            return correcto;
+              return correcto;
         }
 
         public int RegistrarUsuario(Usuario usu)
