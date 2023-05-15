@@ -14,7 +14,12 @@ namespace Proyecto_Cinnity
         private DateTime horaEmision;
         private DateTime fechaEmision;
 
-        public Usuario Usuario { get; set; }
+        public Usuario Usuario { get { return usuarioAsociado; } }
+        public double Precio { get { return precio; } }
+        public DateTime FechaCompra { get { return fechaCompra; } }
+        public DateTime HoraEmision { get { return horaEmision; } }
+        public DateTime FechaEmision { get { return fechaEmision; } }
+
 
         public Entradas (double pre, DateTime fecha, Usuario usu, DateTime horaE, DateTime fechaE)
         {

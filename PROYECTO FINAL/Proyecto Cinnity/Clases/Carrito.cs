@@ -6,40 +6,25 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Cinnity.Clases
 {
-    class Carrito
+    static class Carrito
     {
-        private Usuario usuAsociado;
-        private List<Entradas> listaEntradas;
-        
-        public Carrito(Usuario usu)
-        {
-            usuAsociado = usu;
-<<<<<<< HEAD
-            List<Entradas> lista = new List<Entradas>();
-=======
-            listaEntradas= new List<Entradas>();
->>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
-        }
+        static Usuario usuAsociado;
+        static List<Entradas> listaEntradas;
 
-        //Agregar Entrada
-        public void AnyadirEntrada(Entradas entrada)
+        static void AnyadirEntrada(Entradas entrada)
         {
             listaEntradas.Add(entrada);
         }
 
-        //Eliminar entrada
-        public void EliminarEntrada(Entradas entrada)
-        {
-            foreach (Entradas ent in listaEntradas)
-            {
-<<<<<<< HEAD
-                
-=======
-                //if ()
-                {
 
+        static void EliminarEntrada(Entradas entrada)
+        {
+            for (int i = 0; i < listaEntradas.Count; i++)
+            {
+                if (listaEntradas[i].FechaCompra == entrada.FechaCompra && listaEntradas[i].FechaEmision == entrada.FechaEmision && listaEntradas[i].HoraEmision == entrada.HoraEmision && listaEntradas[i].Precio == entrada.Precio)
+                {
+                    listaEntradas.RemoveAt(i);
                 }
->>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
             }
         }
     }
