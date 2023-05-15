@@ -127,7 +127,7 @@ namespace Proyecto_Cinnity
 
         public List<Pelicula> FiltrarPelicula(string genero)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
+            List<Pelicula> lista = new List<Pelicula>();
             string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + ";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -170,8 +170,8 @@ namespace Proyecto_Cinnity
 
         public List<Pelicula> FiltrarPelicula(string genero, string genero2)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 ";" ;
+            List<Pelicula> lista = new List<Pelicula>();
+            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 + ";" ;
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 

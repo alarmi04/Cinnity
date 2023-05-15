@@ -31,16 +31,21 @@ namespace Proyecto_Cinnity
             fechaNaci = fecha;
         }
 
-        public void IniciarSesion(string usuario, string contraseña)
+        public bool InicioSesionCorrecto(string correo, string contraseña)
         {
+            bool correcto = false;
             List<Usuario> lista = new List<Usuario>();
-            string consulta = "SELECT * FROM Usuario WHERE"
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
+                correcto = true;
             }
+
+            return correcto;
+        }
 
         public int RegistrarUsuario(Usuario usu)
         {
