@@ -8,17 +8,15 @@ namespace Proyecto_Cinnity.Clases
 {
     static class Carrito
     {
+        
         //static Usuario usuAsociado;
-        static List<Entradas> listaEntradas;
+        /*static List<Entradas> listaEntradas;
 
 
         static void AnyadirEntrada(Entradas entrada)
         {
             listaEntradas.Add(entrada);
         }
-
-
-
 
         static void EliminarEntrada(Entradas entrada)
         {
@@ -28,8 +26,7 @@ namespace Proyecto_Cinnity.Clases
                 {
                     listaEntradas.RemoveAt(i);
                 }
-
             }
-        }
+        }*/
     }
 }

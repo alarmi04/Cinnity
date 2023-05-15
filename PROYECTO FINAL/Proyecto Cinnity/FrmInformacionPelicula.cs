@@ -14,32 +14,36 @@ namespace Proyecto_Cinnity
     public partial class FrmInformacionPelicula : Form
     {
         private Entradas entradaEnviadaCarrito = null;
-
         //public Entradas EntradaEnviadaCarrito { get { return entradaEnviadaCarrito; } }
-        string nombre;
+        private string nombre;
+
         public FrmInformacionPelicula(string nombre)
         {
-            this.nombre = nombre;
             InitializeComponent();
+            this.nombre = nombre;
         }
 
         private void btnAñadirEntrada_Click(object sender, EventArgs e)
         {
+
+
             // Se recoge la entrada con el id mas alto.
+
+
+            // Creo una entrada para comprobar 
+            // Entradas entrada = new Entradas();
+
+            // Comprobar Si el ID de la entrada no existe y meter el resultado en una variable booleana
+            //entradaEnviadaCarrito.ID
+
+            // Comprobar el ID mas alto, coger el valor y sumarle 1 (almacenar este valor en una variable id)
             string consulta = "SELECT * FROM entrada WHERE entrada.id=(SELECT MAX(id) FROM entrada);";
 
             ConexionBD.AbrirConexion();
-            Entradas.BuscarEntrada(consulta);
-            //Entradas entrada = new Entradas();
+            //Entradas entrada = Entradas.BuscarEntrada(consulta);
+            ConexionBD.CerrarConexion();
 
-            // abrir conexion
-            //
-            //
-
-            // Comprobar Si el ID de la entrada no existe y meter el resultado en una variable booleana
-
-            // Comprobar el ID mas alto, coger el valor y sumarle 1 (almacenar este valor en una variable id)
-
+            //int id = entrada.ID;
             // cerrar conexion
 
             //entradaEnviadaCarrito = new Entradas(id(recogido de antes), precio, fechaCompra, horaEmision, fechaDeEmision);

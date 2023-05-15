@@ -12,7 +12,7 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmCarrito : Form
     {
-        //Entradas entradaRecibida = FrmInformacionPelicula.EntradaEnviadaCarrito;
+        Entradas entradaRecibida;
 
         public FrmCarrito()
         {

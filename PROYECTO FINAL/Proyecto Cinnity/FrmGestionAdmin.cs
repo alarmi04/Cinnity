@@ -47,9 +47,9 @@ namespace Proyecto_Cinnity
             string genero = txtGenero.Text;
             string director = txtDirector.Text;
             string reparto = txtReparto.Text;
-            int duracionMinutos = (int)numericUpDown1.Value;
+            int duracionMinutos = (int)nudDuracion.Value;
             string sinopsis = txtSinopsis.Text;
-            DateTime fechaEstreno = dateTimePicker1.Value;
+            DateTime fechaEstreno = dtpFechaEstreno.Value;
             Image caratula = pictureBox1.Image;
 
             Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);

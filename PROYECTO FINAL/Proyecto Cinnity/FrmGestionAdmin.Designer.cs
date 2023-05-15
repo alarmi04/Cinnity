@@ -30,9 +30,9 @@ namespace Proyecto_Cinnity
         private void InitializeComponent()
         {
             this.gbInfoPeli = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
+            this.lblMin = new System.Windows.Forms.Label();
+            this.nudDuracion = new System.Windows.Forms.NumericUpDown();
             this.txtDirector = new System.Windows.Forms.TextBox();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtTitulo = new System.Windows.Forms.TextBox();
@@ -56,7 +56,7 @@ namespace Proyecto_Cinnity
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.gbInfoPeli.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,9 +66,9 @@ namespace Proyecto_Cinnity
             // gbInfoPeli
             // 
             this.gbInfoPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.gbInfoPeli.Controls.Add(this.dateTimePicker1);
-            this.gbInfoPeli.Controls.Add(this.label1);
-            this.gbInfoPeli.Controls.Add(this.numericUpDown1);
+            this.gbInfoPeli.Controls.Add(this.dtpFechaEstreno);
+            this.gbInfoPeli.Controls.Add(this.lblMin);
+            this.gbInfoPeli.Controls.Add(this.nudDuracion);
             this.gbInfoPeli.Controls.Add(this.txtDirector);
             this.gbInfoPeli.Controls.Add(this.txtGenero);
             this.gbInfoPeli.Controls.Add(this.txtTitulo);
@@ -88,35 +88,35 @@ namespace Proyecto_Cinnity
             this.gbInfoPeli.TabIndex = 1;
             this.gbInfoPeli.TabStop = false;
             // 
-            // dateTimePicker1
+            // dtpFechaEstreno
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 496);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(380, 32);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(230, 496);
+            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
+            this.dtpFechaEstreno.Size = new System.Drawing.Size(380, 32);
+            this.dtpFechaEstreno.TabIndex = 2;
             // 
-            // label1
+            // lblMin
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(304, 441);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 24);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "min.";
+            this.lblMin.AutoSize = true;
+            this.lblMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblMin.Location = new System.Drawing.Point(304, 441);
+            this.lblMin.Name = "lblMin";
+            this.lblMin.Size = new System.Drawing.Size(48, 24);
+            this.lblMin.TabIndex = 21;
+            this.lblMin.Text = "min.";
             // 
-            // numericUpDown1
+            // nudDuracion
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(155, 439);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nudDuracion.Location = new System.Drawing.Point(155, 439);
+            this.nudDuracion.Maximum = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 32);
-            this.numericUpDown1.TabIndex = 20;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudDuracion.Name = "nudDuracion";
+            this.nudDuracion.Size = new System.Drawing.Size(120, 32);
+            this.nudDuracion.TabIndex = 20;
+            this.nudDuracion.Value = new decimal(new int[] {
             100,
             0,
             0,
@@ -362,7 +362,7 @@ namespace Proyecto_Cinnity
             this.Text = "FrmGestionAdmin";
             this.gbInfoPeli.ResumeLayout(false);
             this.gbInfoPeli.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -374,9 +374,9 @@ namespace Proyecto_Cinnity
         #endregion
 
         private System.Windows.Forms.GroupBox gbInfoPeli;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.DateTimePicker dtpFechaEstreno;
+        private System.Windows.Forms.Label lblMin;
+        private System.Windows.Forms.NumericUpDown nudDuracion;
         private System.Windows.Forms.TextBox txtDirector;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtTitulo;

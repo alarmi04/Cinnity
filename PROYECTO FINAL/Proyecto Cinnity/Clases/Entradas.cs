@@ -9,50 +9,69 @@ namespace Proyecto_Cinnity
 {
     class Entradas
     {
+        /* private double precio;
+         private DateTime fechaCompra;
+         private string horaEmision;
+         private DateTime fechaEmision;
 
-        private int id;
-        private double precio;
-        private DateTime fechaCompra;
-        private string horaEmision;
-        private DateTime fechaEmision;
-        private int cantidad; // Vale por "x" entradas.
+         public double Precio { get { return precio; } }
+         public DateTime FechaCompra { get { return fechaCompra; } }
+         public string HoraEmision { get { return horaEmision; } }
+         public DateTime FechaEmision { get { return fechaEmision; } }
 
-        public int ID { get { return id; } }
-        public double Precio { get { return precio; } }
-        public DateTime FechaCompra { get { return fechaCompra; } }
-        public string HoraEmision { get { return horaEmision; } }
-        public DateTime FechaEmision { get { return fechaEmision; } }
-        public int Cantidad { get { return id; } set { cantidad = value; } }
+         public Entradas(int id, double pre, DateTime fecha, string horaE, DateTime fechaE)
+         {
 
-        public Entradas(int id, double pre, DateTime fecha, string horaE, DateTime fechaE, int cant)
-        {
-            this.id = id;
-            precio = pre;
-            fechaCompra = fecha;
-            horaEmision = horaE;
-            fechaEmision = fechaE;
-            cantidad = cant;
-        }
+             precio = pre;
+             fechaCompra = fecha;
+             horaEmision = horaE;
+             fechaEmision = fechaE;
+         }
 
-        //BuscarEntrada ()
-        public static Entradas BuscarEntrada(string consulta)
-        {
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-            MySqlDataReader reader = comando.ExecuteReader();
+         //BuscarEntrada ()
+         public static Entradas BuscarEntrada(string consulta)
+         {
+             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+             MySqlDataReader reader = comando.ExecuteReader();
 
-            if (reader.HasRows)
-            {
-                reader.Read();
+             if (reader.HasRows)
+             {
+                 reader.Read();
 
-                Entradas entrada = new Entradas(reader.GetInt32(0), reader.GetDouble(1), Convert.ToDateTime(reader.GetDateTime(2)),
-                        reader.GetString(3), Convert.ToDateTime(reader.GetDateTime(4)), reader.GetInt16(5)
-                        );
-                return entrada;
-            }
+                 Entradas entrada = new Entradas(reader.GetInt32(0), reader.GetDouble(1), Convert.ToDateTime(reader.GetDateTime(2)),
+                       reader.GetString(3), Convert.ToDateTime(reader.GetDateTime(4))
+                         );
+                 return entrada;
+             }
 
-            return null;
-        }
+             return null;
+         }
 
+         public static List<Entradas> EntradasActivas()
+         {
+             int idUser = Usuario.RecogerID();
+             List<Entradas> listaActivas = new List<Entradas>();
 
+             if (idUser != -1)
+             {
+                 string consulta = "SELECT * from Entradas WHERE idUsuario = '" + idUser + "' AND fecha_emision > DATE(NOW());";
+                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                 MySqlDataReader reader = comando.ExecuteReader();
+
+                 if (reader.HasRows)
+                 {
+
+                     while (reader.Read())
+                     {
+                         Entradas ent = new Entradas(reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
+                         listaActivas.Add(ent);
+                     }
+                 }
+                 reader.Close();
+             }
+
+             return listaActivas;
+         }
+     }*/
     }
 }

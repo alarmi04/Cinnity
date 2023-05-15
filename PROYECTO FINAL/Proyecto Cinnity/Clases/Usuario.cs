@@ -76,6 +76,25 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        public static int RecogerID()
+        {
+            string consulta = "SELECT id from usuario WHERE nombre='" + nombre + "' AND correoElectronico = '" + correo + "';";
+            int id = -1;
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+
+                while (reader.Read())
+                {
+                    id = reader.GetInt32(0);
+                }
+            }
+            reader.Close();
+            return id;
+
+        }
 
         public static bool ClaveValidada(string clave1, string clave2)
         {

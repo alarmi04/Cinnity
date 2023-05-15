@@ -13,7 +13,8 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmPaginaPrincipal : Form
     {
-        string peliculaSeleccionada = "";
+
+        string nombrePeli;
         public FrmPaginaPrincipal()
         {
             InitializeComponent();
@@ -79,12 +80,11 @@ namespace Proyecto_Cinnity
                     pnlPeliculas.Height = 400;
                     pnlPeliculas.Text = "";
                     this.Controls.Add(pnlPeliculas);
-
                     foreach (Pelicula pelicula in peliculas)
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
-                        peliculaSeleccionada = pelicula.Nombre;
+                        imagen.Tag = pelicula.Nombre;
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -150,8 +150,8 @@ namespace Proyecto_Cinnity
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
-                        peliculaSeleccionada = pelicula.Nombre;
 
+                        imagen.Tag = pelicula.Nombre;
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -206,7 +206,7 @@ namespace Proyecto_Cinnity
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
-                        peliculaSeleccionada = pelicula.Nombre;
+                        imagen.Tag = pelicula.Nombre;
 
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
@@ -247,10 +247,17 @@ namespace Proyecto_Cinnity
 
         private void pictureBox_Click(object sender, EventArgs e)
         {
-            FrmInformacionPelicula frm1 = new FrmInformacionPelicula(peliculaSeleccionada);
-            this.Hide();
+            PictureBox pictureBox = (PictureBox)sender;
+            string nombrePelicula = pictureBox.Tag.ToString();
+
+            FrmInformacionPelicula frm1 = new FrmInformacionPelicula(nombrePelicula);
             frm1.Show();
         }
+
+
+
+
+
 
 
 
