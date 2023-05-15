@@ -138,7 +138,7 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(453, 28);
             this.txtCorreo.TabIndex = 16;
-            this.txtCorreo.TextChanged += new System.EventHandler(this.txtCorreo_TextChanged);
+         
             // 
             // txtApellidos
             // 

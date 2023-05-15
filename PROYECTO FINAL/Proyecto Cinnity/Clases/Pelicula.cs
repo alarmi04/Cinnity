@@ -51,7 +51,135 @@ namespace Proyecto_Cinnity
         //Busqueda por nombre
         //Busqueda por filtro
 
+        public static string BuscarInformacion(string asunto, string nombre)
+        {
+            string info = "";
+            string consulta = "";
+            if (asunto=="genero")
+            {
+                consulta = "SELECT genero from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
 
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("genero");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "director")
+            {
+                consulta = "SELECT director from Pelicula WHERE nombrePeli='" + nombre + "';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("director");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "reparto")
+            {
+                consulta = "SELECT reparto from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("reparto");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "nombre")
+            {
+                consulta = "SELECT nombrePeli from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("nombrePeli");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "duracion")
+            {
+                consulta = "SELECT duraccion from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("duraccion");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "sinopsis")
+            {
+                consulta = "SELECT sinopsis from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetString("sinopsis");
+                    }
+                }
+                reader.Close();
+
+            }
+            if (asunto == "fechaEstreno")
+            {
+                consulta = "SELECT fechaEstreno from Pelicula WHERE nombrePeli='"+nombre+"';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        info = reader.GetDateTime("fechaEstreno").ToString();
+                    }
+                }
+                reader.Close();
+
+            }
+            return info;
+        }
         public int AgregarPelicula(Pelicula pel)
         {
 
@@ -137,13 +265,9 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
-<<<<<<< HEAD
 
             MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
 
-=======
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
->>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)

@@ -30,13 +30,13 @@ namespace Proyecto_Cinnity
         private void InitializeComponent()
         {
             this.gbInfoPeli = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSinopsis = new System.Windows.Forms.TextBox();
             this.lblFechaEstreno = new System.Windows.Forms.Label();
             this.lblSinopsis = new System.Windows.Forms.Label();
             this.lblDuracion = new System.Windows.Forms.Label();
             this.lblReparto = new System.Windows.Forms.Label();
             this.lblDirector = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNombrePeli = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
             this.btnAñadirEntrada = new System.Windows.Forms.Button();
             this.lblSesionesDisponibles = new System.Windows.Forms.Label();
@@ -50,13 +50,13 @@ namespace Proyecto_Cinnity
             // gbInfoPeli
             // 
             this.gbInfoPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.gbInfoPeli.Controls.Add(this.textBox1);
+            this.gbInfoPeli.Controls.Add(this.txtSinopsis);
             this.gbInfoPeli.Controls.Add(this.lblFechaEstreno);
             this.gbInfoPeli.Controls.Add(this.lblSinopsis);
             this.gbInfoPeli.Controls.Add(this.lblDuracion);
             this.gbInfoPeli.Controls.Add(this.lblReparto);
             this.gbInfoPeli.Controls.Add(this.lblDirector);
-            this.gbInfoPeli.Controls.Add(this.label1);
+            this.gbInfoPeli.Controls.Add(this.lblNombrePeli);
             this.gbInfoPeli.Controls.Add(this.lblGenero);
             this.gbInfoPeli.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.gbInfoPeli.Location = new System.Drawing.Point(40, 31);
@@ -65,15 +65,15 @@ namespace Proyecto_Cinnity
             this.gbInfoPeli.TabIndex = 0;
             this.gbInfoPeli.TabStop = false;
             // 
-            // textBox1
+            // txtSinopsis
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.textBox1.Location = new System.Drawing.Point(43, 605);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(615, 142);
-            this.textBox1.TabIndex = 14;
+            this.txtSinopsis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.txtSinopsis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.txtSinopsis.Location = new System.Drawing.Point(43, 605);
+            this.txtSinopsis.Multiline = true;
+            this.txtSinopsis.Name = "txtSinopsis";
+            this.txtSinopsis.Size = new System.Drawing.Size(615, 142);
+            this.txtSinopsis.TabIndex = 14;
             // 
             // lblFechaEstreno
             // 
@@ -125,16 +125,16 @@ namespace Proyecto_Cinnity
             this.lblDirector.TabIndex = 9;
             this.lblDirector.Text = "Director:";
             // 
-            // label1
+            // lblNombrePeli
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.label1.Location = new System.Drawing.Point(106, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(456, 45);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "(NOMBRE DE LA PELÍCULA)";
+            this.lblNombrePeli.AutoSize = true;
+            this.lblNombrePeli.Font = new System.Drawing.Font("Candara", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePeli.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblNombrePeli.Location = new System.Drawing.Point(106, 28);
+            this.lblNombrePeli.Name = "lblNombrePeli";
+            this.lblNombrePeli.Size = new System.Drawing.Size(456, 45);
+            this.lblNombrePeli.TabIndex = 8;
+            this.lblNombrePeli.Text = "(NOMBRE DE LA PELÍCULA)";
             // 
             // lblGenero
             // 
@@ -234,9 +234,9 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Label lblDuracion;
         private System.Windows.Forms.Label lblReparto;
         private System.Windows.Forms.Label lblDirector;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNombrePeli;
         private System.Windows.Forms.Label lblGenero;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSinopsis;
         private System.Windows.Forms.ComboBox cmbSesion;
         private System.Windows.Forms.DateTimePicker dttDiaEmision;
     }

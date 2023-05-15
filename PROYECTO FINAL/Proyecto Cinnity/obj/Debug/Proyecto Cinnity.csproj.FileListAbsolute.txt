@@ -79,7 +79,6 @@ C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CopyComplete
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\ZstdNet.dll
-C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe.config
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe.config
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.pdb

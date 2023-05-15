@@ -17,18 +17,15 @@ namespace Proyecto_Cinnity
         static string contrasenya;
         static string pais;
         static DateTime fechaNaci;
-        static List<Entradas> entradas;       
+        static List<Entradas> entradas;
+
 
         public static bool InicioSesionCorrecto(string correo, string contraseña)
         {
-            bool correcto = false;
-<<<<<<< HEAD
-            List<Usuario> lista = new List<Usuario>();
-            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
 
-=======
-            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
->>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
+            bool correcto = false;
+            string consulta = "SELECT * FROM usuario WHERE correoElectronico LIKE '" + correo + "' && contrasenya LIKE '" + contraseña + "';";
+
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -36,20 +33,11 @@ namespace Proyecto_Cinnity
             {
                 correcto = true;
             }
-<<<<<<< HEAD
-        
-
-              return correcto;
-=======
-
             return correcto;
-
->>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
         }
 
 
-
-        public static int RegistrarUsuario()
+        public static int RegistrarUsuario(string nombre, string apellidos, string correo, string contrasenya, string pais, string fechaNaci)
         {
             int retorno;
 
@@ -59,18 +47,19 @@ namespace Proyecto_Cinnity
                 cmd.CommandText = "INSERT INTO Usuario (nombre, apellidos, correoElectronico, contrasenya, pais, fechaNaci) " +
                     "VALUES (@nombre, @apellidos, @correo, @clave,@pais,@fecha);";
 
-                cmd.Parameters.AddWithValue("@nombre", Usuario.nombre);
-                cmd.Parameters.AddWithValue("@apellidos", Usuario.apellidos);
-                cmd.Parameters.AddWithValue("@correo", Usuario.correo);
-                cmd.Parameters.AddWithValue("@clave", Usuario.contrasenya);
-                cmd.Parameters.AddWithValue("@pais", Usuario.pais);
-                cmd.Parameters.AddWithValue("@fecha", Usuario.fechaNaci);
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.Parameters.AddWithValue("@apellidos", apellidos);
+                cmd.Parameters.AddWithValue("@correo", correo);
+                cmd.Parameters.AddWithValue("@clave", contrasenya);
+                cmd.Parameters.AddWithValue("@pais", pais);
+                cmd.Parameters.AddWithValue("@fecha", fechaNaci);
 
                 retorno = cmd.ExecuteNonQuery();
             }
 
             return retorno;
         }
+
 
         public static bool ClaveValidada(string clave1, string clave2)
         {

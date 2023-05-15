@@ -13,6 +13,7 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmPaginaPrincipal : Form
     {
+        string peliculaSeleccionada = "";
         public FrmPaginaPrincipal()
         {
             InitializeComponent();
@@ -83,7 +84,7 @@ namespace Proyecto_Cinnity
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
-
+                        peliculaSeleccionada = pelicula.Nombre;
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -149,6 +150,7 @@ namespace Proyecto_Cinnity
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
+                        peliculaSeleccionada = pelicula.Nombre;
 
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
@@ -204,6 +206,8 @@ namespace Proyecto_Cinnity
                     {
                         PictureBox imagen = new PictureBox();
                         imagen.Click += new EventHandler(pictureBox_Click);
+                        peliculaSeleccionada = pelicula.Nombre;
+
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -243,7 +247,7 @@ namespace Proyecto_Cinnity
 
         private void pictureBox_Click(object sender, EventArgs e)
         {
-            FrmInformacionPelicula frm1 = new FrmInformacionPelicula();
+            FrmInformacionPelicula frm1 = new FrmInformacionPelicula(peliculaSeleccionada);
             this.Hide();
             frm1.Show();
         }
