@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Cinnity
 {
-    class ConexionBD
+    static class ConexionBD
     {
         private static MySqlConnection instancia = null;
         private static readonly object padlock = new object();
 
-        private ConexionBD() { }
 
         public static MySqlConnection Conexion
         {

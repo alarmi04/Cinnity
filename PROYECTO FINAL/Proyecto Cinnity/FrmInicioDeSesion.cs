@@ -32,9 +32,15 @@ namespace Proyecto_Cinnity
                     if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
                     {
                         FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+<<<<<<< HEAD
                         this.Hide();
                         frm1.Show();
                         ConexionBD.CerrarConexion();
+=======
+                        ConexionBD.CerrarConexion();
+                        this.Hide();
+                        frm1.Show();
+>>>>>>> b9f58cf8681e066b802d5e8a0945318d54cda36a
                     }
                     else
                     {
