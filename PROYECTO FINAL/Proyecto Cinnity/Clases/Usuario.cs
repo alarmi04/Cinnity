@@ -9,34 +9,26 @@ using Mysqlx.Connection;
 
 namespace Proyecto_Cinnity
 {
-    class Usuario
+    static class Usuario
     {
-        private string nombre;
-        private string apellidos;
-        private string correo;
-        private string contrasenya;
-        private string pais;
-        private DateTime fechaNaci;
-        private List<Entradas> entradas;
+        static string nombre;
+        static string apellidos;
+        static string correo;
+        static string contrasenya;
+        static string pais;
+        static DateTime fechaNaci;
+        static List<Entradas> entradas;       
 
-        public List<Entradas> Entradas { get { return entradas; } set { entradas = value; } }
-
-        public Usuario(string nom, string ape, string corr, string clave, string pa, DateTime fecha)
-        {
-            nombre = nom;
-            apellidos = ape;
-            correo = corr;
-            contrasenya = clave;
-            pais = pa;
-            fechaNaci = fecha;
-        }
-
-        public bool InicioSesionCorrecto(string correo, string contraseña)
+        public static bool InicioSesionCorrecto(string correo, string contraseña)
         {
             bool correcto = false;
+<<<<<<< HEAD
             List<Usuario> lista = new List<Usuario>();
             string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
 
+=======
+            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -44,12 +36,20 @@ namespace Proyecto_Cinnity
             {
                 correcto = true;
             }
+<<<<<<< HEAD
         
 
               return correcto;
+=======
+
+            return correcto;
+
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
         }
 
-        public int RegistrarUsuario(Usuario usu)
+
+
+        public static int RegistrarUsuario()
         {
             int retorno;
 
@@ -59,12 +59,12 @@ namespace Proyecto_Cinnity
                 cmd.CommandText = "INSERT INTO Usuario (nombre, apellidos, correoElectronico, contrasenya, pais, fechaNaci) " +
                     "VALUES (@nombre, @apellidos, @correo, @clave,@pais,@fecha);";
 
-                cmd.Parameters.AddWithValue("@nombre", usu.nombre);
-                cmd.Parameters.AddWithValue("@apellidos", usu.apellidos);
-                cmd.Parameters.AddWithValue("@correo", usu.correo);
-                cmd.Parameters.AddWithValue("@clave", usu.contrasenya);
-                cmd.Parameters.AddWithValue("@pais", usu.pais);
-                cmd.Parameters.AddWithValue("@fecha", usu.fechaNaci);
+                cmd.Parameters.AddWithValue("@nombre", Usuario.nombre);
+                cmd.Parameters.AddWithValue("@apellidos", Usuario.apellidos);
+                cmd.Parameters.AddWithValue("@correo", Usuario.correo);
+                cmd.Parameters.AddWithValue("@clave", Usuario.contrasenya);
+                cmd.Parameters.AddWithValue("@pais", Usuario.pais);
+                cmd.Parameters.AddWithValue("@fecha", Usuario.fechaNaci);
 
                 retorno = cmd.ExecuteNonQuery();
             }
@@ -72,17 +72,17 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
-        public bool ClaveValidada(string clave1, string clave2)
+        public static bool ClaveValidada(string clave1, string clave2)
         {
             return clave1 == clave2;
         }
 
-        public bool CorreoValidado(string correo1, string correo2)
+        public static bool CorreoValidado(string correo1, string correo2)
         {
             return correo1 == correo2;
         }
 
-        public int CambiarContraseña(Usuario usu, string contraNueva)
+        public static int CambiarContraseña(string contraNueva)
         {
             int retorno;
 
@@ -92,15 +92,13 @@ namespace Proyecto_Cinnity
                 cmd.CommandText = "UPDATE Usuario SET contrasenya={@contraNueva} WHERE contrasenya={@contraVieja};";
 
                 cmd.Parameters.AddWithValue("@contraNueva", contraNueva);
-                cmd.Parameters.AddWithValue("@contraVieja", usu.contrasenya);
+                cmd.Parameters.AddWithValue("@contraVieja", Usuario.contrasenya);
 
                 retorno = cmd.ExecuteNonQuery();
             }
 
             return retorno;
         }
-
-        //Buscar usuario
 
 
         //Comprar entrada (agregar una entrada en la lista del usuario tambien a la base de datos)

@@ -137,9 +137,13 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
+<<<<<<< HEAD
 
             MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
 
+=======
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)

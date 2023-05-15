@@ -24,9 +24,29 @@ namespace Proyecto_Cinnity
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
-            this.Hide();
-            frm1.Show();
+            try
+            {
+                ConexionBD.AbrirConexion();
+                if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
+                {
+                    FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+                    this.Hide();
+                    frm1.Show();
+                    ConexionBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario o contraseña incorrectos");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+            finally
+            {
+                ConexionBD.CerrarConexion();
+            }
 
         }
 
@@ -44,9 +64,5 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }
 
-        private void lblUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
