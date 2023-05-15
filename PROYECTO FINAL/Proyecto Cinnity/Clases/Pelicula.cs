@@ -84,7 +84,7 @@ namespace Proyecto_Cinnity
 
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
+            List<Pelicula> lista = new List<Pelicula>();
             string consulta = "SELECT * FROM Pelicula WHERE nombrePeli="+nombre+";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -127,7 +127,7 @@ namespace Proyecto_Cinnity
 
         public List<Pelicula> FiltrarPelicula(string genero)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
+            List<Pelicula> lista = new List<Pelicula>();
             string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + ";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -170,8 +170,8 @@ namespace Proyecto_Cinnity
 
         public List<Pelicula> FiltrarPelicula(string genero, string genero2)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
-            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 ";" ;
+            List<Pelicula> lista = new List<Pelicula>();
+            string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 +";" ;
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -214,7 +214,7 @@ namespace Proyecto_Cinnity
 
         public List<Pelicula> FiltrarPelicula(string genero, string genero2, string genero3)
         {
-            List<Pelicula> lista = new List<Pelicula>();.
+            List<Pelicula> lista = new List<Pelicula>();
             string consulta = "SELECT * FROM Pelicula WHERE genero=" + genero + "|| genero=" + genero2 + "|| genero=" + genero3 + ";";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -257,7 +257,7 @@ namespace Proyecto_Cinnity
 
         public static List<Pelicula> CargarPeliculas(string consulta)
         {
-            List<Pelicula> lista = new List<Peliculas>();
+            List<Pelicula> lista = new List<Pelicula>();
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -265,14 +265,14 @@ namespace Proyecto_Cinnity
             {
                 while (reader.Read())
                 {
-                    Pelicula peli = new Pelicula(peli.nombre = reader.GetString(2),
+                   /* Pelicula peli = new Pelicula(peli.nombre = reader.GetString(2),
                     peli.genero = reader.GetString(3),
                     peli.director = reader.GetString(4),
                     peli.reparto = reader.GetString(5),
                     peli.duracionMinutos = reader.GetInt16(6),
                     peli.sinopsis = reader.GetString(7),
                     peli.fechaEstreno = reader.GetDateTime(8));
-                    lista.Add(peli);
+                    lista.Add(peli);*/
                 }
             }
             return lista;

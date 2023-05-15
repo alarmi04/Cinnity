@@ -19,7 +19,7 @@ namespace Proyecto_Cinnity
         private DateTime fechaNaci;
         private List<Entradas> entradas;
 
-        public List<Entradas> Entradas { get { return entradas; } set { entradas }; }
+        public List<Entradas> Entradas { get { return entradas; } set { entradas = value; } }
 
         public Usuario(string nom, string ape, string corr, string clave, string pa, DateTime fecha)
         {
@@ -34,13 +34,14 @@ namespace Proyecto_Cinnity
         public void IniciarSesion(string usuario, string contraseña)
         {
             List<Usuario> lista = new List<Usuario>();
-            string consulta = "SELECT * FROM Usuario WHERE"
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            string consulta = "SELECT * FROM Usuario WHERE";
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)
             {
             }
+        }
 
         public int RegistrarUsuario(Usuario usu)
         {

@@ -20,7 +20,7 @@ namespace Proyecto_Cinnity
 
         private void FrmPaginaPrincipal_Load(object sender, EventArgs e)
         {
-            clbFiltrar.Visible= false;
+            clbFiltrar.Visible = false;
             CargarPeliculas();
         }
 
@@ -29,7 +29,8 @@ namespace Proyecto_Cinnity
             if (clbFiltrar.Visible == true)
             {
                 clbFiltrar.Visible = false;
-            } else
+            }
+            else
             {
                 clbFiltrar.Visible = true;
             }
@@ -53,21 +54,21 @@ namespace Proyecto_Cinnity
 
         private void btnCarrito_Click(object sender, EventArgs e)
         {
-            FrmCarrito frm1= new FrmCarrito();
+            FrmCarrito frm1 = new FrmCarrito();
             this.Hide();
             frm1.Show();
         }
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
-            FrmMiPerfil frm1= new FrmMiPerfil();
+            FrmMiPerfil frm1 = new FrmMiPerfil();
             this.Hide();
             frm1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
@@ -92,5 +93,5 @@ namespace Proyecto_Cinnity
             }
         }
     }
-    }
 }
+

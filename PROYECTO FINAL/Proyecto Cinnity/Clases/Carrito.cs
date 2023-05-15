@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Cinnity.Clases
 {
-    static class Carrito
+    class Carrito
     {
         private Usuario usuAsociado;
         private List<Entradas> listaEntradas;
@@ -14,7 +14,7 @@ namespace Proyecto_Cinnity.Clases
         public Carrito(Usuario usu)
         {
             usuAsociado = usu;
-            List<Entradas> = new List<Entradas>();
+            listaEntradas= new List<Entradas>();
         }
 
         //Agregar Entrada
@@ -28,7 +28,7 @@ namespace Proyecto_Cinnity.Clases
         {
             foreach (Entradas ent in listaEntradas)
             {
-                if ()
+                //if ()
                 {
 
                 }
