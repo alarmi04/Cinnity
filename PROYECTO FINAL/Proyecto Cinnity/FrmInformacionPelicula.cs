@@ -26,12 +26,15 @@ namespace Proyecto_Cinnity
         private void btnAñadirEntrada_Click(object sender, EventArgs e)
         {
             // Se recoge la entrada con el id mas alto.
-            //string consulta = "SELECT * FROM entrada WHERE entrada.id=(SELECT MAX(id) FROM entrada);";
+            string consulta = "SELECT * FROM entrada WHERE entrada.id=(SELECT MAX(id) FROM entrada);";
+
+            ConexionBD.AbrirConexion();
+            Entradas.BuscarEntrada(consulta);
             //Entradas entrada = new Entradas();
 
             // abrir conexion
-            //ConexionBD.AbrirConexion();
-            //ConexionBD.CerrarConexion();
+            //
+            //
 
             // Comprobar Si el ID de la entrada no existe y meter el resultado en una variable booleana
 
