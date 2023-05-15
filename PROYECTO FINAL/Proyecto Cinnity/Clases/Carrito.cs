@@ -14,7 +14,11 @@ namespace Proyecto_Cinnity.Clases
         public Carrito(Usuario usu)
         {
             usuAsociado = usu;
+<<<<<<< HEAD
+            List<Entradas> lista = new List<Entradas>();
+=======
             listaEntradas= new List<Entradas>();
+>>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
         }
 
         //Agregar Entrada
@@ -28,10 +32,14 @@ namespace Proyecto_Cinnity.Clases
         {
             foreach (Entradas ent in listaEntradas)
             {
+<<<<<<< HEAD
+                
+=======
                 //if ()
                 {
 
                 }
+>>>>>>> 7c0184c2bc2894d6804263fcb157e4370bb185ff
             }
         }
     }
