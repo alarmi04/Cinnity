@@ -26,17 +26,20 @@ namespace Proyecto_Cinnity
         {
             try
             {
-                ConexionBD.AbrirConexion();
-                if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
+                if (ConexionBD.Conexion != null)
                 {
-                    FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
-                    this.Hide();
-                    frm1.Show();
-                    ConexionBD.CerrarConexion();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña incorrectos");
+                    ConexionBD.AbrirConexion();
+                    if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
+                    {
+                        FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+                        ConexionBD.CerrarConexion();
+                        this.Hide();
+                        frm1.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos");
+                    }
                 }
             }
             catch (Exception ex)

@@ -21,15 +21,18 @@ namespace Proyecto_Cinnity
         {
             try
             {
-                ConexionBD.AbrirConexion();
-
-                if (Usuario.ClaveValidada(txtNuevaContra.Text, txtConfirmaContra.Text))
+                if (ConexionBD.Conexion != null)
                 {
-                    Usuario.CambiarContraseña(txtConfirmaContra.Text);
-                    FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
-                    this.Hide();
-                    frm1.Show();
-                    ConexionBD.CerrarConexion();
+                    ConexionBD.AbrirConexion();
+
+                    if (Usuario.ClaveValidada(txtNuevaContra.Text, txtConfirmaContra.Text))
+                    {
+                        Usuario.CambiarContraseña(txtConfirmaContra.Text);
+                        FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
+                        ConexionBD.CerrarConexion();
+                        this.Hide();
+                        frm1.Show();
+                    }
                 }
             }
             catch (Exception ex)
