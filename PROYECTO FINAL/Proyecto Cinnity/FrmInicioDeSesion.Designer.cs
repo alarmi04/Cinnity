@@ -50,7 +50,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(204, 23);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "CORREO ELECTRÓNICO:";
-            this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
             // txtUsuario
             // 

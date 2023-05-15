@@ -8,7 +8,6 @@ namespace Proyecto_Cinnity.Clases
 {
     static class Carrito
     {
-        static Usuario usuAsociado;
         static List<Entradas> listaEntradas;
 
         static void AnyadirEntrada(Entradas entrada)

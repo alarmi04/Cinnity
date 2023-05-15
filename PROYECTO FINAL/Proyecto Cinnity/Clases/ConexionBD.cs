@@ -26,7 +26,7 @@ namespace Proyecto_Cinnity
                         instancia = new MySqlConnection();
                         string server = "server=127.0.0.1;";
                         string port = "port=3306;";
-                        string database = "database=Cinnity;";
+                        string database = "database=cinnity;";
                         string usuario = "uid=root;";
                         string password = "pwd=;";
                         string convert = "Convert Zero Datetime=True;";
