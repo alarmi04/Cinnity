@@ -22,7 +22,17 @@ namespace Proyecto_Cinnity
         public static bool InicioSesionCorrecto(string correo, string contraseña)
         {
             bool correcto = false;
+<<<<<<< HEAD
             string consulta = "SELECT * FROM usuario WHERE correoElectronico LIKE '" +correo+"' && contrasenya LIKE '"+contraseña+"';";
+=======
+<<<<<<< HEAD
+            List<Usuario> lista = new List<Usuario>();
+            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
+
+=======
+            string consulta = $"SELECT * FROM Usuario WHERE (correoElectronico LIKE {correo}) AND (contrasenya LIKE {contraseña});";
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
+>>>>>>> 24e5915d6d3d30e6cd6233feb4312cd66e36936e
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -30,9 +40,15 @@ namespace Proyecto_Cinnity
             {
                 correcto = true;
             }
+<<<<<<< HEAD
+        
+
+              return correcto;
+=======
 
             return correcto;
 
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
         }
 
 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Proyecto_Cinnity
 {
@@ -24,6 +25,13 @@ namespace Proyecto_Cinnity
         private Image caratula;
 
         public Image Caratula { get { return caratula; } set { caratula = value; } }
+        public string Nombre { get { return nombre; } set { nombre = value; } }
+        public string Genero { get { return genero; } set { genero = value; } }
+        public string Director { get { return director; } set { director = value; } }
+        public string Reparto { get { return reparto; } set { reparto = value; } }
+        public int DuracionMinutos { get { return duracionMinutos; } set { duracionMinutos = value; } }
+        public string Sinopsis { get { return sinopsis; } set { sinopsis = value; } }
+        public DateTime FechaEstreno { get { return fechaEstreno; } set { fechaEstreno = value; } }
         public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat)
         {
             nombre = nom;
@@ -86,7 +94,7 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli=" + nombre + ";";
+            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli='" + nombre + "';";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 
@@ -129,7 +137,13 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
+<<<<<<< HEAD
+
             MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
+
+=======
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM Pelicula", ConexionBD.Conexion);
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
             MySqlDataReader reader = comando.ExecuteReader();
 
             if (reader.HasRows)

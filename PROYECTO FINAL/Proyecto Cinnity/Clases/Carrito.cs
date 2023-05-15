@@ -8,13 +8,36 @@ namespace Proyecto_Cinnity.Clases
 {
     static class Carrito
     {
+<<<<<<< HEAD
+        private Usuario usuAsociado;
+        private List<Entradas> listaEntradas;
+        
+        public Carrito(Usuario usu)
+        {
+            usuAsociado = usu;
+            listaEntradas= new List<Entradas>();
+
+        }
+=======
         static List<Entradas> listaEntradas;
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
 
         static void AnyadirEntrada(Entradas entrada)
         {
             listaEntradas.Add(entrada);
         }
 
+<<<<<<< HEAD
+        //Eliminar entrada
+        public void EliminarEntrada(Entradas entrada)
+        {
+            foreach (Entradas ent in listaEntradas)
+            {
+
+                //if ()
+                {
+=======
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
 
         static void EliminarEntrada(Entradas entrada)
         {
@@ -24,6 +47,10 @@ namespace Proyecto_Cinnity.Clases
                 {
                     listaEntradas.RemoveAt(i);
                 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5d1339d58beb975a2f34734bb6831ab61536de75
             }
         }
     }

@@ -38,26 +38,24 @@
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.grbPeliculas = new System.Windows.Forms.GroupBox();
-            this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnCarrito = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
             this.ptbTwitter = new System.Windows.Forms.PictureBox();
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlPeliculas = new System.Windows.Forms.Panel();
             this.cmbFiltrar = new System.Windows.Forms.ComboBox();
+            this.pnlPeliculas = new System.Windows.Forms.Panel();
+            this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.grbPeliculas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +94,7 @@
             this.btnCerrarSesion.Text = "CERRAR SESIÓN";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnAyuda
             // 
@@ -142,32 +141,19 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(291, 129);
+            this.txtBuscar.Location = new System.Drawing.Point(338, 149);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(270, 32);
             this.txtBuscar.TabIndex = 6;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
-            // grbPeliculas
-            // 
-            this.grbPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.grbPeliculas.Controls.Add(this.pnlPeliculas);
-            this.grbPeliculas.Location = new System.Drawing.Point(291, 170);
-            this.grbPeliculas.Name = "grbPeliculas";
-            this.grbPeliculas.Size = new System.Drawing.Size(884, 513);
-            this.grbPeliculas.TabIndex = 13;
-            this.grbPeliculas.TabStop = false;
-            // 
-            // peliculaBindingSource1
-            // 
-            this.peliculaBindingSource1.DataSource = typeof(Proyecto_Cinnity.Pelicula);
             // 
             // btnCarrito
             // 
@@ -228,17 +214,6 @@
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
             // 
-            // peliculaBindingSource
-            // 
-            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
-            // 
-            // pnlPeliculas
-            // 
-            this.pnlPeliculas.Location = new System.Drawing.Point(31, 22);
-            this.pnlPeliculas.Name = "pnlPeliculas";
-            this.pnlPeliculas.Size = new System.Drawing.Size(200, 100);
-            this.pnlPeliculas.TabIndex = 0;
-            // 
             // cmbFiltrar
             // 
             this.cmbFiltrar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,12 +223,28 @@
             "Infantil",
             "Terror",
             "Todas"});
-            this.cmbFiltrar.Location = new System.Drawing.Point(567, 129);
+            this.cmbFiltrar.Location = new System.Drawing.Point(625, 149);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(121, 32);
             this.cmbFiltrar.TabIndex = 16;
             this.cmbFiltrar.Text = "Filtrar...";
             this.cmbFiltrar.SelectedIndexChanged += new System.EventHandler(this.cmbFiltrar_SelectedIndexChanged);
+            // 
+            // pnlPeliculas
+            // 
+            this.pnlPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.pnlPeliculas.Location = new System.Drawing.Point(338, 193);
+            this.pnlPeliculas.Name = "pnlPeliculas";
+            this.pnlPeliculas.Size = new System.Drawing.Size(200, 100);
+            this.pnlPeliculas.TabIndex = 0;
+            // 
+            // peliculaBindingSource1
+            // 
+            this.peliculaBindingSource1.DataSource = typeof(Proyecto_Cinnity.Pelicula);
+            // 
+            // peliculaBindingSource
+            // 
+            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
             // 
             // FrmPaginaPrincipal
             // 
@@ -261,10 +252,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
+            this.Controls.Add(this.pnlPeliculas);
             this.Controls.Add(this.cmbFiltrar);
             this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.btnIdioma);
-            this.Controls.Add(this.grbPeliculas);
             this.Controls.Add(this.ptbEmail);
             this.Controls.Add(this.ptbTwitter);
             this.Controls.Add(this.ptbFacebook);
@@ -277,12 +268,11 @@
             this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.grbPeliculas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -303,12 +293,11 @@
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.PictureBox ptbTwitter;
         private System.Windows.Forms.PictureBox ptbEmail;
-        private System.Windows.Forms.GroupBox grbPeliculas;
         private System.Windows.Forms.Button btnCarrito;
         private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.BindingSource peliculaBindingSource1;
         private System.Windows.Forms.BindingSource peliculaBindingSource;
-        private System.Windows.Forms.Panel pnlPeliculas;
         private System.Windows.Forms.ComboBox cmbFiltrar;
+        private System.Windows.Forms.Panel pnlPeliculas;
     }
 }

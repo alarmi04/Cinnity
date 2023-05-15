@@ -29,10 +29,6 @@ namespace Proyecto_Cinnity
         {
             txtBuscar.Text = "";
         }
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            Pelicula.BuscarPelicula(txtBuscar.Text);
-        }
         private void btnEntradas_Click(object sender, EventArgs e)
         {
             FrmGestionDeEntradas gestionDeEntradas = new FrmGestionDeEntradas();
@@ -86,6 +82,8 @@ namespace Proyecto_Cinnity
                     foreach (Pelicula pelicula in peliculas)
                     {
                         PictureBox imagen = new PictureBox();
+                        imagen.Click += new EventHandler(pictureBox_Click);
+
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -150,6 +148,8 @@ namespace Proyecto_Cinnity
                     foreach (Pelicula pelicula in peliculas)
                     {
                         PictureBox imagen = new PictureBox();
+                        imagen.Click += new EventHandler(pictureBox_Click);
+
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -178,6 +178,80 @@ namespace Proyecto_Cinnity
                 ConexionBD.CerrarConexion();
             }
         }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();
+
+                // Obtener la lista de películas del género seleccionado
+                List<Pelicula> peliculas = Pelicula.BuscarPelicula(txtBuscar.Text);
+
+                if (peliculas != null && peliculas.Count > 0)
+                {
+                    int x = 10, y = 10;
+                    int peliculaCount = 0;
+                    int maxPeliculasPorFila = 5;
+                    pnlPeliculas.Width = 600;
+                    pnlPeliculas.Height = 400;
+                    pnlPeliculas.Text = "";
+                    pnlPeliculas.Controls.Clear(); // Limpiar PictureBoxes anteriores
+                    pnlPeliculas.AutoScroll = true; // Habilitar el scroll del GroupBox
+                    this.Controls.Add(pnlPeliculas);
+
+                    foreach (Pelicula pelicula in peliculas)
+                    {
+                        PictureBox imagen = new PictureBox();
+                        imagen.Click += new EventHandler(pictureBox_Click);
+                        imagen.SizeMode = PictureBoxSizeMode.StretchImage;
+                        imagen.BorderStyle = BorderStyle.FixedSingle;
+                        imagen.Image = pelicula.Caratula;
+                        imagen.Width = 100;
+                        imagen.Height = 150;
+                        imagen.Location = new Point(x, y);
+                        pnlPeliculas.Controls.Add(imagen);
+                        peliculaCount++;
+
+                        if (peliculaCount % maxPeliculasPorFila == 0)
+                        {
+                            x = 10;
+                            y = imagen.Bottom + 10;
+                        }
+                        else
+                        {
+                            x = imagen.Right + 10;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay películas con el nombre seleccionado.");
+                }
+
+                ConexionBD.CerrarConexion();
+
+            }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            FrmInformacionPelicula frm1 = new FrmInformacionPelicula();
+            this.Hide();
+            frm1.Show();
+        }
+
+
+
+
+
     }
 }
 
