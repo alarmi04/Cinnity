@@ -27,8 +27,7 @@ namespace Proyecto_Cinnity
             if (ConexionBD.Conexion != null)
             {
                 ConexionBD.AbrirConexion();                
-                List<Entradas> lista = Entradas.EntradasActivas();
-                dgvEntradasActivas.DataSource = lista;
+                dgvEntradasActivas.DataSource = Entradas.EntradasActivas();
                 ConexionBD.CerrarConexion();
             }
             else

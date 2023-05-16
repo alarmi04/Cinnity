@@ -261,7 +261,7 @@ namespace Proyecto_Cinnity
         private void ptbInsta_Click(object sender, EventArgs e)
         {
             //abrir un link en el navegador al clickar la imagen.
-            System.Diagnostics.Process.Start("https://www.instagram.com/AppCinnity");
+            System.Diagnostics.Process.Start("https://www.instagram.com/appcinnity/");
         }
 
         private void ptbFacebook_Click(object sender, EventArgs e)

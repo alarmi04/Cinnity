@@ -19,6 +19,7 @@ namespace Proyecto_Cinnity
          public DateTime FechaCompra { get { return fechaCompra; } }
          public string HoraEmision { get { return horaEmision; } }
          public DateTime FechaEmision { get { return fechaEmision; } }
+        public string Titulo { get { return titulo; } set { titulo = value; } }
 
          public Entradas(string titulo, double pre, DateTime fecha, string horaE, DateTime fechaE)
          {
