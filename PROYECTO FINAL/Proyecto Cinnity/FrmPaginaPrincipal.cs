@@ -83,8 +83,9 @@ namespace Proyecto_Cinnity
                     foreach (Pelicula pelicula in peliculas)
                     {
                         PictureBox imagen = new PictureBox();
-                        imagen.Click += new EventHandler(pictureBox_Click);
                         imagen.Tag = pelicula.Nombre;
+                        imagen.Click += new EventHandler(pictureBox_Click);
+
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;
@@ -149,9 +150,10 @@ namespace Proyecto_Cinnity
                     foreach (Pelicula pelicula in peliculas)
                     {
                         PictureBox imagen = new PictureBox();
+                        imagen.Tag = pelicula.Nombre;
                         imagen.Click += new EventHandler(pictureBox_Click);
 
-                        imagen.Tag = pelicula.Nombre;
+
                         imagen.SizeMode = PictureBoxSizeMode.StretchImage;
                         imagen.BorderStyle = BorderStyle.FixedSingle;
                         imagen.Image = pelicula.Caratula;

@@ -144,6 +144,7 @@ namespace Proyecto_Cinnity
                 reader.Close();
 
             }
+
             if (asunto == "sinopsis")
             {
                 consulta = "SELECT sinopsis from Pelicula WHERE nombrePeli='"+nombre+"';";
@@ -179,6 +180,25 @@ namespace Proyecto_Cinnity
 
             }
             return info;
+        }
+
+        public static byte[] CargarCaratula(string nombre)
+        {
+            string consulta = "SELECT fotoCaratula from Pelicula WHERE nombrePeli='" + nombre + "';";
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            byte[] img = null;
+            if (reader.HasRows)
+            {
+
+                while (reader.Read())
+                {
+                   img = (byte[])(reader["fotoCaratula"]);
+
+                }
+            }
+            reader.Close();
+            return img;
         }
         public int AgregarPelicula(Pelicula pel)
         {
@@ -275,6 +295,14 @@ namespace Proyecto_Cinnity
                 while (reader.Read())
                 {
                     Pelicula peli = new Pelicula();
+                    peli.nombre = reader.GetString(2);
+                    peli.genero = reader.GetString(3);
+                    peli.director = reader.GetString(4);
+                    peli.reparto = reader.GetString(5);
+                    peli.duracionMinutos = reader.GetInt16(6);
+                    peli.sinopsis = reader.GetString(7);
+                    peli.fechaEstreno = reader.GetDateTime(8);
+
 
                     byte[] img = (byte[])(reader["fotoCaratula"]);
 
@@ -310,6 +338,13 @@ namespace Proyecto_Cinnity
                 while (reader.Read())
                 {
                     Pelicula peli = new Pelicula();
+                    peli.nombre = reader.GetString(2);
+                    peli.genero = reader.GetString(3);
+                    peli.director = reader.GetString(4);
+                    peli.reparto = reader.GetString(5);
+                    peli.duracionMinutos = reader.GetInt16(6);
+                    peli.sinopsis = reader.GetString(7);
+                    peli.fechaEstreno = reader.GetDateTime(8);
 
                     byte[] img = (byte[])(reader["fotoCaratula"]);
 

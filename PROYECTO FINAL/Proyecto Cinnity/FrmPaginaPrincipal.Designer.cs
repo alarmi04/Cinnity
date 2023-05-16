@@ -220,10 +220,10 @@
             this.cmbFiltrar.FormattingEnabled = true;
             this.cmbFiltrar.Items.AddRange(new object[] {
             "Accion",
-            "Infantil",
+            "Animacion",
             "Terror",
             "Todas"});
-            this.cmbFiltrar.Location = new System.Drawing.Point(625, 149);
+            this.cmbFiltrar.Location = new System.Drawing.Point(614, 149);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(121, 32);
             this.cmbFiltrar.TabIndex = 16;

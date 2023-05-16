@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Resources.ResXFileRef;
 
 namespace Proyecto_Cinnity
 {
@@ -65,17 +66,25 @@ namespace Proyecto_Cinnity
             if (ConexionBD.Conexion != null)
             {
                 ConexionBD.AbrirConexion();
-                lblGenero.Text += Pelicula.BuscarInformacion("genero",nombre);
-                lblDirector.Text += Pelicula.BuscarInformacion("director",nombre);
-                lblDuracion.Text += Pelicula.BuscarInformacion("duracion",nombre);
-                txtSinopsis.Text = Pelicula.BuscarInformacion("sinopsis",nombre);
-                lblNombrePeli.Text += Pelicula.BuscarInformacion("nombre",nombre);
-                lblFechaEstreno.Text += Pelicula.BuscarInformacion("fechaEstreno",nombre);
-                lblReparto.Text += Pelicula.BuscarInformacion("reparto",nombre);
+
+                lblGeneroInfo.Text =  Pelicula.BuscarInformacion("genero", nombre);
+                lblDirectorInfo.Text =  Pelicula.BuscarInformacion("director", nombre);
+                lblDuracionInfo.Text =  Pelicula.BuscarInformacion("duracion", nombre);
+                txtSinopsis.Text = Pelicula.BuscarInformacion("sinopsis", nombre);
+                txtNombrePeli.Text = Pelicula.BuscarInformacion("nombre", nombre);
+                lblFechaEstrenoInfo.Text =  Pelicula.BuscarInformacion("fechaEstreno", nombre);
+                txtReparto.Text = Pelicula.BuscarInformacion("reparto", nombre);
+
+                System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
+                ptbPeli.Image = (Image)converter.ConvertFrom(Pelicula.CargarCaratula(nombre));
+
                 ConexionBD.CerrarConexion();
+
+
+
             }
 
-            
+
         }
     }
 }
