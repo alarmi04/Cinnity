@@ -439,3 +439,64 @@ C:\Users\laclcr\Desktop\PROYECTO\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Deb
 C:\Users\laclcr\Desktop\PROYECTO\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CopyComplete
 C:\Users\laclcr\Desktop\PROYECTO\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe
 C:\Users\laclcr\Desktop\PROYECTO\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe.config
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.exe
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Proyecto Cinnity.pdb
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Google.Protobuf.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Buffers.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.IO.Pipelines.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Memory.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Runtime.Loader.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.AccessControl.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.Permissions.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Text.Json.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\ZstdNet.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Google.Protobuf.pdb
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Google.Protobuf.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\MySql.Data.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Buffers.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.IO.Pipelines.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Memory.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.AccessControl.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.Permissions.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Text.Json.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.AssemblyReference.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmAyuda.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarContra.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCarrito.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCrearCuenta.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmGestionAdmin.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmGestionDeEntradas.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmInformacionPelicula.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmInicioDeSesion.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmMiPerfil.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmPaginaPrincipal.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Properties.Resources.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.Resources.StringRecursosIdiomas.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.GenerateResource.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CoreCompileInputs.cache
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CopyComplete
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.exe
+C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb

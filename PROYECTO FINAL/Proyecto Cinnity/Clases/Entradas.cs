@@ -41,28 +41,34 @@ namespace Proyecto_Cinnity
 
         public Entradas() { }
 
-        public static int GenerarEntrada(double precio, DateTime fechaCompra, DateTime fechaEmi, string horaEmi, int idPeli, int idUsu)
+        public static void GenerarEntrada(List<Entradas> lista)
         {
-            int retorno;
+            int idUsu = Usuario.RecogerID();
 
-            using (var cmd = new MySqlCommand())
+            foreach (Entradas ent in lista)
             {
-                cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "INSERT INTO  entradas (precio, fecha_emision, hora_emision, fecha_compra, peliID, idUsuario) " +
-                    "VALUES (@precio, @fechaEmi, @horaEmi, @fechaCompra,@idPeli,@idUsu);";
+                int retorno;
+                int idPeli = Pelicula.RecogerID(ent.titulo);
 
-                cmd.Parameters.AddWithValue("@precio", precio);
-                cmd.Parameters.AddWithValue("@fechaEmi", fechaEmi);
-                cmd.Parameters.AddWithValue("@horaEmi", horaEmi);
-                cmd.Parameters.AddWithValue("@fechaCompra", fechaCompra);
-                cmd.Parameters.AddWithValue("@idPeli", idPeli);
-                cmd.Parameters.AddWithValue("@idUsu", idUsu);
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.Connection = ConexionBD.Conexion;
+                    cmd.CommandText = "INSERT INTO  entradas (precio, fecha_emision, hora_emision, fecha_compra, peliID, idUsuario) " +
+                        "VALUES (@precio, @fechaEmi, @horaEmi, @fechaCompra,@idPeli,@idUsu);";
 
-                retorno = cmd.ExecuteNonQuery();
+                    cmd.Parameters.AddWithValue("@precio", ent.precio);
+                    cmd.Parameters.AddWithValue("@fechaEmi", ent.fechaEmision);
+                    cmd.Parameters.AddWithValue("@horaEmi", ent.horaEmision);
+                    cmd.Parameters.AddWithValue("@fechaCompra", ent.FechaCompra);
+                    cmd.Parameters.AddWithValue("@idPeli", idPeli);
+                    cmd.Parameters.AddWithValue("@idUsu", idUsu);
+
+                    retorno = cmd.ExecuteNonQuery();
+                }
             }
 
-            return retorno;
         }
+
         public static Entradas BuscarEntrada(string consulta)
          {
              MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);

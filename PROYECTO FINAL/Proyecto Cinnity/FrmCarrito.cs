@@ -95,12 +95,29 @@ namespace Proyecto_Cinnity
 
         private void btnPagar_Click_1(object sender, EventArgs e)
         {
-            Entradas.GenerarEntrada(Carrito.listaCarrito);
-            Carrito.listaCarrito.Clear();
+            if (ConexionBD.Conexion != null)
+            {
+                try
+                {
+                    ConexionBD.AbrirConexion();
+                    Entradas.GenerarEntrada(Carrito.listaCarrito);
+                    ConexionBD.CerrarConexion();
+                    Carrito.listaCarrito.Clear();
 
-            dgvEntradas.DataSource = null;
-            ActualizarDataGrid();
-            MessageBox.Show("Compra realizada.");
+                    dgvEntradas.DataSource = null;
+                    ActualizarDataGrid();
+                    MessageBox.Show("Compra realizada.");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
+            }
 
         }
     }
