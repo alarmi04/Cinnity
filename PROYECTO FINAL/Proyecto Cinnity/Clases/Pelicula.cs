@@ -327,6 +327,26 @@ namespace Proyecto_Cinnity
             return lista;
         }
 
+        public static int RecogerID(string titulo)
+        {
+            string consulta = "SELECT idPelicula from Pelicula WHERE nombrePeli='" + titulo + "';";
+            int id = -1;
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+
+                while (reader.Read())
+                {
+                    id = reader.GetInt32(0);
+                }
+            }
+            reader.Close();
+            return id;
+
+        }
+
         public static List<Pelicula> FiltrarPelicula(string genero, string consulta)
         {
             List<Pelicula> lista = new List<Pelicula>();

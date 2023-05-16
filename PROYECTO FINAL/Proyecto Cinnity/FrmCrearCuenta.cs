@@ -27,18 +27,24 @@ namespace Proyecto_Cinnity
                     ConexionBD.AbrirConexion();
                     if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
                     {
-                        Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value.ToString());
+                        Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
                         ConexionBD.CerrarConexion();
+
+                        FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
+                        this.Hide();
+                        frmprincipal.Show();
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error: {ex.Message}");
                 }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
             }
-            FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
-            this.Hide();
-            frmprincipal.Show();
+
         }
 
 

@@ -12,9 +12,11 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmCambiarContra : Form
     {
-        public FrmCambiarContra()
+        string correoAsignado;
+        public FrmCambiarContra(string correoAsignado)
         {
             InitializeComponent();
+            this.correoAsignado = correoAsignado;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace Proyecto_Cinnity
 
                     if (Usuario.ClaveValidada(txtNuevaContra.Text, txtConfirmaContra.Text))
                     {
-                        Usuario.CambiarContraseña(txtConfirmaContra.Text);
+                        Usuario.CambiarContraseña(txtConfirmaContra.Text, txtContraActual.Text, correoAsignado);
                         FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
                         ConexionBD.CerrarConexion();
                         this.Hide();
@@ -38,11 +40,12 @@ namespace Proyecto_Cinnity
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
-            } finally
+            }
+            finally
             {
                 ConexionBD.CerrarConexion();
             }
-            
+
         }
     }
 }

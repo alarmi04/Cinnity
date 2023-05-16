@@ -14,8 +14,6 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmInformacionPelicula : Form
     {
-        private Entradas entradaEnviadaCarrito = null;
-        //public Entradas EntradaEnviadaCarrito { get { return entradaEnviadaCarrito; } }
         private string nombre;
 
         public FrmInformacionPelicula(string nombre)
@@ -26,40 +24,62 @@ namespace Proyecto_Cinnity
 
         private void btnAñadirEntrada_Click(object sender, EventArgs e)
         {
+            if (ConexionBD.Conexion != null)
+            {
+                try
+                {
+                    ConexionBD.AbrirConexion();
+                    int idUsu = Usuario.RecogerID();
+                    int idPeli = Pelicula.RecogerID(txtNombrePeli.Text);
 
+                    Entradas.GenerarEntrada(Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, dttDiaEmision.Value, cmbSesion.Text, idPeli, idUsu);                    
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
 
-            // Se recoge la entrada con el id mas alto.
-
-
-            // Creo una entrada para comprobar 
-            // Entradas entrada = new Entradas();
-
-            // Comprobar Si el ID de la entrada no existe y meter el resultado en una variable booleana
-            //entradaEnviadaCarrito.ID
-
-            // Comprobar el ID mas alto, coger el valor y sumarle 1 (almacenar este valor en una variable id)
-            string consulta = "SELECT * FROM entrada WHERE entrada.id=(SELECT MAX(id) FROM entrada);";
-
-            ConexionBD.AbrirConexion();
-            //Entradas entrada = Entradas.BuscarEntrada(consulta);
-            ConexionBD.CerrarConexion();
-
-            //int id = entrada.ID;
-            // cerrar conexion
-
-            //entradaEnviadaCarrito = new Entradas(id(recogido de antes), precio, fechaCompra, horaEmision, fechaDeEmision);
-        }
-
-        private void dttDiaEmision_ValueChanged(object sender, EventArgs e)
-        {
-
+            }
         }
 
         private void FrmInformacionPelicula_Load(object sender, EventArgs e)
         {
             CargarInformacion();
+
+            if (dttDiaEmision.Value.Day % 2 == 0)
+            {
+                string[] sesiones1 = { "17:00", "18:00", "19:00", "21:00" };
+                cmbSesion.Items.Clear();
+                cmbSesion.Items.AddRange(sesiones1);
+            }
+            else
+            {
+                string[] sesiones2 = { "16:00", "17:30", "19:40", "22:00" };
+                cmbSesion.Items.Clear();
+                cmbSesion.Items.AddRange(sesiones2);
+            }
         }
 
+        private void dttDiaEmision_ValueChanged(object sender, EventArgs e)
+        {
+            if (dttDiaEmision.Value.Day % 2 == 0)
+            {
+                string[] sesiones1 = { "17:00", "18:00", "19:00", "21:00" };
+                cmbSesion.Items.Clear();
+                cmbSesion.Items.AddRange(sesiones1);
+            }
+            else
+            {
+                string[] sesiones2 = { "16:00", "17:30", "19:40", "22:00" };
+                cmbSesion.Items.Clear();
+                cmbSesion.Items.AddRange(sesiones2);
+            }
+        }
 
         public void CargarInformacion()
         {
@@ -79,12 +99,7 @@ namespace Proyecto_Cinnity
                 ptbPeli.Image = (Image)converter.ConvertFrom(Pelicula.CargarCaratula(nombre));
 
                 ConexionBD.CerrarConexion();
-
-
-
             }
-
-
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Proyecto_Cinnity
 {
     class Entradas
     {
-        /* private double precio;
+         private double precio;
          private DateTime fechaCompra;
          private string horaEmision;
          private DateTime fechaEmision;
@@ -28,8 +28,31 @@ namespace Proyecto_Cinnity
              fechaEmision = fechaE;
          }
 
-         //BuscarEntrada ()
-         public static Entradas BuscarEntrada(string consulta)
+        public Entradas() { }
+
+        public static int GenerarEntrada(double precio, DateTime fechaCompra, DateTime fechaEmi, string horaEmi, int idPeli, int idUsu)
+        {
+            int retorno;
+
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.Connection = ConexionBD.Conexion;
+                cmd.CommandText = "INSERT INTO  entradas (precio, fecha_emision, hora_emision, fecha_compra, peliID, idUsuario) " +
+                    "VALUES (@precio, @fechaEmi, @horaEmi, @fechaCompra,@idPeli,@idUsu);";
+
+                cmd.Parameters.AddWithValue("@precio", precio);
+                cmd.Parameters.AddWithValue("@fechaEmi", fechaEmi);
+                cmd.Parameters.AddWithValue("@horaEmi", horaEmi);
+                cmd.Parameters.AddWithValue("@fechaCompra", fechaCompra);
+                cmd.Parameters.AddWithValue("@idPeli", idPeli);
+                cmd.Parameters.AddWithValue("@idUsu", idUsu);
+
+                retorno = cmd.ExecuteNonQuery();
+            }
+
+            return retorno;
+        }
+        public static Entradas BuscarEntrada(string consulta)
          {
              MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
              MySqlDataReader reader = comando.ExecuteReader();
@@ -72,6 +95,6 @@ namespace Proyecto_Cinnity
 
              return listaActivas;
          }
-     }*/
+ 
     }
 }

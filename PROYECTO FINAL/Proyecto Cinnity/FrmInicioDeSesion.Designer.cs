@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblContra = new System.Windows.Forms.Label();
@@ -37,7 +38,9 @@
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
+            this.errorInicioSesion = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -141,6 +144,10 @@
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
             // 
+            // errorInicioSesion
+            // 
+            this.errorInicioSesion.ContainerControl = this;
+            // 
             // FrmInicioDeSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,6 +167,7 @@
             this.Text = "Inicio De Sesión";
             this.Load += new System.EventHandler(this.FrmInicioDeSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +183,7 @@
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.Button btnIdioma;
+        private System.Windows.Forms.ErrorProvider errorInicioSesion;
     }
 }
 

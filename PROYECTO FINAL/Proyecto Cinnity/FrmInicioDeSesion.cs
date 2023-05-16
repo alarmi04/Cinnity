@@ -17,6 +17,54 @@ namespace Proyecto_Cinnity
             InitializeComponent();
         }
 
+        #region VALIDACIONES
+
+        private bool DatosValidos()
+        {
+            bool ok = true;
+
+            try
+            {
+                if (ConexionBD.Conexion != null)
+                {
+                    ConexionBD.AbrirConexion();
+
+                    errorInicioSesion.Clear();
+
+                    if (txtUsuario.Text == "")
+                    {
+                        ok = false;
+                        errorInicioSesion.SetError(txtUsuario, "Introduce Usuario");
+                    }
+
+                    if (txtContra.Text == "")
+                    {
+                        ok = false;
+                        errorInicioSesion.SetError(txtContra, "Introduce Contraseña");
+                    }
+
+                }
+                return ok;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+                return ok;
+
+            }
+
+            finally
+            {
+                ConexionBD.CerrarConexion();
+            }
+
+        }
+
+
+
+
+        #endregion
         private void FrmInicioDeSesion_Load(object sender, EventArgs e)
         {
 
@@ -24,36 +72,40 @@ namespace Proyecto_Cinnity
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            try
+            if (DatosValidos())
             {
-                if (ConexionBD.Conexion != null)
+                try
                 {
-                    ConexionBD.AbrirConexion();
-                    if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
+                    if (ConexionBD.Conexion != null)
                     {
-                        FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
-                        this.Hide();
-                        frm1.Show();
-                        ConexionBD.CerrarConexion();
+                        ConexionBD.AbrirConexion();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario o contraseña incorrectos");
+                        if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
+                        {
+                            ConexionBD.CerrarConexion();
+                            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+                            this.Hide();
+                            frm1.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario o contraseña incorrectos");
+                        }
+
+
                     }
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-            finally
-            {
-                ConexionBD.CerrarConexion();
-            }
-
         }
+
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
@@ -64,9 +116,16 @@ namespace Proyecto_Cinnity
 
         private void lblContraOlvidada_Click(object sender, EventArgs e)
         {
-            FrmCambiarContra frm1 = new FrmCambiarContra();
-            this.Hide();
-            frm1.Show();
+            if (txtUsuario.Text != "")
+            {
+                FrmCambiarContra frm1 = new FrmCambiarContra(txtUsuario.Text);
+                this.Hide();
+                frm1.Show();
+            }
+            else
+            {
+                MessageBox.Show("Indica tu correo electrónico para cambiar la contraseña.");
+            }
         }
 
     }
