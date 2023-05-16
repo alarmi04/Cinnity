@@ -23,6 +23,7 @@ namespace Proyecto_Cinnity
         private void FrmPaginaPrincipal_Load(object sender, EventArgs e)
         {
             CargarPeliculas();
+            pnlMantenimiento.Visible= false;
         }
 
 
@@ -285,6 +286,42 @@ namespace Proyecto_Cinnity
         {
             //al hacer click en la imagen que se abra el outlook para enviar un correo.
             System.Diagnostics.Process.Start("https://cinnitytest.000webhostapp.com/index.php");
+        }
+
+        private void btnMantenimiento_Click(object sender, EventArgs e)
+        {
+            if (pnlMantenimiento.Visible == true)
+            {
+                pnlMantenimiento.Visible = false;
+            } else
+            {
+                pnlMantenimiento.Visible = true;
+
+            }
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            if (ValidarContra())
+            {
+                FrmGestionAdmin frm1 = new FrmGestionAdmin();
+                this.Hide();
+                frm1.Show();
+            } else
+            {
+                MessageBox.Show("La contraseña no es correcta.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private bool ValidarContra()
+        {
+            bool correcto = false;
+            string clave = "EQUIPOAMARILLO";
+            if (txtContraAdmin.Text.ToUpper() == clave)
+            {
+                correcto = true;
+            }
+            return correcto;
         }
     }
 }

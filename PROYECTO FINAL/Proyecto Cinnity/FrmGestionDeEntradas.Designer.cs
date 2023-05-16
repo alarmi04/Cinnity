@@ -38,7 +38,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBuscarEntrada = new System.Windows.Forms.Button();
             this.lblIdEntrada = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,7 +96,7 @@
             this.dgvEntradasActivas.Name = "dgvEntradasActivas";
             this.dgvEntradasActivas.RowHeadersWidth = 51;
             this.dgvEntradasActivas.RowTemplate.Height = 24;
-            this.dgvEntradasActivas.Size = new System.Drawing.Size(544, 265);
+            this.dgvEntradasActivas.Size = new System.Drawing.Size(557, 265);
             this.dgvEntradasActivas.TabIndex = 1;
             // 
             // lblEntradasActivas
@@ -148,22 +148,23 @@
             // lblIdEntrada
             // 
             this.lblIdEntrada.AutoSize = true;
-            this.lblIdEntrada.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdEntrada.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdEntrada.ForeColor = System.Drawing.Color.White;
-            this.lblIdEntrada.Location = new System.Drawing.Point(38, 503);
+            this.lblIdEntrada.Location = new System.Drawing.Point(63, 511);
             this.lblIdEntrada.Name = "lblIdEntrada";
-            this.lblIdEntrada.Size = new System.Drawing.Size(165, 24);
+            this.lblIdEntrada.Size = new System.Drawing.Size(80, 24);
             this.lblIdEntrada.TabIndex = 3;
-            this.lblIdEntrada.Text = "TÍTULO PELICULA:";
+            this.lblIdEntrada.Text = "TÍTULO:";
             // 
-            // textBox1
+            // txtTitulo
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.textBox1.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(209, 503);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(389, 32);
-            this.textBox1.TabIndex = 4;
+            this.txtTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.txtTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTitulo.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitulo.Location = new System.Drawing.Point(160, 508);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(420, 32);
+            this.txtTitulo.TabIndex = 4;
             // 
             // FrmGestionDeEntradas
             // 
@@ -174,7 +175,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnVenderEntrada);
             this.Controls.Add(this.btnBuscarEntrada);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblIdEntrada);
             this.Controls.Add(this.lblEntradasActivas);
             this.Controls.Add(this.dgvEntradasActivas);
@@ -202,6 +203,6 @@
         private System.Windows.Forms.Button btnVolverPrincipal;
         private System.Windows.Forms.Button btnBuscarEntrada;
         private System.Windows.Forms.Label lblIdEntrada;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitulo;
     }
 }

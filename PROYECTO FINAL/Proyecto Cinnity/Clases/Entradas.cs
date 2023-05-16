@@ -9,6 +9,7 @@ namespace Proyecto_Cinnity
 {
     class Entradas
     {
+        private string titulo;
          private double precio;
          private DateTime fechaCompra;
          private string horaEmision;
@@ -19,14 +20,25 @@ namespace Proyecto_Cinnity
          public string HoraEmision { get { return horaEmision; } }
          public DateTime FechaEmision { get { return fechaEmision; } }
 
-         public Entradas(double pre, DateTime fecha, string horaE, DateTime fechaE)
+         public Entradas(string titulo, double pre, DateTime fecha, string horaE, DateTime fechaE)
          {
 
+            this.titulo = titulo;
              precio = pre;
              fechaCompra = fecha;
              horaEmision = horaE;
              fechaEmision = fechaE;
          }
+
+        public Entradas(double pre, DateTime fecha, string horaE, DateTime fechaE)
+        {
+
+            
+            precio = pre;
+            fechaCompra = fecha;
+            horaEmision = horaE;
+            fechaEmision = fechaE;
+        }
 
         public Entradas() { }
 
@@ -77,7 +89,7 @@ namespace Proyecto_Cinnity
 
              if (idUser != -1)
              {
-                 string consulta = "SELECT * from Entradas WHERE idUsuario = '" + idUser + "' AND fecha_emision > DATE(NOW());";
+                 string consulta = "SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
                  MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                  MySqlDataReader reader = comando.ExecuteReader();
 
@@ -86,7 +98,7 @@ namespace Proyecto_Cinnity
 
                      while (reader.Read())
                      {
-                         Entradas ent = new Entradas(reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
+                         Entradas ent = new Entradas(reader.GetString("titulo"),reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
                          listaActivas.Add(ent);
                      }
                  }

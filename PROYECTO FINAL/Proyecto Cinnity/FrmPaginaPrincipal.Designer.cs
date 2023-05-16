@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaginaPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnMantenimiento = new System.Windows.Forms.Button();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
@@ -46,6 +47,10 @@
             this.ptbInsta = new System.Windows.Forms.PictureBox();
             this.cmbFiltrar = new System.Windows.Forms.ComboBox();
             this.pnlPeliculas = new System.Windows.Forms.Panel();
+            this.pnlMantenimiento = new System.Windows.Forms.Panel();
+            this.btnAcceder = new System.Windows.Forms.Button();
+            this.txtContraAdmin = new System.Windows.Forms.TextBox();
+            this.lblContraAdmin = new System.Windows.Forms.Label();
             this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
@@ -55,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
+            this.pnlMantenimiento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +68,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(37)))));
+            this.pnlMenu.Controls.Add(this.btnMantenimiento);
             this.pnlMenu.Controls.Add(this.ptbLogo);
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnAyuda);
@@ -71,6 +78,20 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(294, 796);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnMantenimiento
+            // 
+            this.btnMantenimiento.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimiento.Image = global::Proyecto_Cinnity.Properties.Resources.configuraciones;
+            this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMantenimiento.Location = new System.Drawing.Point(5, 600);
+            this.btnMantenimiento.Name = "btnMantenimiento";
+            this.btnMantenimiento.Size = new System.Drawing.Size(289, 50);
+            this.btnMantenimiento.TabIndex = 6;
+            this.btnMantenimiento.Text = "MANTENIMIENTO";
+            this.btnMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMantenimiento.UseVisualStyleBackColor = true;
+            this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
             // 
             // ptbLogo
             // 
@@ -243,6 +264,49 @@
             this.pnlPeliculas.Size = new System.Drawing.Size(200, 100);
             this.pnlPeliculas.TabIndex = 0;
             // 
+            // pnlMantenimiento
+            // 
+            this.pnlMantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.pnlMantenimiento.Controls.Add(this.btnAcceder);
+            this.pnlMantenimiento.Controls.Add(this.txtContraAdmin);
+            this.pnlMantenimiento.Controls.Add(this.lblContraAdmin);
+            this.pnlMantenimiento.Location = new System.Drawing.Point(312, 12);
+            this.pnlMantenimiento.Name = "pnlMantenimiento";
+            this.pnlMantenimiento.Size = new System.Drawing.Size(613, 105);
+            this.pnlMantenimiento.TabIndex = 17;
+            // 
+            // btnAcceder
+            // 
+            this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceder.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnAcceder.Location = new System.Drawing.Point(479, 33);
+            this.btnAcceder.Name = "btnAcceder";
+            this.btnAcceder.Size = new System.Drawing.Size(114, 38);
+            this.btnAcceder.TabIndex = 2;
+            this.btnAcceder.Text = "Acceder";
+            this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
+            // 
+            // txtContraAdmin
+            // 
+            this.txtContraAdmin.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraAdmin.Location = new System.Drawing.Point(195, 39);
+            this.txtContraAdmin.Name = "txtContraAdmin";
+            this.txtContraAdmin.Size = new System.Drawing.Size(250, 32);
+            this.txtContraAdmin.TabIndex = 1;
+            // 
+            // lblContraAdmin
+            // 
+            this.lblContraAdmin.AutoSize = true;
+            this.lblContraAdmin.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraAdmin.Location = new System.Drawing.Point(16, 39);
+            this.lblContraAdmin.Name = "lblContraAdmin";
+            this.lblContraAdmin.Size = new System.Drawing.Size(155, 28);
+            this.lblContraAdmin.TabIndex = 0;
+            this.lblContraAdmin.Text = "CONTRASEÑA:";
+            // 
             // peliculaBindingSource1
             // 
             this.peliculaBindingSource1.DataSource = typeof(Proyecto_Cinnity.Pelicula);
@@ -257,6 +321,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
+            this.Controls.Add(this.pnlMantenimiento);
             this.Controls.Add(this.pnlPeliculas);
             this.Controls.Add(this.cmbFiltrar);
             this.Controls.Add(this.btnCarrito);
@@ -277,6 +342,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
+            this.pnlMantenimiento.ResumeLayout(false);
+            this.pnlMantenimiento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -304,5 +371,10 @@
         private System.Windows.Forms.BindingSource peliculaBindingSource;
         private System.Windows.Forms.ComboBox cmbFiltrar;
         private System.Windows.Forms.Panel pnlPeliculas;
+        private System.Windows.Forms.Button btnMantenimiento;
+        private System.Windows.Forms.Panel pnlMantenimiento;
+        private System.Windows.Forms.TextBox txtContraAdmin;
+        private System.Windows.Forms.Label lblContraAdmin;
+        private System.Windows.Forms.Button btnAcceder;
     }
 }
