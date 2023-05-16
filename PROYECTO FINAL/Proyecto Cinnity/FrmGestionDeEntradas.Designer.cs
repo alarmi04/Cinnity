@@ -34,11 +34,11 @@
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEntradasActivas = new System.Windows.Forms.Label();
-            this.lblIdEntrada = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBuscarEntrada = new System.Windows.Forms.Button();
             this.btnVenderEntrada = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBuscarEntrada = new System.Windows.Forms.Button();
+            this.lblIdEntrada = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,7 +96,7 @@
             this.dgvEntradasActivas.Name = "dgvEntradasActivas";
             this.dgvEntradasActivas.RowHeadersWidth = 51;
             this.dgvEntradasActivas.RowTemplate.Height = 24;
-            this.dgvEntradasActivas.Size = new System.Drawing.Size(560, 265);
+            this.dgvEntradasActivas.Size = new System.Drawing.Size(544, 265);
             this.dgvEntradasActivas.TabIndex = 1;
             // 
             // lblEntradasActivas
@@ -111,25 +111,27 @@
             this.lblEntradasActivas.TabIndex = 2;
             this.lblEntradasActivas.Text = "ENTRADAS ACTIVAS";
             // 
-            // lblIdEntrada
+            // btnVenderEntrada
             // 
-            this.lblIdEntrada.AutoSize = true;
-            this.lblIdEntrada.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdEntrada.ForeColor = System.Drawing.Color.White;
-            this.lblIdEntrada.Location = new System.Drawing.Point(38, 503);
-            this.lblIdEntrada.Name = "lblIdEntrada";
-            this.lblIdEntrada.Size = new System.Drawing.Size(102, 24);
-            this.lblIdEntrada.TabIndex = 3;
-            this.lblIdEntrada.Text = "ID Entrada:";
+            this.btnVenderEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnVenderEntrada.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVenderEntrada.Location = new System.Drawing.Point(331, 565);
+            this.btnVenderEntrada.Name = "btnVenderEntrada";
+            this.btnVenderEntrada.Size = new System.Drawing.Size(272, 84);
+            this.btnVenderEntrada.TabIndex = 6;
+            this.btnVenderEntrada.Text = "DEVOLVER ENTRADA";
+            this.btnVenderEntrada.UseVisualStyleBackColor = false;
+            this.btnVenderEntrada.Click += new System.EventHandler(this.btnVenderEntrada_Click);
             // 
-            // textBox1
+            // pictureBox2
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.textBox1.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 503);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(452, 32);
-            this.textBox1.TabIndex = 4;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(667, 93);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(408, 556);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // btnBuscarEntrada
             // 
@@ -143,27 +145,25 @@
             this.btnBuscarEntrada.UseVisualStyleBackColor = false;
             this.btnBuscarEntrada.Click += new System.EventHandler(this.btnBuscarEntrada_Click);
             // 
-            // btnVenderEntrada
+            // lblIdEntrada
             // 
-            this.btnVenderEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnVenderEntrada.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVenderEntrada.Location = new System.Drawing.Point(331, 565);
-            this.btnVenderEntrada.Name = "btnVenderEntrada";
-            this.btnVenderEntrada.Size = new System.Drawing.Size(272, 84);
-            this.btnVenderEntrada.TabIndex = 6;
-            this.btnVenderEntrada.Text = "VENDER ENTRADA";
-            this.btnVenderEntrada.UseVisualStyleBackColor = false;
-            this.btnVenderEntrada.Click += new System.EventHandler(this.btnVenderEntrada_Click);
+            this.lblIdEntrada.AutoSize = true;
+            this.lblIdEntrada.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdEntrada.ForeColor = System.Drawing.Color.White;
+            this.lblIdEntrada.Location = new System.Drawing.Point(38, 503);
+            this.lblIdEntrada.Name = "lblIdEntrada";
+            this.lblIdEntrada.Size = new System.Drawing.Size(165, 24);
+            this.lblIdEntrada.TabIndex = 3;
+            this.lblIdEntrada.Text = "TÍTULO PELICULA:";
             // 
-            // pictureBox2
+            // textBox1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(667, 93);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(408, 556);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.textBox1.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(209, 503);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(389, 32);
+            this.textBox1.TabIndex = 4;
             // 
             // FrmGestionDeEntradas
             // 
@@ -195,13 +195,13 @@
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.DataGridView dgvEntradasActivas;
         private System.Windows.Forms.Label lblEntradasActivas;
-        private System.Windows.Forms.Label lblIdEntrada;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnBuscarEntrada;
         private System.Windows.Forms.Button btnVenderEntrada;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnMiPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnVolverPrincipal;
+        private System.Windows.Forms.Button btnBuscarEntrada;
+        private System.Windows.Forms.Label lblIdEntrada;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

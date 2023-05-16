@@ -90,6 +90,7 @@ namespace Proyecto_Cinnity
             //    Lo que sea
             //    Usuario.EntradasCompradas.Add();  // El usuario deberia ser estatico.
             //}
+            
 
             dgvEntradas.DataSource = null;
         }

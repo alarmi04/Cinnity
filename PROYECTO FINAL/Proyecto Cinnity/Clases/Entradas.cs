@@ -19,7 +19,7 @@ namespace Proyecto_Cinnity
          public string HoraEmision { get { return horaEmision; } }
          public DateTime FechaEmision { get { return fechaEmision; } }
 
-         public Entradas(int id, double pre, DateTime fecha, string horaE, DateTime fechaE)
+         public Entradas(double pre, DateTime fecha, string horaE, DateTime fechaE)
          {
 
              precio = pre;
@@ -61,7 +61,7 @@ namespace Proyecto_Cinnity
              {
                  reader.Read();
 
-                 Entradas entrada = new Entradas(reader.GetInt32(0), reader.GetDouble(1), Convert.ToDateTime(reader.GetDateTime(2)),
+                 Entradas entrada = new Entradas( reader.GetDouble(1), Convert.ToDateTime(reader.GetDateTime(2)),
                        reader.GetString(3), Convert.ToDateTime(reader.GetDateTime(4))
                          );
                  return entrada;

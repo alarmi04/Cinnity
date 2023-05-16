@@ -19,7 +19,22 @@ namespace Proyecto_Cinnity
 
         private void FrmGestionDeEntradas_Load(object sender, EventArgs e)
         {
+            CargaListaEntradasActivas();
+        }
 
+        private void CargaListaEntradasActivas()
+        {
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();                
+                List<Entradas> lista = Entradas.EntradasActivas();
+                dgvEntradasActivas.DataSource = lista;
+                ConexionBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+            }
         }
 
         private void btnMiPerfil_Click(object sender, EventArgs e)

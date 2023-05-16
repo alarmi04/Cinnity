@@ -32,7 +32,12 @@ namespace Proyecto_Cinnity
                     int idUsu = Usuario.RecogerID();
                     int idPeli = Pelicula.RecogerID(txtNombrePeli.Text);
 
-                    Entradas.GenerarEntrada(Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, dttDiaEmision.Value, cmbSesion.Text, idPeli, idUsu);                    
+                    Entradas.GenerarEntrada(Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, dttDiaEmision.Value, cmbSesion.Text, idPeli, idUsu);
+                    ConexionBD.CerrarConexion();
+
+                    FrmPaginaPrincipal fr = new FrmPaginaPrincipal();
+                    this.Hide();
+                    fr.Show();
                     
                 }
                 catch (Exception ex)
