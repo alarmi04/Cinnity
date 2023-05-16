@@ -107,10 +107,11 @@ namespace Proyecto_Cinnity
                     }
                     ConexionBD.CerrarConexion();
                 }
-                else
-                {
-                    MessageBox.Show("No existe conexión a la Base de datos");
-                }
+                
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
             }
         }
 
@@ -256,15 +257,35 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }
 
+        private void ptbInsta_Click(object sender, EventArgs e)
+        {
+            //abrir un link en el navegador al clickar la imagen.
+            System.Diagnostics.Process.Start("https://www.instagram.com/AppCinnity");
+        }
 
+        private void ptbFacebook_Click(object sender, EventArgs e)
+        {
+            //abrir un link en el navegador al clickar la imagen.
+            System.Diagnostics.Process.Start("https://www.facebook.com/profile.php?id=100092501948457");
+        }
 
+        private void ptbTwitter_Click(object sender, EventArgs e)
+        {
+            //abrir un link en el navegador al clickar la imagen.
+            System.Diagnostics.Process.Start("https://www.twitter.com/CinnityApp");
+        }
 
+        private void ptbEmail_Click(object sender, EventArgs e)
+        {
+            //al hacer click en la imagen que se abra el outlook para enviar un correo.
+            System.Diagnostics.Process.Start("mailto:cinnityapp@gmail.com");
+        }
 
-
-
-
-
-
+        private void ptbLogo_Click(object sender, EventArgs e)
+        {
+            //al hacer click en la imagen que se abra el outlook para enviar un correo.
+            System.Diagnostics.Process.Start("https://cinnitytest.000webhostapp.com/index.php");
+        }
     }
 }
 

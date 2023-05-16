@@ -32,8 +32,6 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
-            this.lblUltimoAcceso = new System.Windows.Forms.Label();
-            this.lblPrimerAcceso = new System.Windows.Forms.Label();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.ptbFoto = new System.Windows.Forms.PictureBox();
@@ -86,39 +84,14 @@
             // pnlInformacionPerfil
             // 
             this.pnlInformacionPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacionPerfil.Controls.Add(this.lblUltimoAcceso);
-            this.pnlInformacionPerfil.Controls.Add(this.lblPrimerAcceso);
             this.pnlInformacionPerfil.Controls.Add(this.lblCorreo);
+            this.pnlInformacionPerfil.Controls.Add(this.lblCambiarContra);
             this.pnlInformacionPerfil.Controls.Add(this.lblNombreUsuario);
             this.pnlInformacionPerfil.Controls.Add(this.ptbFoto);
             this.pnlInformacionPerfil.Location = new System.Drawing.Point(48, 91);
             this.pnlInformacionPerfil.Name = "pnlInformacionPerfil";
             this.pnlInformacionPerfil.Size = new System.Drawing.Size(472, 549);
             this.pnlInformacionPerfil.TabIndex = 2;
-            // 
-            // lblUltimoAcceso
-            // 
-            this.lblUltimoAcceso.AutoSize = true;
-            this.lblUltimoAcceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblUltimoAcceso.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblUltimoAcceso.Location = new System.Drawing.Point(22, 479);
-            this.lblUltimoAcceso.Name = "lblUltimoAcceso";
-            this.lblUltimoAcceso.Size = new System.Drawing.Size(337, 24);
-            this.lblUltimoAcceso.TabIndex = 4;
-            this.lblUltimoAcceso.Text = "Última vez de acceso: 14 de marzo 2023";
-            // 
-            // lblPrimerAcceso
-            // 
-            this.lblPrimerAcceso.AutoSize = true;
-            this.lblPrimerAcceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblPrimerAcceso.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerAcceso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblPrimerAcceso.Location = new System.Drawing.Point(22, 440);
-            this.lblPrimerAcceso.Name = "lblPrimerAcceso";
-            this.lblPrimerAcceso.Size = new System.Drawing.Size(411, 24);
-            this.lblPrimerAcceso.TabIndex = 3;
-            this.lblPrimerAcceso.Text = "Primera vez de acceso: 21 de Septiembre de 2010";
             // 
             // lblCorreo
             // 
@@ -181,7 +154,7 @@
             this.lblEditarInformacion.AutoSize = true;
             this.lblEditarInformacion.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditarInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 489);
+            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 521);
             this.lblEditarInformacion.Name = "lblEditarInformacion";
             this.lblEditarInformacion.Size = new System.Drawing.Size(236, 35);
             this.lblEditarInformacion.TabIndex = 6;
@@ -192,7 +165,7 @@
             this.lblMetodosDePago.AutoSize = true;
             this.lblMetodosDePago.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMetodosDePago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblMetodosDePago.Location = new System.Drawing.Point(562, 549);
+            this.lblMetodosDePago.Location = new System.Drawing.Point(568, 593);
             this.lblMetodosDePago.Name = "lblMetodosDePago";
             this.lblMetodosDePago.Size = new System.Drawing.Size(223, 35);
             this.lblMetodosDePago.TabIndex = 7;
@@ -203,7 +176,7 @@
             this.lblCambiarContra.AutoSize = true;
             this.lblCambiarContra.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCambiarContra.Location = new System.Drawing.Point(562, 605);
+            this.lblCambiarContra.Location = new System.Drawing.Point(121, 485);
             this.lblCambiarContra.Name = "lblCambiarContra";
             this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
             this.lblCambiarContra.TabIndex = 8;
@@ -231,7 +204,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1204, 702);
             this.Controls.Add(this.lblTotalEntradas);
-            this.Controls.Add(this.lblCambiarContra);
             this.Controls.Add(this.lblMetodosDePago);
             this.Controls.Add(this.lblEditarInformacion);
             this.Controls.Add(this.lblEntradasAdquiridas);
@@ -257,8 +229,6 @@
         private System.Windows.Forms.Button btnVolverPrincipal;
         private System.Windows.Forms.Panel pnlInformacionPerfil;
         private System.Windows.Forms.PictureBox ptbFoto;
-        private System.Windows.Forms.Label lblUltimoAcceso;
-        private System.Windows.Forms.Label lblPrimerAcceso;
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label lblNombreUsuario;
         private System.Windows.Forms.Label lblEntradasAdquiridas;

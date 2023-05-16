@@ -48,6 +48,8 @@ namespace Proyecto_Cinnity
             this.ptbPeli = new System.Windows.Forms.PictureBox();
             this.cmbSesion = new System.Windows.Forms.ComboBox();
             this.dttDiaEmision = new System.Windows.Forms.DateTimePicker();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblPrecioNum = new System.Windows.Forms.Label();
             this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPeli)).BeginInit();
             this.SuspendLayout();
@@ -282,12 +284,36 @@ namespace Proyecto_Cinnity
             this.dttDiaEmision.TabIndex = 6;
             this.dttDiaEmision.ValueChanged += new System.EventHandler(this.dttDiaEmision_ValueChanged);
             // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblPrecio.Location = new System.Drawing.Point(850, 684);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(80, 24);
+            this.lblPrecio.TabIndex = 7;
+            this.lblPrecio.Text = "PRECIO:";
+            // 
+            // lblPrecioNum
+            // 
+            this.lblPrecioNum.AutoSize = true;
+            this.lblPrecioNum.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrecioNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblPrecioNum.Location = new System.Drawing.Point(951, 684);
+            this.lblPrecioNum.Name = "lblPrecioNum";
+            this.lblPrecioNum.Size = new System.Drawing.Size(28, 24);
+            this.lblPrecioNum.TabIndex = 8;
+            this.lblPrecioNum.Text = "10";
+            // 
             // FrmInformacionPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1107, 837);
+            this.Controls.Add(this.lblPrecioNum);
+            this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.dttDiaEmision);
             this.Controls.Add(this.cmbSesion);
             this.Controls.Add(this.lblSesionesDisponibles);
@@ -326,5 +352,7 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Label lblFechaEstrenoInfo;
         private System.Windows.Forms.Label lblDuracionInfo;
         private System.Windows.Forms.TextBox txtNombrePeli;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblPrecioNum;
     }
 }

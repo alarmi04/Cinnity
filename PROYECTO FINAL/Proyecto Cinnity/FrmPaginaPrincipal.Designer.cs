@@ -81,6 +81,7 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 5;
             this.ptbLogo.TabStop = false;
+            this.ptbLogo.Click += new System.EventHandler(this.ptbLogo_Click);
             // 
             // btnCerrarSesion
             // 
@@ -183,6 +184,7 @@
             this.ptbEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbEmail.TabIndex = 12;
             this.ptbEmail.TabStop = false;
+            this.ptbEmail.Click += new System.EventHandler(this.ptbEmail_Click);
             // 
             // ptbTwitter
             // 
@@ -193,6 +195,7 @@
             this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbTwitter.TabIndex = 11;
             this.ptbTwitter.TabStop = false;
+            this.ptbTwitter.Click += new System.EventHandler(this.ptbTwitter_Click);
             // 
             // ptbFacebook
             // 
@@ -203,6 +206,7 @@
             this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbFacebook.TabIndex = 10;
             this.ptbFacebook.TabStop = false;
+            this.ptbFacebook.Click += new System.EventHandler(this.ptbFacebook_Click);
             // 
             // ptbInsta
             // 
@@ -213,6 +217,7 @@
             this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbInsta.TabIndex = 2;
             this.ptbInsta.TabStop = false;
+            this.ptbInsta.Click += new System.EventHandler(this.ptbInsta_Click);
             // 
             // cmbFiltrar
             // 

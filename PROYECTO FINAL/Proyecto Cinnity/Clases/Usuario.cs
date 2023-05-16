@@ -9,16 +9,15 @@ using Mysqlx.Connection;
 
 namespace Proyecto_Cinnity
 {
+    
     static class Usuario
     {
-        static string nombre;
-        static string apellidos;
-        static string correo;
-        static string contrasenya;
-        static string pais;
-        static DateTime fechaNaci;
-        static List<Entradas> entradas;
-
+        public static string nombre;
+        public static string apellidos;
+        public static string correo;
+        public static string contrasenya;
+        public static string pais;
+        public static DateTime fechaNaci;
 
         public static bool InicioSesionCorrecto(string correo, string contraseña)
 
@@ -28,32 +27,30 @@ namespace Proyecto_Cinnity
 
             string consulta = "SELECT * FROM usuario WHERE correoElectronico LIKE '" + correo + "' && contrasenya LIKE '" + contraseña + "';";
 
-
-
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
 
             MySqlDataReader reader = comando.ExecuteReader();
 
-
-
             if (reader.HasRows)
-
             {
-
                 correcto = true;
-
+                while (reader.Read())
+                {
+                    Usuario.nombre = reader.GetString("nombre");
+                    Usuario.apellidos = reader.GetString("apellidos");
+                    Usuario.correo = reader.GetString("correoElectronico");
+                    Usuario.contrasenya = reader.GetString("contrasenya");
+                    Usuario.pais = reader.GetString("pais");
+                    Usuario.fechaNaci = reader.GetDateTime("fechaNaci");
+                }
             }
-
-
-
-
 
             return correcto;
 
         }
 
 
-        public static int RegistrarUsuario(string nombre, string apellidos, string correo, string contrasenya, string pais, string fechaNaci)
+        public static int RegistrarUsuario(string nombre, string apellidos, string correo, string contrasenya, string pais, DateTime fechaNaci)
         {
             int retorno;
 
@@ -106,17 +103,18 @@ namespace Proyecto_Cinnity
             return correo1 == correo2;
         }
 
-        public static int CambiarContraseña(string contraNueva)
+        public static int CambiarContraseña(string contraNueva, string contraVieja, string correo)
         {
             int retorno;
 
             using (var cmd = new MySqlCommand())
             {
                 cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "UPDATE Usuario SET contrasenya={@contraNueva} WHERE contrasenya={@contraVieja};";
+                cmd.CommandText = "UPDATE Usuario SET contrasenya=@contraNueva WHERE correoElectronico=@correo AND contrasenya=@contraVieja;";
 
                 cmd.Parameters.AddWithValue("@contraNueva", contraNueva);
-                cmd.Parameters.AddWithValue("@contraVieja", Usuario.contrasenya);
+                cmd.Parameters.AddWithValue("@contraVieja", contraVieja);
+                cmd.Parameters.AddWithValue("@correo", correo);
 
                 retorno = cmd.ExecuteNonQuery();
             }
@@ -124,26 +122,7 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
-
-        //Comprar entrada (agregar una entrada en la lista del usuario tambien a la base de datos)
-
-
-        //ConsumirEntrada (Eliminar una entrada en la lista y base de datos de entradas la entrada asignada al usuario por ID)
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-      
-
     }
+
 }
+
