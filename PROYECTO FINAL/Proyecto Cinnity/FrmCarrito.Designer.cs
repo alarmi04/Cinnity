@@ -41,6 +41,7 @@
             this.btnVaciar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.lblPrecioTotal2 = new System.Windows.Forms.Label();
+            this.lblTotalEntradas2 = new System.Windows.Forms.Label();
             this.entradasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
@@ -111,6 +112,7 @@
             // pnlGeneral
             // 
             this.pnlGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.pnlGeneral.Controls.Add(this.lblTotalEntradas2);
             this.pnlGeneral.Controls.Add(this.lblPrecioTotal2);
             this.pnlGeneral.Controls.Add(this.lblPrecioTotal);
             this.pnlGeneral.Controls.Add(this.lblTotalEntradas);
@@ -154,6 +156,7 @@
             this.btnPagar.TabIndex = 7;
             this.btnPagar.Text = "PAGAR";
             this.btnPagar.UseVisualStyleBackColor = false;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click_1);
             // 
             // btnVaciar
             // 
@@ -166,6 +169,7 @@
             this.btnVaciar.TabIndex = 6;
             this.btnVaciar.Text = "VACIAR";
             this.btnVaciar.UseVisualStyleBackColor = false;
+            this.btnVaciar.Click += new System.EventHandler(this.btnVaciar_Click);
             // 
             // btnVolver
             // 
@@ -189,6 +193,16 @@
             this.lblPrecioTotal2.Size = new System.Drawing.Size(120, 24);
             this.lblPrecioTotal2.TabIndex = 10;
             this.lblPrecioTotal2.Text = "(precio total)";
+            // 
+            // lblTotalEntradas2
+            // 
+            this.lblTotalEntradas2.AutoSize = true;
+            this.lblTotalEntradas2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEntradas2.Location = new System.Drawing.Point(167, 303);
+            this.lblTotalEntradas2.Name = "lblTotalEntradas2";
+            this.lblTotalEntradas2.Size = new System.Drawing.Size(142, 24);
+            this.lblTotalEntradas2.TabIndex = 11;
+            this.lblTotalEntradas2.Text = "(total entradas)";
             // 
             // entradasBindingSource
             // 
@@ -229,5 +243,6 @@
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.BindingSource entradasBindingSource;
         private System.Windows.Forms.Label lblPrecioTotal2;
+        private System.Windows.Forms.Label lblTotalEntradas2;
     }
 }

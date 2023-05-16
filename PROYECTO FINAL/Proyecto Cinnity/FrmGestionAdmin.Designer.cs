@@ -47,7 +47,6 @@ namespace Proyecto_Cinnity
             this.lblDirector = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCargarImagen = new System.Windows.Forms.Button();
@@ -56,7 +55,6 @@ namespace Proyecto_Cinnity
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
-            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +62,7 @@ namespace Proyecto_Cinnity
             this.duracionMinutosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEstrenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -247,25 +246,13 @@ namespace Proyecto_Cinnity
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.btnAgregar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAgregar.Location = new System.Drawing.Point(1140, 789);
+            this.btnAgregar.Location = new System.Drawing.Point(912, 772);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(183, 81);
+            this.btnAgregar.Size = new System.Drawing.Size(382, 81);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnEliminar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEliminar.Location = new System.Drawing.Point(846, 789);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(200, 81);
-            this.btnEliminar.TabIndex = 3;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
@@ -369,10 +356,6 @@ namespace Proyecto_Cinnity
             this.btnMiPerfil.UseVisualStyleBackColor = false;
             this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
-            // peliculaBindingSource
-            // 
-            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
-            // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
@@ -429,6 +412,10 @@ namespace Proyecto_Cinnity
             this.fechaEstrenoDataGridViewTextBoxColumn.Name = "fechaEstrenoDataGridViewTextBoxColumn";
             this.fechaEstrenoDataGridViewTextBoxColumn.Width = 125;
             // 
+            // peliculaBindingSource
+            // 
+            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
+            // 
             // FrmGestionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,7 +425,6 @@ namespace Proyecto_Cinnity
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.dgvPeliculas);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbInfoPeli);
             this.Name = "FrmGestionAdmin";
@@ -475,7 +461,6 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Label lblDirector;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCargarImagen;

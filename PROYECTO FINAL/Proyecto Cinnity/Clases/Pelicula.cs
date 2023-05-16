@@ -229,16 +229,6 @@ namespace Proyecto_Cinnity
         }
 
 
-        public static int ElminarPelicula(string nombre)
-        {
-            int retorno;
-            string consulta = string.Format("DELETE FROM Pelicula WHERE nombrePeli='{0}'", nombre);
-            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
-        }
-
-
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();

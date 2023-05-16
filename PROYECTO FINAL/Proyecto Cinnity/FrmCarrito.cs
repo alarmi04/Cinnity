@@ -71,18 +71,37 @@ namespace Proyecto_Cinnity
 
         private void dgvEntradas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Estas seguro que quieres eliminar este producto?",
-              "Ayuda", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult resultado = MessageBox.Show("¿Estás seguro que quieres eliminar este producto?", "Ayuda", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
             if (resultado == DialogResult.Yes)
             {
                 if (e.RowIndex > -1)
                 {
-                    Carrito.EliminarDelCarrito(e.RowIndex);
+                    Carrito.listaCarrito.RemoveAt(e.RowIndex);
+
+                    dgvEntradas.DataSource = null;
                     ActualizarDataGrid();
                 }
             }
         }
 
+        private void btnVaciar_Click(object sender, EventArgs e)
+        {
+            Carrito.listaCarrito.Clear();
 
+            dgvEntradas.DataSource = null;
+            ActualizarDataGrid();
+        }
+
+        private void btnPagar_Click_1(object sender, EventArgs e)
+        {
+            Entradas.GenerarEntrada(Carrito.listaCarrito);
+            Carrito.listaCarrito.Clear();
+
+            dgvEntradas.DataSource = null;
+            ActualizarDataGrid();
+            MessageBox.Show("Compra realizada.");
+
+        }
     }
 }

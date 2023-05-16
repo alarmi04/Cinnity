@@ -36,17 +36,6 @@ namespace Proyecto_Cinnity
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (ConexionBD.Conexion != null)
-            {
-                ConexionBD.AbrirConexion();
-                Pelicula.ElminarPelicula(txtTitulo.Text);
-                CargarDataGrid();
-            }
-            ConexionBD.CerrarConexion();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string nombre = txtTitulo.Text;
