@@ -65,6 +65,7 @@
             this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
             this.btnCerrarSesion.TabIndex = 5;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnVolverPrincipal
             // 
@@ -76,6 +77,7 @@
             this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
             this.btnVolverPrincipal.TabIndex = 4;
             this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
             // btnMiPerfil
             // 

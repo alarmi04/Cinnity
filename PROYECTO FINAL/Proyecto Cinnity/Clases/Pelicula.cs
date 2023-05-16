@@ -211,7 +211,7 @@ namespace Proyecto_Cinnity
             using (var cmd = new MySqlCommand())
             {
                 cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechEstreno) " +
+                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechaEstreno) " +
                     "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
                 cmd.Parameters.AddWithValue("@caratula", aByte);
                 cmd.Parameters.AddWithValue("@nombre", pel.nombre);
@@ -229,7 +229,7 @@ namespace Proyecto_Cinnity
         }
 
 
-        public int ElminarPelicula(string nombre)
+        public static int ElminarPelicula(string nombre)
         {
             int retorno;
             string consulta = string.Format("DELETE FROM Pelicula WHERE nombrePeli='{0}'", nombre);

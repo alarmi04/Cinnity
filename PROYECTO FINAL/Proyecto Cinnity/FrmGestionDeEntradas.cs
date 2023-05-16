@@ -39,6 +39,7 @@ namespace Proyecto_Cinnity
         private void btnMiPerfil_Click(object sender, EventArgs e)
         {
             FrmMiPerfil frm1 = new FrmMiPerfil();
+            this.Hide();
             frm1.Show();
         }
 
@@ -50,6 +51,20 @@ namespace Proyecto_Cinnity
         private void btnVenderEntrada_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void btnVolverPrincipal_Click(object sender, EventArgs e)
+        {
+            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+            this.Hide();
+            frm1.Show();
         }
     }
 }

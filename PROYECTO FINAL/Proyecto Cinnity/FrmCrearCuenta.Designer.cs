@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.grbInformacionPersonal = new System.Windows.Forms.GroupBox();
@@ -49,8 +50,10 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCrearCuenta = new System.Windows.Forms.Label();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
+            this.errorCrearCuenta = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.grbInformacionPersonal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCrearCuenta)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbLogo
@@ -138,7 +141,6 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(453, 28);
             this.txtCorreo.TabIndex = 16;
-         
             // 
             // txtApellidos
             // 
@@ -269,6 +271,10 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
+            // errorCrearCuenta
+            // 
+            this.errorCrearCuenta.ContainerControl = this;
+            // 
             // FrmCrearCuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,9 +286,11 @@
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmCrearCuenta";
             this.Text = "Crear Cuenta";
+            this.Load += new System.EventHandler(this.FrmCrearCuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.grbInformacionPersonal.ResumeLayout(false);
             this.grbInformacionPersonal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCrearCuenta)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,5 +318,6 @@
         private System.Windows.Forms.Label lblCrearCuenta;
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.ComboBox cmbPais;
+        private System.Windows.Forms.ErrorProvider errorCrearCuenta;
     }
 }

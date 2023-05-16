@@ -29,6 +29,7 @@ namespace Proyecto_Cinnity
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbInfoPeli = new System.Windows.Forms.GroupBox();
             this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.lblMin = new System.Windows.Forms.Label();
@@ -50,17 +51,26 @@ namespace Proyecto_Cinnity
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCargarImagen = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.repartoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracionMinutosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaEstrenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInfoPeli
@@ -291,16 +301,26 @@ namespace Proyecto_Cinnity
             this.btnCargarImagen.UseVisualStyleBackColor = false;
             this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
-            // dataGridView1
+            // dgvPeliculas
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(781, 393);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(620, 343);
-            this.dataGridView1.TabIndex = 5;
+            this.dgvPeliculas.AutoGenerateColumns = false;
+            this.dgvPeliculas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.generoDataGridViewTextBoxColumn,
+            this.directorDataGridViewTextBoxColumn,
+            this.repartoDataGridViewTextBoxColumn,
+            this.duracionMinutosDataGridViewTextBoxColumn,
+            this.sinopsisDataGridViewTextBoxColumn,
+            this.fechaEstrenoDataGridViewTextBoxColumn});
+            this.dgvPeliculas.DataSource = this.peliculaBindingSource;
+            this.dgvPeliculas.Location = new System.Drawing.Point(781, 393);
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.RowHeadersWidth = 51;
+            this.dgvPeliculas.RowTemplate.Height = 24;
+            this.dgvPeliculas.Size = new System.Drawing.Size(620, 343);
+            this.dgvPeliculas.TabIndex = 5;
             // 
             // pnlMenu
             // 
@@ -323,6 +343,7 @@ namespace Proyecto_Cinnity
             this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnVolverPrincipal
             // 
@@ -334,6 +355,7 @@ namespace Proyecto_Cinnity
             this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
             this.btnVolverPrincipal.TabIndex = 5;
             this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
             // btnMiPerfil
             // 
@@ -345,6 +367,67 @@ namespace Proyecto_Cinnity
             this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
             this.btnMiPerfil.TabIndex = 0;
             this.btnMiPerfil.UseVisualStyleBackColor = false;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
+            // 
+            // peliculaBindingSource
+            // 
+            this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "Genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Genero";
+            this.generoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // directorDataGridViewTextBoxColumn
+            // 
+            this.directorDataGridViewTextBoxColumn.DataPropertyName = "Director";
+            this.directorDataGridViewTextBoxColumn.HeaderText = "Director";
+            this.directorDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.directorDataGridViewTextBoxColumn.Name = "directorDataGridViewTextBoxColumn";
+            this.directorDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // repartoDataGridViewTextBoxColumn
+            // 
+            this.repartoDataGridViewTextBoxColumn.DataPropertyName = "Reparto";
+            this.repartoDataGridViewTextBoxColumn.HeaderText = "Reparto";
+            this.repartoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.repartoDataGridViewTextBoxColumn.Name = "repartoDataGridViewTextBoxColumn";
+            this.repartoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // duracionMinutosDataGridViewTextBoxColumn
+            // 
+            this.duracionMinutosDataGridViewTextBoxColumn.DataPropertyName = "DuracionMinutos";
+            this.duracionMinutosDataGridViewTextBoxColumn.HeaderText = "DuracionMinutos";
+            this.duracionMinutosDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.duracionMinutosDataGridViewTextBoxColumn.Name = "duracionMinutosDataGridViewTextBoxColumn";
+            this.duracionMinutosDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sinopsisDataGridViewTextBoxColumn
+            // 
+            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
+            this.sinopsisDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fechaEstrenoDataGridViewTextBoxColumn
+            // 
+            this.fechaEstrenoDataGridViewTextBoxColumn.DataPropertyName = "FechaEstreno";
+            this.fechaEstrenoDataGridViewTextBoxColumn.HeaderText = "FechaEstreno";
+            this.fechaEstrenoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fechaEstrenoDataGridViewTextBoxColumn.Name = "fechaEstrenoDataGridViewTextBoxColumn";
+            this.fechaEstrenoDataGridViewTextBoxColumn.Width = 125;
             // 
             // FrmGestionAdmin
             // 
@@ -353,20 +436,22 @@ namespace Proyecto_Cinnity
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1445, 927);
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPeliculas);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.gbInfoPeli);
             this.Name = "FrmGestionAdmin";
             this.Text = "FrmGestionAdmin";
+            this.Load += new System.EventHandler(this.FrmGestionAdmin_Load);
             this.gbInfoPeli.ResumeLayout(false);
             this.gbInfoPeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,10 +479,18 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCargarImagen;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPeliculas;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnVolverPrincipal;
         private System.Windows.Forms.Button btnMiPerfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn directorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn repartoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracionMinutosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sinopsisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaEstrenoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource peliculaBindingSource;
     }
 }

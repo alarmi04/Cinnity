@@ -29,10 +29,8 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-                    int idUsu = Usuario.RecogerID();
-                    int idPeli = Pelicula.RecogerID(txtNombrePeli.Text);
 
-                    Entradas.GenerarEntrada(Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, dttDiaEmision.Value, cmbSesion.Text, idPeli, idUsu);
+                    Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value);
                     ConexionBD.CerrarConexion();
 
                     FrmPaginaPrincipal fr = new FrmPaginaPrincipal();

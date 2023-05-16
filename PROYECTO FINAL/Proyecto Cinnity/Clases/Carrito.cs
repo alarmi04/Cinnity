@@ -4,29 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Proyecto_Cinnity.Clases
+namespace Proyecto_Cinnity
 {
     static class Carrito
     {
-        
-        //static Usuario usuAsociado;
-        /*static List<Entradas> listaEntradas;
+        public static List<Entradas> listaCarrito = new List<Entradas>();
 
-
-        static void AnyadirEntrada(Entradas entrada)
+        public static void AñadirAlCarrito(string titulo, double pre, DateTime fecha, string horaE, DateTime fechaE)
         {
-            listaEntradas.Add(entrada);
+            Entradas ent = new Entradas(titulo, pre, fecha, horaE, fechaE);
+            listaCarrito.Add(ent);
         }
 
-        static void EliminarEntrada(Entradas entrada)
+        public static void EliminarDelCarrito(int indice)
         {
-            for (int i = 0; i < listaEntradas.Count; i++)
+            listaCarrito.RemoveAt(indice);
+        }
+
+        public static int TotalEntradas()
+        {
+            int total = listaCarrito.Count;
+            return total;
+        }
+
+        public static double PrecioTotal()
+        {
+            double total = 0;
+
+            foreach (Entradas ent in listaCarrito)
             {
-                if (listaEntradas[i].FechaCompra == entrada.FechaCompra && listaEntradas[i].FechaEmision == entrada.FechaEmision && listaEntradas[i].HoraEmision == entrada.HoraEmision && listaEntradas[i].Precio == entrada.Precio)
-                {
-                    listaEntradas.RemoveAt(i);
-                }
+                total += ent.Precio;
             }
-        }*/
+
+            return total;
+        }
+
     }
 }

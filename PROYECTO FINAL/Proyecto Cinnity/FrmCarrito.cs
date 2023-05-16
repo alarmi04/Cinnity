@@ -19,9 +19,14 @@ namespace Proyecto_Cinnity
             InitializeComponent();
         }
 
+        private void ActualizarDataGrid()
+        {
+            dgvEntradas.DataSource = Carrito.listaCarrito;
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            FrmPaginaPrincipal frm1= new FrmPaginaPrincipal();
+            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
             this.Hide();
             frm1.Show();
         }
@@ -45,54 +50,39 @@ namespace Proyecto_Cinnity
             FrmMiPerfil frm1 = new FrmMiPerfil();
             this.Hide();
             frm1.Show();
-        }
+        }       
 
-        private void btnSumar_Click(object sender, EventArgs e)
-        {
-            if (dgvEntradas.SelectedRows.Count > 0 && dgvEntradas.SelectedRows.Count < 2)
-            {
-                DataGridViewRow filaSeleccionada = dgvEntradas.SelectedRows[0];
-                DataGridViewCell celdaValor = filaSeleccionada.Cells["Cantidad"];
-                int valorActual = Convert.ToInt32(celdaValor.Value);
-                valorActual++;
-                celdaValor.Value = valorActual;
-
-
-            }
-        }
-
-        private void btnRestar_Click(object sender, EventArgs e)
-        {
-            if (dgvEntradas.SelectedRows.Count > 0 && dgvEntradas.SelectedRows.Count < 2)
-            {
-                DataGridViewRow filaSeleccionada = dgvEntradas.SelectedRows[0];
-                DataGridViewCell celdaValor = filaSeleccionada.Cells["Cantidad"];
-                int valorActual = Convert.ToInt32(celdaValor.Value);
-                valorActual--;
-                if (valorActual == 0)
-                {
-                    dgvEntradas.Rows.Remove(filaSeleccionada);
-                }
-                else
-                {
-                    celdaValor.Value = valorActual;
-                }
-
-
-            }
-        }
+        
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            // si se confirma la compra:
-            //for (int i = 0; i < dgvEntradas.RowCount; i++)
-            //{
-            //    Lo que sea
-            //    Usuario.EntradasCompradas.Add();  // El usuario deberia ser estatico.
-            //}
             
-
-            dgvEntradas.DataSource = null;
         }
+
+        private void dgvEntradas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmCarrito_Load_1(object sender, EventArgs e)
+        {
+            ActualizarDataGrid();
+        }
+
+        private void dgvEntradas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estas seguro que quieres eliminar este producto?",
+              "Ayuda", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (resultado == DialogResult.Yes)
+            {
+                if (e.RowIndex > -1)
+                {
+                    Carrito.EliminarDelCarrito(e.RowIndex);
+                    ActualizarDataGrid();
+                }
+            }
+        }
+
+
     }
 }

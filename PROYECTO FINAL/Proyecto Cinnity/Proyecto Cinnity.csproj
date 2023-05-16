@@ -231,6 +231,7 @@
       <LastGenOutput>StringRecursosIdiomas.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Entradas.datasource" />
     <None Include="Properties\DataSources\Pelicula.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

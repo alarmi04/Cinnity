@@ -20,7 +20,7 @@ namespace Proyecto_Cinnity
         public void CargarDataGrid()
         {
             List<Pelicula> lista = Pelicula.CargarPeliculas();
-            dataGridView1.DataSource = lista;
+            dgvPeliculas.DataSource = lista;
         }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
@@ -38,7 +38,13 @@ namespace Proyecto_Cinnity
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();
+                Pelicula.ElminarPelicula(txtTitulo.Text);
+                CargarDataGrid();
+            }
+            ConexionBD.CerrarConexion();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -52,9 +58,58 @@ namespace Proyecto_Cinnity
             DateTime fechaEstreno = dtpFechaEstreno.Value;
             Image caratula = pictureBox1.Image;
 
-            Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
+            if (ConexionBD.Conexion != null)
+            {
+                ConexionBD.AbrirConexion();
+                Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
 
-            pel.AgregarPelicula(pel);
+                pel.AgregarPelicula(pel);
+                CargarDataGrid();
+            }
+            ConexionBD.CerrarConexion();
+
+
+        }
+
+        private void btnMiPerfil_Click(object sender, EventArgs e)
+        {
+            FrmMiPerfil frm1 = new FrmMiPerfil();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void btnVolverPrincipal_Click(object sender, EventArgs e)
+        {
+            FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
+            this.Hide();
+            frm1.Show();
+        }
+
+        private void FrmGestionAdmin_Load(object sender, EventArgs e)
+        {
+            if (ConexionBD.Conexion != null)
+            {
+                try
+                {
+                    ConexionBD.AbrirConexion();
+                    CargarDataGrid();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
+            }
         }
     }
 }

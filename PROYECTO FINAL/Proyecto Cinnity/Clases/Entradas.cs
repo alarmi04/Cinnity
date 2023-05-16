@@ -32,9 +32,7 @@ namespace Proyecto_Cinnity
          }
 
         public Entradas(double pre, DateTime fecha, string horaE, DateTime fechaE)
-        {
-
-            
+        {            
             precio = pre;
             fechaCompra = fecha;
             horaEmision = horaE;
