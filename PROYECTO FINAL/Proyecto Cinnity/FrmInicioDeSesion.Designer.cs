@@ -36,10 +36,10 @@
             this.lblContraOlvidada = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.errorInicioSesion = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -124,6 +124,10 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
+            // errorInicioSesion
+            // 
+            this.errorInicioSesion.ContainerControl = this;
+            // 
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
@@ -133,10 +137,6 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
-            // 
-            // errorInicioSesion
-            // 
-            this.errorInicioSesion.ContainerControl = this;
             // 
             // FrmInicioDeSesion
             // 
@@ -154,8 +154,8 @@
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmInicioDeSesion";
             this.Text = "Inicio De Sesión";
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -51,6 +51,7 @@ namespace Proyecto_Cinnity
         {
             
             CargarInformacion();
+            lblPrecioNum.Text = "8.00";
 
             if (dttDiaEmision.Value.Day % 2 == 0)
             {
@@ -88,12 +89,12 @@ namespace Proyecto_Cinnity
             {
                 ConexionBD.AbrirConexion();
 
-                lblGeneroInfo.Text =  Pelicula.BuscarInformacion("genero", nombre);
-                lblDirectorInfo.Text =  Pelicula.BuscarInformacion("director", nombre);
-                lblDuracionInfo.Text =  Pelicula.BuscarInformacion("duracion", nombre);
+                lblGeneroInfo.Text = Pelicula.BuscarInformacion("genero", nombre);
+                lblDirectorInfo.Text = Pelicula.BuscarInformacion("director", nombre);
+                lblDuracionInfo.Text = Pelicula.BuscarInformacion("duracion", nombre);
                 txtSinopsis.Text = Pelicula.BuscarInformacion("sinopsis", nombre);
                 txtNombrePeli.Text = Pelicula.BuscarInformacion("nombre", nombre);
-                lblFechaEstrenoInfo.Text =  Pelicula.BuscarInformacion("fechaEstreno", nombre);
+                lblFechaEstrenoInfo.Text = Pelicula.BuscarInformacion("fechaEstreno", nombre);
                 txtReparto.Text = Pelicula.BuscarInformacion("reparto", nombre);
 
                 System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
@@ -102,5 +103,28 @@ namespace Proyecto_Cinnity
                 ConexionBD.CerrarConexion();
             }
         }
+
+            private void cmbSesion_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                switch (cmbSesion.SelectedIndex)
+                {
+                    case 0:
+                        lblPrecioNum.Text = "7";
+                        break;
+                    case 1:
+                        lblPrecioNum.Text = "9";
+                        break;
+                    case 2:
+                        lblPrecioNum.Text = "10";
+                        break;
+                    case 3:
+                        lblPrecioNum.Text = "8";
+                        break;
+                    default:
+                        lblPrecioNum.Text = "10";
+                        break;
+                }
+            }
+        
     }
 }

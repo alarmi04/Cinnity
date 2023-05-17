@@ -125,6 +125,34 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        public static int CambiarDatos(string nuevoNombre, string nuevoCorreo, string nuevosApellidos)
+        {
+            int retorno;
+
+            string nombreV = Usuario.nombre;
+            string correoV = Usuario.correo;
+            string apellidoV = Usuario.apellidos;
+
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.Connection = ConexionBD.Conexion;
+                cmd.CommandText = "UPDATE Usuario SET nombre=@nuevoNom, correoElectronico=@nuevoCorr, apellidos=@nuevosApe WHERE nombre=@viejoNom AND correoElectronico=@viejoCorr AND apellidos=@viejosApe;";
+
+                cmd.Parameters.AddWithValue("@nuevoNom", nuevoNombre);
+                cmd.Parameters.AddWithValue("@nuevoCorr", nuevoCorreo);
+                cmd.Parameters.AddWithValue("@nuevosApe", nuevosApellidos);
+                cmd.Parameters.AddWithValue("@viejoNom", nombreV);
+                cmd.Parameters.AddWithValue("@viejoCorr", correoV);
+                cmd.Parameters.AddWithValue("@viejosApe", apellidoV);
+
+
+                retorno = cmd.ExecuteNonQuery();
+            }
+
+            return retorno;
+        }
+
+
     }
 
 }
