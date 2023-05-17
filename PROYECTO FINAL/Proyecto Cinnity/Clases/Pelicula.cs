@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -256,7 +257,73 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        public static Pelicula ObtenerPelicula(MySqlConnection conexion, string identificacion)
+        {
+            Pelicula peli = new Pelicula();
+            string consulta = string.Format("SELECT * FROM pelicula WHERE nombrePeli='{0}'", identificacion);
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            while (reader.Read())
+            {
+                peli.nombre = reader.GetString(2);
+                peli.genero = reader.GetString(3);
+                peli.director = reader.GetString(4);
+                peli.reparto = reader.GetString(5);
+                peli.duracionMinutos = reader.GetInt16(6);
+                peli.sinopsis = reader.GetString(7);
+                peli.fechaEstreno = reader.GetDateTime(8);
 
+                byte[] img = (byte[])reader["fotoCaratula"];
+                MemoryStream ms = new MemoryStream(img);
+                peli.Caratula = Image.FromStream(ms);
+
+            }
+            // Cerramos el reader para que luego se reutilice
+            reader.Close();
+            return peli;
+        }
+
+        public bool YaEsta(MySqlConnection conexion, string nom)
+        {
+            string consulta = string.Format("SELECT * FROM pelicula" +
+            " WHERE nombrePeli='{0}';", nom);
+
+            MessageBox.Show(consulta);   // Se puede activar esta línea para testear la sintaxis de la consulta.
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            { // si existen registros en la devolución de la consulta
+                reader.Close();   // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return true;
+            }
+            else
+            {
+                reader.Close();  // Cierro el reader para utilizar la misma conexión en AgregarUsuario
+                return false;
+            }
+
+        }
+
+        public int ActualizaPelicula(MySqlConnection conexion, Pelicula pel)
+        {
+            int retorno;
+
+            // Preparación de la imagen
+            MemoryStream ms = new MemoryStream();
+            pel.Caratula.Save(ms, ImageFormat.Jpeg);
+            byte[] imgArr = ms.ToArray();
+
+            string consulta = string.Format("UPDATE pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
+                "duraccion={4},sinopsis='{5}',fotoCaratula=@fotoCaratula WHERE nombrePeli='{6}'", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
+                pel.DuracionMinutos,pel.FechaEstreno.ToString("yyyy/MM/dd"), pel.Nombre);
+
+            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            comando.Parameters.AddWithValue("fotoCaratula", imgArr);
+            retorno = comando.ExecuteNonQuery();
+
+            return retorno;
+        }
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
