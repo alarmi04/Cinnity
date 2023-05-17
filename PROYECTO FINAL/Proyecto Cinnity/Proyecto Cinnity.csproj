@@ -335,5 +335,8 @@
   <ItemGroup>
     <None Include="Resources\seleccionar-todo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Femenino.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

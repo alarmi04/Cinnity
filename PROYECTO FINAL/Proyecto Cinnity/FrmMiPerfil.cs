@@ -87,7 +87,9 @@ namespace Proyecto_Cinnity
 
         private void lblEditarInformacion_Click(object sender, EventArgs e)
         {
-
+            FrmCambiarDatos fr = new FrmCambiarDatos();
+            this.Hide();
+            fr.Show();
         }
     }
 }

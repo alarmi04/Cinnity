@@ -40,20 +40,20 @@ namespace Proyecto_Cinnity
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblImagen = new System.Windows.Forms.Label();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.cmbSeleccionarApariencia = new System.Windows.Forms.ComboBox();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ptbApariencia = new System.Windows.Forms.PictureBox();
             this.grbInformacionPersonal.SuspendLayout();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbApariencia)).BeginInit();
             this.SuspendLayout();
             // 
             // grbInformacionPersonal
             // 
             this.grbInformacionPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.grbInformacionPersonal.Controls.Add(this.comboBox1);
-            this.grbInformacionPersonal.Controls.Add(this.pictureBox1);
+            this.grbInformacionPersonal.Controls.Add(this.cmbSeleccionarApariencia);
+            this.grbInformacionPersonal.Controls.Add(this.ptbApariencia);
             this.grbInformacionPersonal.Controls.Add(this.lblImagen);
             this.grbInformacionPersonal.Controls.Add(this.txtCorreo);
             this.grbInformacionPersonal.Controls.Add(this.txtApellidos);
@@ -143,16 +143,17 @@ namespace Proyecto_Cinnity
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "ACEPTAR Y MODIFICAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblImagen
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(697, 69);
+            this.lblImagen.Location = new System.Drawing.Point(684, 69);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(160, 24);
+            this.lblImagen.Size = new System.Drawing.Size(107, 24);
             this.lblImagen.TabIndex = 17;
-            this.lblImagen.Text = "Imagen del perfil:";
+            this.lblImagen.Text = "Apariencia:";
             // 
             // pnlMenu
             // 
@@ -163,6 +164,21 @@ namespace Proyecto_Cinnity
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1200, 70);
             this.pnlMenu.TabIndex = 4;
+            // 
+            // cmbSeleccionarApariencia
+            // 
+            this.cmbSeleccionarApariencia.AutoCompleteCustomSource.AddRange(new string[] {
+            "Masculino",
+            "Femenino"});
+            this.cmbSeleccionarApariencia.FormattingEnabled = true;
+            this.cmbSeleccionarApariencia.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino"});
+            this.cmbSeleccionarApariencia.Location = new System.Drawing.Point(663, 320);
+            this.cmbSeleccionarApariencia.Name = "cmbSeleccionarApariencia";
+            this.cmbSeleccionarApariencia.Size = new System.Drawing.Size(168, 24);
+            this.cmbSeleccionarApariencia.TabIndex = 19;
+            this.cmbSeleccionarApariencia.SelectedIndexChanged += new System.EventHandler(this.cmbSeleccionarApariencia_SelectedIndexChanged);
             // 
             // btnCerrarSesion
             // 
@@ -186,21 +202,15 @@ namespace Proyecto_Cinnity
             this.btnVolverPrincipal.TabIndex = 5;
             this.btnVolverPrincipal.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // ptbApariencia
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(663, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(230, 188);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(648, 320);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 19;
+            this.ptbApariencia.Image = global::Proyecto_Cinnity.Properties.Resources.Femenino;
+            this.ptbApariencia.Location = new System.Drawing.Point(663, 110);
+            this.ptbApariencia.Name = "ptbApariencia";
+            this.ptbApariencia.Size = new System.Drawing.Size(168, 163);
+            this.ptbApariencia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbApariencia.TabIndex = 18;
+            this.ptbApariencia.TabStop = false;
             // 
             // FrmCambiarDatos
             // 
@@ -213,10 +223,11 @@ namespace Proyecto_Cinnity
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmCambiarDatos";
             this.Text = "FrmCambiarDatos";
+            this.Load += new System.EventHandler(this.FrmCambiarDatos_Load);
             this.grbInformacionPersonal.ResumeLayout(false);
             this.grbInformacionPersonal.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbApariencia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,11 +243,11 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCambioDatos;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbApariencia;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnVolverPrincipal;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSeleccionarApariencia;
     }
 }

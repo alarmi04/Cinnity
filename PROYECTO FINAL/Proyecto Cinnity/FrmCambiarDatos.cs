@@ -17,6 +17,27 @@ namespace Proyecto_Cinnity
             InitializeComponent();
         }
 
+        private void FrmCambiarDatos_Load(object sender, EventArgs e)
+        {
+            ptbApariencia.Image = Usuario.imagenSeleccionada;
+        }
 
+        private void cmbSeleccionarApariencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbSeleccionarApariencia.SelectedItem.ToString() == "Masculino")
+            {
+                Usuario.imagenSeleccionada = Properties.Resources.perfil;
+            }else
+            {
+                Usuario.imagenSeleccionada = Properties.Resources.Femenino;
+            }
+
+            ptbApariencia.Image = Usuario.imagenSeleccionada;
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
