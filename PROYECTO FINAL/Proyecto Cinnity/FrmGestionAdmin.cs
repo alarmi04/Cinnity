@@ -32,12 +32,25 @@ namespace Proyecto_Cinnity
 
             if (ofdSeleccionar.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(ofdSeleccionar.FileName);
+                ptbImagen.Image = Image.FromFile(ofdSeleccionar.FileName);
             }
+        }
+
+        private void LimpiarControles()
+        {
+            txtTitulo.Clear();
+            txtGenero.Clear();
+            txtDirector.Clear();
+            txtReparto.Clear();
+            nudDuracion.Value = 0;
+            dtpFechaEstreno.Value = DateTime.Now;
+            txtSinopsis.Clear();
+            ptbImagen.Image = null;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            int resultado = 0;
             string nombre = txtTitulo.Text;
             string genero = txtGenero.Text;
             string director = txtDirector.Text;
@@ -45,17 +58,42 @@ namespace Proyecto_Cinnity
             int duracionMinutos = (int)nudDuracion.Value;
             string sinopsis = txtSinopsis.Text;
             DateTime fechaEstreno = dtpFechaEstreno.Value;
-            Image caratula = pictureBox1.Image;
+            Image caratula = ptbImagen.Image;
+            Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
+
 
             if (ConexionBD.Conexion != null)
             {
                 ConexionBD.AbrirConexion();
-                Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
 
-                pel.AgregarPelicula(pel);
+                if (String.IsNullOrEmpty(txtTitulo.Text))
+                {
+                    if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))
+                    {
+                        MessageBox.Show("Esta película ya existe en la base de datos.");
+                    }
+                    else
+                    {
+                        resultado = pel.AgregarPelicula(pel);
+
+                    }
+                }
+                else
+                {
+                    resultado = pel.ActualizaPelicula(ConexionBD.Conexion, pel);
+                }
+                if (resultado > 0)
+                {
+                    LimpiarControles();
+                }
                 CargarDataGrid();
+                ConexionBD.CerrarConexion();
             }
-            ConexionBD.CerrarConexion();
+
+
+
+
+
 
 
         }
@@ -110,7 +148,50 @@ namespace Proyecto_Cinnity
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dgvPeliculas.SelectedRows.Count == 1) // Si hay una fila seleccionada en el datagridview
+                {
+                    string titulo = dgvPeliculas.CurrentRow.Cells[0].Value.ToString();  // Obtenemos el id de la fila seleccionada
+                    // Extraigo de la BD la información (no del datagrid!) 
+                    // por si estuviese actualizada en la BD por otro usuario y no estuviese refrescada en mi datagridview
+                    if (ConexionBD.Conexion != null)
+                    {
+                        ConexionBD.AbrirConexion();
+                        Pelicula pel = Pelicula.ObtenerPelicula(ConexionBD.Conexion, titulo);
+                        CargaCajasTexto(pel);
 
+ 
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                    }
+                    // Cerramos la conexion
+                    ConexionBD.CerrarConexion();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                ConexionBD.CerrarConexion();
+            }
         }
+
+        private void CargaCajasTexto(Pelicula pel)
+        {
+            txtTitulo.Text = pel.Nombre.ToString();
+            txtGenero.Text = pel.Genero;
+            txtDirector.Text = pel.Director;
+            txtReparto.Text = pel.Reparto;
+            nudDuracion.Value = pel.DuracionMinutos;
+            dtpFechaEstreno.Value = pel.FechaEstreno;
+            txtSinopsis.Text = pel.Sinopsis;
+            ptbImagen.Image = pel.Caratula;
+        }
+ 
     }
 }

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+﻿
+=======
 ﻿using Proyecto_Cinnity;
+>>>>>>> 369625ae4dbf7bca1a5284b30a1dd4d6ab42b905
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
