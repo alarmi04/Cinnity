@@ -5,6 +5,8 @@ using MySql.Data;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.Drawing.Imaging;
 using Mysqlx.Connection;
 
 namespace Proyecto_Cinnity
@@ -17,6 +19,7 @@ namespace Proyecto_Cinnity
         public static string correo;
         public static string contrasenya;
         public static string pais;
+        public static Image imagenSeleccionada = Properties.Resources.perfil;
         public static DateTime fechaNaci;
 
         public static bool InicioSesionCorrecto(string correo, string contraseña)

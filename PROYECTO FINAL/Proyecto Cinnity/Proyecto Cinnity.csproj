@@ -134,6 +134,12 @@
     <Compile Include="FrmCambiarContra.Designer.cs">
       <DependentUpon>FrmCambiarContra.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCambiarDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambiarDatos.Designer.cs">
+      <DependentUpon>FrmCambiarDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCambiarContra.resx">
       <DependentUpon>FrmCambiarContra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCambiarDatos.resx">
+      <DependentUpon>FrmCambiarDatos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>

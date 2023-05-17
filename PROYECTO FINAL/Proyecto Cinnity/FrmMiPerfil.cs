@@ -17,6 +17,7 @@ namespace Proyecto_Cinnity
             InitializeComponent();
             lblCorreo.Text = Usuario.correo;
             lblNombreUsuario.Text = Usuario.nombre;
+            ptbFoto.Image = Usuario.imagenSeleccionada;
         }
 
         private int CargarDataGrid()
@@ -84,5 +85,9 @@ namespace Proyecto_Cinnity
             lblTotalEntradas.Text += cant.ToString();
         }
 
+        private void lblEditarInformacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

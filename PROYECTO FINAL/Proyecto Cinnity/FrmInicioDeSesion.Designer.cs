@@ -36,7 +36,6 @@
             this.lblContraOlvidada = new System.Windows.Forms.Label();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
-            this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.errorInicioSesion = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
@@ -125,15 +124,6 @@
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
             this.btnCrearCuenta.Click += new System.EventHandler(this.btnCrearCuenta_Click);
             // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Image = global::Proyecto_Cinnity.Properties.Resources.traductor;
-            this.btnIdioma.Location = new System.Drawing.Point(595, 32);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(101, 95);
-            this.btnIdioma.TabIndex = 9;
-            this.btnIdioma.UseVisualStyleBackColor = true;
-            // 
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
@@ -154,7 +144,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(735, 691);
-            this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblContraOlvidada);
@@ -181,7 +170,6 @@
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.PictureBox ptbLogo;
-        private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.ErrorProvider errorInicioSesion;
     }
 }
