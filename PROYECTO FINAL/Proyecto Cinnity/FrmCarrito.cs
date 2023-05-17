@@ -88,6 +88,8 @@ namespace Proyecto_Cinnity
         private void btnVaciar_Click(object sender, EventArgs e)
         {
             Carrito.listaCarrito.Clear();
+            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
 
             dgvEntradas.DataSource = null;
             ActualizarDataGrid();
@@ -106,6 +108,8 @@ namespace Proyecto_Cinnity
 
                     dgvEntradas.DataSource = null;
                     ActualizarDataGrid();
+                    lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                    lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
                     MessageBox.Show("Compra realizada.");
 
                 }
