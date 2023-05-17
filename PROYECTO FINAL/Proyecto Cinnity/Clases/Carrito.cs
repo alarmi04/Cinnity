@@ -21,6 +21,10 @@ namespace Proyecto_Cinnity
             listaCarrito.RemoveAt(indice);
         }
 
+        public static void VaciarCarrito()
+        {
+            listaCarrito.Clear();
+        }
         public static int TotalEntradas()
         {
             int total = listaCarrito.Count;

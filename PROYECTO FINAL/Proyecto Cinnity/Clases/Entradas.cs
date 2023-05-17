@@ -150,6 +150,33 @@ namespace Proyecto_Cinnity
 
              return listaActivas;
          }
+
+
+        public static List<Entradas> EntradasAdquiridas(int idUsu)
+        {
+            int idUser = Usuario.RecogerID();
+            List<Entradas> listaAdquiridas = new List<Entradas>();
+
+            if (idUser != -1)
+            {
+                string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "';";
+                MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+
+                    while (reader.Read())
+                    {
+                        Entradas ent = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
+                        listaAdquiridas.Add(ent);
+                    }
+                }
+                reader.Close();
+            }
+
+            return listaAdquiridas;
+        }
  
     }
 }

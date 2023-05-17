@@ -80,6 +80,7 @@ namespace Proyecto_Cinnity
 
                         if (Usuario.InicioSesionCorrecto(txtUsuario.Text, txtContra.Text))
                         {
+                            Carrito.VaciarCarrito();
                             ConexionBD.CerrarConexion();
                             FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
                             this.Hide();
@@ -118,13 +119,11 @@ namespace Proyecto_Cinnity
         {
             if (txtUsuario.Text != "")
             {
-                FrmCambiarContra frm1 = new FrmCambiarContra(txtUsuario.Text);
-                this.Hide();
-                frm1.Show();
+                //Funcionalidad enviar email para recuperar contraseña
             }
             else
             {
-                MessageBox.Show("Indica tu correo electrónico para cambiar la contraseña.");
+                MessageBox.Show("Indica tu correo electrónico.");
             }
         }
 

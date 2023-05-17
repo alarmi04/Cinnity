@@ -14,7 +14,6 @@ namespace Proyecto_Cinnity
     public partial class FrmPaginaPrincipal : Form
     {
 
-        string nombrePeli;
         public FrmPaginaPrincipal()
         {
             InitializeComponent();

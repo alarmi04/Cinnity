@@ -17,6 +17,38 @@ namespace Proyecto_Cinnity
             InitializeComponent();
             lblCorreo.Text = Usuario.correo;
             lblNombreUsuario.Text = Usuario.nombre;
+            ptbFoto.Image = Usuario.imagenSeleccionada;
+        }
+
+        private int CargarDataGrid()
+        {
+            int cantEntradasAdquiridas = -1;
+            if (ConexionBD.Conexion != null)
+            {
+                try
+                {
+                    ConexionBD.AbrirConexion();
+                    int id = Usuario.RecogerID();
+                    List<Entradas> lista = Entradas.EntradasAdquiridas(id);
+                    cantEntradasAdquiridas = lista.Count;
+                    ConexionBD.CerrarConexion();
+                    dgvEntradasActivas.DataSource = lista;                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    ConexionBD.CerrarConexion();
+                }
+            } else
+            {
+                MessageBox.Show("No existe conexión a la base de datos.");
+            }
+
+            return cantEntradasAdquiridas;
+
         }
 
         private void btnVolverPrincipal_Click(object sender, EventArgs e)
@@ -47,5 +79,15 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }
 
+        private void FrmMiPerfil_Load(object sender, EventArgs e)
+        {
+            int cant = CargarDataGrid();
+            lblTotalEntradas.Text += cant.ToString();
+        }
+
+        private void lblEditarInformacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
