@@ -69,32 +69,70 @@ namespace Proyecto_Cinnity
 
         }
 
-        public static Entradas BuscarEntrada(string consulta)
-         {
-             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-             MySqlDataReader reader = comando.ExecuteReader();
+        public static int DevolverEntrada(string titulo)
 
-             if (reader.HasRows)
-             {
-                 reader.Read();
+        {
+            int retorno;
+            string consulta = string.Format("DELETE FROM entradas WHERE peliID IN (SELECT idPelicula FROM pelicula WHERE nombrePeli=@titulo);");
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            comando.Parameters.AddWithValue("titulo", titulo);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
 
-                 Entradas entrada = new Entradas( reader.GetDouble(1), Convert.ToDateTime(reader.GetDateTime(2)),
-                       reader.GetString(3), Convert.ToDateTime(reader.GetDateTime(4))
-                         );
-                 return entrada;
-             }
 
-             return null;
-         }
 
-         public static List<Entradas> EntradasActivas()
+        public static bool ComprobarEntrada(string titulo)
+        {
+            string consulta = string.Format("SELECT * FROM entradas WHERE peliID IN (SELECT idPelicula FROM pelicula WHERE nombrePeli=@titulo);");
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            comando.Parameters.AddWithValue("titulo", titulo);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
+        }
+
+
+
+
+
+        public static List<Entradas> BuscarEntrada(string titulo)
+        {
+            int idUser = Usuario.RecogerID();
+            List<Entradas> lista = new List<Entradas>();
+            string consulta = String.Format("SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario=@idUser AND e.fecha_emision > DATE(NOW()) AND p.nombrePeli=@titulo;");
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            comando.Parameters.AddWithValue("idUser", idUser);
+            comando.Parameters.AddWithValue("titulo", titulo);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)   
+            {
+                while (reader.Read())
+                {
+                    Entradas entrada = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(),
+                        reader.GetDateTime("fecha_emision"));
+                    lista.Add(entrada);
+                }
+            }
+            return lista;
+        }
+
+        public static List<Entradas> EntradasActivas()
          {
              int idUser = Usuario.RecogerID();
              List<Entradas> listaActivas = new List<Entradas>();
 
              if (idUser != -1)
              {
-                 string consulta = "SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
+                 string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
                  MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                  MySqlDataReader reader = comando.ExecuteReader();
 

@@ -33,13 +33,13 @@
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
             this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblCambiarContra = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
             this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.lblEntradasAdquiridas = new System.Windows.Forms.Label();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEditarInformacion = new System.Windows.Forms.Label();
             this.lblMetodosDePago = new System.Windows.Forms.Label();
-            this.lblCambiarContra = new System.Windows.Forms.Label();
             this.lblTotalEntradas = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlInformacionPerfil.SuspendLayout();
@@ -104,6 +104,18 @@
             this.lblCorreo.Size = new System.Drawing.Size(266, 37);
             this.lblCorreo.TabIndex = 2;
             this.lblCorreo.Text = "correo@gmail.com";
+            // 
+            // lblCambiarContra
+            // 
+            this.lblCambiarContra.AutoSize = true;
+            this.lblCambiarContra.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambiarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblCambiarContra.Location = new System.Drawing.Point(121, 485);
+            this.lblCambiarContra.Name = "lblCambiarContra";
+            this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
+            this.lblCambiarContra.TabIndex = 8;
+            this.lblCambiarContra.Text = "Cambiar Contraseña";
+            this.lblCambiarContra.Click += new System.EventHandler(this.lblCambiarContra_Click);
             // 
             // lblNombreUsuario
             // 
@@ -170,18 +182,6 @@
             this.lblMetodosDePago.Size = new System.Drawing.Size(223, 35);
             this.lblMetodosDePago.TabIndex = 7;
             this.lblMetodosDePago.Text = "Métodos de Pago";
-            // 
-            // lblCambiarContra
-            // 
-            this.lblCambiarContra.AutoSize = true;
-            this.lblCambiarContra.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambiarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCambiarContra.Location = new System.Drawing.Point(121, 485);
-            this.lblCambiarContra.Name = "lblCambiarContra";
-            this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
-            this.lblCambiarContra.TabIndex = 8;
-            this.lblCambiarContra.Text = "Cambiar Contraseña";
-            this.lblCambiarContra.Click += new System.EventHandler(this.lblCambiarContra_Click);
             // 
             // lblTotalEntradas
             // 

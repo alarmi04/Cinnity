@@ -253,6 +253,16 @@ namespace Proyecto_Cinnity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seleccionar_todo {
+            get {
+                object obj = ResourceManager.GetObject("seleccionar-todo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap traduccion {
             get {
                 object obj = ResourceManager.GetObject("traduccion", resourceCulture);

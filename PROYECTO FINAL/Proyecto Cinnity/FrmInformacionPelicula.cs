@@ -29,14 +29,9 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-
                     Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value);
                     ConexionBD.CerrarConexion();
-
-                    FrmPaginaPrincipal fr = new FrmPaginaPrincipal();
-                    this.Hide();
-                    fr.Show();
-                    
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -46,12 +41,15 @@ namespace Proyecto_Cinnity
                 {
                     ConexionBD.CerrarConexion();
                 }
-
             }
         }
 
+
+
+
         private void FrmInformacionPelicula_Load(object sender, EventArgs e)
         {
+            
             CargarInformacion();
 
             if (dttDiaEmision.Value.Day % 2 == 0)

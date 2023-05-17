@@ -110,6 +110,8 @@ namespace Proyecto_Cinnity
 
                         FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
                         this.Hide();
+                        frmprincipal.StartPosition = FormStartPosition.CenterScreen;
+
                         frmprincipal.Show();
                     }
                 }
@@ -125,10 +127,6 @@ namespace Proyecto_Cinnity
 
         }
 
-        private void FrmCrearCuenta_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

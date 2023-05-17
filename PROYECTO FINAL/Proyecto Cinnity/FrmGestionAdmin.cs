@@ -64,6 +64,8 @@ namespace Proyecto_Cinnity
         {
             FrmMiPerfil frm1 = new FrmMiPerfil();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -71,6 +73,8 @@ namespace Proyecto_Cinnity
         {
             FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -78,11 +82,14 @@ namespace Proyecto_Cinnity
         {
             FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
         private void FrmGestionAdmin_Load(object sender, EventArgs e)
         {
+
             if (ConexionBD.Conexion != null)
             {
                 try

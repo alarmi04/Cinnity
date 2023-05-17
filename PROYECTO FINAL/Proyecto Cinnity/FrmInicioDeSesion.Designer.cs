@@ -165,7 +165,6 @@
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmInicioDeSesion";
             this.Text = "Inicio De Sesión";
-            this.Load += new System.EventHandler(this.FrmInicioDeSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).EndInit();
             this.ResumeLayout(false);

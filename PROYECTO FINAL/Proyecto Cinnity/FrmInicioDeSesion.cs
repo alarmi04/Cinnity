@@ -14,7 +14,9 @@ namespace Proyecto_Cinnity
     {
         public FrmInicioDeSesion()
         {
+
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         #region VALIDACIONES
@@ -65,10 +67,6 @@ namespace Proyecto_Cinnity
 
 
         #endregion
-        private void FrmInicioDeSesion_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -85,6 +83,7 @@ namespace Proyecto_Cinnity
                             ConexionBD.CerrarConexion();
                             FrmPaginaPrincipal frm1 = new FrmPaginaPrincipal();
                             this.Hide();
+                            frm1.StartPosition = FormStartPosition.CenterScreen;
                             frm1.Show();
                         }
                         else
@@ -111,6 +110,7 @@ namespace Proyecto_Cinnity
         {
             FrmCrearCuenta frmcuenta = new FrmCrearCuenta();
             this.Hide();
+            frmcuenta.StartPosition = FormStartPosition.CenterScreen;
             frmcuenta.Show();
         }
 

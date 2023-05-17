@@ -233,9 +233,9 @@ namespace Proyecto_Cinnity
             // 
             this.btnAñadirEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.btnAñadirEntrada.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAñadirEntrada.Location = new System.Drawing.Point(794, 745);
+            this.btnAñadirEntrada.Location = new System.Drawing.Point(770, 745);
             this.btnAñadirEntrada.Name = "btnAñadirEntrada";
-            this.btnAñadirEntrada.Size = new System.Drawing.Size(273, 62);
+            this.btnAñadirEntrada.Size = new System.Drawing.Size(308, 62);
             this.btnAñadirEntrada.TabIndex = 3;
             this.btnAñadirEntrada.Text = "Añadir al carrito";
             this.btnAñadirEntrada.UseVisualStyleBackColor = false;
@@ -289,7 +289,7 @@ namespace Proyecto_Cinnity
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.lblPrecio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblPrecio.Location = new System.Drawing.Point(850, 684);
+            this.lblPrecio.Location = new System.Drawing.Point(841, 670);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(80, 24);
             this.lblPrecio.TabIndex = 7;
@@ -298,13 +298,13 @@ namespace Proyecto_Cinnity
             // lblPrecioNum
             // 
             this.lblPrecioNum.AutoSize = true;
-            this.lblPrecioNum.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrecioNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblPrecioNum.Location = new System.Drawing.Point(951, 684);
+            this.lblPrecioNum.Location = new System.Drawing.Point(937, 670);
             this.lblPrecioNum.Name = "lblPrecioNum";
-            this.lblPrecioNum.Size = new System.Drawing.Size(28, 24);
+            this.lblPrecioNum.Size = new System.Drawing.Size(61, 25);
             this.lblPrecioNum.TabIndex = 8;
-            this.lblPrecioNum.Text = "10";
+            this.lblPrecioNum.Text = "10.00";
             // 
             // FrmInformacionPelicula
             // 

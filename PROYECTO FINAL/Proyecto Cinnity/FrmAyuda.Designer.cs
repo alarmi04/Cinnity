@@ -34,21 +34,21 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.ptbCorreo = new System.Windows.Forms.PictureBox();
+            this.ptbTwitter = new System.Windows.Forms.PictureBox();
+            this.ptbFacebook = new System.Windows.Forms.PictureBox();
+            this.ptbInsta = new System.Windows.Forms.PictureBox();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.lblInformacion = new System.Windows.Forms.Label();
             this.lblInformacion2 = new System.Windows.Forms.Label();
             this.lblPreguntas = new System.Windows.Forms.Label();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.ptbFacebook = new System.Windows.Forms.PictureBox();
-            this.ptbTwitter = new System.Windows.Forms.PictureBox();
-            this.ptbCorreo = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -111,6 +111,56 @@
             this.pnlInformacion.Size = new System.Drawing.Size(316, 796);
             this.pnlInformacion.TabIndex = 1;
             // 
+            // ptbCorreo
+            // 
+            this.ptbCorreo.Image = global::Proyecto_Cinnity.Properties.Resources.gmail;
+            this.ptbCorreo.Location = new System.Drawing.Point(125, 678);
+            this.ptbCorreo.Name = "ptbCorreo";
+            this.ptbCorreo.Size = new System.Drawing.Size(52, 50);
+            this.ptbCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCorreo.TabIndex = 4;
+            this.ptbCorreo.TabStop = false;
+            // 
+            // ptbTwitter
+            // 
+            this.ptbTwitter.Image = global::Proyecto_Cinnity.Properties.Resources.twitter;
+            this.ptbTwitter.Location = new System.Drawing.Point(125, 592);
+            this.ptbTwitter.Name = "ptbTwitter";
+            this.ptbTwitter.Size = new System.Drawing.Size(52, 50);
+            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTwitter.TabIndex = 3;
+            this.ptbTwitter.TabStop = false;
+            // 
+            // ptbFacebook
+            // 
+            this.ptbFacebook.Image = global::Proyecto_Cinnity.Properties.Resources.facebook;
+            this.ptbFacebook.Location = new System.Drawing.Point(125, 505);
+            this.ptbFacebook.Name = "ptbFacebook";
+            this.ptbFacebook.Size = new System.Drawing.Size(52, 50);
+            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFacebook.TabIndex = 2;
+            this.ptbFacebook.TabStop = false;
+            // 
+            // ptbInsta
+            // 
+            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
+            this.ptbInsta.Location = new System.Drawing.Point(125, 426);
+            this.ptbInsta.Name = "ptbInsta";
+            this.ptbInsta.Size = new System.Drawing.Size(52, 50);
+            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbInsta.TabIndex = 1;
+            this.ptbInsta.TabStop = false;
+            // 
+            // ptbLogo
+            // 
+            this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
+            this.ptbLogo.Location = new System.Drawing.Point(27, 8);
+            this.ptbLogo.Name = "ptbLogo";
+            this.ptbLogo.Size = new System.Drawing.Size(250, 250);
+            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLogo.TabIndex = 0;
+            this.ptbLogo.TabStop = false;
+            // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
@@ -146,56 +196,6 @@
             this.lblPreguntas.TabIndex = 4;
             this.lblPreguntas.Text = "PREGUNTAS FRECUENTES:";
             // 
-            // ptbLogo
-            // 
-            this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
-            this.ptbLogo.Location = new System.Drawing.Point(27, 8);
-            this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(250, 250);
-            this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbLogo.TabIndex = 0;
-            this.ptbLogo.TabStop = false;
-            // 
-            // ptbInsta
-            // 
-            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
-            this.ptbInsta.Location = new System.Drawing.Point(125, 426);
-            this.ptbInsta.Name = "ptbInsta";
-            this.ptbInsta.Size = new System.Drawing.Size(52, 50);
-            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbInsta.TabIndex = 1;
-            this.ptbInsta.TabStop = false;
-            // 
-            // ptbFacebook
-            // 
-            this.ptbFacebook.Image = global::Proyecto_Cinnity.Properties.Resources.facebook;
-            this.ptbFacebook.Location = new System.Drawing.Point(125, 505);
-            this.ptbFacebook.Name = "ptbFacebook";
-            this.ptbFacebook.Size = new System.Drawing.Size(52, 50);
-            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFacebook.TabIndex = 2;
-            this.ptbFacebook.TabStop = false;
-            // 
-            // ptbTwitter
-            // 
-            this.ptbTwitter.Image = global::Proyecto_Cinnity.Properties.Resources.twitter;
-            this.ptbTwitter.Location = new System.Drawing.Point(125, 592);
-            this.ptbTwitter.Name = "ptbTwitter";
-            this.ptbTwitter.Size = new System.Drawing.Size(52, 50);
-            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTwitter.TabIndex = 3;
-            this.ptbTwitter.TabStop = false;
-            // 
-            // ptbCorreo
-            // 
-            this.ptbCorreo.Image = global::Proyecto_Cinnity.Properties.Resources.gmail;
-            this.ptbCorreo.Location = new System.Drawing.Point(125, 678);
-            this.ptbCorreo.Name = "ptbCorreo";
-            this.ptbCorreo.Size = new System.Drawing.Size(52, 50);
-            this.ptbCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbCorreo.TabIndex = 4;
-            this.ptbCorreo.TabStop = false;
-            // 
             // FrmAyuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -211,11 +211,11 @@
             this.Text = "Ayuda";
             this.pnlMenu.ResumeLayout(false);
             this.pnlInformacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

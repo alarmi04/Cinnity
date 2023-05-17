@@ -36,6 +36,8 @@ namespace Proyecto_Cinnity
         {
             FrmGestionDeEntradas gestionDeEntradas = new FrmGestionDeEntradas();
             this.Hide();
+            gestionDeEntradas.StartPosition = FormStartPosition.CenterScreen;
+
             gestionDeEntradas.Show();
         }
 
@@ -43,6 +45,8 @@ namespace Proyecto_Cinnity
         {
             FrmCarrito frm1 = new FrmCarrito();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -50,6 +54,8 @@ namespace Proyecto_Cinnity
         {
             FrmMiPerfil frm1 = new FrmMiPerfil();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -62,6 +68,8 @@ namespace Proyecto_Cinnity
         {
             FrmAyuda frm1 = new FrmAyuda();
             this.Hide();
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -255,6 +263,8 @@ namespace Proyecto_Cinnity
             string nombrePelicula = pictureBox.Tag.ToString();
 
             FrmInformacionPelicula frm1 = new FrmInformacionPelicula(nombrePelicula);
+            frm1.StartPosition = FormStartPosition.CenterScreen;
+
             frm1.Show();
         }
 
@@ -306,6 +316,8 @@ namespace Proyecto_Cinnity
             {
                 FrmGestionAdmin frm1 = new FrmGestionAdmin();
                 this.Hide();
+                frm1.StartPosition = FormStartPosition.CenterScreen;
+
                 frm1.Show();
             } else
             {

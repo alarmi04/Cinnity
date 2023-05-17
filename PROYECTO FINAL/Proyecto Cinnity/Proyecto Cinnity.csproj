@@ -323,5 +323,8 @@
   <ItemGroup>
     <None Include="Resources\pelicula-super-mario-bros-la-pelicula.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seleccionar-todo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
