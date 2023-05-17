@@ -107,5 +107,10 @@ namespace Proyecto_Cinnity
                 }
             }
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -200,6 +200,34 @@ namespace Proyecto_Cinnity
             reader.Close();
             return img;
         }
+
+        public int ModificarPelicula(Pelicula pel)
+        {
+
+            int retorno;
+            MemoryStream ms = new MemoryStream();
+            pel.caratula.Save(ms, ImageFormat.Jpeg);
+            byte[] aByte = ms.ToArray();
+
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.Connection = ConexionBD.Conexion;
+                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechaEstreno) " +
+                    "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
+                cmd.Parameters.AddWithValue("@caratula", aByte);
+                cmd.Parameters.AddWithValue("@nombre", pel.nombre);
+                cmd.Parameters.AddWithValue("@genero", pel.genero);
+                cmd.Parameters.AddWithValue("@director", pel.director);
+                cmd.Parameters.AddWithValue("@reparto", pel.reparto);
+                cmd.Parameters.AddWithValue("@duracionMinutos", pel.duracionMinutos);
+                cmd.Parameters.AddWithValue("@sinopsis", pel.sinopsis);
+                cmd.Parameters.AddWithValue("@fechaEstreno", pel.fechaEstreno);
+
+                retorno = cmd.ExecuteNonQuery();
+            }
+
+            return retorno;
+        }
         public int AgregarPelicula(Pelicula pel)
         {
 
