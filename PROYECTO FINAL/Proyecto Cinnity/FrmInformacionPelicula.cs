@@ -109,19 +109,19 @@ namespace Proyecto_Cinnity
                 switch (cmbSesion.SelectedIndex)
                 {
                     case 0:
-                        lblPrecioNum.Text = "7";
+                        lblPrecioNum.Text = "7,00";
                         break;
                     case 1:
-                        lblPrecioNum.Text = "9";
+                        lblPrecioNum.Text = "9,00";
                         break;
                     case 2:
-                        lblPrecioNum.Text = "10";
+                        lblPrecioNum.Text = "10,00";
                         break;
                     case 3:
-                        lblPrecioNum.Text = "8";
+                        lblPrecioNum.Text = "8,00";
                         break;
                     default:
-                        lblPrecioNum.Text = "10";
+                        lblPrecioNum.Text = "10,00";
                         break;
                 }
             }

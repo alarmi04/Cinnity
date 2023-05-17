@@ -84,6 +84,7 @@ namespace Proyecto_Cinnity
 
         {
             int resultado = 0;
+
             try
 
             {

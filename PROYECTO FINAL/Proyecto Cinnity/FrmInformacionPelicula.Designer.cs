@@ -272,6 +272,7 @@ namespace Proyecto_Cinnity
             this.cmbSesion.Size = new System.Drawing.Size(308, 32);
             this.cmbSesion.TabIndex = 5;
             this.cmbSesion.Text = "Seleccionar sesión";
+            this.cmbSesion.SelectedIndexChanged += new System.EventHandler(this.cmbSesion_SelectedIndexChanged);
             // 
             // dttDiaEmision
             // 
