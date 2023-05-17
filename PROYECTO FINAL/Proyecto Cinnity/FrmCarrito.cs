@@ -1,4 +1,4 @@
-﻿using Proyecto_Cinnity.Clases;
+﻿using Proyecto_Cinnity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +13,6 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmCarrito : Form
     {
-        Entradas entradaRecibida;
 
         public FrmCarrito()
         {

@@ -193,9 +193,9 @@
             this.lblTotalEntradas.Location = new System.Drawing.Point(932, 593);
             this.lblTotalEntradas.Name = "lblTotalEntradas";
             this.lblTotalEntradas.Padding = new System.Windows.Forms.Padding(5);
-            this.lblTotalEntradas.Size = new System.Drawing.Size(234, 47);
+            this.lblTotalEntradas.Size = new System.Drawing.Size(209, 47);
             this.lblTotalEntradas.TabIndex = 9;
-            this.lblTotalEntradas.Text = "Total Entradas: 10";
+            this.lblTotalEntradas.Text = "Total Entradas: ";
             // 
             // FrmMiPerfil
             // 
@@ -212,6 +212,7 @@
             this.Controls.Add(this.pnlMenu);
             this.Name = "FrmMiPerfil";
             this.Text = "Mi Perfil";
+            this.Load += new System.EventHandler(this.FrmMiPerfil_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlInformacionPerfil.ResumeLayout(false);
             this.pnlInformacionPerfil.PerformLayout();
