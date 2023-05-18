@@ -63,6 +63,16 @@ namespace Proyecto_Cinnity.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bandera_españa_con_escudo_para_exterior_interior_1200x675 {
+            get {
+                object obj = ResourceManager.GetObject("bandera-españa-con-escudo-para-exterior-interior-1200x675", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap billete {
             get {
                 object obj = ResourceManager.GetObject("billete", resourceCulture);
@@ -146,6 +156,16 @@ namespace Proyecto_Cinnity.Properties {
         internal static System.Drawing.Bitmap CINNITY1 {
             get {
                 object obj = ResourceManager.GetObject("CINNITY1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comprar_bandera_reino_unido_gran_bretaña_para_exterior_interior_1200x900 {
+            get {
+                object obj = ResourceManager.GetObject("comprar-bandera-reino-unido-gran-bretaña-para-exterior-interior-1200x900", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

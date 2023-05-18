@@ -37,8 +37,14 @@
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.errorInicioSesion = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tlsIdioma = new System.Windows.Forms.ToolStripDropDownButton();
+            this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inglésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +53,9 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblUsuario.Location = new System.Drawing.Point(169, 299);
+            this.lblUsuario.Location = new System.Drawing.Point(169, 357);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(199, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(204, 23);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "CORREO ELECTRÓNICO:";
             // 
@@ -58,7 +64,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(173, 335);
+            this.txtUsuario.Location = new System.Drawing.Point(173, 393);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(368, 21);
             this.txtUsuario.TabIndex = 2;
@@ -68,9 +74,9 @@
             this.lblContra.AutoSize = true;
             this.lblContra.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblContra.Location = new System.Drawing.Point(169, 394);
+            this.lblContra.Location = new System.Drawing.Point(169, 452);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(123, 22);
+            this.lblContra.Size = new System.Drawing.Size(130, 23);
             this.lblContra.TabIndex = 3;
             this.lblContra.Text = "CONTRASEÑA:";
             // 
@@ -79,7 +85,7 @@
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContra.Location = new System.Drawing.Point(173, 438);
+            this.txtContra.Location = new System.Drawing.Point(173, 496);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(368, 21);
             this.txtContra.TabIndex = 4;
@@ -89,9 +95,9 @@
             this.lblContraOlvidada.AutoSize = true;
             this.lblContraOlvidada.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraOlvidada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblContraOlvidada.Location = new System.Drawing.Point(236, 528);
+            this.lblContraOlvidada.Location = new System.Drawing.Point(236, 548);
             this.lblContraOlvidada.Name = "lblContraOlvidada";
-            this.lblContraOlvidada.Size = new System.Drawing.Size(242, 16);
+            this.lblContraOlvidada.Size = new System.Drawing.Size(253, 17);
             this.lblContraOlvidada.TabIndex = 6;
             this.lblContraOlvidada.Text = "¿HAS OLVIDADO  TU CONTRASEÑA?";
             this.lblContraOlvidada.Click += new System.EventHandler(this.lblContraOlvidada_Click);
@@ -128,10 +134,52 @@
             // 
             this.errorInicioSesion.ContainerControl = this;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.tlsIdioma});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(735, 31);
+            this.toolStrip1.TabIndex = 9;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(131, 28);
+            this.toolStripLabel1.Text = "Selecciona Idioma";
+            // 
+            // tlsIdioma
+            // 
+            this.tlsIdioma.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsIdioma.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.españolToolStripMenuItem,
+            this.inglésToolStripMenuItem});
+            this.tlsIdioma.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsIdioma.Name = "tlsIdioma";
+            this.tlsIdioma.Size = new System.Drawing.Size(14, 28);
+            // 
+            // españolToolStripMenuItem
+            // 
+            this.españolToolStripMenuItem.Image = global::Proyecto_Cinnity.Properties.Resources.bandera_españa_con_escudo_para_exterior_interior_1200x675;
+            this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.españolToolStripMenuItem.Text = "Español";
+            // 
+            // inglésToolStripMenuItem
+            // 
+            this.inglésToolStripMenuItem.Image = global::Proyecto_Cinnity.Properties.Resources.comprar_bandera_reino_unido_gran_bretaña_para_exterior_interior_1200x900;
+            this.inglésToolStripMenuItem.Name = "inglésToolStripMenuItem";
+            this.inglésToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.inglésToolStripMenuItem.Text = "Inglés";
+            // 
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
-            this.ptbLogo.Location = new System.Drawing.Point(230, 2);
+            this.ptbLogo.Location = new System.Drawing.Point(230, 82);
             this.ptbLogo.Name = "ptbLogo";
             this.ptbLogo.Size = new System.Drawing.Size(263, 250);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,6 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(735, 691);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.lblContraOlvidada);
@@ -156,6 +205,8 @@
             this.Text = "Inicio De Sesión";
             this.Load += new System.EventHandler(this.FrmInicioDeSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,6 +223,11 @@
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.PictureBox ptbLogo;
         private System.Windows.Forms.ErrorProvider errorInicioSesion;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripDropDownButton tlsIdioma;
+        private System.Windows.Forms.ToolStripMenuItem españolToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inglésToolStripMenuItem;
     }
 }
 

@@ -122,6 +122,7 @@
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\ConexionBD.cs" />
     <Compile Include="Clases\Entradas.cs" />
+    <Compile Include="Clases\EnvioCorreos.cs" />
     <Compile Include="FrmAyuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,7 +190,8 @@
       <DependentUpon>FrmPaginaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Pelicula.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Clases\Program.cs" />
+    <Compile Include="Clases\Idiomas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Resources\StringRecursosIdiomas.Designer.cs">
@@ -337,6 +339,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Femenino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera-españa-con-escudo-para-exterior-interior-1200x675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprar-bandera-reino-unido-gran-bretaña-para-exterior-interior-1200x900.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
