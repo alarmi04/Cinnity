@@ -303,7 +303,7 @@ namespace Proyecto_Cinnity
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
-            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli='" + nombre + "';";
+            string consulta = "SELECT * FROM Pelicula WHERE nombrePeli LIKE '%" + nombre + "%';";
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();
 

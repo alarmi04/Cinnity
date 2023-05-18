@@ -132,7 +132,7 @@ namespace Proyecto_Cinnity
 
              if (idUser != -1)
              {
-                 string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
+                 string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision >= DATE(NOW());";
                  MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                  MySqlDataReader reader = comando.ExecuteReader();
 

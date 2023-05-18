@@ -40,7 +40,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.btnCarrito = new System.Windows.Forms.Button();
-            this.btnIdioma = new System.Windows.Forms.Button();
             this.ptbEmail = new System.Windows.Forms.PictureBox();
             this.ptbTwitter = new System.Windows.Forms.PictureBox();
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,7 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.txtContraAdmin = new System.Windows.Forms.TextBox();
             this.lblContraAdmin = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
@@ -170,7 +170,6 @@
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
-            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // fileSystemWatcher1
             // 
@@ -186,15 +185,6 @@
             this.btnCarrito.TabIndex = 15;
             this.btnCarrito.UseVisualStyleBackColor = true;
             this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
-            // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Image = global::Proyecto_Cinnity.Properties.Resources.traductor;
-            this.btnIdioma.Location = new System.Drawing.Point(955, 12);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(101, 89);
-            this.btnIdioma.TabIndex = 14;
-            this.btnIdioma.UseVisualStyleBackColor = true;
             // 
             // ptbEmail
             // 
@@ -249,7 +239,7 @@
             "Animacion",
             "Terror",
             "Todas"});
-            this.cmbFiltrar.Location = new System.Drawing.Point(614, 149);
+            this.cmbFiltrar.Location = new System.Drawing.Point(704, 149);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(121, 32);
             this.cmbFiltrar.TabIndex = 16;
@@ -308,6 +298,17 @@
             this.lblContraAdmin.TabIndex = 0;
             this.lblContraAdmin.Text = "CONTRASEÑA:";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::Proyecto_Cinnity.Properties.Resources.lupa;
+            this.btnBuscar.Location = new System.Drawing.Point(626, 142);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(58, 48);
+            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.txtBuscar_Leave);
+            // 
             // peliculaBindingSource1
             // 
             this.peliculaBindingSource1.DataSource = typeof(Proyecto_Cinnity.Pelicula);
@@ -322,11 +323,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pnlMantenimiento);
             this.Controls.Add(this.pnlPeliculas);
             this.Controls.Add(this.cmbFiltrar);
             this.Controls.Add(this.btnCarrito);
-            this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.ptbEmail);
             this.Controls.Add(this.ptbTwitter);
             this.Controls.Add(this.ptbFacebook);
@@ -367,7 +368,6 @@
         private System.Windows.Forms.PictureBox ptbTwitter;
         private System.Windows.Forms.PictureBox ptbEmail;
         private System.Windows.Forms.Button btnCarrito;
-        private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.BindingSource peliculaBindingSource1;
         private System.Windows.Forms.BindingSource peliculaBindingSource;
         private System.Windows.Forms.ComboBox cmbFiltrar;
@@ -377,5 +377,6 @@
         private System.Windows.Forms.TextBox txtContraAdmin;
         private System.Windows.Forms.Label lblContraAdmin;
         private System.Windows.Forms.Button btnAcceder;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
