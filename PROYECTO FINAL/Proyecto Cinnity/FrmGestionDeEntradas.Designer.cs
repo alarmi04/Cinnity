@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEntradasActivas = new System.Windows.Forms.Label();
             this.btnVenderEntrada = new System.Windows.Forms.Button();
@@ -39,9 +42,6 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.ptbImagenPeli = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVolverPrincipal = new System.Windows.Forms.Button();
-            this.btnMiPerfil = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenPeli)).BeginInit();
@@ -58,6 +58,39 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1334, 63);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1248, 8);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVolverPrincipal
+            // 
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
+            this.btnVolverPrincipal.Location = new System.Drawing.Point(1162, 8);
+            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
+            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
+            this.btnVolverPrincipal.TabIndex = 4;
+            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
+            // 
+            // btnMiPerfil
+            // 
+            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
+            this.btnMiPerfil.Location = new System.Drawing.Point(14, 8);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
+            this.btnMiPerfil.TabIndex = 3;
+            this.btnMiPerfil.UseVisualStyleBackColor = false;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
             // dgvEntradasActivas
             // 
@@ -173,42 +206,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(434, 606);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1248, 8);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
-            this.btnCerrarSesion.TabIndex = 5;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnVolverPrincipal
-            // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.btnVolverPrincipal.Location = new System.Drawing.Point(1162, 8);
-            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
-            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
-            this.btnVolverPrincipal.TabIndex = 4;
-            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
-            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
-            // 
-            // btnMiPerfil
-            // 
-            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
-            this.btnMiPerfil.Location = new System.Drawing.Point(3, 8);
-            this.btnMiPerfil.Name = "btnMiPerfil";
-            this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
-            this.btnMiPerfil.TabIndex = 3;
-            this.btnMiPerfil.UseVisualStyleBackColor = false;
-            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
             // 
             // FrmGestionDeEntradas
             // 

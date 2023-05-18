@@ -143,7 +143,7 @@ namespace Proyecto_Cinnity
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
             this.pnlMenu.Location = new System.Drawing.Point(-2, 0);
@@ -153,8 +153,7 @@ namespace Proyecto_Cinnity
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(563, 12);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -165,8 +164,7 @@ namespace Proyecto_Cinnity
             // 
             // btnVolverPrincipal
             // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolverPrincipal.Location = new System.Drawing.Point(485, 12);
             this.btnVolverPrincipal.Name = "btnVolverPrincipal";

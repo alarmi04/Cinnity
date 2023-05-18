@@ -52,48 +52,61 @@ namespace Proyecto_Cinnity
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             int resultado = 0;
-            string nombre = txtTitulo.Text;
-            string genero = txtGenero.Text;
-            string director = txtDirector.Text;
-            string reparto = txtReparto.Text;
-            int duracionMinutos = (int)nudDuracion.Value;
-            string sinopsis = txtSinopsis.Text;
-            DateTime fechaEstreno = dtpFechaEstreno.Value;
-            Image caratula = ptbImagen.Image;
-            Pelicula pel = new Pelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
 
-
-            if (ConexionBD.Conexion != null)
+            try
             {
-                ConexionBD.AbrirConexion();
-                int id = Pelicula.RecogerID(nombre);
-
-
-                if (String.IsNullOrEmpty(txtId.Text))
+                if (ConexionBD.Conexion != null)
                 {
-                    if (DatosValidos()) 
+                    ConexionBD.AbrirConexion();
+                    Pelicula pel = new Pelicula();
+                    pel.Nombre = txtTitulo.Text;
+                    pel.Genero = txtGenero.Text;
+                    pel.Director = txtDirector.Text;
+                    pel.Reparto = txtReparto.Text;
+                    pel.DuracionMinutos = (int)nudDuracion.Value;
+                    pel.Sinopsis = txtSinopsis.Text;
+                    pel.FechaEstreno = dtpFechaEstreno.Value;
+                    pel.Caratula = ptbImagen.Image;
+
+                    if (String.IsNullOrEmpty(txtId.Text))  // Estoy agregando un usuario nuevo
                     {
-                        if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))
+                        if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
                         {
-                            MessageBox.Show("Esta película ya existe en la base de datos.");
+                            MessageBox.Show("Esta película no se puede dar de alta. Ya existe");
                         }
                         else
                         {
-                            resultado = Pelicula.AgregarPelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
-
+                            resultado = pel.AgregarPelicula(pel);
                         }
                     }
+                    else // Estoy modificando un usuario editado
+                    {
+                        pel.IdPelicula = Convert.ToInt16(txtId.Text);
+                        resultado = pel.ActualizaPelicula(pel);
+                    }
+
+                    if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
+                    {
+                        LimpiarControles();
+                    }
+                    CargarDataGrid();
+                    // Cierro la conexión
+                    ConexionBD.CerrarConexion();
+                    // volvemos a cargar toda la lista de usuarios;
+
 
                 }
                 else
                 {
-                    resultado = Pelicula.ActualizaPelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula, id);
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
                 }
-                if (resultado > 0)
-                {
-                    LimpiarControles();
-                }
-                CargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+            }
+            finally  // en cualquier caso cierro la conexión (haya error o no)
+            {
                 ConexionBD.CerrarConexion();
             }
         }

@@ -35,13 +35,13 @@
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.dgvEntradas = new System.Windows.Forms.DataGridView();
             this.pnlGeneral = new System.Windows.Forms.Panel();
+            this.lblTotalEntradas2 = new System.Windows.Forms.Label();
+            this.lblPrecioTotal2 = new System.Windows.Forms.Label();
             this.lblPrecioTotal = new System.Windows.Forms.Label();
             this.lblTotalEntradas = new System.Windows.Forms.Label();
             this.btnPagar = new System.Windows.Forms.Button();
             this.btnVaciar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.lblPrecioTotal2 = new System.Windows.Forms.Label();
-            this.lblTotalEntradas2 = new System.Windows.Forms.Label();
             this.entradasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
@@ -63,7 +63,6 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(710, 15);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -75,7 +74,6 @@
             // btnVolverPrincipal
             // 
             this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolverPrincipal.Location = new System.Drawing.Point(631, 15);
             this.btnVolverPrincipal.Name = "btnVolverPrincipal";
@@ -87,7 +85,6 @@
             // btnMiPerfil
             // 
             this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
             this.btnMiPerfil.Location = new System.Drawing.Point(3, 15);
             this.btnMiPerfil.Name = "btnMiPerfil";
@@ -124,6 +121,26 @@
             this.pnlGeneral.Name = "pnlGeneral";
             this.pnlGeneral.Size = new System.Drawing.Size(728, 539);
             this.pnlGeneral.TabIndex = 5;
+            // 
+            // lblTotalEntradas2
+            // 
+            this.lblTotalEntradas2.AutoSize = true;
+            this.lblTotalEntradas2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalEntradas2.Location = new System.Drawing.Point(167, 303);
+            this.lblTotalEntradas2.Name = "lblTotalEntradas2";
+            this.lblTotalEntradas2.Size = new System.Drawing.Size(142, 24);
+            this.lblTotalEntradas2.TabIndex = 11;
+            this.lblTotalEntradas2.Text = "(total entradas)";
+            // 
+            // lblPrecioTotal2
+            // 
+            this.lblPrecioTotal2.AutoSize = true;
+            this.lblPrecioTotal2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioTotal2.Location = new System.Drawing.Point(517, 303);
+            this.lblPrecioTotal2.Name = "lblPrecioTotal2";
+            this.lblPrecioTotal2.Size = new System.Drawing.Size(120, 24);
+            this.lblPrecioTotal2.TabIndex = 10;
+            this.lblPrecioTotal2.Text = "(precio total)";
             // 
             // lblPrecioTotal
             // 
@@ -183,26 +200,6 @@
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // lblPrecioTotal2
-            // 
-            this.lblPrecioTotal2.AutoSize = true;
-            this.lblPrecioTotal2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioTotal2.Location = new System.Drawing.Point(517, 303);
-            this.lblPrecioTotal2.Name = "lblPrecioTotal2";
-            this.lblPrecioTotal2.Size = new System.Drawing.Size(120, 24);
-            this.lblPrecioTotal2.TabIndex = 10;
-            this.lblPrecioTotal2.Text = "(precio total)";
-            // 
-            // lblTotalEntradas2
-            // 
-            this.lblTotalEntradas2.AutoSize = true;
-            this.lblTotalEntradas2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEntradas2.Location = new System.Drawing.Point(167, 303);
-            this.lblTotalEntradas2.Name = "lblTotalEntradas2";
-            this.lblTotalEntradas2.Size = new System.Drawing.Size(142, 24);
-            this.lblTotalEntradas2.TabIndex = 11;
-            this.lblTotalEntradas2.Text = "(total entradas)";
             // 
             // entradasBindingSource
             // 
