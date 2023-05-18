@@ -39,23 +39,32 @@ namespace Proyecto_Cinnity
                 errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
             }
 
+
+            if (txtApellidos.Text == "")
+            {
+                ok = false;
+                errorCrearCuenta.SetError(txtApellidos, "Introduce Apellidos");
+            }
+
             if (cmbPais.Text == "")
             {
                 ok = false;
                 errorCrearCuenta.SetError(cmbPais, "Introduce Pais");
             }
-
-            if (dtpFechaNacimiento.Value == DateTime.Now)
-            {
-                ok = false;
-                errorCrearCuenta.SetError(dtpFechaNacimiento, "Introduce Fecha valida");
-            }
-
             if (txtCorreo.Text == "")
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
             }
+
+
+            if (dtpFechaNacimiento.Value == DateTime.Today)
+            {
+                ok = false;
+                errorCrearCuenta.SetError(dtpFechaNacimiento, "Introduce Fecha valida");
+            }
+
+            
 
             if (txtCorreo.Text != txtConfirmarCorreo.Text)
             {
@@ -72,7 +81,7 @@ namespace Proyecto_Cinnity
             if (txtContra.Text != txtConfirmarContra.Text)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtContra, "Introduce la misma contraseña");
+                errorCrearCuenta.SetError(txtConfirmarContra, "Introduce la misma contraseña");
             }
 
             return ok;
@@ -87,19 +96,23 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-                    if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
+                    if (DatosValidos())
                     {
-                        Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
-                        string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
-                        EnviarCorreoRegistro(correoDestino);
-                        ConexionBD.CerrarConexion();
 
-                        FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
-                        this.Hide();
-                        frmprincipal.StartPosition = FormStartPosition.CenterScreen;
+                        if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
+                        {
+                            Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
+                            string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
+                            EnviarCorreoRegistro(correoDestino);
+                            ConexionBD.CerrarConexion();
 
-                        frmprincipal.Show();
-                        
+                            FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
+                            this.Hide();
+                            frmprincipal.StartPosition = FormStartPosition.CenterScreen;
+
+                            frmprincipal.Show();
+
+                        }
                     }
                 }
                 catch (Exception ex)
