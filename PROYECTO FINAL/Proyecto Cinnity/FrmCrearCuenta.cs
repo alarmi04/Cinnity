@@ -25,77 +25,57 @@ namespace Proyecto_Cinnity
         {
             bool ok = true;
 
-            try
+            errorCrearCuenta.Clear();
+
+            if (txtNombre.Text == "")
             {
-                if (ConexionBD.Conexion != null)
-                {
-                    ConexionBD.AbrirConexion();
-
-                    errorCrearCuenta.Clear();
-
-                    if (txtNombre.Text == "")
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtNombre, "Introduce Nombre");
-                    }
-
-                    if (txtContra.Text == "")
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
-                    }
-
-                    if (cmbPais.Text == "")
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(cmbPais, "Introduce Pais");
-                    }
-
-                    if (dtpFechaNacimiento.Value == DateTime.Now)
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(dtpFechaNacimiento, "Introduce Fecha valida");
-                    }
-
-                    if (txtCorreo.Text == "")
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
-                    }
-
-                    if (txtCorreo.Text != txtConfirmarCorreo.Text)
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtConfirmarCorreo, "Introduce el mismo correo");
-                    }
-
-                    if (txtContra.Text == "")
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
-                    }
-
-                    if (txtContra.Text != txtConfirmarContra.Text)
-                    {
-                        ok = false;
-                        errorCrearCuenta.SetError(txtContra, "Introduce la misma contraseña");
-                    }
-
-                }
-                return ok;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
-                return ok;
-
+                ok = false;
+                errorCrearCuenta.SetError(txtNombre, "Introduce Nombre");
             }
 
-            finally
+            if (txtContra.Text == "")
             {
-                ConexionBD.CerrarConexion();
+                ok = false;
+                errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
             }
+
+            if (cmbPais.Text == "")
+            {
+                ok = false;
+                errorCrearCuenta.SetError(cmbPais, "Introduce Pais");
+            }
+
+            if (dtpFechaNacimiento.Value == DateTime.Now)
+            {
+                ok = false;
+                errorCrearCuenta.SetError(dtpFechaNacimiento, "Introduce Fecha valida");
+            }
+
+            if (txtCorreo.Text == "")
+            {
+                ok = false;
+                errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
+            }
+
+            if (txtCorreo.Text != txtConfirmarCorreo.Text)
+            {
+                ok = false;
+                errorCrearCuenta.SetError(txtConfirmarCorreo, "Introduce el mismo correo");
+            }
+
+            if (txtContra.Text == "")
+            {
+                ok = false;
+                errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
+            }
+
+            if (txtContra.Text != txtConfirmarContra.Text)
+            {
+                ok = false;
+                errorCrearCuenta.SetError(txtContra, "Introduce la misma contraseña");
+            }
+
+            return ok;
 
         }
 
@@ -110,6 +90,8 @@ namespace Proyecto_Cinnity
                     if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
                     {
                         Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
+                        string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
+                        EnviarCorreoRegistro(correoDestino);
                         ConexionBD.CerrarConexion();
 
                         FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
@@ -117,10 +99,7 @@ namespace Proyecto_Cinnity
                         frmprincipal.StartPosition = FormStartPosition.CenterScreen;
 
                         frmprincipal.Show();
-
-                        // Envío de correo
-                        string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
-                        EnviarCorreoRegistro(correoDestino);
+                        
                     }
                 }
                 catch (Exception ex)
@@ -135,10 +114,8 @@ namespace Proyecto_Cinnity
 
         }
 
-<<<<<<< HEAD
         private void EnviarCorreoRegistro(string correoDestino)
         {
-
             MailMessage correo = new MailMessage();
             correo.From = new MailAddress("cinnityapp@gmail.com", "Cinnity", System.Text.Encoding.UTF8); // Correo de salida
             correo.To.Add(correoDestino); // Correo destino
@@ -148,16 +125,9 @@ namespace Proyecto_Cinnity
             correo.Body = Body;
             correo.IsBodyHtml = true;
             correo.Priority = MailPriority.Normal;
-            SmtpClient smtp = new SmtpClient("smpt.gmail.com", 587);
-            smtp.UseDefaultCredentials = false;
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.EnableSsl = true; // True si el servidor de correo permite SSL
             smtp.Credentials = new NetworkCredential("cinnityapp@gmail.com", "caeiyxiguufehhke"); // Cuenta de correo de envío
-
-
-            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
-            {
-                return true;
-            };
 
             try
             {
@@ -169,13 +139,7 @@ namespace Proyecto_Cinnity
                 MessageBox.Show($"Error al enviar el correo: {ex.Message}");
             }
         }
-
-=======
-        private void FrmCrearCuenta_Load(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> 5a6b66dd5d840c6aa520331b3f5f7ed25c20b44c
     }
 }
+
 

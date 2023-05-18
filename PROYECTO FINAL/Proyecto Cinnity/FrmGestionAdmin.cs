@@ -67,6 +67,8 @@ namespace Proyecto_Cinnity
             {
                 ConexionBD.AbrirConexion();
                 int id = Pelicula.RecogerID(nombre);
+
+
                 if (String.IsNullOrEmpty(txtId.Text))
                 {
                     if (DatosValidos()) 
@@ -77,7 +79,7 @@ namespace Proyecto_Cinnity
                         }
                         else
                         {
-                            resultado = pel.AgregarPelicula(pel);
+                            resultado = Pelicula.AgregarPelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula);
 
                         }
                     }
@@ -85,7 +87,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    resultado = pel.ActualizaPelicula(pel, id);
+                    resultado = Pelicula.ActualizaPelicula(nombre, genero, director, reparto, duracionMinutos, sinopsis, fechaEstreno, caratula, id);
                 }
                 if (resultado > 0)
                 {
