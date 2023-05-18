@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net.Security;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Proyecto_Cinnity
 {
@@ -113,6 +118,10 @@ namespace Proyecto_Cinnity
                         frmprincipal.StartPosition = FormStartPosition.CenterScreen;
 
                         frmprincipal.Show();
+
+                        // Envío de correo
+                        string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
+                        EnviarCorreoRegistro(correoDestino);
                     }
                 }
                 catch (Exception ex)
@@ -125,6 +134,40 @@ namespace Proyecto_Cinnity
                 }
             }
 
+        }
+
+        private void EnviarCorreoRegistro(string correoDestino)
+        {
+
+            MailMessage correo = new MailMessage();
+            correo.From = new MailAddress("cinnityapp@gmail.com", "Cinnity", System.Text.Encoding.UTF8); // Correo de salida
+            correo.To.Add(correoDestino); // Correo destino
+            correo.Subject = "Gracias por tu registro"; // Asunto del correo
+            string Body = "¡Gracias por registrarte en nuestra aplicación! [Nombre de Usuario]" +
+                "<br><br>Es bueno que nos hayas elegido, porque somos tu mejor APP para adquirir entradas de cine."; // Mensaje del correo con HTML y demas
+            correo.Body = Body;
+            correo.IsBodyHtml = true;
+            correo.Priority = MailPriority.Normal;
+            SmtpClient smtp = new SmtpClient("smpt.gmail.com", 587);
+            smtp.UseDefaultCredentials = false;
+            smtp.EnableSsl = true; // True si el servidor de correo permite SSL
+            smtp.Credentials = new NetworkCredential("cinnityapp@gmail.com", "caeiyxiguufehhke"); // Cuenta de correo de envío
+
+
+            ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+            {
+                return true;
+            };
+
+            try
+            {
+                smtp.Send(correo);
+                MessageBox.Show("Correo enviado");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al enviar el correo: {ex.Message}");
+            }
         }
 
     }

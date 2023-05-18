@@ -28,7 +28,7 @@ namespace Proyecto_Cinnity
 
             bool correcto = false;
 
-            string consulta = "SELECT * FROM usuario WHERE correoElectronico LIKE '" + correo + "' && contrasenya LIKE '" + contraseña + "';";
+            string consulta = "SELECT * FROM Usuario WHERE correoElectronico LIKE '" + correo + "' && contrasenya LIKE '" + contraseña + "';";
 
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
 
@@ -78,7 +78,7 @@ namespace Proyecto_Cinnity
 
         public static int RecogerID()
         {
-            string consulta = "SELECT id from usuario WHERE nombre='" + nombre + "' AND correoElectronico = '" + correo + "';";
+            string consulta = "SELECT id from Usuario WHERE nombre='" + nombre + "' AND correoElectronico = '" + correo + "';";
             int id = -1;
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             MySqlDataReader reader = comando.ExecuteReader();

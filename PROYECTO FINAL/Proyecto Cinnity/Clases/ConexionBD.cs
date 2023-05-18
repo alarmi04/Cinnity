@@ -23,11 +23,11 @@ namespace Proyecto_Cinnity
                     if (instancia == null)
                     {
                         instancia = new MySqlConnection();
-                        string server = "server=127.0.0.1;";
+                        string server = "server=cinnity.caruzqlq1py9.us-east-1.rds.amazonaws.com;";
                         string port = "port=3306;";
-                        string database = "database=cinnity;";
-                        string usuario = "uid=root;";
-                        string password = "pwd=;";
+                        string database = "database=Cinnity;";
+                        string usuario = "uid=admin;";
+                        string password = "pwd=12345678;";
                         string convert = "Convert Zero Datetime=True;";
                         instancia.ConnectionString = server + port + database + usuario + password + convert;
                     }

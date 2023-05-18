@@ -53,7 +53,7 @@ namespace Proyecto_Cinnity
                 using (var cmd = new MySqlCommand())
                 {
                     cmd.Connection = ConexionBD.Conexion;
-                    cmd.CommandText = "INSERT INTO  entradas (precio, fecha_emision, hora_emision, fecha_compra, peliID, idUsuario) " +
+                    cmd.CommandText = "INSERT INTO  Entradas (precio, fecha_emision, hora_emision, fecha_compra, peliID, idUsuario) " +
                         "VALUES (@precio, @fechaEmi, @horaEmi, @fechaCompra,@idPeli,@idUsu);";
 
                     cmd.Parameters.AddWithValue("@precio", ent.precio);
@@ -73,7 +73,7 @@ namespace Proyecto_Cinnity
 
         {
             int retorno;
-            string consulta = string.Format("DELETE FROM entradas WHERE peliID IN (SELECT idPelicula FROM pelicula WHERE nombrePeli=@titulo);");
+            string consulta = string.Format("DELETE FROM Entradas WHERE peliID IN (SELECT idPelicula FROM Pelicula WHERE nombrePeli=@titulo);");
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("titulo", titulo);
             retorno = comando.ExecuteNonQuery();
@@ -84,7 +84,7 @@ namespace Proyecto_Cinnity
 
         public static bool ComprobarEntrada(string titulo)
         {
-            string consulta = string.Format("SELECT * FROM entradas WHERE peliID IN (SELECT idPelicula FROM pelicula WHERE nombrePeli=@titulo);");
+            string consulta = string.Format("SELECT * FROM Entradas WHERE peliID IN (SELECT idPelicula FROM Pelicula WHERE nombrePeli=@titulo);");
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("titulo", titulo);
             MySqlDataReader reader = comando.ExecuteReader();
@@ -108,7 +108,7 @@ namespace Proyecto_Cinnity
         {
             int idUser = Usuario.RecogerID();
             List<Entradas> lista = new List<Entradas>();
-            string consulta = String.Format("SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario=@idUser AND e.fecha_emision > DATE(NOW()) AND p.nombrePeli=@titulo;");
+            string consulta = String.Format("SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario=@idUser AND e.fecha_emision > DATE(NOW()) AND p.nombrePeli=@titulo;");
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("idUser", idUser);
             comando.Parameters.AddWithValue("titulo", titulo);
@@ -132,7 +132,7 @@ namespace Proyecto_Cinnity
 
              if (idUser != -1)
              {
-                 string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
+                 string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision > DATE(NOW());";
                  MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                  MySqlDataReader reader = comando.ExecuteReader();
 
@@ -159,7 +159,7 @@ namespace Proyecto_Cinnity
 
             if (idUser != -1)
             {
-                string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "';";
+                string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 

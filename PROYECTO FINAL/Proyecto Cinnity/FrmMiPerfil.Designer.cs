@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblCambiarContra = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.lblEntradasAdquiridas = new System.Windows.Forms.Label();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEditarInformacion = new System.Windows.Forms.Label();
             this.lblMetodosDePago = new System.Windows.Forms.Label();
             this.lblTotalEntradas = new System.Windows.Forms.Label();
-            this.ptbFoto = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlInformacionPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -56,6 +56,30 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1211, 70);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1128, 14);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 6;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVolverPrincipal
+            // 
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
+            this.btnVolverPrincipal.Location = new System.Drawing.Point(1040, 14);
+            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
+            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
+            this.btnVolverPrincipal.TabIndex = 5;
+            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
             // pnlInformacionPerfil
             // 
@@ -75,7 +99,7 @@
             this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.lblCorreo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCorreo.Location = new System.Drawing.Point(109, 352);
+            this.lblCorreo.Location = new System.Drawing.Point(67, 351);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(266, 37);
             this.lblCorreo.TabIndex = 2;
@@ -86,7 +110,7 @@
             this.lblCambiarContra.AutoSize = true;
             this.lblCambiarContra.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCambiarContra.Location = new System.Drawing.Point(121, 485);
+            this.lblCambiarContra.Location = new System.Drawing.Point(105, 486);
             this.lblCambiarContra.Name = "lblCambiarContra";
             this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
             this.lblCambiarContra.TabIndex = 8;
@@ -99,11 +123,21 @@
             this.lblNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.lblNombreUsuario.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(165, 293);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(149, 290);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(147, 37);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Username";
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
+            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
+            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFoto.TabIndex = 0;
+            this.ptbFoto.TabStop = false;
             // 
             // lblEntradasAdquiridas
             // 
@@ -133,7 +167,7 @@
             this.lblEditarInformacion.AutoSize = true;
             this.lblEditarInformacion.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditarInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 521);
+            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 538);
             this.lblEditarInformacion.Name = "lblEditarInformacion";
             this.lblEditarInformacion.Size = new System.Drawing.Size(236, 35);
             this.lblEditarInformacion.TabIndex = 6;
@@ -145,7 +179,7 @@
             this.lblMetodosDePago.AutoSize = true;
             this.lblMetodosDePago.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMetodosDePago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblMetodosDePago.Location = new System.Drawing.Point(568, 593);
+            this.lblMetodosDePago.Location = new System.Drawing.Point(568, 605);
             this.lblMetodosDePago.Name = "lblMetodosDePago";
             this.lblMetodosDePago.Size = new System.Drawing.Size(223, 35);
             this.lblMetodosDePago.TabIndex = 7;
@@ -164,40 +198,6 @@
             this.lblTotalEntradas.Size = new System.Drawing.Size(209, 47);
             this.lblTotalEntradas.TabIndex = 9;
             this.lblTotalEntradas.Text = "Total Entradas: ";
-            // 
-            // ptbFoto
-            // 
-            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
-            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
-            this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
-            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFoto.TabIndex = 0;
-            this.ptbFoto.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1128, 14);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
-            this.btnCerrarSesion.TabIndex = 6;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnVolverPrincipal
-            // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.btnVolverPrincipal.Location = new System.Drawing.Point(1040, 14);
-            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
-            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
-            this.btnVolverPrincipal.TabIndex = 5;
-            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
-            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
             // FrmMiPerfil
             // 
@@ -218,8 +218,8 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlInformacionPerfil.ResumeLayout(false);
             this.pnlInformacionPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

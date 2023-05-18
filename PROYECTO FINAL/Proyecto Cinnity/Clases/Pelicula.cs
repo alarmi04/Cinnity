@@ -129,7 +129,7 @@ namespace Proyecto_Cinnity
             }
             if (asunto == "duracion")
             {
-                consulta = "SELECT duraccion from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT duracion from Pelicula WHERE nombrePeli='"+nombre+"';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -139,7 +139,7 @@ namespace Proyecto_Cinnity
 
                     while (reader.Read())
                     {
-                        info = reader.GetString("duraccion");
+                        info = reader.GetString("duracion");
                     }
                 }
                 reader.Close();
@@ -213,7 +213,7 @@ namespace Proyecto_Cinnity
             using (var cmd = new MySqlCommand())
             {
                 cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechaEstreno) " +
+                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duracion, sinopsis, fechaEstreno) " +
                     "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
                 cmd.Parameters.AddWithValue("@caratula", aByte);
                 cmd.Parameters.AddWithValue("@nombre", pel.nombre);
@@ -240,7 +240,7 @@ namespace Proyecto_Cinnity
             using (var cmd = new MySqlCommand())
             {
                 cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechaEstreno) " +
+                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duracion, sinopsis, fechaEstreno) " +
                     "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
                 cmd.Parameters.AddWithValue("@caratula", aByte);
                 cmd.Parameters.AddWithValue("@nombre", pel.nombre);
@@ -260,7 +260,7 @@ namespace Proyecto_Cinnity
         public static Pelicula ObtenerPelicula(MySqlConnection conexion, string identificacion)
         {
             Pelicula peli = new Pelicula();
-            string consulta = string.Format("SELECT * FROM pelicula WHERE nombrePeli='{0}'", identificacion);
+            string consulta = string.Format("SELECT * FROM Pelicula WHERE nombrePeli='{0}'", identificacion);
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
@@ -285,7 +285,7 @@ namespace Proyecto_Cinnity
 
         public bool YaEsta(MySqlConnection conexion, string nom)
         {
-            string consulta = string.Format("SELECT * FROM pelicula" +
+            string consulta = string.Format("SELECT * FROM Pelicula" +
             " WHERE nombrePeli='{0}';", nom);
 
             MessageBox.Show(consulta);   // Se puede activar esta línea para testear la sintaxis de la consulta.
@@ -314,8 +314,8 @@ namespace Proyecto_Cinnity
             pel.Caratula.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
-            string consulta = string.Format("UPDATE pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
-                "duraccion={4},sinopsis='{5}',fotoCaratula=@fotoCaratula WHERE nombrePeli='{6}'", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
+            string consulta = string.Format("UPDATE Pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
+                "duracion={4},sinopsis='{5}',fotoCaratula=@fotoCaratula WHERE nombrePeli='{6}'", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
                 pel.DuracionMinutos,pel.FechaEstreno.ToString("yyyy/MM/dd"), pel.Nombre);
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);

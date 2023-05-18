@@ -258,6 +258,7 @@
             // 
             // pnlPeliculas
             // 
+            this.pnlPeliculas.AutoScroll = true;
             this.pnlPeliculas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.pnlPeliculas.Location = new System.Drawing.Point(338, 193);
             this.pnlPeliculas.Name = "pnlPeliculas";
@@ -303,7 +304,7 @@
             this.lblContraAdmin.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraAdmin.Location = new System.Drawing.Point(16, 39);
             this.lblContraAdmin.Name = "lblContraAdmin";
-            this.lblContraAdmin.Size = new System.Drawing.Size(155, 28);
+            this.lblContraAdmin.Size = new System.Drawing.Size(164, 29);
             this.lblContraAdmin.TabIndex = 0;
             this.lblContraAdmin.Text = "CONTRASEÑA:";
             // 
