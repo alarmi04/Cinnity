@@ -87,12 +87,19 @@ namespace Proyecto_Cinnity
 
         private void btnVaciar_Click(object sender, EventArgs e)
         {
-            Carrito.listaCarrito.Clear();
-            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
-            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
+            if (Carrito.listaCarrito.Count == 0)
+            {
+                MessageBox.Show("No tienes entradas para vaciar.");
+            } else
+            {
+                Carrito.listaCarrito.Clear();
+                lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
 
-            dgvEntradas.DataSource = null;
-            ActualizarDataGrid();
+                dgvEntradas.DataSource = null;
+                ActualizarDataGrid();
+            }
+
         }
 
         private void btnPagar_Click_1(object sender, EventArgs e)
@@ -101,16 +108,23 @@ namespace Proyecto_Cinnity
             {
                 try
                 {
-                    ConexionBD.AbrirConexion();
-                    Entradas.GenerarEntrada(Carrito.listaCarrito);
-                    ConexionBD.CerrarConexion();
-                    Carrito.listaCarrito.Clear();
+                    if (Carrito.listaCarrito.Count == 0)
+                    {
+                        MessageBox.Show("No hay entradas para pagar.");
+                    } else
+                    {
+                        ConexionBD.AbrirConexion();
+                        Entradas.GenerarEntrada(Carrito.listaCarrito);
+                        ConexionBD.CerrarConexion();
+                        Carrito.listaCarrito.Clear();
 
-                    dgvEntradas.DataSource = null;
-                    ActualizarDataGrid();
-                    lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
-                    lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
-                    MessageBox.Show("Compra realizada.");
+                        dgvEntradas.DataSource = null;
+                        ActualizarDataGrid();
+                        lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                        lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
+                        MessageBox.Show("Compra realizada.");
+                    }
+
 
                 }
                 catch (Exception ex)

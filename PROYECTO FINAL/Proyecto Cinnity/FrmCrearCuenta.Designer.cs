@@ -286,6 +286,7 @@
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmCrearCuenta";
             this.Text = "Crear Cuenta";
+            this.Load += new System.EventHandler(this.FrmCrearCuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.grbInformacionPersonal.ResumeLayout(false);
             this.grbInformacionPersonal.PerformLayout();

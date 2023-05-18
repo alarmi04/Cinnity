@@ -17,7 +17,32 @@ namespace Proyecto_Cinnity
             InitializeComponent();
         }
 
+        private bool DatosValidos()
+        {
+            bool ok = true;
 
+            errorCambiarDatos.Clear();
+
+            if (txtNombre.Text == "")
+            {
+                ok = false;
+                errorCambiarDatos.SetError(txtNombre, "Introduce tu nuevo nombre.");
+            }
+
+            if (txtApellidos.Text == "")
+            {
+                ok = false;
+                errorCambiarDatos.SetError(txtApellidos, "Introduce tus nuevos apellidos.");
+            }
+
+            if (txtCorreo.Text == "")
+            {
+                ok = false;
+                errorCambiarDatos.SetError(txtCorreo, "Introduce tu nuevo correo.");
+            }
+            return ok;
+
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             
@@ -27,12 +52,17 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-                    Usuario.CambiarDatos(txtNombre.Text, txtCorreo.Text, txtApellidos.Text);
-                    ConexionBD.CerrarConexion();
+                    if (DatosValidos())
+                    {
+                        Usuario.CambiarDatos(txtNombre.Text, txtCorreo.Text, txtApellidos.Text);
+                        ConexionBD.CerrarConexion();
 
-                    FrmInicioDeSesion fr1 = new FrmInicioDeSesion();
-                    this.Close();
-                    fr1.Show();
+                        FrmInicioDeSesion fr1 = new FrmInicioDeSesion();
+                        this.Close();
+                        fr1.StartPosition = FormStartPosition.CenterScreen;
+
+                        fr1.Show();
+                    } 
                     
                 }
                 catch (Exception ex)

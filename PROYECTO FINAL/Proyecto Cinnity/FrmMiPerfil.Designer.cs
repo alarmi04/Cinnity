@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlInformacionPerfil = new System.Windows.Forms.Panel();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.lblCambiarContra = new System.Windows.Forms.Label();
             this.lblNombreUsuario = new System.Windows.Forms.Label();
+            this.ptbFoto = new System.Windows.Forms.PictureBox();
             this.lblEntradasAdquiridas = new System.Windows.Forms.Label();
             this.dgvEntradasActivas = new System.Windows.Forms.DataGridView();
             this.lblEditarInformacion = new System.Windows.Forms.Label();
             this.lblMetodosDePago = new System.Windows.Forms.Label();
             this.lblTotalEntradas = new System.Windows.Forms.Label();
-            this.ptbFoto = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.pnlInformacionPerfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -56,6 +56,30 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(1211, 70);
             this.pnlMenu.TabIndex = 1;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1128, 14);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 6;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVolverPrincipal
+            // 
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
+            this.btnVolverPrincipal.Location = new System.Drawing.Point(1040, 14);
+            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
+            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
+            this.btnVolverPrincipal.TabIndex = 5;
+            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
             // pnlInformacionPerfil
             // 
@@ -104,6 +128,16 @@
             this.lblNombreUsuario.Size = new System.Drawing.Size(147, 37);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Username";
+            // 
+            // ptbFoto
+            // 
+            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
+            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
+            this.ptbFoto.Name = "ptbFoto";
+            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
+            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFoto.TabIndex = 0;
+            this.ptbFoto.TabStop = false;
             // 
             // lblEntradasAdquiridas
             // 
@@ -165,40 +199,6 @@
             this.lblTotalEntradas.TabIndex = 9;
             this.lblTotalEntradas.Text = "Total Entradas: ";
             // 
-            // ptbFoto
-            // 
-            this.ptbFoto.Image = global::Proyecto_Cinnity.Properties.Resources.perfil__1_;
-            this.ptbFoto.Location = new System.Drawing.Point(116, 35);
-            this.ptbFoto.Name = "ptbFoto";
-            this.ptbFoto.Size = new System.Drawing.Size(243, 236);
-            this.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFoto.TabIndex = 0;
-            this.ptbFoto.TabStop = false;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1128, 14);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
-            this.btnCerrarSesion.TabIndex = 6;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnVolverPrincipal
-            // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.btnVolverPrincipal.Location = new System.Drawing.Point(1040, 14);
-            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
-            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
-            this.btnVolverPrincipal.TabIndex = 5;
-            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
-            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
-            // 
             // FrmMiPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,8 +218,8 @@
             this.pnlMenu.ResumeLayout(false);
             this.pnlInformacionPerfil.ResumeLayout(false);
             this.pnlInformacionPerfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

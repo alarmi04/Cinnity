@@ -66,22 +66,26 @@ namespace Proyecto_Cinnity
             if (ConexionBD.Conexion != null)
             {
                 ConexionBD.AbrirConexion();
-
+                int id = Pelicula.RecogerID(nombre);
                 if (String.IsNullOrEmpty(txtId.Text))
                 {
-                    if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))
+                    if (DatosValidos()) 
                     {
-                        MessageBox.Show("Esta película ya existe en la base de datos.");
-                    }
-                    else
-                    {
-                        resultado = pel.AgregarPelicula(pel);
+                        if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))
+                        {
+                            MessageBox.Show("Esta película ya existe en la base de datos.");
+                        }
+                        else
+                        {
+                            resultado = pel.AgregarPelicula(pel);
 
+                        }
                     }
+
                 }
                 else
                 {
-                    resultado = pel.ActualizaPelicula(ConexionBD.Conexion, pel);
+                    resultado = pel.ActualizaPelicula(pel, id);
                 }
                 if (resultado > 0)
                 {
@@ -90,13 +94,6 @@ namespace Proyecto_Cinnity
                 CargarDataGrid();
                 ConexionBD.CerrarConexion();
             }
-
-
-
-
-
-
-
         }
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
@@ -124,6 +121,57 @@ namespace Proyecto_Cinnity
             frm1.StartPosition = FormStartPosition.CenterScreen;
 
             frm1.Show();
+        }
+
+        private bool DatosValidos()
+        {
+            bool ok = true;
+
+            errorGestionAdmin.Clear();
+
+            if (txtTitulo.Text == "")
+            {
+                ok = false;
+                errorGestionAdmin.SetError(txtTitulo, "Introduce un título.");
+            }
+
+            if (txtGenero.Text == "")
+            {
+                ok = false;
+                errorGestionAdmin.SetError(txtGenero, "Introduce un genero.");
+            }
+
+            if (txtDirector.Text == "")
+            {
+                ok = false;
+                errorGestionAdmin.SetError(txtDirector, "Introduce un director.");
+            }
+
+            if (txtReparto.Text == "")
+            {
+                ok = false;
+                errorGestionAdmin.SetError(txtReparto, "Introduce un reparto.");
+            }
+
+            if (nudDuracion.Value == 0)
+            {
+                ok = false;
+                errorGestionAdmin.SetError(nudDuracion, "Introduce una duración.");
+            }
+
+            if (txtSinopsis.Text == "")
+            {
+                ok = false;
+                errorGestionAdmin.SetError(txtSinopsis, "Introduce una sinopsis.");
+            }
+
+            if (ptbImagen.Image == null)
+            {
+                ok = false;
+                errorGestionAdmin.SetError(ptbImagen, "Introduce una imagen.");
+            }
+            return ok;
+
         }
 
         private void FrmGestionAdmin_Load(object sender, EventArgs e)
@@ -194,6 +242,10 @@ namespace Proyecto_Cinnity
             ptbImagen.Image = pel.Caratula;
             txtId.Text = pel.IdPelicula.ToString();
         }
- 
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
     }
 }

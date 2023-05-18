@@ -203,34 +203,6 @@ namespace Proyecto_Cinnity
             reader.Close();
             return img;
         }
-
-        public int ModificarPelicula(Pelicula pel)
-        {
-
-            int retorno;
-            MemoryStream ms = new MemoryStream();
-            pel.caratula.Save(ms, ImageFormat.Jpeg);
-            byte[] aByte = ms.ToArray();
-
-            using (var cmd = new MySqlCommand())
-            {
-                cmd.Connection = ConexionBD.Conexion;
-                cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duraccion, sinopsis, fechaEstreno) " +
-                    "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
-                cmd.Parameters.AddWithValue("@caratula", aByte);
-                cmd.Parameters.AddWithValue("@nombre", pel.nombre);
-                cmd.Parameters.AddWithValue("@genero", pel.genero);
-                cmd.Parameters.AddWithValue("@director", pel.director);
-                cmd.Parameters.AddWithValue("@reparto", pel.reparto);
-                cmd.Parameters.AddWithValue("@duracionMinutos", pel.duracionMinutos);
-                cmd.Parameters.AddWithValue("@sinopsis", pel.sinopsis);
-                cmd.Parameters.AddWithValue("@fechaEstreno", pel.fechaEstreno);
-
-                retorno = cmd.ExecuteNonQuery();
-            }
-
-            return retorno;
-        }
         public int AgregarPelicula(Pelicula pel)
         {
 
@@ -306,7 +278,7 @@ namespace Proyecto_Cinnity
 
         }
 
-        public int ActualizaPelicula(MySqlConnection conexion, Pelicula pel)
+        public int ActualizaPelicula(Pelicula pel, int id)
         {
             int retorno;
 
@@ -316,10 +288,10 @@ namespace Proyecto_Cinnity
             byte[] imgArr = ms.ToArray();
 
             string consulta = string.Format("UPDATE pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
-                "duraccion={4},sinopsis='{5}',fotoCaratula=@fotoCaratula WHERE nombrePeli='{6}'", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
-                pel.DuracionMinutos,pel.FechaEstreno.ToString("yyyy/MM/dd"), pel.Nombre);
+                "duraccion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
+                pel.DuracionMinutos,pel.Sinopsis,pel.FechaEstreno.ToString("yyyy/MM/dd"), id);
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("fotoCaratula", imgArr);
             retorno = comando.ExecuteNonQuery();
 

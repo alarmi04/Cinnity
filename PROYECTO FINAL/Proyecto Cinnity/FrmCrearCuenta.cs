@@ -127,6 +127,10 @@ namespace Proyecto_Cinnity
 
         }
 
+        private void FrmCrearCuenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
