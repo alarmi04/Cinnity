@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Cinnity
 {
-    class EnvioCorreos
+    static class EnvioCorreos
     {
     }
 }
