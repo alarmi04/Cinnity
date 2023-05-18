@@ -205,12 +205,12 @@ namespace Proyecto_Cinnity
         }
 
 
-        public static int AgregarPelicula(string nombre, string genero, string director, string reparto, int duracionMinutos, string sinopsis, DateTime fechaEstreno, Image caratula)
+        public int AgregarPelicula(Pelicula pel)
         {
 
             int retorno;
             MemoryStream ms = new MemoryStream();
-            caratula.Save(ms, ImageFormat.Jpeg);
+            pel.caratula.Save(ms, ImageFormat.Jpeg);
             byte[] aByte = ms.ToArray();
 
             using (var cmd = new MySqlCommand())
@@ -219,13 +219,13 @@ namespace Proyecto_Cinnity
                 cmd.CommandText = "INSERT INTO Pelicula (fotoCaratula, nombrePeli, genero, director, reparto, duracion, sinopsis, fechaEstreno) " +
                     "VALUES (@caratula, @nombre, @genero, @director, @reparto, @duracionMinutos, @sinopsis, @fechaEstreno);";
                 cmd.Parameters.AddWithValue("@caratula", aByte);
-                cmd.Parameters.AddWithValue("@nombre", nombre);
-                cmd.Parameters.AddWithValue("@genero", genero);
-                cmd.Parameters.AddWithValue("@director", director);
-                cmd.Parameters.AddWithValue("@reparto", reparto);
-                cmd.Parameters.AddWithValue("@duracionMinutos",duracionMinutos);
-                cmd.Parameters.AddWithValue("@sinopsis", sinopsis);
-                cmd.Parameters.AddWithValue("@fechaEstreno", fechaEstreno);
+                cmd.Parameters.AddWithValue("@nombre", pel.nombre);
+                cmd.Parameters.AddWithValue("@genero", pel.genero);
+                cmd.Parameters.AddWithValue("@director", pel.director);
+                cmd.Parameters.AddWithValue("@reparto", pel.reparto);
+                cmd.Parameters.AddWithValue("@duracionMinutos", pel.duracionMinutos);
+                cmd.Parameters.AddWithValue("@sinopsis", pel.sinopsis);
+                cmd.Parameters.AddWithValue("@fechaEstreno", pel.fechaEstreno);
 
                 retorno = cmd.ExecuteNonQuery();
             }
@@ -280,18 +280,18 @@ namespace Proyecto_Cinnity
 
         }
 
-        public static int ActualizaPelicula(string nombre, string genero, string director, string reparto, int duracionMinutos, string sinopsis, DateTime fechaEstreno, Image caratula, int id)
+        public int ActualizaPelicula(Pelicula pel)
         {
             int retorno;
 
             // Preparación de la imagen
             MemoryStream ms = new MemoryStream();
-            caratula.Save(ms, ImageFormat.Jpeg);
+            pel.caratula.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
             string consulta = string.Format("UPDATE Pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
-                "duracion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", nombre, genero, director, reparto, 
-                duracionMinutos,sinopsis,fechaEstreno.ToString("yyyy/MM/dd"), id);
+                "duracion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", pel.nombre, pel.genero, pel.director, pel.reparto, 
+                pel.duracionMinutos,pel.sinopsis,pel.fechaEstreno.ToString("yyyy/MM/dd"), pel.IdPelicula);
 
 
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
