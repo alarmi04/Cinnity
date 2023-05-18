@@ -60,21 +60,13 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }       
 
-        
-
-        private void btnPagar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dgvEntradas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void FrmCarrito_Load_1(object sender, EventArgs e)
         {
             ActualizarDataGrid();
+            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
+
         }
 
         private void dgvEntradas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -96,6 +88,8 @@ namespace Proyecto_Cinnity
         private void btnVaciar_Click(object sender, EventArgs e)
         {
             Carrito.listaCarrito.Clear();
+            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
 
             dgvEntradas.DataSource = null;
             ActualizarDataGrid();
@@ -114,6 +108,8 @@ namespace Proyecto_Cinnity
 
                     dgvEntradas.DataSource = null;
                     ActualizarDataGrid();
+                    lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                    lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
                     MessageBox.Show("Compra realizada.");
 
                 }
