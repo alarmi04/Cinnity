@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ptbLogo = new System.Windows.Forms.PictureBox();
-            this.btnIdioma = new System.Windows.Forms.Button();
             this.lblContraActual = new System.Windows.Forms.Label();
             this.txtContraActual = new System.Windows.Forms.TextBox();
             this.lblNuevaContra = new System.Windows.Forms.Label();
@@ -37,7 +37,9 @@
             this.lblConfirmaContra = new System.Windows.Forms.Label();
             this.txtConfirmaContra = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.errorCambiarContra = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCambiarContra)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbLogo
@@ -49,15 +51,6 @@
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
-            // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Image = global::Proyecto_Cinnity.Properties.Resources.traductor;
-            this.btnIdioma.Location = new System.Drawing.Point(566, 61);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(106, 86);
-            this.btnIdioma.TabIndex = 1;
-            this.btnIdioma.UseVisualStyleBackColor = true;
             // 
             // lblContraActual
             // 
@@ -136,6 +129,10 @@
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
+            // errorCambiarContra
+            // 
+            this.errorCambiarContra.ContainerControl = this;
+            // 
             // FrmCambiarContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -149,11 +146,12 @@
             this.Controls.Add(this.lblNuevaContra);
             this.Controls.Add(this.txtContraActual);
             this.Controls.Add(this.lblContraActual);
-            this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmCambiarContra";
             this.Text = "Cambiar Contraseña";
+            this.Load += new System.EventHandler(this.FrmCambiarContra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCambiarContra)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +160,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox ptbLogo;
-        private System.Windows.Forms.Button btnIdioma;
         private System.Windows.Forms.Label lblContraActual;
         private System.Windows.Forms.TextBox txtContraActual;
         private System.Windows.Forms.Label lblNuevaContra;
@@ -170,5 +167,6 @@
         private System.Windows.Forms.Label lblConfirmaContra;
         private System.Windows.Forms.TextBox txtConfirmaContra;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ErrorProvider errorCambiarContra;
     }
 }

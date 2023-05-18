@@ -25,41 +25,20 @@ namespace Proyecto_Cinnity
         {
             bool ok = true;
 
-            try
+            errorInicioSesion.Clear();
+
+            if (txtUsuario.Text == "")
             {
-                if (ConexionBD.Conexion != null)
-                {
-                    ConexionBD.AbrirConexion();
-
-                    errorInicioSesion.Clear();
-
-                    if (txtUsuario.Text == "")
-                    {
-                        ok = false;
-                        errorInicioSesion.SetError(txtUsuario, "Introduce Usuario");
-                    }
-
-                    if (txtContra.Text == "")
-                    {
-                        ok = false;
-                        errorInicioSesion.SetError(txtContra, "Introduce Contraseña");
-                    }
-
-                }
-                return ok;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
-                return ok;
-
+                ok = false;
+                errorInicioSesion.SetError(txtUsuario, "Introduce Usuario");
             }
 
-            finally
+            if (txtContra.Text == "")
             {
-                ConexionBD.CerrarConexion();
+                ok = false;
+                errorInicioSesion.SetError(txtContra, "Introduce Contraseña");
             }
+            return ok;
 
         }
 
@@ -127,6 +106,9 @@ namespace Proyecto_Cinnity
             }
         }
 
+        private void FrmInicioDeSesion_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

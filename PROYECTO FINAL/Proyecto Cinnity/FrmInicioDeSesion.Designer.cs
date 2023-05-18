@@ -49,7 +49,7 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblUsuario.Location = new System.Drawing.Point(169, 299);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(204, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(199, 22);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "CORREO ELECTRÓNICO:";
             // 
@@ -70,7 +70,7 @@
             this.lblContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblContra.Location = new System.Drawing.Point(169, 394);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(130, 23);
+            this.lblContra.Size = new System.Drawing.Size(123, 22);
             this.lblContra.TabIndex = 3;
             this.lblContra.Text = "CONTRASEÑA:";
             // 
@@ -91,7 +91,7 @@
             this.lblContraOlvidada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblContraOlvidada.Location = new System.Drawing.Point(236, 528);
             this.lblContraOlvidada.Name = "lblContraOlvidada";
-            this.lblContraOlvidada.Size = new System.Drawing.Size(253, 17);
+            this.lblContraOlvidada.Size = new System.Drawing.Size(242, 16);
             this.lblContraOlvidada.TabIndex = 6;
             this.lblContraOlvidada.Text = "¿HAS OLVIDADO  TU CONTRASEÑA?";
             this.lblContraOlvidada.Click += new System.EventHandler(this.lblContraOlvidada_Click);
@@ -154,6 +154,7 @@
             this.Controls.Add(this.ptbLogo);
             this.Name = "FrmInicioDeSesion";
             this.Text = "Inicio De Sesión";
+            this.Load += new System.EventHandler(this.FrmInicioDeSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorInicioSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);

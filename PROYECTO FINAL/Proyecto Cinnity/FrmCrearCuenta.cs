@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net.Security;
 using System.Net;
@@ -136,6 +135,7 @@ namespace Proyecto_Cinnity
 
         }
 
+<<<<<<< HEAD
         private void EnviarCorreoRegistro(string correoDestino)
         {
 
@@ -170,6 +170,12 @@ namespace Proyecto_Cinnity
             }
         }
 
+=======
+        private void FrmCrearCuenta_Load(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 5a6b66dd5d840c6aa520331b3f5f7ed25c20b44c
     }
 }
 

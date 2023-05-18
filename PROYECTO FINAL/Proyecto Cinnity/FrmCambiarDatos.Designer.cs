@@ -29,6 +29,7 @@ namespace Proyecto_Cinnity
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grbInformacionPersonal = new System.Windows.Forms.GroupBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
@@ -39,10 +40,12 @@ namespace Proyecto_Cinnity
             this.lblCambioDatos = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnVolverPrincipal = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
+            this.errorCambiarDatos = new System.Windows.Forms.ErrorProvider(this.components);
             this.grbInformacionPersonal.SuspendLayout();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCambiarDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // grbInformacionPersonal
@@ -148,6 +151,18 @@ namespace Proyecto_Cinnity
             this.pnlMenu.Size = new System.Drawing.Size(646, 70);
             this.pnlMenu.TabIndex = 4;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(563, 12);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 6;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // btnVolverPrincipal
             // 
             this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
@@ -160,17 +175,9 @@ namespace Proyecto_Cinnity
             this.btnVolverPrincipal.UseVisualStyleBackColor = false;
             this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
             // 
-            // btnCerrarSesion
+            // errorCambiarDatos
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(563, 12);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
-            this.btnCerrarSesion.TabIndex = 6;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.errorCambiarDatos.ContainerControl = this;
             // 
             // FrmCambiarDatos
             // 
@@ -186,6 +193,7 @@ namespace Proyecto_Cinnity
             this.grbInformacionPersonal.ResumeLayout(false);
             this.grbInformacionPersonal.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorCambiarDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +212,6 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnVolverPrincipal;
         private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.ErrorProvider errorCambiarDatos;
     }
 }

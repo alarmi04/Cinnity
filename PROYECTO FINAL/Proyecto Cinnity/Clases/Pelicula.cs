@@ -16,6 +16,7 @@ namespace Proyecto_Cinnity
 {
     class Pelicula
     {
+        private int idPelicula;
         private string nombre;
         private string genero;
         private string director;
@@ -25,6 +26,7 @@ namespace Proyecto_Cinnity
         private DateTime fechaEstreno;
         private Image caratula;
 
+        public int IdPelicula { get { return idPelicula; } set { idPelicula = value; } }
         public Image Caratula { get { return caratula; } set { caratula = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Genero { get { return genero; } set { genero = value; } }
@@ -201,6 +203,7 @@ namespace Proyecto_Cinnity
             reader.Close();
             return img;
         }
+<<<<<<< HEAD
 
         public int ModificarPelicula(Pelicula pel)
         {
@@ -229,6 +232,8 @@ namespace Proyecto_Cinnity
 
             return retorno;
         }
+=======
+>>>>>>> 5a6b66dd5d840c6aa520331b3f5f7ed25c20b44c
         public int AgregarPelicula(Pelicula pel)
         {
 
@@ -265,6 +270,7 @@ namespace Proyecto_Cinnity
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
+                peli.idPelicula= Convert.ToInt32(reader["idPelicula"]);
                 peli.nombre = reader.GetString(2);
                 peli.genero = reader.GetString(3);
                 peli.director = reader.GetString(4);
@@ -288,8 +294,6 @@ namespace Proyecto_Cinnity
             string consulta = string.Format("SELECT * FROM Pelicula" +
             " WHERE nombrePeli='{0}';", nom);
 
-            MessageBox.Show(consulta);   // Se puede activar esta línea para testear la sintaxis de la consulta.
-
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();
             if (reader.HasRows)
@@ -305,7 +309,7 @@ namespace Proyecto_Cinnity
 
         }
 
-        public int ActualizaPelicula(MySqlConnection conexion, Pelicula pel)
+        public int ActualizaPelicula(Pelicula pel, int id)
         {
             int retorno;
 
@@ -314,11 +318,17 @@ namespace Proyecto_Cinnity
             pel.Caratula.Save(ms, ImageFormat.Jpeg);
             byte[] imgArr = ms.ToArray();
 
+<<<<<<< HEAD
             string consulta = string.Format("UPDATE Pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
                 "duracion={4},sinopsis='{5}',fotoCaratula=@fotoCaratula WHERE nombrePeli='{6}'", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
                 pel.DuracionMinutos,pel.FechaEstreno.ToString("yyyy/MM/dd"), pel.Nombre);
+=======
+            string consulta = string.Format("UPDATE pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
+                "duraccion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", pel.Nombre, pel.Genero, pel.Director, pel.Reparto, 
+                pel.DuracionMinutos,pel.Sinopsis,pel.FechaEstreno.ToString("yyyy/MM/dd"), id);
+>>>>>>> 5a6b66dd5d840c6aa520331b3f5f7ed25c20b44c
 
-            MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("fotoCaratula", imgArr);
             retorno = comando.ExecuteNonQuery();
 
