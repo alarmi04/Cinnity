@@ -16,6 +16,7 @@ namespace Proyecto_Cinnity
 {
     class Pelicula
     {
+        private int idPelicula;
         private string nombre;
         private string genero;
         private string director;
@@ -25,6 +26,7 @@ namespace Proyecto_Cinnity
         private DateTime fechaEstreno;
         private Image caratula;
 
+        public int IdPelicula { get { return idPelicula; } set { idPelicula = value; } }
         public Image Caratula { get { return caratula; } set { caratula = value; } }
         public string Nombre { get { return nombre; } set { nombre = value; } }
         public string Genero { get { return genero; } set { genero = value; } }
@@ -265,6 +267,7 @@ namespace Proyecto_Cinnity
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
+                peli.idPelicula= Convert.ToInt32(reader["idPelicula"]);
                 peli.nombre = reader.GetString(2);
                 peli.genero = reader.GetString(3);
                 peli.director = reader.GetString(4);
@@ -287,8 +290,6 @@ namespace Proyecto_Cinnity
         {
             string consulta = string.Format("SELECT * FROM pelicula" +
             " WHERE nombrePeli='{0}';", nom);
-
-            MessageBox.Show(consulta);   // Se puede activar esta línea para testear la sintaxis de la consulta.
 
             MySqlCommand comando = new MySqlCommand(consulta, conexion);
             MySqlDataReader reader = comando.ExecuteReader();

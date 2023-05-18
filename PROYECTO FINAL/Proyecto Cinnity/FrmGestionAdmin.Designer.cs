@@ -51,11 +51,6 @@ namespace Proyecto_Cinnity
             this.ptbImagen = new System.Windows.Forms.PictureBox();
             this.btnCargarImagen = new System.Windows.Forms.Button();
             this.dgvPeliculas = new System.Windows.Forms.DataGridView();
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVolverPrincipal = new System.Windows.Forms.Button();
-            this.btnMiPerfil = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,18 +59,27 @@ namespace Proyecto_Cinnity
             this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaEstrenoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVolverPrincipal = new System.Windows.Forms.Button();
+            this.btnMiPerfil = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDuracion)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
-            this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).BeginInit();
+            this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbInfoPeli
             // 
             this.gbInfoPeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.gbInfoPeli.Controls.Add(this.txtId);
+            this.gbInfoPeli.Controls.Add(this.lblId);
             this.gbInfoPeli.Controls.Add(this.dtpFechaEstreno);
             this.gbInfoPeli.Controls.Add(this.lblMin);
             this.gbInfoPeli.Controls.Add(this.nudDuracion);
@@ -100,7 +104,7 @@ namespace Proyecto_Cinnity
             // 
             // dtpFechaEstreno
             // 
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(230, 496);
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(230, 515);
             this.dtpFechaEstreno.Name = "dtpFechaEstreno";
             this.dtpFechaEstreno.Size = new System.Drawing.Size(380, 32);
             this.dtpFechaEstreno.TabIndex = 2;
@@ -109,7 +113,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblMin.AutoSize = true;
             this.lblMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblMin.Location = new System.Drawing.Point(304, 441);
+            this.lblMin.Location = new System.Drawing.Point(305, 466);
             this.lblMin.Name = "lblMin";
             this.lblMin.Size = new System.Drawing.Size(48, 24);
             this.lblMin.TabIndex = 21;
@@ -117,7 +121,7 @@ namespace Proyecto_Cinnity
             // 
             // nudDuracion
             // 
-            this.nudDuracion.Location = new System.Drawing.Point(155, 439);
+            this.nudDuracion.Location = new System.Drawing.Point(156, 464);
             this.nudDuracion.Maximum = new decimal(new int[] {
             500,
             0,
@@ -134,21 +138,21 @@ namespace Proyecto_Cinnity
             // 
             // txtDirector
             // 
-            this.txtDirector.Location = new System.Drawing.Point(141, 166);
+            this.txtDirector.Location = new System.Drawing.Point(141, 205);
             this.txtDirector.Name = "txtDirector";
             this.txtDirector.Size = new System.Drawing.Size(517, 32);
             this.txtDirector.TabIndex = 19;
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(141, 109);
+            this.txtGenero.Location = new System.Drawing.Point(142, 150);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(517, 32);
             this.txtGenero.TabIndex = 18;
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(141, 53);
+            this.txtTitulo.Location = new System.Drawing.Point(142, 96);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(517, 32);
             this.txtTitulo.TabIndex = 17;
@@ -157,7 +161,7 @@ namespace Proyecto_Cinnity
             // 
             this.txtReparto.BackColor = System.Drawing.Color.White;
             this.txtReparto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.txtReparto.Location = new System.Drawing.Point(43, 268);
+            this.txtReparto.Location = new System.Drawing.Point(44, 299);
             this.txtReparto.Multiline = true;
             this.txtReparto.Name = "txtReparto";
             this.txtReparto.Size = new System.Drawing.Size(615, 142);
@@ -167,7 +171,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblTítulo.AutoSize = true;
             this.lblTítulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblTítulo.Location = new System.Drawing.Point(39, 56);
+            this.lblTítulo.Location = new System.Drawing.Point(40, 99);
             this.lblTítulo.Name = "lblTítulo";
             this.lblTítulo.Size = new System.Drawing.Size(65, 24);
             this.lblTítulo.TabIndex = 15;
@@ -187,7 +191,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblFechaEstreno.AutoSize = true;
             this.lblFechaEstreno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblFechaEstreno.Location = new System.Drawing.Point(39, 502);
+            this.lblFechaEstreno.Location = new System.Drawing.Point(39, 515);
             this.lblFechaEstreno.Name = "lblFechaEstreno";
             this.lblFechaEstreno.Size = new System.Drawing.Size(159, 24);
             this.lblFechaEstreno.TabIndex = 13;
@@ -207,7 +211,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblDuracion.AutoSize = true;
             this.lblDuracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblDuracion.Location = new System.Drawing.Point(39, 441);
+            this.lblDuracion.Location = new System.Drawing.Point(40, 466);
             this.lblDuracion.Name = "lblDuracion";
             this.lblDuracion.Size = new System.Drawing.Size(93, 24);
             this.lblDuracion.TabIndex = 11;
@@ -217,7 +221,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblReparto.AutoSize = true;
             this.lblReparto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblReparto.Location = new System.Drawing.Point(39, 223);
+            this.lblReparto.Location = new System.Drawing.Point(40, 254);
             this.lblReparto.Name = "lblReparto";
             this.lblReparto.Size = new System.Drawing.Size(84, 24);
             this.lblReparto.TabIndex = 10;
@@ -227,7 +231,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblDirector.AutoSize = true;
             this.lblDirector.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblDirector.Location = new System.Drawing.Point(39, 169);
+            this.lblDirector.Location = new System.Drawing.Point(39, 208);
             this.lblDirector.Name = "lblDirector";
             this.lblDirector.Size = new System.Drawing.Size(86, 24);
             this.lblDirector.TabIndex = 9;
@@ -237,7 +241,7 @@ namespace Proyecto_Cinnity
             // 
             this.lblGenero.AutoSize = true;
             this.lblGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
-            this.lblGenero.Location = new System.Drawing.Point(39, 112);
+            this.lblGenero.Location = new System.Drawing.Point(40, 153);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(77, 24);
             this.lblGenero.TabIndex = 7;
@@ -310,65 +314,6 @@ namespace Proyecto_Cinnity
             this.dgvPeliculas.Size = new System.Drawing.Size(620, 343);
             this.dgvPeliculas.TabIndex = 5;
             // 
-            // pnlMenu
-            // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
-            this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
-            this.pnlMenu.Controls.Add(this.btnMiPerfil);
-            this.pnlMenu.Location = new System.Drawing.Point(1, -1);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(1448, 68);
-            this.pnlMenu.TabIndex = 6;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1365, 10);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
-            this.btnCerrarSesion.TabIndex = 6;
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnVolverPrincipal
-            // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.btnVolverPrincipal.Location = new System.Drawing.Point(1286, 10);
-            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
-            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
-            this.btnVolverPrincipal.TabIndex = 5;
-            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
-            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
-            // 
-            // btnMiPerfil
-            // 
-            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
-            this.btnMiPerfil.Location = new System.Drawing.Point(3, 15);
-            this.btnMiPerfil.Name = "btnMiPerfil";
-            this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
-            this.btnMiPerfil.TabIndex = 0;
-            this.btnMiPerfil.UseVisualStyleBackColor = false;
-            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.btnModificar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.Location = new System.Drawing.Point(781, 776);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(194, 81);
-            this.btnModificar.TabIndex = 7;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
@@ -429,6 +374,83 @@ namespace Proyecto_Cinnity
             // 
             this.peliculaBindingSource.DataSource = typeof(Proyecto_Cinnity.Pelicula);
             // 
+            // pnlMenu
+            // 
+            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlMenu.Controls.Add(this.btnCerrarSesion);
+            this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
+            this.pnlMenu.Controls.Add(this.btnMiPerfil);
+            this.pnlMenu.Location = new System.Drawing.Point(1, -1);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(1448, 68);
+            this.pnlMenu.TabIndex = 6;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1365, 10);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(66, 50);
+            this.btnCerrarSesion.TabIndex = 6;
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVolverPrincipal
+            // 
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
+            this.btnVolverPrincipal.Location = new System.Drawing.Point(1286, 10);
+            this.btnVolverPrincipal.Name = "btnVolverPrincipal";
+            this.btnVolverPrincipal.Size = new System.Drawing.Size(66, 50);
+            this.btnVolverPrincipal.TabIndex = 5;
+            this.btnVolverPrincipal.UseVisualStyleBackColor = false;
+            this.btnVolverPrincipal.Click += new System.EventHandler(this.btnVolverPrincipal_Click);
+            // 
+            // btnMiPerfil
+            // 
+            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
+            this.btnMiPerfil.Location = new System.Drawing.Point(3, 15);
+            this.btnMiPerfil.Name = "btnMiPerfil";
+            this.btnMiPerfil.Size = new System.Drawing.Size(66, 50);
+            this.btnMiPerfil.TabIndex = 0;
+            this.btnMiPerfil.UseVisualStyleBackColor = false;
+            this.btnMiPerfil.Click += new System.EventHandler(this.btnMiPerfil_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnModificar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.Location = new System.Drawing.Point(781, 776);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(194, 81);
+            this.btnModificar.TabIndex = 7;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.lblId.Location = new System.Drawing.Point(40, 44);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(104, 24);
+            this.lblId.TabIndex = 22;
+            this.lblId.Text = "ID Película:";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(156, 41);
+            this.txtId.Name = "txtId";
+            this.txtId.ReadOnly = true;
+            this.txtId.Size = new System.Drawing.Size(503, 32);
+            this.txtId.TabIndex = 23;
+            // 
             // FrmGestionAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,8 +472,8 @@ namespace Proyecto_Cinnity
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
-            this.pnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.peliculaBindingSource)).EndInit();
+            this.pnlMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -492,5 +514,7 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaEstrenoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource peliculaBindingSource;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lblId;
     }
 }

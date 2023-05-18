@@ -46,6 +46,7 @@ namespace Proyecto_Cinnity
             dtpFechaEstreno.Value = DateTime.Now;
             txtSinopsis.Clear();
             ptbImagen.Image = null;
+            txtId.Clear();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Proyecto_Cinnity
             {
                 ConexionBD.AbrirConexion();
 
-                if (String.IsNullOrEmpty(txtTitulo.Text))
+                if (String.IsNullOrEmpty(txtId.Text))
                 {
                     if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))
                     {
@@ -191,6 +192,7 @@ namespace Proyecto_Cinnity
             dtpFechaEstreno.Value = pel.FechaEstreno;
             txtSinopsis.Text = pel.Sinopsis;
             ptbImagen.Image = pel.Caratula;
+            txtId.Text = pel.IdPelicula.ToString();
         }
  
     }

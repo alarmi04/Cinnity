@@ -404,3 +404,4 @@ C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto 
 C:\Users\laclcr\Documents\PROYECTO\PROG\Reinmic\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.pdb
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\ZstdNet.dll
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarDatos.resources
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.FrmCambiarDatos.resources
