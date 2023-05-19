@@ -59,7 +59,7 @@
             this.pnlMenu.Controls.Add(this.btnMiPerfil);
             this.pnlMenu.Location = new System.Drawing.Point(-5, -6);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(1006, 71);
+            this.pnlMenu.Size = new System.Drawing.Size(1006, 64);
             this.pnlMenu.TabIndex = 0;
             // 
             // btnCerrarSesion
@@ -67,7 +67,7 @@
             this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(929, 18);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(929, 11);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(62, 50);
             this.btnCerrarSesion.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.btnVolver.BackColor = System.Drawing.Color.Transparent;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
-            this.btnVolver.Location = new System.Drawing.Point(856, 18);
+            this.btnVolver.Location = new System.Drawing.Point(852, 11);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(62, 50);
             this.btnVolver.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.btnMiPerfil.BackColor = System.Drawing.Color.Transparent;
             this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
-            this.btnMiPerfil.Location = new System.Drawing.Point(17, 18);
+            this.btnMiPerfil.Location = new System.Drawing.Point(17, 11);
             this.btnMiPerfil.Name = "btnMiPerfil";
             this.btnMiPerfil.Size = new System.Drawing.Size(62, 50);
             this.btnMiPerfil.TabIndex = 0;
@@ -106,9 +106,9 @@
             this.pnlInformacion.Controls.Add(this.ptbFacebook);
             this.pnlInformacion.Controls.Add(this.ptbInsta);
             this.pnlInformacion.Controls.Add(this.ptbLogo);
-            this.pnlInformacion.Location = new System.Drawing.Point(-5, 63);
+            this.pnlInformacion.Location = new System.Drawing.Point(-5, 57);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(316, 796);
+            this.pnlInformacion.Size = new System.Drawing.Size(316, 802);
             this.pnlInformacion.TabIndex = 1;
             // 
             // ptbCorreo
@@ -154,7 +154,7 @@
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
-            this.ptbLogo.Location = new System.Drawing.Point(27, 8);
+            this.ptbLogo.Location = new System.Drawing.Point(38, 8);
             this.ptbLogo.Name = "ptbLogo";
             this.ptbLogo.Size = new System.Drawing.Size(250, 250);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(998, 850);
             this.Controls.Add(this.lblPreguntas);
             this.Controls.Add(this.lblInformacion2);

@@ -143,7 +143,7 @@ namespace Proyecto_Cinnity
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.White;
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
             this.pnlMenu.Location = new System.Drawing.Point(-2, 0);
@@ -153,7 +153,7 @@ namespace Proyecto_Cinnity
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(563, 12);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -164,7 +164,7 @@ namespace Proyecto_Cinnity
             // 
             // btnVolverPrincipal
             // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.White;
             this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolverPrincipal.Location = new System.Drawing.Point(485, 12);
             this.btnVolverPrincipal.Name = "btnVolverPrincipal";
@@ -181,7 +181,7 @@ namespace Proyecto_Cinnity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(639, 609);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.grbInformacionPersonal);

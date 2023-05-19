@@ -49,7 +49,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.White;
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
             this.pnlMenu.Location = new System.Drawing.Point(-2, -2);
@@ -59,7 +59,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(1128, 14);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -70,7 +70,7 @@
             // 
             // btnVolverPrincipal
             // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.White;
             this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolverPrincipal.Location = new System.Drawing.Point(1040, 14);
             this.btnVolverPrincipal.Name = "btnVolverPrincipal";
@@ -83,7 +83,6 @@
             // 
             this.pnlInformacionPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacionPerfil.Controls.Add(this.lblCorreo);
-            this.pnlInformacionPerfil.Controls.Add(this.lblCambiarContra);
             this.pnlInformacionPerfil.Controls.Add(this.lblNombreUsuario);
             this.pnlInformacionPerfil.Controls.Add(this.ptbFoto);
             this.pnlInformacionPerfil.Location = new System.Drawing.Point(48, 91);
@@ -97,18 +96,19 @@
             this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.lblCorreo.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCorreo.Location = new System.Drawing.Point(67, 351);
+            this.lblCorreo.Location = new System.Drawing.Point(109, 377);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(266, 37);
             this.lblCorreo.TabIndex = 2;
             this.lblCorreo.Text = "correo@gmail.com";
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCambiarContra
             // 
             this.lblCambiarContra.AutoSize = true;
             this.lblCambiarContra.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblCambiarContra.Location = new System.Drawing.Point(105, 486);
+            this.lblCambiarContra.Location = new System.Drawing.Point(562, 550);
             this.lblCambiarContra.Name = "lblCambiarContra";
             this.lblCambiarContra.Size = new System.Drawing.Size(254, 35);
             this.lblCambiarContra.TabIndex = 8;
@@ -121,11 +121,12 @@
             this.lblNombreUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
             this.lblNombreUsuario.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(149, 290);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(165, 300);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(147, 37);
             this.lblNombreUsuario.TabIndex = 1;
             this.lblNombreUsuario.Text = "Username";
+            this.lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptbFoto
             // 
@@ -140,7 +141,7 @@
             // lblEntradasAdquiridas
             // 
             this.lblEntradasAdquiridas.AutoSize = true;
-            this.lblEntradasAdquiridas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblEntradasAdquiridas.BackColor = System.Drawing.Color.White;
             this.lblEntradasAdquiridas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntradasAdquiridas.Location = new System.Drawing.Point(568, 93);
             this.lblEntradasAdquiridas.Name = "lblEntradasAdquiridas";
@@ -165,7 +166,7 @@
             this.lblEditarInformacion.AutoSize = true;
             this.lblEditarInformacion.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditarInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 538);
+            this.lblEditarInformacion.Location = new System.Drawing.Point(562, 489);
             this.lblEditarInformacion.Name = "lblEditarInformacion";
             this.lblEditarInformacion.Size = new System.Drawing.Size(236, 35);
             this.lblEditarInformacion.TabIndex = 6;
@@ -177,7 +178,7 @@
             this.lblMetodosDePago.AutoSize = true;
             this.lblMetodosDePago.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMetodosDePago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblMetodosDePago.Location = new System.Drawing.Point(568, 605);
+            this.lblMetodosDePago.Location = new System.Drawing.Point(562, 605);
             this.lblMetodosDePago.Name = "lblMetodosDePago";
             this.lblMetodosDePago.Size = new System.Drawing.Size(223, 35);
             this.lblMetodosDePago.TabIndex = 7;
@@ -201,9 +202,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(1204, 702);
             this.Controls.Add(this.lblTotalEntradas);
+            this.Controls.Add(this.lblCambiarContra);
             this.Controls.Add(this.lblMetodosDePago);
             this.Controls.Add(this.lblEditarInformacion);
             this.Controls.Add(this.lblEntradasAdquiridas);

@@ -51,7 +51,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.White;
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
             this.pnlMenu.Controls.Add(this.btnVolverPrincipal);
             this.pnlMenu.Controls.Add(this.btnMiPerfil);
@@ -62,7 +62,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(710, 15);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -73,7 +73,7 @@
             // 
             // btnVolverPrincipal
             // 
-            this.btnVolverPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnVolverPrincipal.BackColor = System.Drawing.Color.White;
             this.btnVolverPrincipal.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolverPrincipal.Location = new System.Drawing.Point(631, 15);
             this.btnVolverPrincipal.Name = "btnVolverPrincipal";
@@ -84,7 +84,7 @@
             // 
             // btnMiPerfil
             // 
-            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnMiPerfil.BackColor = System.Drawing.Color.White;
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
             this.btnMiPerfil.Location = new System.Drawing.Point(3, 15);
             this.btnMiPerfil.Name = "btnMiPerfil";
@@ -209,7 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(787, 630);
             this.Controls.Add(this.pnlGeneral);
             this.Controls.Add(this.pnlMenu);

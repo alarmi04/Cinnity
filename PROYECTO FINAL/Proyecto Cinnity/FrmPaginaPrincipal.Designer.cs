@@ -50,7 +50,6 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.txtContraAdmin = new System.Windows.Forms.TextBox();
             this.lblContraAdmin = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.peliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.peliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
@@ -84,7 +83,7 @@
             this.btnMantenimiento.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenimiento.Image = global::Proyecto_Cinnity.Properties.Resources.configuraciones;
             this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMantenimiento.Location = new System.Drawing.Point(5, 600);
+            this.btnMantenimiento.Location = new System.Drawing.Point(5, 582);
             this.btnMantenimiento.Name = "btnMantenimiento";
             this.btnMantenimiento.Size = new System.Drawing.Size(289, 50);
             this.btnMantenimiento.TabIndex = 6;
@@ -109,7 +108,7 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(5, 521);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(5, 503);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(289, 50);
             this.btnCerrarSesion.TabIndex = 4;
@@ -123,7 +122,7 @@
             this.btnAyuda.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAyuda.Image = global::Proyecto_Cinnity.Properties.Resources.informacion;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAyuda.Location = new System.Drawing.Point(5, 441);
+            this.btnAyuda.Location = new System.Drawing.Point(5, 420);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(289, 53);
             this.btnAyuda.TabIndex = 3;
@@ -137,7 +136,7 @@
             this.btnEntradas.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.Image = global::Proyecto_Cinnity.Properties.Resources.billete;
             this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEntradas.Location = new System.Drawing.Point(5, 359);
+            this.btnEntradas.Location = new System.Drawing.Point(5, 340);
             this.btnEntradas.Name = "btnEntradas";
             this.btnEntradas.Size = new System.Drawing.Size(289, 53);
             this.btnEntradas.TabIndex = 2;
@@ -151,7 +150,7 @@
             this.btnMiPerfil.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
             this.btnMiPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMiPerfil.Location = new System.Drawing.Point(5, 277);
+            this.btnMiPerfil.Location = new System.Drawing.Point(5, 263);
             this.btnMiPerfil.Name = "btnMiPerfil";
             this.btnMiPerfil.Size = new System.Drawing.Size(289, 52);
             this.btnMiPerfil.TabIndex = 1;
@@ -170,6 +169,7 @@
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtBuscar.Click += new System.EventHandler(this.txtBuscar_Click);
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // fileSystemWatcher1
             // 
@@ -239,7 +239,7 @@
             "Animacion",
             "Terror",
             "Todas"});
-            this.cmbFiltrar.Location = new System.Drawing.Point(704, 149);
+            this.cmbFiltrar.Location = new System.Drawing.Point(625, 149);
             this.cmbFiltrar.Name = "cmbFiltrar";
             this.cmbFiltrar.Size = new System.Drawing.Size(121, 32);
             this.cmbFiltrar.TabIndex = 16;
@@ -261,9 +261,9 @@
             this.pnlMantenimiento.Controls.Add(this.btnAcceder);
             this.pnlMantenimiento.Controls.Add(this.txtContraAdmin);
             this.pnlMantenimiento.Controls.Add(this.lblContraAdmin);
-            this.pnlMantenimiento.Location = new System.Drawing.Point(312, 12);
+            this.pnlMantenimiento.Location = new System.Drawing.Point(338, 12);
             this.pnlMantenimiento.Name = "pnlMantenimiento";
-            this.pnlMantenimiento.Size = new System.Drawing.Size(613, 105);
+            this.pnlMantenimiento.Size = new System.Drawing.Size(617, 105);
             this.pnlMantenimiento.TabIndex = 17;
             // 
             // btnAcceder
@@ -285,6 +285,7 @@
             this.txtContraAdmin.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraAdmin.Location = new System.Drawing.Point(195, 39);
             this.txtContraAdmin.Name = "txtContraAdmin";
+            this.txtContraAdmin.PasswordChar = '*';
             this.txtContraAdmin.Size = new System.Drawing.Size(250, 32);
             this.txtContraAdmin.TabIndex = 1;
             // 
@@ -294,20 +295,9 @@
             this.lblContraAdmin.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraAdmin.Location = new System.Drawing.Point(16, 39);
             this.lblContraAdmin.Name = "lblContraAdmin";
-            this.lblContraAdmin.Size = new System.Drawing.Size(164, 29);
+            this.lblContraAdmin.Size = new System.Drawing.Size(155, 28);
             this.lblContraAdmin.TabIndex = 0;
             this.lblContraAdmin.Text = "CONTRASEÑA:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::Proyecto_Cinnity.Properties.Resources.lupa;
-            this.btnBuscar.Location = new System.Drawing.Point(626, 142);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(58, 48);
-            this.btnBuscar.TabIndex = 18;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // peliculaBindingSource1
             // 
@@ -321,9 +311,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(1195, 790);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pnlMantenimiento);
             this.Controls.Add(this.pnlPeliculas);
             this.Controls.Add(this.cmbFiltrar);
@@ -377,6 +366,5 @@
         private System.Windows.Forms.TextBox txtContraAdmin;
         private System.Windows.Forms.Label lblContraAdmin;
         private System.Windows.Forms.Button btnAcceder;
-        private System.Windows.Forms.Button btnBuscar;
     }
 }
