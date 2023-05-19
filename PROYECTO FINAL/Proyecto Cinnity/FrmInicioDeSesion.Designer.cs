@@ -53,9 +53,10 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblUsuario.Location = new System.Drawing.Point(169, 357);
+            this.lblUsuario.Location = new System.Drawing.Point(127, 290);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(199, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(159, 18);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "CORREO ELECTRÓNICO:";
             // 
@@ -64,9 +65,10 @@
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(173, 393);
+            this.txtUsuario.Location = new System.Drawing.Point(130, 319);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(368, 21);
+            this.txtUsuario.Size = new System.Drawing.Size(276, 17);
             this.txtUsuario.TabIndex = 2;
             // 
             // lblContra
@@ -74,9 +76,10 @@
             this.lblContra.AutoSize = true;
             this.lblContra.Font = new System.Drawing.Font("Candara", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblContra.Location = new System.Drawing.Point(169, 452);
+            this.lblContra.Location = new System.Drawing.Point(127, 367);
+            this.lblContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(123, 22);
+            this.lblContra.Size = new System.Drawing.Size(101, 18);
             this.lblContra.TabIndex = 3;
             this.lblContra.Text = "CONTRASEÑA:";
             // 
@@ -85,10 +88,11 @@
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.txtContra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContra.Location = new System.Drawing.Point(173, 496);
+            this.txtContra.Location = new System.Drawing.Point(130, 403);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContra.Name = "txtContra";
             this.txtContra.PasswordChar = '*';
-            this.txtContra.Size = new System.Drawing.Size(368, 21);
+            this.txtContra.Size = new System.Drawing.Size(276, 17);
             this.txtContra.TabIndex = 4;
             // 
             // btnIniciarSesion
@@ -97,9 +101,10 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(81, 612);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(61, 497);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(176, 55);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(132, 45);
             this.btnIniciarSesion.TabIndex = 7;
             this.btnIniciarSesion.Text = "INICIAR SESIÓN";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
@@ -111,9 +116,10 @@
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Candara", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCuenta.ForeColor = System.Drawing.Color.Black;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(444, 612);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(333, 497);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(176, 55);
+            this.btnCrearCuenta.Size = new System.Drawing.Size(132, 45);
             this.btnCrearCuenta.TabIndex = 8;
             this.btnCrearCuenta.Text = "CREAR MI CUENTA";
             this.btnCrearCuenta.UseVisualStyleBackColor = false;
@@ -131,14 +137,14 @@
             this.tlsIdioma});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(735, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(551, 25);
             this.toolStrip1.TabIndex = 9;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(131, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(103, 22);
             this.toolStripLabel1.Text = "Selecciona Idioma";
             // 
             // tlsIdioma
@@ -149,28 +155,31 @@
             this.inglésToolStripMenuItem});
             this.tlsIdioma.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsIdioma.Name = "tlsIdioma";
-            this.tlsIdioma.Size = new System.Drawing.Size(14, 28);
+            this.tlsIdioma.Size = new System.Drawing.Size(13, 22);
             // 
             // españolToolStripMenuItem
             // 
             this.españolToolStripMenuItem.Image = global::Proyecto_Cinnity.Properties.Resources.bandera_españa_con_escudo_para_exterior_interior_1200x675;
             this.españolToolStripMenuItem.Name = "españolToolStripMenuItem";
-            this.españolToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.españolToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.españolToolStripMenuItem.Text = "Español";
+            this.españolToolStripMenuItem.Click += new System.EventHandler(this.españolToolStripMenuItem_Click);
             // 
             // inglésToolStripMenuItem
             // 
             this.inglésToolStripMenuItem.Image = global::Proyecto_Cinnity.Properties.Resources.comprar_bandera_reino_unido_gran_bretaña_para_exterior_interior_1200x900;
             this.inglésToolStripMenuItem.Name = "inglésToolStripMenuItem";
-            this.inglésToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.inglésToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.inglésToolStripMenuItem.Text = "Inglés";
+            this.inglésToolStripMenuItem.Click += new System.EventHandler(this.inglésToolStripMenuItem_Click);
             // 
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
-            this.ptbLogo.Location = new System.Drawing.Point(228, 55);
+            this.ptbLogo.Location = new System.Drawing.Point(171, 45);
+            this.ptbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(263, 250);
+            this.ptbLogo.Size = new System.Drawing.Size(197, 203);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
@@ -180,9 +189,10 @@
             this.chbMostrarContra.AutoSize = true;
             this.chbMostrarContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chbMostrarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.chbMostrarContra.Location = new System.Drawing.Point(173, 539);
+            this.chbMostrarContra.Location = new System.Drawing.Point(130, 438);
+            this.chbMostrarContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chbMostrarContra.Name = "chbMostrarContra";
-            this.chbMostrarContra.Size = new System.Drawing.Size(177, 24);
+            this.chbMostrarContra.Size = new System.Drawing.Size(150, 21);
             this.chbMostrarContra.TabIndex = 10;
             this.chbMostrarContra.Text = "Mostrar contraseña";
             this.chbMostrarContra.UseVisualStyleBackColor = true;
@@ -190,10 +200,10 @@
             // 
             // FrmInicioDeSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(735, 691);
+            this.ClientSize = new System.Drawing.Size(551, 561);
             this.Controls.Add(this.chbMostrarContra);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnCrearCuenta);
@@ -203,6 +213,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.ptbLogo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmInicioDeSesion";
             this.Text = "Inicio De Sesión";
             this.Load += new System.EventHandler(this.FrmInicioDeSesion_Load);
