@@ -194,6 +194,16 @@
     <Compile Include="Clases\Idiomas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="RecursosLocalizables\StringRecursos.EN-GB.Designer.cs">
+      <DependentUpon>StringRecursos.EN-GB.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RecursosLocalizables\StringRecursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StringRecursos.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\StringRecursosIdiomas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +246,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.EN-GB.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringRecursos.EN-GB.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosLocalizables\StringRecursos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringRecursos.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\StringRecursosIdiomas.resx">
       <Generator>ResXFileCodeGenerator</Generator>

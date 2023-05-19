@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
 
 namespace Proyecto_Cinnity
 {
@@ -121,6 +124,31 @@ namespace Proyecto_Cinnity
             {
                 txtContra.PasswordChar = '*';
             }
+        }
+
+        private void españolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idioma.CulturaActual = new CultureInfo("es-ES");
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblUsuario.Text = StringRecursos.correo;
+            lblContra.Text = StringRecursos.contrasenya;
+            chbMostrarContra.Text = StringRecursos.mostradContra;
+            btnIniciarSesion.Text = StringRecursos.iniciarSesión;
+            btnCrearCuenta.Text = StringRecursos.crearcuenta;
+            this.Text = StringRecursos.tituloventana3;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+        }
+
+        private void inglésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idioma.CulturaActual = new CultureInfo("en-GB");
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            AplicarIdioma();
         }
     }
 }
