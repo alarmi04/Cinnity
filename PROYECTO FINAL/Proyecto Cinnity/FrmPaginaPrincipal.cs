@@ -58,10 +58,6 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {

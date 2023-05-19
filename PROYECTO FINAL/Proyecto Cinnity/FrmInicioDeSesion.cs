@@ -111,5 +111,16 @@ namespace Proyecto_Cinnity
 
         }
 
+        private void chbMostrarContra_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtContra.PasswordChar == '*')
+            {
+                txtContra.PasswordChar = '\0';
+            }
+            else
+            {
+                txtContra.PasswordChar = '*';
+            }
+        }
     }
 }

@@ -346,5 +346,26 @@
   <ItemGroup>
     <None Include="Resources\comprar-bandera-reino-unido-gran-bretaña-para-exterior-interior-1200x900.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\correo-electronico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paises.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloquear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invisible.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,6 +16,13 @@ namespace Proyecto_Cinnity
 {
     public partial class FrmCrearCuenta : Form
     {
+
+        private bool isFirstClickContra = true;
+        private bool isFirstClickConfirmarContra = true;
+        private bool isFirstClickConfirmarCorreo = true;
+        private bool isFirstClickCorreo = true;
+        private bool isFirstClickNombre = true;
+        private bool isFirstClickApellidos = true;
         public FrmCrearCuenta()
         {
             InitializeComponent();
@@ -27,31 +34,31 @@ namespace Proyecto_Cinnity
 
             errorCrearCuenta.Clear();
 
-            if (txtNombre.Text == "")
+            if (txtNombre.Text == "" || txtNombre.Text == "Nombre")
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtNombre, "Introduce Nombre");
             }
 
-            if (txtContra.Text == "")
+            if (txtContra.Text == "" || txtContra.Text == "Contraseña")
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
             }
 
 
-            if (txtApellidos.Text == "")
+            if (txtApellidos.Text == "" || txtApellidos.Text == "Apellidos")
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtApellidos, "Introduce Apellidos");
             }
 
-            if (cmbPais.Text == "")
+            if (cmbPais.Text == "" || cmbPais.Text == "País")
             {
                 ok = false;
                 errorCrearCuenta.SetError(cmbPais, "Introduce Pais");
             }
-            if (txtCorreo.Text == "")
+            if (txtCorreo.Text == "" || txtCorreo.Text == "Correo electrónico")
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
@@ -151,6 +158,81 @@ namespace Proyecto_Cinnity
             {
                 MessageBox.Show($"Error al enviar el correo: {ex.Message}");
             }
+        }
+
+        private void txtContra_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickContra)
+            {
+                txtContra.PasswordChar = '*';
+                txtContra.Text = "";
+                isFirstClickContra = false;
+            }
+        }
+
+        private void txtConfirmarContra_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickConfirmarContra)
+            {
+                txtConfirmarContra.PasswordChar = '*';
+                txtConfirmarContra.Text = "";
+                isFirstClickConfirmarContra = false;
+            }
+        }
+
+        private void txtConfirmarCorreo_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickConfirmarCorreo)
+            {
+                txtConfirmarCorreo.Text = "";
+                isFirstClickConfirmarCorreo = false;
+            }
+        }
+
+        private void txtCorreo_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickCorreo)
+            {
+                txtCorreo.Text = "";
+                isFirstClickCorreo = false;
+            }
+        }
+
+        private void txtNombre_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickNombre)
+            {
+                txtNombre.Text = "";
+                isFirstClickNombre = false;
+            }
+        }
+
+        private void txtApellidos_Click(object sender, EventArgs e)
+        {
+            if (isFirstClickApellidos)
+            {
+                txtApellidos.Text = "";
+                isFirstClickApellidos = false;
+            }
+        }
+
+        private void chbMostrarContra_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtConfirmarContra.PasswordChar == '*' || txtContra.PasswordChar == '*')
+            {
+                txtContra.PasswordChar = '\0';
+                txtConfirmarContra.PasswordChar = '\0';
+            }
+            else
+            {
+                txtConfirmarContra.PasswordChar = '*';
+                txtContra.PasswordChar = '*';
+            }
+        }
+
+        private void FrmCrearCuenta_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

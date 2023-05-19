@@ -80,7 +80,7 @@ namespace Proyecto_Cinnity
             // 
             // txtNombrePeli
             // 
-            this.txtNombrePeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.txtNombrePeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.txtNombrePeli.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombrePeli.Enabled = false;
             this.txtNombrePeli.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,6 +232,7 @@ namespace Proyecto_Cinnity
             // btnAñadirEntrada
             // 
             this.btnAñadirEntrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.btnAñadirEntrada.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnAñadirEntrada.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.btnAñadirEntrada.Location = new System.Drawing.Point(770, 745);
             this.btnAñadirEntrada.Name = "btnAñadirEntrada";
@@ -311,7 +312,7 @@ namespace Proyecto_Cinnity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(48)))), ((int)(((byte)(83)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(1107, 837);
             this.Controls.Add(this.lblPrecioNum);
             this.Controls.Add(this.lblPrecio);
