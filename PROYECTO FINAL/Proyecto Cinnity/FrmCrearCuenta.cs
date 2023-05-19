@@ -452,38 +452,38 @@ namespace Proyecto_Cinnity
             if (txtNombre.Text == "" || txtNombre.Text == StringRecursos.nombrecuenta)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtNombre, "Introduce Nombre");
+                errorCrearCuenta.SetError(txtNombre, "Enter your name");
             }
 
             if (txtContra.Text == "" || txtContra.Text == StringRecursos.contrasenya)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
+                errorCrearCuenta.SetError(txtContra, "Enter your password");
             }
 
 
             if (txtApellidos.Text == "" || txtApellidos.Text == StringRecursos.apellidoscuenta)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtApellidos, "Introduce Apellidos");
+                errorCrearCuenta.SetError(txtApellidos, "Enter your last name");
             }
 
             if (cmbPais.Text == "" || cmbPais.Text == StringRecursos.pais)
             {
                 ok = false;
-                errorCrearCuenta.SetError(cmbPais, "Introduce País");
+                errorCrearCuenta.SetError(cmbPais, "Enter country");
             }
             if (txtCorreo.Text == "" || txtCorreo.Text == StringRecursos.correoelectronico)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
+                errorCrearCuenta.SetError(txtCorreo, "Enter your e-mail");
             }
 
 
             if (dtpFechaNacimiento.Value == DateTime.Today)
             {
                 ok = false;
-                errorCrearCuenta.SetError(dtpFechaNacimiento, "Introduce Fecha valida");
+                errorCrearCuenta.SetError(dtpFechaNacimiento, "Enter a valid date");
             }
 
             
@@ -491,19 +491,19 @@ namespace Proyecto_Cinnity
             if (txtCorreo.Text != txtConfirmarCorreo.Text)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtConfirmarCorreo, "Introduce el mismo correo");
+                errorCrearCuenta.SetError(txtConfirmarCorreo, "e-mails don't match");
             }
 
             if (txtContra.Text == "")
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
+                errorCrearCuenta.SetError(txtContra, "Enter password");
             }
 
             if (txtContra.Text != txtConfirmarContra.Text)
             {
                 ok = false;
-                errorCrearCuenta.SetError(txtConfirmarContra, "Introduce la misma contraseña");
+                errorCrearCuenta.SetError(txtConfirmarContra, "Passwords don't match");
             }
 
             return ok;

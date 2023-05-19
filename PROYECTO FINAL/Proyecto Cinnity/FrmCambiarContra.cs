@@ -54,7 +54,7 @@ namespace Proyecto_Cinnity
                             frm1.Show();
                         } else
                         {
-                            MessageBox.Show("La clave introducida no es correcta.");
+                            MessageBox.Show("Wrong password.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                     }
 
@@ -80,25 +80,25 @@ namespace Proyecto_Cinnity
             if (txtContraActual.Text == "")
             {
                 ok = false;
-                errorCambiarContra.SetError(txtContraActual, "Introduce tu constraseña actual.");
+                errorCambiarContra.SetError(txtContraActual, "Enter your current password");
             }
 
             if (txtNuevaContra.Text == "")
             {
                 ok = false;
-                errorCambiarContra.SetError(txtNuevaContra, "Introduce nueva contraseña");
+                errorCambiarContra.SetError(txtNuevaContra, "Enter your new password");
             }
 
             if (txtConfirmaContra.Text == "")
             {
                 ok = false;
-                errorCambiarContra.SetError(txtConfirmaContra, "Introduce nueva contraseña");
+                errorCambiarContra.SetError(txtConfirmaContra, "Enter your new password");
             }
 
             if (!Usuario.ClaveValidada(txtNuevaContra.Text,txtConfirmaContra.Text))
             {
                 ok = false;
-                errorCambiarContra.SetError(txtConfirmaContra, "Las contraseñas no coinciden");
+                errorCambiarContra.SetError(txtConfirmaContra, "Passwords don't match");
             }
             return ok;
 

@@ -147,13 +147,53 @@ namespace Proyecto_Cinnity
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos");
+                MessageBox.Show("No existe conexión a la Base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string ComprobarGenero()
+        {
+            string genero = "";
+
+
+
+            switch (cmbFiltrar.SelectedIndex)
+            {
+                case 0:
+                    genero = "Accion";
+                    break;
+                case 1:
+                    genero = "Animacion";
+                    break;
+                case 2:
+                    genero = "Terror";
+                    break;
+                case 3:
+                    genero = "Suspense";
+                    break;
+                case 4:
+                    genero = "Comedia";
+                    break;
+                case 5:
+                    genero = "Documental";
+                    break;
+                case 6:
+                    genero = "Aventura";
+                    break;
+                case 7:
+                    genero = "Drama";
+                    break;
+                case 8:
+                    genero = "Todas";
+                    break;
+            }
+
+            return genero;
         }
 
         private void cmbFiltrar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string genero = cmbFiltrar.SelectedItem.ToString();
+            string genero = ComprobarGenero();
             string consulta = "";
             if (genero == "Todas")
             {
@@ -213,7 +253,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No hay películas del género seleccionado.");
+                    MessageBox.Show("No hay películas del género seleccionado.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 ConexionBD.CerrarConexion();

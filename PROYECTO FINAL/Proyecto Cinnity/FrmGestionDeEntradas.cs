@@ -50,7 +50,7 @@ namespace Proyecto_Cinnity
             }
             else
             {
-                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -80,7 +80,7 @@ namespace Proyecto_Cinnity
                 else
 
                 {
-                    MessageBox.Show("Titulo de película introducido no existente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Titulo de película introducido no existente", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 ConexionBD.CerrarConexion();
@@ -89,7 +89,7 @@ namespace Proyecto_Cinnity
             else
 
             {
-                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -110,12 +110,12 @@ namespace Proyecto_Cinnity
                     }
                     else
                     {
-                        MessageBox.Show("Titulo de película introducido no existente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Titulo de película introducido no existente", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 ConexionBD.CerrarConexion();
                 CargaListaEntradasActivas();
@@ -176,7 +176,7 @@ namespace Proyecto_Cinnity
                     }
                     else
                     {
-                        MessageBox.Show("Esta película no tiene caratula.","Alerta",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Esta película no tiene caratula.","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     ConexionBD.CerrarConexion();
                 }

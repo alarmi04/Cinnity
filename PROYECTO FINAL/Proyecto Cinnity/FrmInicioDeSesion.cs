@@ -33,13 +33,13 @@ namespace Proyecto_Cinnity
             if (txtUsuario.Text == "")
             {
                 ok = false;
-                errorInicioSesion.SetError(txtUsuario, "Introduce Usuario");
+                errorInicioSesion.SetError(txtUsuario, "Enter your e-mail");
             }
 
             if (txtContra.Text == "")
             {
                 ok = false;
-                errorInicioSesion.SetError(txtContra, "Introduce Contraseña");
+                errorInicioSesion.SetError(txtContra, "Enter your password");
             }
             return ok;
 
@@ -71,7 +71,7 @@ namespace Proyecto_Cinnity
                         }
                         else
                         {
-                            MessageBox.Show("Usuario o contraseña incorrectos");
+                            MessageBox.Show("Wrong e-mail or password","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
 
 
@@ -97,17 +97,6 @@ namespace Proyecto_Cinnity
             frmcuenta.Show();
         }
 
-        private void lblContraOlvidada_Click(object sender, EventArgs e)
-        {
-            if (txtUsuario.Text != "")
-            {
-                //Funcionalidad enviar email para recuperar contraseña
-            }
-            else
-            {
-                MessageBox.Show("Indica tu correo electrónico.");
-            }
-        }
 
         private void FrmInicioDeSesion_Load(object sender, EventArgs e)
         {

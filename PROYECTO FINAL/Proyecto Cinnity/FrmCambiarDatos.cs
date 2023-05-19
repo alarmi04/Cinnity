@@ -45,19 +45,19 @@ namespace Proyecto_Cinnity
             if (txtNombre.Text == "")
             {
                 ok = false;
-                errorCambiarDatos.SetError(txtNombre, "Introduce tu nuevo nombre.");
+                errorCambiarDatos.SetError(txtNombre, "Enter your new name.");
             }
 
             if (txtApellidos.Text == "")
             {
                 ok = false;
-                errorCambiarDatos.SetError(txtApellidos, "Introduce tus nuevos apellidos.");
+                errorCambiarDatos.SetError(txtApellidos, "Enter your new last name.");
             }
 
             if (txtCorreo.Text == "")
             {
                 ok = false;
-                errorCambiarDatos.SetError(txtCorreo, "Introduce tu nuevo correo.");
+                errorCambiarDatos.SetError(txtCorreo, "Enter your new e-mail.");
             }
             return ok;
 

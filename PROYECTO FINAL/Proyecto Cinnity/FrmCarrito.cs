@@ -89,7 +89,7 @@ namespace Proyecto_Cinnity
 
         private void dgvEntradas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Estás seguro que quieres eliminar este producto?", "Ayuda", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult resultado = MessageBox.Show("¿Are you sure you want to delete this ticket?", "Help", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (resultado == DialogResult.Yes)
             {
@@ -107,7 +107,7 @@ namespace Proyecto_Cinnity
         {
             if (Carrito.listaCarrito.Count == 0)
             {
-                MessageBox.Show("No tienes entradas para vaciar.");
+                MessageBox.Show("There are no tickets in your shopping cart.","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             } else
             {
                 Carrito.listaCarrito.Clear();
@@ -128,7 +128,7 @@ namespace Proyecto_Cinnity
                 {
                     if (Carrito.listaCarrito.Count == 0)
                     {
-                        MessageBox.Show("No hay entradas para pagar.");
+                        MessageBox.Show("There are no tickets in your shopping cart.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     } else
                     {
                         ConexionBD.AbrirConexion();
@@ -140,7 +140,7 @@ namespace Proyecto_Cinnity
                         ActualizarDataGrid();
                         lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
                         lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
-                        MessageBox.Show("Compra realizada.");
+                        MessageBox.Show("Purchased correctly.","Information",MessageBoxButtons.OK,MessageBoxIcon.Question);
                     }
 
 
