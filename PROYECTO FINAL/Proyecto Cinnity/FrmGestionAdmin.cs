@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Globalization;
+using System.Threading;
 
 namespace Proyecto_Cinnity
 {
@@ -15,6 +18,25 @@ namespace Proyecto_Cinnity
         public FrmGestionAdmin()
         {
             InitializeComponent();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblId.Text = StringRecursos.idPeli;
+            lblTítulo.Text = StringRecursos.titulopel;
+            lblDirector.Text = StringRecursos.directorAdmin;
+            lblGenero.Text = StringRecursos.generoAdmin;
+            lblDuracion.Text = StringRecursos.duracionAdmin;
+            lblReparto.Text = StringRecursos.repartoAdmin;
+            lblFechaEstreno.Text = StringRecursos.fechaestrenoAdmin;
+            lblSinopsis.Text = StringRecursos.sinopsisAdmin;
+            btnCargarImagen.Text = StringRecursos.selecImagenAdmin;
+            lblInformacion.Text = StringRecursos.ClickAdmin;
+            btnLimpiar.Text = StringRecursos.limpiarAdmin;
+            btnModificar.Text = StringRecursos.modificarAdmin;
+            btnAgregar.Text = StringRecursos.agregarAdmin;
+            this.Text = StringRecursos.tituloVentanaGestionAdmin;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         public void CargarDataGrid()
@@ -197,6 +219,7 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
+                    AplicarIdioma();
                     CargarDataGrid();
                 }
                 catch (Exception ex)

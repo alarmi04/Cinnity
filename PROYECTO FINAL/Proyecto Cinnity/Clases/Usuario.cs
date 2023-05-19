@@ -19,7 +19,6 @@ namespace Proyecto_Cinnity
         public static string correo;
         public static string contrasenya;
         public static string pais;
-        public static Image imagenSeleccionada = Properties.Resources.perfil;
         public static DateTime fechaNaci;
 
         public static bool InicioSesionCorrecto(string correo, string contraseña)

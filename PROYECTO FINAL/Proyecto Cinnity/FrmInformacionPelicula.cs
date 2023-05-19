@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
 using static System.Resources.ResXFileRef;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -20,6 +23,22 @@ namespace Proyecto_Cinnity
         {
             InitializeComponent();
             this.nombre = nombre;
+        }
+
+        private void AplicarIdioma()
+        {
+            lblGenero.Text = StringRecursos.genero;
+            lblDirector.Text = StringRecursos.director;
+            lblReparto.Text = StringRecursos.reparto;
+            lblDuracion.Text = StringRecursos.duracion;
+            lblSinopsis.Text = StringRecursos.sinopsis;
+            cmbSesion.Text = StringRecursos.seleccsesion;
+            lblFechaEstreno.Text = StringRecursos.fechaestreno;
+            lblPrecio.Text = StringRecursos.precio;
+            lblSesionesDisponibles.Text = StringRecursos.sesiones;
+            btnAñadirEntrada.Text = StringRecursos.añcarrito;
+            this.Text = StringRecursos.TituloVentanaInfoPeli; 
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         private void btnAñadirEntrada_Click(object sender, EventArgs e)
@@ -44,13 +63,11 @@ namespace Proyecto_Cinnity
             }
         }
 
-
-
-
         private void FrmInformacionPelicula_Load(object sender, EventArgs e)
         {
-            
+
             CargarInformacion();
+            AplicarIdioma();
             lblPrecioNum.Text = "8.00";
 
             if (dttDiaEmision.Value.Day % 2 == 0)
@@ -66,6 +83,7 @@ namespace Proyecto_Cinnity
                 cmbSesion.Items.AddRange(sesiones2);
             }
         }
+
 
         private void dttDiaEmision_ValueChanged(object sender, EventArgs e)
         {

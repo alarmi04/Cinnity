@@ -101,19 +101,20 @@
             this.dgvEntradasActivas.ReadOnly = true;
             this.dgvEntradasActivas.RowHeadersWidth = 51;
             this.dgvEntradasActivas.RowTemplate.Height = 24;
-            this.dgvEntradasActivas.Size = new System.Drawing.Size(744, 265);
+            this.dgvEntradasActivas.Size = new System.Drawing.Size(726, 265);
             this.dgvEntradasActivas.TabIndex = 1;
             this.dgvEntradasActivas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntradasActivas_CellContentClick);
             // 
             // lblEntradasActivas
             // 
             this.lblEntradasActivas.AutoSize = true;
-            this.lblEntradasActivas.BackColor = System.Drawing.Color.White;
-            this.lblEntradasActivas.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntradasActivas.Location = new System.Drawing.Point(36, 93);
+            this.lblEntradasActivas.BackColor = System.Drawing.Color.Transparent;
+            this.lblEntradasActivas.Font = new System.Drawing.Font("Candara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntradasActivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.lblEntradasActivas.Location = new System.Drawing.Point(-11, 79);
             this.lblEntradasActivas.Name = "lblEntradasActivas";
             this.lblEntradasActivas.Padding = new System.Windows.Forms.Padding(233, 30, 233, 30);
-            this.lblEntradasActivas.Size = new System.Drawing.Size(726, 95);
+            this.lblEntradasActivas.Size = new System.Drawing.Size(834, 109);
             this.lblEntradasActivas.TabIndex = 2;
             this.lblEntradasActivas.Text = "ENTRADAS ACTIVAS";
             // 
@@ -212,7 +213,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(1324, 719);
+            this.ClientSize = new System.Drawing.Size(1320, 710);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.lblInformacion);
             this.Controls.Add(this.ptbImagenPeli);

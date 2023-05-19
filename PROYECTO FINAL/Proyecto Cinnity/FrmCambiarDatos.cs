@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Globalization;
+using System.Threading;
 
 namespace Proyecto_Cinnity
 {
@@ -15,6 +18,22 @@ namespace Proyecto_Cinnity
         public FrmCambiarDatos()
         {
             InitializeComponent();
+        }
+
+        private void FrmCambiarDatos_Load(object sender, EventArgs e)
+        {
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblCambioDatos.Text = StringRecursos.cambiodatos;
+            lblNombre.Text = StringRecursos.nombrecuenta;
+            lblApellidos.Text = StringRecursos.apellidoscuenta;
+            lblCorreo.Text = StringRecursos.correoelectronico;
+            this.Text = StringRecursos.TituloVentanaCambioDatos;
+            btnAceptar.Text = StringRecursos.btnModificar;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         private bool DatosValidos()
@@ -89,5 +108,7 @@ namespace Proyecto_Cinnity
             this.Close();
             frmIni.Show();
         }
+
+        
     }
 }

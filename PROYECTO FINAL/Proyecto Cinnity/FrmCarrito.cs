@@ -1,5 +1,4 @@
-
-﻿using Proyecto_Cinnity;
+using Proyecto_Cinnity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -18,6 +20,28 @@ namespace Proyecto_Cinnity
         public FrmCarrito()
         {
             InitializeComponent();
+        }
+
+        private void FrmCarrito_Load_1(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            AplicarIdioma();
+            ActualizarDataGrid();
+            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
+
+        }
+
+
+        private void AplicarIdioma()
+        {
+            lblTotalEntradas.Text = StringRecursos.totalEntradas;
+            lblPrecioTotal.Text = StringRecursos.totalPrecio;
+            btnVolver.Text = StringRecursos.volver;
+            btnVaciar.Text = StringRecursos.vaciar;
+            btnPagar.Text = StringRecursos.pagar;
+            this.Text = StringRecursos.tituloventanaCarrito;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         private void ActualizarDataGrid()
@@ -61,13 +85,7 @@ namespace Proyecto_Cinnity
         }       
 
 
-        private void FrmCarrito_Load_1(object sender, EventArgs e)
-        {
-            ActualizarDataGrid();
-            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
-            lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
-
-        }
+        
 
         private void dgvEntradas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

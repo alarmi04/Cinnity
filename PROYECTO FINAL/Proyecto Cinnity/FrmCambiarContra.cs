@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using Proyecto_Cinnity.RecursosLocalizables;
 
 namespace Proyecto_Cinnity
 {
@@ -18,7 +21,21 @@ namespace Proyecto_Cinnity
             InitializeComponent();
             this.correoAsignado = correoAsignado;
         }
-       
+
+        private void FrmCambiarContra_Load(object sender, EventArgs e)
+        {
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            lblContraActual.Text = StringRecursos.contraActual;
+            lblNuevaContra.Text = StringRecursos.nuevaContra;
+            lblConfirmaContra.Text = StringRecursos.confirmaContra;
+            btnAceptar.Text = StringRecursos.aceptarcambiar;
+            chbMostrarContra.Text = StringRecursos.mostrarContra;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+        }
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -77,13 +94,31 @@ namespace Proyecto_Cinnity
                 ok = false;
                 errorCambiarContra.SetError(txtConfirmaContra, "Introduce nueva contraseña");
             }
+
+            if (!Usuario.ClaveValidada(txtNuevaContra.Text,txtConfirmaContra.Text))
+            {
+                ok = false;
+                errorCambiarContra.SetError(txtConfirmaContra, "Las contraseñas no coinciden");
+            }
             return ok;
 
         }
 
-        private void FrmCambiarContra_Load(object sender, EventArgs e)
+        private void chbMostrarContra_Click(object sender, EventArgs e)
         {
+            if (txtContraActual.PasswordChar == '*')
+            {
+                txtContraActual.PasswordChar = '\0';
+                txtNuevaContra.PasswordChar = '\0';
+                txtConfirmaContra.PasswordChar = '\0';
 
+            }
+            else
+            {
+                txtContraActual.PasswordChar = '*';
+                txtNuevaContra.PasswordChar = '*';
+                txtConfirmaContra.PasswordChar = '*';
+            }
         }
     }
 }

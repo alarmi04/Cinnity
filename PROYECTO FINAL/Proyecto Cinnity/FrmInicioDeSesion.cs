@@ -135,12 +135,13 @@ namespace Proyecto_Cinnity
 
         private void AplicarIdioma()
         {
-            lblUsuario.Text = StringRecursos.correo;
+            lblUsuario.Text = StringRecursos.emailMayus;
             lblContra.Text = StringRecursos.contrasenya;
-            chbMostrarContra.Text = StringRecursos.mostradContra;
+            chbMostrarContra.Text = StringRecursos.mostrarContra;
             btnIniciarSesion.Text = StringRecursos.iniciarSesión;
             btnCrearCuenta.Text = StringRecursos.crearcuenta;
-            this.Text = StringRecursos.tituloventana3;
+            toolStripLabel1.Text = StringRecursos.idioma;
+            this.Text = StringRecursos.tituloventanaMiPerfil;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 

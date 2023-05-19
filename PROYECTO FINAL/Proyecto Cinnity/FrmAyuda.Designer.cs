@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAyuda));
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnMiPerfil = new System.Windows.Forms.Button();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.ptbCorreo = new System.Windows.Forms.PictureBox();
             this.ptbTwitter = new System.Windows.Forms.PictureBox();
             this.ptbFacebook = new System.Windows.Forms.PictureBox();
             this.ptbInsta = new System.Windows.Forms.PictureBox();
-            this.ptbLogo = new System.Windows.Forms.PictureBox();
             this.lblInformacion = new System.Windows.Forms.Label();
             this.lblInformacion2 = new System.Windows.Forms.Label();
-            this.lblPreguntas = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -101,72 +99,73 @@
             // pnlInformacion
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(29)))), ((int)(((byte)(37)))));
-            this.pnlInformacion.Controls.Add(this.ptbCorreo);
-            this.pnlInformacion.Controls.Add(this.ptbTwitter);
-            this.pnlInformacion.Controls.Add(this.ptbFacebook);
-            this.pnlInformacion.Controls.Add(this.ptbInsta);
             this.pnlInformacion.Controls.Add(this.ptbLogo);
             this.pnlInformacion.Location = new System.Drawing.Point(-5, 57);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(316, 802);
             this.pnlInformacion.TabIndex = 1;
             // 
-            // ptbCorreo
-            // 
-            this.ptbCorreo.Image = global::Proyecto_Cinnity.Properties.Resources.gmail;
-            this.ptbCorreo.Location = new System.Drawing.Point(125, 678);
-            this.ptbCorreo.Name = "ptbCorreo";
-            this.ptbCorreo.Size = new System.Drawing.Size(52, 50);
-            this.ptbCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbCorreo.TabIndex = 4;
-            this.ptbCorreo.TabStop = false;
-            // 
-            // ptbTwitter
-            // 
-            this.ptbTwitter.Image = global::Proyecto_Cinnity.Properties.Resources.twitter;
-            this.ptbTwitter.Location = new System.Drawing.Point(125, 592);
-            this.ptbTwitter.Name = "ptbTwitter";
-            this.ptbTwitter.Size = new System.Drawing.Size(52, 50);
-            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbTwitter.TabIndex = 3;
-            this.ptbTwitter.TabStop = false;
-            // 
-            // ptbFacebook
-            // 
-            this.ptbFacebook.Image = global::Proyecto_Cinnity.Properties.Resources.facebook;
-            this.ptbFacebook.Location = new System.Drawing.Point(125, 505);
-            this.ptbFacebook.Name = "ptbFacebook";
-            this.ptbFacebook.Size = new System.Drawing.Size(52, 50);
-            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFacebook.TabIndex = 2;
-            this.ptbFacebook.TabStop = false;
-            // 
-            // ptbInsta
-            // 
-            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
-            this.ptbInsta.Location = new System.Drawing.Point(125, 426);
-            this.ptbInsta.Name = "ptbInsta";
-            this.ptbInsta.Size = new System.Drawing.Size(52, 50);
-            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbInsta.TabIndex = 1;
-            this.ptbInsta.TabStop = false;
-            // 
             // ptbLogo
             // 
             this.ptbLogo.Image = global::Proyecto_Cinnity.Properties.Resources.CINNITY;
-            this.ptbLogo.Location = new System.Drawing.Point(38, 8);
+            this.ptbLogo.Location = new System.Drawing.Point(35, 69);
             this.ptbLogo.Name = "ptbLogo";
             this.ptbLogo.Size = new System.Drawing.Size(250, 250);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbLogo.TabIndex = 0;
             this.ptbLogo.TabStop = false;
+            this.ptbLogo.Click += new System.EventHandler(this.ptbLogo_Click);
+            // 
+            // ptbCorreo
+            // 
+            this.ptbCorreo.Image = global::Proyecto_Cinnity.Properties.Resources.gmail;
+            this.ptbCorreo.Location = new System.Drawing.Point(792, 403);
+            this.ptbCorreo.Name = "ptbCorreo";
+            this.ptbCorreo.Size = new System.Drawing.Size(52, 50);
+            this.ptbCorreo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCorreo.TabIndex = 4;
+            this.ptbCorreo.TabStop = false;
+            this.ptbCorreo.Click += new System.EventHandler(this.ptbCorreo_Click);
+            // 
+            // ptbTwitter
+            // 
+            this.ptbTwitter.Image = global::Proyecto_Cinnity.Properties.Resources.twitter;
+            this.ptbTwitter.Location = new System.Drawing.Point(650, 403);
+            this.ptbTwitter.Name = "ptbTwitter";
+            this.ptbTwitter.Size = new System.Drawing.Size(52, 50);
+            this.ptbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbTwitter.TabIndex = 3;
+            this.ptbTwitter.TabStop = false;
+            this.ptbTwitter.Click += new System.EventHandler(this.ptbTwitter_Click);
+            // 
+            // ptbFacebook
+            // 
+            this.ptbFacebook.Image = global::Proyecto_Cinnity.Properties.Resources.facebook;
+            this.ptbFacebook.Location = new System.Drawing.Point(513, 403);
+            this.ptbFacebook.Name = "ptbFacebook";
+            this.ptbFacebook.Size = new System.Drawing.Size(52, 50);
+            this.ptbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFacebook.TabIndex = 2;
+            this.ptbFacebook.TabStop = false;
+            this.ptbFacebook.Click += new System.EventHandler(this.ptbFacebook_Click);
+            // 
+            // ptbInsta
+            // 
+            this.ptbInsta.Image = global::Proyecto_Cinnity.Properties.Resources.instagram;
+            this.ptbInsta.Location = new System.Drawing.Point(381, 403);
+            this.ptbInsta.Name = "ptbInsta";
+            this.ptbInsta.Size = new System.Drawing.Size(52, 50);
+            this.ptbInsta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbInsta.TabIndex = 1;
+            this.ptbInsta.TabStop = false;
+            this.ptbInsta.Click += new System.EventHandler(this.ptbInsta_Click);
             // 
             // lblInformacion
             // 
             this.lblInformacion.AutoSize = true;
             this.lblInformacion.Font = new System.Drawing.Font("Myanmar Text", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblInformacion.Location = new System.Drawing.Point(334, 88);
+            this.lblInformacion.Location = new System.Drawing.Point(372, 91);
             this.lblInformacion.Name = "lblInformacion";
             this.lblInformacion.Size = new System.Drawing.Size(231, 50);
             this.lblInformacion.TabIndex = 2;
@@ -178,44 +177,38 @@
             this.lblInformacion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
             this.lblInformacion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblInformacion2.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInformacion2.Location = new System.Drawing.Point(362, 156);
+            this.lblInformacion2.Location = new System.Drawing.Point(376, 192);
             this.lblInformacion2.Name = "lblInformacion2";
             this.lblInformacion2.Padding = new System.Windows.Forms.Padding(15);
-            this.lblInformacion2.Size = new System.Drawing.Size(584, 180);
+            this.lblInformacion2.Size = new System.Drawing.Size(559, 120);
             this.lblInformacion2.TabIndex = 3;
-            this.lblInformacion2.Text = resources.GetString("lblInformacion2.Text");
-            // 
-            // lblPreguntas
-            // 
-            this.lblPreguntas.AutoSize = true;
-            this.lblPreguntas.Font = new System.Drawing.Font("Myanmar Text", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreguntas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
-            this.lblPreguntas.Location = new System.Drawing.Point(334, 367);
-            this.lblPreguntas.Name = "lblPreguntas";
-            this.lblPreguntas.Size = new System.Drawing.Size(371, 50);
-            this.lblPreguntas.TabIndex = 4;
-            this.lblPreguntas.Text = "PREGUNTAS FRECUENTES:";
+            this.lblInformacion2.Text = "Esta es la aplicación perfecta para cualquier amante del cine. \r\nEn ella, podrás " +
+    "comprar y vender entradas para ver en nuestro cine \r\ntus películas favoritas.";
             // 
             // FrmAyuda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(998, 850);
-            this.Controls.Add(this.lblPreguntas);
+            this.ClientSize = new System.Drawing.Size(998, 502);
+            this.Controls.Add(this.ptbCorreo);
             this.Controls.Add(this.lblInformacion2);
+            this.Controls.Add(this.ptbTwitter);
             this.Controls.Add(this.lblInformacion);
+            this.Controls.Add(this.ptbFacebook);
             this.Controls.Add(this.pnlInformacion);
+            this.Controls.Add(this.ptbInsta);
             this.Controls.Add(this.pnlMenu);
             this.Name = "FrmAyuda";
             this.Text = "Ayuda";
+            this.Load += new System.EventHandler(this.FrmAyuda_Load);
             this.pnlMenu.ResumeLayout(false);
             this.pnlInformacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCorreo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbInsta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,6 +228,5 @@
         private System.Windows.Forms.PictureBox ptbFacebook;
         private System.Windows.Forms.PictureBox ptbInsta;
         private System.Windows.Forms.PictureBox ptbLogo;
-        private System.Windows.Forms.Label lblPreguntas;
     }
 }

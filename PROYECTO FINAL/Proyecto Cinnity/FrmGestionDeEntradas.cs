@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -20,7 +23,21 @@ namespace Proyecto_Cinnity
 
         private void FrmGestionDeEntradas_Load(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            AplicarIdioma();
+
             CargaListaEntradasActivas();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblEntradasActivas.Text = StringRecursos.entradasact;
+            btnBuscarEntrada.Text = StringRecursos.buscarentr;
+            btnVenderEntrada.Text = StringRecursos.venderentr;
+            lblIdEntrada.Text = StringRecursos.tituloMayus;
+            this.Text = StringRecursos.tituloventanaEntradas;
+            lblInformacion.Text = StringRecursos.infoGestionEntradas;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         private void CargaListaEntradasActivas()
@@ -49,10 +66,8 @@ namespace Proyecto_Cinnity
         }
 
         private void btnBuscarEntrada_Click(object sender, EventArgs e)
-
         {
             if (ConexionBD.Conexion != null)
-
             {
                 ConexionBD.AbrirConexion();
 
@@ -84,10 +99,8 @@ namespace Proyecto_Cinnity
 
         {
             int resultado = 0;
-
             try
-
-            {
+            { 
                 if (ConexionBD.Conexion != null)
                 {
                     ConexionBD.AbrirConexion();
@@ -116,10 +129,7 @@ namespace Proyecto_Cinnity
             {
                 ConexionBD.CerrarConexion();
             }
-
         }
-
-
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {

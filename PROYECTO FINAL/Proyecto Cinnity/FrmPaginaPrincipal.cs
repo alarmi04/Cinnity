@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Globalization;
+using Proyecto_Cinnity.RecursosLocalizables;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace Proyecto_Cinnity
@@ -21,8 +24,37 @@ namespace Proyecto_Cinnity
 
         private void FrmPaginaPrincipal_Load(object sender, EventArgs e)
         {
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            AplicarIdioma();
+
             CargarPeliculas();
             pnlMantenimiento.Visible= false;
+        }
+
+        private void AplicarIdioma()
+        {
+            btnMiPerfil.Text = StringRecursos.perfil;
+            btnEntradas.Text = StringRecursos.entradas;
+            btnAyuda.Text = StringRecursos.ayuda;
+            btnCerrarSesion.Text = StringRecursos.cerrarsesion;
+            btnMantenimiento.Text = StringRecursos.mantenimiento;
+            lblContraAdmin.Text = StringRecursos.contrasenya;
+            btnAcceder.Text = StringRecursos.acceder;
+            txtBuscar.Text = StringRecursos.buscar;
+            cmbFiltrar.Text = StringRecursos.filtrar;            
+
+            cmbFiltrar.Items.Clear();
+            cmbFiltrar.Items.Add(StringRecursos.acción);
+            cmbFiltrar.Items.Add(StringRecursos.animación);
+            cmbFiltrar.Items.Add(StringRecursos.terror);
+            cmbFiltrar.Items.Add(StringRecursos.suspense);
+            cmbFiltrar.Items.Add(StringRecursos.comedia);
+            cmbFiltrar.Items.Add(StringRecursos.documental);
+            cmbFiltrar.Items.Add(StringRecursos.aventura);
+            cmbFiltrar.Items.Add(StringRecursos.drama);
+            cmbFiltrar.Items.Add(StringRecursos.todas);
+            this.Text = StringRecursos.tituloventanaMiPerfil;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
 
@@ -234,11 +266,7 @@ namespace Proyecto_Cinnity
                             x = imagen.Right + 10;
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("No hay películas con el nombre seleccionado.");
-                }
+                }                
 
                 ConexionBD.CerrarConexion();
 

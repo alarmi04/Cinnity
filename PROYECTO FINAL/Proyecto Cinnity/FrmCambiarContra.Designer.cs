@@ -38,6 +38,7 @@
             this.txtConfirmaContra = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorCambiarContra = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chbMostrarContra = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCambiarContra)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +71,7 @@
             this.txtContraActual.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraActual.Location = new System.Drawing.Point(384, 300);
             this.txtContraActual.Name = "txtContraActual";
+            this.txtContraActual.PasswordChar = '*';
             this.txtContraActual.Size = new System.Drawing.Size(270, 32);
             this.txtContraActual.TabIndex = 3;
             // 
@@ -91,6 +93,7 @@
             this.txtNuevaContra.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNuevaContra.Location = new System.Drawing.Point(384, 367);
             this.txtNuevaContra.Name = "txtNuevaContra";
+            this.txtNuevaContra.PasswordChar = '*';
             this.txtNuevaContra.Size = new System.Drawing.Size(270, 32);
             this.txtNuevaContra.TabIndex = 5;
             // 
@@ -112,6 +115,7 @@
             this.txtConfirmaContra.Font = new System.Drawing.Font("Myanmar Text", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmaContra.Location = new System.Drawing.Point(384, 443);
             this.txtConfirmaContra.Name = "txtConfirmaContra";
+            this.txtConfirmaContra.PasswordChar = '*';
             this.txtConfirmaContra.Size = new System.Drawing.Size(270, 32);
             this.txtConfirmaContra.TabIndex = 7;
             // 
@@ -133,12 +137,27 @@
             // 
             this.errorCambiarContra.ContainerControl = this;
             // 
+            // chbMostrarContra
+            // 
+            this.chbMostrarContra.AutoSize = true;
+            this.chbMostrarContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbMostrarContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(212)))), ((int)(((byte)(196)))));
+            this.chbMostrarContra.Location = new System.Drawing.Point(384, 497);
+            this.chbMostrarContra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chbMostrarContra.Name = "chbMostrarContra";
+            this.chbMostrarContra.Size = new System.Drawing.Size(177, 24);
+            this.chbMostrarContra.TabIndex = 11;
+            this.chbMostrarContra.Text = "Mostrar contraseña";
+            this.chbMostrarContra.UseVisualStyleBackColor = true;
+            this.chbMostrarContra.Click += new System.EventHandler(this.chbMostrarContra_Click);
+            // 
             // FrmCambiarContra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.ClientSize = new System.Drawing.Size(741, 663);
+            this.Controls.Add(this.chbMostrarContra);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtConfirmaContra);
             this.Controls.Add(this.lblConfirmaContra);
@@ -168,5 +187,6 @@
         private System.Windows.Forms.TextBox txtConfirmaContra;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.ErrorProvider errorCambiarContra;
+        private System.Windows.Forms.CheckBox chbMostrarContra;
     }
 }

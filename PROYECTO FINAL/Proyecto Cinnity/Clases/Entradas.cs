@@ -129,7 +129,7 @@ namespace Proyecto_Cinnity
          {
              int idUser = Usuario.RecogerID();
              List<Entradas> listaActivas = new List<Entradas>();
-
+            
              if (idUser != -1)
              {
                  string consulta = "SELECT p.nombrePeli AS titulo, e.* FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario = '" + idUser + "' AND e.fecha_emision >= DATE(NOW());";

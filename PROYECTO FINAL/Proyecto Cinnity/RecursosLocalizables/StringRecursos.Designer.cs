@@ -61,11 +61,38 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Acceder.
+        /// </summary>
+        internal static string acceder {
+            get {
+                return ResourceManager.GetString("acceder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Acción.
+        /// </summary>
+        internal static string acción {
+            get {
+                return ResourceManager.GetString("acción", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ACEPTAR Y CAMBIAR CONTRASEÑA.
         /// </summary>
         internal static string aceptarcambiar {
             get {
                 return ResourceManager.GetString("aceptarcambiar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Agregar.
+        /// </summary>
+        internal static string agregarAdmin {
+            get {
+                return ResourceManager.GetString("agregarAdmin", resourceCulture);
             }
         }
         
@@ -79,11 +106,20 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Añadir al carrito:.
+        ///   Busca una cadena traducida similar a AÑADIR AL CARRITO.
         /// </summary>
         internal static string añcarrito {
             get {
                 return ResourceManager.GetString("añcarrito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Animación.
+        /// </summary>
+        internal static string animación {
+            get {
+                return ResourceManager.GetString("animación", resourceCulture);
             }
         }
         
@@ -97,11 +133,29 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Aventura.
+        /// </summary>
+        internal static string aventura {
+            get {
+                return ResourceManager.GetString("aventura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a AYUDA.
         /// </summary>
         internal static string ayuda {
             get {
                 return ResourceManager.GetString("ayuda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ACEPTAR Y MODIFICAR.
+        /// </summary>
+        internal static string btnModificar {
+            get {
+                return ResourceManager.GetString("btnModificar", resourceCulture);
             }
         }
         
@@ -133,11 +187,38 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a CAMBIAR MIS DATOS.
+        /// </summary>
+        internal static string cambiodatos {
+            get {
+                return ResourceManager.GetString("cambiodatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a CERRAR SESIÓN.
         /// </summary>
         internal static string cerrarsesion {
             get {
                 return ResourceManager.GetString("cerrarsesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Haz click en una fila para modificar la película..
+        /// </summary>
+        internal static string ClickAdmin {
+            get {
+                return ResourceManager.GetString("ClickAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Comedia.
+        /// </summary>
+        internal static string comedia {
+            get {
+                return ResourceManager.GetString("comedia", resourceCulture);
             }
         }
         
@@ -187,24 +268,6 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Contraseña:.
-        /// </summary>
-        internal static string contrasenyacuenta {
-            get {
-                return ResourceManager.GetString("contrasenyacuenta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a CORREO ELECTRÓNICO: .
-        /// </summary>
-        internal static string correo {
-            get {
-                return ResourceManager.GetString("correo", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Correo Electrónico:.
         /// </summary>
         internal static string correoelectronico {
@@ -223,7 +286,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CREAR MI CUENTA.
+        ///   Busca una cadena traducida similar a CREAR CUENTA.
         /// </summary>
         internal static string crearcuenta {
             get {
@@ -232,29 +295,18 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CREAR CUENTA.
+        ///   Busca una cadena traducida similar a Esta es la aplicación perfecta para cualquier amante del cine. 
+        ///En ella, podrás comprar y vender entradas para ver en 
+        ///nuestro cine tus películas favoritas..
         /// </summary>
-        internal static string crearcuentanueva {
+        internal static string descripcionayuda {
             get {
-                return ResourceManager.GetString("crearcuentanueva", resourceCulture);
+                return ResourceManager.GetString("descripcionayuda", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Es una aplicación para gestionar entradas de uno o varios cines 
-        ///cuando escogas la película que más te guste. 
-        ///
-        ///También, a la hora de vender o comprar entradas, 
-        ///obtendrás créditos CINNITY ´s para futuros descuentos o promociones..
-        /// </summary>
-        internal static string descripcion {
-            get {
-                return ResourceManager.GetString("descripcion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Director: .
+        ///   Busca una cadena traducida similar a DIRECTOR:.
         /// </summary>
         internal static string director {
             get {
@@ -265,14 +317,32 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Director:.
         /// </summary>
-        internal static string directorpel {
+        internal static string directorAdmin {
             get {
-                return ResourceManager.GetString("directorpel", resourceCulture);
+                return ResourceManager.GetString("directorAdmin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Duración: .
+        ///   Busca una cadena traducida similar a Documental.
+        /// </summary>
+        internal static string documental {
+            get {
+                return ResourceManager.GetString("documental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Drama.
+        /// </summary>
+        internal static string drama {
+            get {
+                return ResourceManager.GetString("drama", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a DURACIÓN:.
         /// </summary>
         internal static string duracion {
             get {
@@ -283,9 +353,9 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Duración:.
         /// </summary>
-        internal static string duracionpel {
+        internal static string duracionAdmin {
             get {
-                return ResourceManager.GetString("duracionpel", resourceCulture);
+                return ResourceManager.GetString("duracionAdmin", resourceCulture);
             }
         }
         
@@ -304,6 +374,15 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         internal static string eliminarpel {
             get {
                 return ResourceManager.GetString("eliminarpel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a CORREO ELECTRÓNICO:.
+        /// </summary>
+        internal static string emailMayus {
+            get {
+                return ResourceManager.GetString("emailMayus", resourceCulture);
             }
         }
         
@@ -335,7 +414,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Fecha de estreno:.
+        ///   Busca una cadena traducida similar a FECHA DE ESTRENO:.
         /// </summary>
         internal static string fechaestreno {
             get {
@@ -346,9 +425,9 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Fecha de estreno:.
         /// </summary>
-        internal static string fechestrenopel {
+        internal static string fechaestrenoAdmin {
             get {
-                return ResourceManager.GetString("fechestrenopel", resourceCulture);
+                return ResourceManager.GetString("fechaestrenoAdmin", resourceCulture);
             }
         }
         
@@ -371,7 +450,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Género: .
+        ///   Busca una cadena traducida similar a GÉNERO:.
         /// </summary>
         internal static string genero {
             get {
@@ -380,11 +459,11 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Genero:.
+        ///   Busca una cadena traducida similar a Género:.
         /// </summary>
-        internal static string generopel {
+        internal static string generoAdmin {
             get {
-                return ResourceManager.GetString("generopel", resourceCulture);
+                return ResourceManager.GetString("generoAdmin", resourceCulture);
             }
         }
         
@@ -407,6 +486,33 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Seleccionar idioma.
+        /// </summary>
+        internal static string idioma {
+            get {
+                return ResourceManager.GetString("idioma", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID Película:.
+        /// </summary>
+        internal static string idPeli {
+            get {
+                return ResourceManager.GetString("idPeli", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Haz click en la entrada  para visualizar la película..
+        /// </summary>
+        internal static string infoGestionEntradas {
+            get {
+                return ResourceManager.GetString("infoGestionEntradas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a INFORMACIÓN:.
         /// </summary>
         internal static string informacion {
@@ -425,6 +531,24 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Limpiar información.
+        /// </summary>
+        internal static string limpiarAdmin {
+            get {
+                return ResourceManager.GetString("limpiarAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a MANTENIMIENTO.
+        /// </summary>
+        internal static string mantenimiento {
+            get {
+                return ResourceManager.GetString("mantenimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Métodos de Pago.
         /// </summary>
         internal static string metpago {
@@ -434,11 +558,20 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Modificar.
+        /// </summary>
+        internal static string modificarAdmin {
+            get {
+                return ResourceManager.GetString("modificarAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Mostrar contraseña.
         /// </summary>
-        internal static string mostradContra {
+        internal static string mostrarContra {
             get {
-                return ResourceManager.GetString("mostradContra", resourceCulture);
+                return ResourceManager.GetString("mostrarContra", resourceCulture);
             }
         }
         
@@ -448,15 +581,6 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         internal static string nombrecuenta {
             get {
                 return ResourceManager.GetString("nombrecuenta", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Username.
-        /// </summary>
-        internal static string nomusuario {
-            get {
-                return ResourceManager.GetString("nomusuario", resourceCulture);
             }
         }
         
@@ -479,7 +603,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a País:.
+        ///   Busca una cadena traducida similar a País.
         /// </summary>
         internal static string pais {
             get {
@@ -493,6 +617,15 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         internal static string perfil {
             get {
                 return ResourceManager.GetString("perfil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a PRECIO:.
+        /// </summary>
+        internal static string precio {
+            get {
+                return ResourceManager.GetString("precio", resourceCulture);
             }
         }
         
@@ -515,7 +648,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Reparto:.
+        ///   Busca una cadena traducida similar a REPARTO:.
         /// </summary>
         internal static string reparto {
             get {
@@ -526,9 +659,9 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Reparto:.
         /// </summary>
-        internal static string repartopel {
+        internal static string repartoAdmin {
             get {
-                return ResourceManager.GetString("repartopel", resourceCulture);
+                return ResourceManager.GetString("repartoAdmin", resourceCulture);
             }
         }
         
@@ -551,6 +684,15 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Seleccionar Imagen....
+        /// </summary>
+        internal static string selecImagenAdmin {
+            get {
+                return ResourceManager.GetString("selecImagenAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a SESIONES DISPONIBLES:.
         /// </summary>
         internal static string sesiones {
@@ -560,7 +702,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sinopsis:.
+        ///   Busca una cadena traducida similar a SINOPSIS:.
         /// </summary>
         internal static string sinopsis {
             get {
@@ -571,9 +713,9 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Sinopsis:.
         /// </summary>
-        internal static string sinopsispel {
+        internal static string sinopsisAdmin {
             get {
-                return ResourceManager.GetString("sinopsispel", resourceCulture);
+                return ResourceManager.GetString("sinopsisAdmin", resourceCulture);
             }
         }
         
@@ -583,6 +725,33 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         internal static string sumaentradas {
             get {
                 return ResourceManager.GetString("sumaentradas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Suspense.
+        /// </summary>
+        internal static string suspense {
+            get {
+                return ResourceManager.GetString("suspense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Terror.
+        /// </summary>
+        internal static string terror {
+            get {
+                return ResourceManager.GetString("terror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a TÍTULO:.
+        /// </summary>
+        internal static string tituloMayus {
+            get {
+                return ResourceManager.GetString("tituloMayus", resourceCulture);
             }
         }
         
@@ -607,50 +776,95 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         /// <summary>
         ///   Busca una cadena traducida similar a Ayuda.
         /// </summary>
-        internal static string tituloventana2 {
+        internal static string tituloventanaAyuda {
             get {
-                return ResourceManager.GetString("tituloventana2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Mi Perfil.
-        /// </summary>
-        internal static string tituloventana3 {
-            get {
-                return ResourceManager.GetString("tituloventana3", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Gestión de Entradas.
-        /// </summary>
-        internal static string tituloventana4 {
-            get {
-                return ResourceManager.GetString("tituloventana4", resourceCulture);
+                return ResourceManager.GetString("tituloventanaAyuda", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Cambiar Contraseña.
         /// </summary>
-        internal static string tituloventana5 {
+        internal static string tituloventanaCambioContra {
             get {
-                return ResourceManager.GetString("tituloventana5", resourceCulture);
+                return ResourceManager.GetString("tituloventanaCambioContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cambiar mis datos.
+        /// </summary>
+        internal static string TituloVentanaCambioDatos {
+            get {
+                return ResourceManager.GetString("TituloVentanaCambioDatos", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Busca una cadena traducida similar a Carrito de la Compra.
         /// </summary>
-        internal static string tituloventana6 {
+        internal static string tituloventanaCarrito {
             get {
-                return ResourceManager.GetString("tituloventana6", resourceCulture);
+                return ResourceManager.GetString("tituloventanaCarrito", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Total Entradas: 10.
+        ///   Busca una cadena traducida similar a Crear Cuenta.
+        /// </summary>
+        internal static string TituloVentanaCrearCuenta {
+            get {
+                return ResourceManager.GetString("TituloVentanaCrearCuenta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gestión de Entradas.
+        /// </summary>
+        internal static string tituloventanaEntradas {
+            get {
+                return ResourceManager.GetString("tituloventanaEntradas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mantenimiento.
+        /// </summary>
+        internal static string tituloVentanaGestionAdmin {
+            get {
+                return ResourceManager.GetString("tituloVentanaGestionAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Información de película.
+        /// </summary>
+        internal static string TituloVentanaInfoPeli {
+            get {
+                return ResourceManager.GetString("TituloVentanaInfoPeli", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mi Perfil.
+        /// </summary>
+        internal static string tituloventanaMiPerfil {
+            get {
+                return ResourceManager.GetString("tituloventanaMiPerfil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Todas.
+        /// </summary>
+        internal static string todas {
+            get {
+                return ResourceManager.GetString("todas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Total Entradas: .
         /// </summary>
         internal static string totalEntradas {
             get {
@@ -659,7 +873,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Total Precio:.
+        ///   Busca una cadena traducida similar a Precio Total:.
         /// </summary>
         internal static string totalPrecio {
             get {
@@ -686,7 +900,7 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a ELIMINAR ENTRADA.
+        ///   Busca una cadena traducida similar a DEVOLVER ENTRADA.
         /// </summary>
         internal static string venderentr {
             get {

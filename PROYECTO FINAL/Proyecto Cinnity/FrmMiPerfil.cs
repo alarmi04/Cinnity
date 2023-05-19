@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Globalization;
+using System.Threading;
 
 namespace Proyecto_Cinnity
 {
@@ -17,7 +20,25 @@ namespace Proyecto_Cinnity
             InitializeComponent();
             lblCorreo.Text = Usuario.correo;
             lblNombreUsuario.Text = Usuario.nombre;
-            ptbFoto.Image = Usuario.imagenSeleccionada;
+        }
+
+        private void FrmMiPerfil_Load(object sender, EventArgs e)
+        {
+            AplicarIdioma();
+
+            int cant = CargarDataGrid();
+            lblTotalEntradas.Text += cant.ToString();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblEditarInformacion.Text = StringRecursos.editinfo;
+            lblMetodosDePago.Text = StringRecursos.metpago;
+            lblCambiarContra.Text = StringRecursos.cambContrasenya;
+            lblTotalEntradas.Text = StringRecursos.totalEntradas;
+            lblEntradasAdquiridas.Text = StringRecursos.entradasadquiridas;
+            this.Text = StringRecursos.tituloventanaMiPerfil;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
         private int CargarDataGrid()
@@ -73,17 +94,11 @@ namespace Proyecto_Cinnity
         private void lblCambiarContra_Click(object sender, EventArgs e)
         {
             FrmCambiarContra frm1 = new FrmCambiarContra(lblCorreo.Text);
-            this.Hide();
             frm1.StartPosition = FormStartPosition.CenterScreen;
-
             frm1.Show();
         }
 
-        private void FrmMiPerfil_Load(object sender, EventArgs e)
-        {
-            int cant = CargarDataGrid();
-            lblTotalEntradas.Text += cant.ToString();
-        }
+
 
         private void lblEditarInformacion_Click(object sender, EventArgs e)
         {

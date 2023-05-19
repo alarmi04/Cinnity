@@ -35,6 +35,7 @@ namespace Proyecto_Cinnity
         public int DuracionMinutos { get { return duracionMinutos; } set { duracionMinutos = value; } }
         public string Sinopsis { get { return sinopsis; } set { sinopsis = value; } }
         public DateTime FechaEstreno { get { return fechaEstreno; } set { fechaEstreno = value; } }
+
         public Pelicula(string nom, string gene, string direc, string repar, int dura, string sinop, DateTime estreno, Image carat)
         {
             nombre = nom;

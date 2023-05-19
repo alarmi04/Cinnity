@@ -7,6 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net.Security;
+using System.Net;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
+using System.Security.Cryptography.X509Certificates;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -15,6 +22,20 @@ namespace Proyecto_Cinnity
         public FrmAyuda()
         {
             InitializeComponent();
+        }
+
+        private void FrmAyuda_Load(object sender, EventArgs e)
+        {
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblInformacion.Text = StringRecursos.informacion;
+            lblInformacion2.Text = StringRecursos.descripcionayuda;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+
+
         }
 
         private void btnMiPerfil_Click(object sender, EventArgs e)
@@ -44,5 +65,36 @@ namespace Proyecto_Cinnity
             frm1.Show();
         }
 
+        private void ptbInsta_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/appcinnity/");
+
+        }
+
+        private void ptbFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/profile.php?id=100092501948457");
+
+        }
+
+        private void ptbTwitter_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.twitter.com/CinnityApp");
+
+        }
+
+        private void ptbCorreo_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto:cinnityapp@gmail.com");
+
+        }
+
+        private void ptbLogo_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://cinnitytest.000webhostapp.com/index.php");
+
+        }
+
+        
     }
 }

@@ -188,6 +188,7 @@ namespace Proyecto_Cinnity
             this.Controls.Add(this.btnAceptar);
             this.Name = "FrmCambiarDatos";
             this.Text = "FrmCambiarDatos";
+            this.Load += new System.EventHandler(this.FrmCambiarDatos_Load);
             this.grbInformacionPersonal.ResumeLayout(false);
             this.grbInformacionPersonal.PerformLayout();
             this.pnlMenu.ResumeLayout(false);

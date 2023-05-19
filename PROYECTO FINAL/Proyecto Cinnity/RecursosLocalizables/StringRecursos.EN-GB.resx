@@ -117,20 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="acceder" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="acción" xml:space="preserve">
+    <value>Action</value>
+  </data>
   <data name="aceptarcambiar" xml:space="preserve">
-    <value>ACCEPT AND CHANGE PASSWORD</value>
+    <value>CHANGE MY PASSWORD</value>
+  </data>
+  <data name="agregarAdmin" xml:space="preserve">
+    <value>Add</value>
   </data>
   <data name="agregarpel" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="animación" xml:space="preserve">
+    <value>Animation</value>
+  </data>
   <data name="apellidoscuenta" xml:space="preserve">
-    <value>Surnames:</value>
+    <value>Last name:</value>
+  </data>
+  <data name="aventura" xml:space="preserve">
+    <value>Adventure</value>
   </data>
   <data name="ayuda" xml:space="preserve">
     <value>HELP</value>
   </data>
   <data name="añcarrito" xml:space="preserve">
-    <value>Add to cart:</value>
+    <value>ADD TO MY CART</value>
+  </data>
+  <data name="btnModificar" xml:space="preserve">
+    <value>ACCEPT AND MODIFY</value>
   </data>
   <data name="buscar" xml:space="preserve">
     <value>Search</value>
@@ -139,68 +157,75 @@
     <value>SEARCH TICKET</value>
   </data>
   <data name="cambContrasenya" xml:space="preserve">
-    <value>Change the Password</value>
+    <value>Change your password</value>
+  </data>
+  <data name="cambiodatos" xml:space="preserve">
+    <value>CHANGE MY DATA</value>
   </data>
   <data name="cerrarsesion" xml:space="preserve">
-    <value>SIGN OUT</value>
+    <value>LOG OUT</value>
+  </data>
+  <data name="ClickAdmin" xml:space="preserve">
+    <value>Click on any row to modify the movie.</value>
+  </data>
+  <data name="comedia" xml:space="preserve">
+    <value>Comedy</value>
   </data>
   <data name="confcontrasenyacuenta" xml:space="preserve">
     <value>Confirm Password:</value>
   </data>
   <data name="confcorreo" xml:space="preserve">
-    <value>Confirm mail:</value>
+    <value>Confirm e-mail:</value>
   </data>
   <data name="confirmaContra" xml:space="preserve">
-    <value>Confirm your new password:</value>
+    <value>Confirm new password:</value>
   </data>
   <data name="contraActual" xml:space="preserve">
-    <value>Type your current password:</value>
+    <value>Current password:</value>
   </data>
   <data name="contrasenya" xml:space="preserve">
     <value>PASSWORD:</value>
   </data>
-  <data name="contrasenyacuenta" xml:space="preserve">
-    <value>Password:</value>
-  </data>
-  <data name="correo" xml:space="preserve">
-    <value>EMAIL:</value>
-  </data>
   <data name="correoelectronico" xml:space="preserve">
-    <value>Email:</value>
+    <value>E-mail:</value>
   </data>
   <data name="creacioncuenta" xml:space="preserve">
     <value>ACCOUNT CREATION</value>
   </data>
   <data name="crearcuenta" xml:space="preserve">
-    <value>CREATE MY ACCOUNT</value>
+    <value>CREATE AN ACCOUNT</value>
   </data>
-  <data name="crearcuentanueva" xml:space="preserve">
-    <value>CREATE ACCOUNT</value>
-  </data>
-  <data name="descripcion" xml:space="preserve">
-    <value>It is an application to manage tickets for one or more cinemas
-when you choose the movie you like the most.
-
-Also, when selling or buying tickets,
-earn CINNITY ´s credits for future discounts or promotions.</value>
+  <data name="descripcionayuda" xml:space="preserve">
+    <value>This is the perfect app for anyone who is a movie lover. 
+Here, you can buy and sell tickets to see your 
+favorite movies at our cinema.</value>
   </data>
   <data name="director" xml:space="preserve">
+    <value>DIRECTOR:</value>
+  </data>
+  <data name="directorAdmin" xml:space="preserve">
     <value>Director:</value>
   </data>
-  <data name="directorpel" xml:space="preserve">
-    <value>Director:</value>
+  <data name="documental" xml:space="preserve">
+    <value>Documentary</value>
+  </data>
+  <data name="drama" xml:space="preserve">
+    <value>Drama</value>
   </data>
   <data name="duracion" xml:space="preserve">
-    <value>Duration:</value>
+    <value>DURATION:</value>
   </data>
-  <data name="duracionpel" xml:space="preserve">
+  <data name="duracionAdmin" xml:space="preserve">
     <value>Duration:</value>
   </data>
   <data name="editinfo" xml:space="preserve">
-    <value>Edit Information</value>
+    <value>Modify Information</value>
   </data>
   <data name="eliminarpel" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="emailMayus" xml:space="preserve">
+    <value>E-MAIL:</value>
   </data>
   <data name="entradas" xml:space="preserve">
     <value>TICKETS</value>
@@ -209,31 +234,37 @@ earn CINNITY ´s credits for future discounts or promotions.</value>
     <value>ACTIVE TICKETS</value>
   </data>
   <data name="entradasadquiridas" xml:space="preserve">
-    <value>PURCHASED TICKETS</value>
+    <value>ACQUIRED TICKETS</value>
   </data>
   <data name="fechaestreno" xml:space="preserve">
-    <value>Release date:</value>
+    <value>RELEASE DATE:</value>
   </data>
-  <data name="fechestrenopel" xml:space="preserve">
+  <data name="fechaestrenoAdmin" xml:space="preserve">
     <value>Release date:</value>
   </data>
   <data name="filtrar" xml:space="preserve">
     <value>Filter</value>
   </data>
   <data name="fnac" xml:space="preserve">
-    <value>Birthdate:</value>
+    <value>Birth Date:</value>
   </data>
   <data name="genero" xml:space="preserve">
-    <value>Gender:</value>
+    <value>GENRE:</value>
   </data>
-  <data name="generopel" xml:space="preserve">
-    <value>Gender:</value>
-  </data>
-  <data name="gmail" xml:space="preserve">
-    <value>correo@gmail.com</value>
+  <data name="generoAdmin" xml:space="preserve">
+    <value>Genre:</value>
   </data>
   <data name="identrada" xml:space="preserve">
-    <value>Id Ticket</value>
+    <value>Ticket ID:</value>
+  </data>
+  <data name="idioma" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="idPeli" xml:space="preserve">
+    <value>Movie ID:</value>
+  </data>
+  <data name="infoGestionEntradas" xml:space="preserve">
+    <value>Click on the ticket to visualize the movie.</value>
   </data>
   <data name="informacion" xml:space="preserve">
     <value>INFORMATION:</value>
@@ -241,62 +272,74 @@ earn CINNITY ´s credits for future discounts or promotions.</value>
   <data name="iniciarSesión" xml:space="preserve">
     <value>LOG IN</value>
   </data>
-  <data name="metpago" xml:space="preserve">
-    <value>Payment methods</value>
+  <data name="limpiarAdmin" xml:space="preserve">
+    <value>Clear </value>
   </data>
-  <data name="mostradContra" xml:space="preserve">
-    <value>Display password</value>
+  <data name="mantenimiento" xml:space="preserve">
+    <value>MAINTENANCE</value>
+  </data>
+  <data name="metpago" xml:space="preserve">
+    <value>Payment Methods</value>
+  </data>
+  <data name="modificarAdmin" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="mostrarContra" xml:space="preserve">
+    <value>Show password</value>
   </data>
   <data name="nombrecuenta" xml:space="preserve">
     <value>Name:</value>
   </data>
-  <data name="nomusuario" xml:space="preserve">
-    <value>Username</value>
-  </data>
   <data name="nuevaContra" xml:space="preserve">
-    <value>Type your new password:</value>
-  </data>
-  <data name="olvidadContra" xml:space="preserve">
-    <value>HAVE YOU FORGOTTEN YOUR PASSWORD?</value>
+    <value>New password:</value>
   </data>
   <data name="pagar" xml:space="preserve">
     <value>PAY</value>
   </data>
   <data name="pais" xml:space="preserve">
-    <value>Country: </value>
+    <value>Country:</value>
   </data>
   <data name="perfil" xml:space="preserve">
     <value>MY PROFILE</value>
   </data>
-  <data name="preguntas" xml:space="preserve">
-    <value>FREQUENT QUESTIONS:</value>
-  </data>
-  <data name="primacceso" xml:space="preserve">
-    <value>First access time: September 21, 2010</value>
+  <data name="precio" xml:space="preserve">
+    <value>PRICE:</value>
   </data>
   <data name="reparto" xml:space="preserve">
-    <value>Distribution:</value>
+    <value>CAST:</value>
   </data>
-  <data name="repartopel" xml:space="preserve">
-    <value>Distribution:</value>
+  <data name="repartoAdmin" xml:space="preserve">
+    <value>Cast:</value>
   </data>
   <data name="seleccimagenpel" xml:space="preserve">
-    <value>Choose image...</value>
+    <value>Select image...</value>
   </data>
   <data name="seleccsesion" xml:space="preserve">
-    <value>Choose the session</value>
+    <value>Select showing</value>
+  </data>
+  <data name="selecImagenAdmin" xml:space="preserve">
+    <value>Select Image...</value>
   </data>
   <data name="sesiones" xml:space="preserve">
-    <value>AVAILABLE SESSIONS:</value>
+    <value>AVAILABLE SHOWINGS:</value>
   </data>
   <data name="sinopsis" xml:space="preserve">
-    <value>Synopsis:</value>
+    <value>SYNOPSIS:</value>
   </data>
-  <data name="sinopsispel" xml:space="preserve">
+  <data name="sinopsisAdmin" xml:space="preserve">
     <value>Synopsis:</value>
   </data>
   <data name="sumaentradas" xml:space="preserve">
-    <value>Total Tickets</value>
+    <value>Total Tickets:</value>
+  </data>
+  <data name="suspense" xml:space="preserve">
+    <value>Thriller</value>
+  </data>
+  <data name="terror" xml:space="preserve">
+    <value>Horror</value>
+  </data>
+  <data name="tituloMayus" xml:space="preserve">
+    <value>TITLE:</value>
   </data>
   <data name="titulopel" xml:space="preserve">
     <value>Title:</value>
@@ -304,20 +347,35 @@ earn CINNITY ´s credits for future discounts or promotions.</value>
   <data name="tituloventana" xml:space="preserve">
     <value>Main Page</value>
   </data>
-  <data name="tituloventana2" xml:space="preserve">
+  <data name="tituloventanaAyuda" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="tituloventana3" xml:space="preserve">
-    <value>My Profile</value>
+  <data name="tituloventanaCambioContra" xml:space="preserve">
+    <value>Change my password</value>
   </data>
-  <data name="tituloventana4" xml:space="preserve">
-    <value>Ticket Management</value>
+  <data name="TituloVentanaCambioDatos" xml:space="preserve">
+    <value>Change my data</value>
   </data>
-  <data name="tituloventana5" xml:space="preserve">
-    <value>Change Password</value>
+  <data name="tituloventanaCarrito" xml:space="preserve">
+    <value>Shopping cart</value>
   </data>
-  <data name="tituloventana6" xml:space="preserve">
-    <value>Shopping Cart</value>
+  <data name="TituloVentanaCrearCuenta" xml:space="preserve">
+    <value>Create an account</value>
+  </data>
+  <data name="tituloventanaEntradas" xml:space="preserve">
+    <value>Ticket management</value>
+  </data>
+  <data name="tituloVentanaGestionAdmin" xml:space="preserve">
+    <value>Admin management</value>
+  </data>
+  <data name="TituloVentanaInfoPeli" xml:space="preserve">
+    <value>Movie information</value>
+  </data>
+  <data name="tituloventanaMiPerfil" xml:space="preserve">
+    <value>My profile</value>
+  </data>
+  <data name="todas" xml:space="preserve">
+    <value>All</value>
   </data>
   <data name="totalEntradas" xml:space="preserve">
     <value>Total Tickets:</value>
@@ -325,11 +383,8 @@ earn CINNITY ´s credits for future discounts or promotions.</value>
   <data name="totalPrecio" xml:space="preserve">
     <value>Total Price:</value>
   </data>
-  <data name="ultacceso" xml:space="preserve">
-    <value>Last access time: March 14, 2023</value>
-  </data>
   <data name="vaciar" xml:space="preserve">
-    <value>EMPTY</value>
+    <value>CLEAR</value>
   </data>
   <data name="venderentr" xml:space="preserve">
     <value>DELETE TICKET</value>

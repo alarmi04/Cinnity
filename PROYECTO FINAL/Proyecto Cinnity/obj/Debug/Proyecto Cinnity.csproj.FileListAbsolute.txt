@@ -472,3 +472,7 @@ C:\Users\Usuario\Desktop\lalala\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debu
 C:\Users\Usuario\Desktop\lalala\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Usuario\Desktop\lalala\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\EN-GB\Proyecto Cinnity.resources.dll
 C:\Users\Usuario\Desktop\lalala\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto Cinnity.csproj.CopyComplete
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.EN-GB.resources
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\EN-GB\Proyecto Cinnity.resources.dll
+C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\EN-GB\Proyecto Cinnity.resources.dll

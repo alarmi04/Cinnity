@@ -10,7 +10,10 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net.Security;
 using System.Net;
+using System.Threading;
+using Proyecto_Cinnity.RecursosLocalizables;
 using System.Security.Cryptography.X509Certificates;
+using System.Globalization;
 
 namespace Proyecto_Cinnity
 {
@@ -28,37 +31,449 @@ namespace Proyecto_Cinnity
             InitializeComponent();
         }
 
+        private void FrmCrearCuenta_Load(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+            RellenarIdiomas();
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            txtNombre.Text = StringRecursos.nombrecuenta;
+            txtCorreo.Text = StringRecursos.correoelectronico;
+            txtApellidos.Text = StringRecursos.apellidoscuenta;
+            txtConfirmarCorreo.Text = StringRecursos.confcorreo;
+            cmbPais.Text = StringRecursos.pais;
+            txtContra.Text = StringRecursos.contrasenya;
+            txtConfirmarContra.Text = StringRecursos.confcontrasenyacuenta;
+            chbMostrarContra.Text = StringRecursos.mostrarContra;
+            btnCrearCuenta.Text = StringRecursos.crearcuenta;
+            this.Text = StringRecursos.TituloVentanaCrearCuenta;
+            Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
+        }
+
+        private void RellenarIdiomas()
+        {
+            string[] paises = { "Afganistán", "Albania",
+
+  "Alemania",
+
+  "Andorra",
+
+  "Angola",
+
+  "Antigua y Barbuda",
+
+  "Arabia Saudita",
+
+  "Argelia",
+
+  "Argentina",
+
+  "Armenia",
+
+  "Australia",
+
+  "Austria",
+
+  "Azerbaiyán",
+
+  "Bahamas",
+
+  "Bangladés",
+
+  "Barbados",
+
+  "Baréin",
+
+  "Bélgica",
+
+  "Belice",
+
+  "Benín",
+
+  "Bielorrusia",
+
+  "Birmania",
+
+  "Bolivia",
+
+  "Bosnia y Herzegovina",
+
+  "Botsuana",
+
+  "Brasil",
+
+  "Brunéi",
+
+  "Bulgaria",
+
+  "Burkina Faso",
+
+  "Burundi",
+
+  "Bután",
+
+  "Cabo Verde",
+
+  "Camboya",
+
+  "Camerún",
+
+  "Canadá",
+
+  "Catar",
+
+  "Chad",
+
+  "Chile",
+
+  "China",
+
+  "Chipre",
+
+  "Ciudad del Vaticano",
+
+  "Colombia",
+
+  "Comoras",
+
+  "Corea del Norte",
+
+  "Corea del Sur",
+
+  "Costa de Marfil",
+
+  "Costa Rica",
+
+  "Croacia",
+
+  "Cuba",
+
+  "Dinamarca",
+
+  "Dominica",
+
+  "Ecuador",
+
+  "Egipto",
+
+  "El Salvador",
+
+  "Emiratos Árabes Unidos",
+
+  "Eritrea",
+
+  "Eslovaquia",
+
+  "Eslovenia",
+
+  "España",
+
+  "Estados Unidos",
+
+  "Estonia",
+
+  "Etiopía",
+
+  "Filipinas",
+
+  "Finlandia",
+
+  "Fiyi",
+
+  "Francia",
+
+  "Gabón",
+
+  "Gambia",
+
+  "Georgia",
+
+  "Ghana",
+
+  "Granada",
+
+  "Grecia",
+
+  "Guatemala",
+
+  "Guyana",
+
+  "Guinea",
+
+  "Guinea-Bisáu",
+
+  "Guinea Ecuatorial",
+
+  "Haití",
+
+  "Honduras",
+
+  "Hungría",
+
+  "India",
+
+  "Indonesia",
+
+  "Irak",
+
+  "Irán",
+
+  "Irlanda",
+
+  "Islandia",
+
+  "Israel",
+
+  "Italia",
+
+  "Jamaica",
+
+  "Japón",
+
+  "Jordania",
+
+  "Kazajistán",
+
+  "Kenia",
+
+  "Kirguistán",
+
+  "Kiribati",
+
+  "Kuwait",
+
+  "Laos",
+
+  "Lesoto",
+
+  "Letonia",
+
+  "Líbano",
+
+  "Liberia",
+
+  "Libia",
+
+  "Liechtenstein",
+
+  "Lituania",
+
+  "Luxemburgo",
+
+  "Madagascar",
+
+  "Malasia",
+
+  "Malaui",
+
+  "Maldivas",
+
+  "Malí",
+
+  "Malta",
+
+  "Marruecos",
+
+  "Islas Marshall",
+
+  "Mauricio",
+
+  "Mauritania",
+
+  "México",
+
+  "Micronesia",
+
+  "Moldavia",
+
+  "Mónaco",
+
+  "Mongolia",
+
+  "Montenegro",
+
+  "Mozambique",
+
+  "Namibia",
+
+  "Nauru",
+
+  "Nepal",
+
+  "Nicaragua",
+
+  "Níger",
+
+  "Nigeria",
+
+  "Noruega",
+
+  "Nueva Zelanda",
+
+  "Omán",
+
+  "Países Bajos",
+
+  "Pakistán",
+
+  "Palaos",
+
+  "Panamá",
+
+  "Papúa Nueva Guinea",
+
+  "Paraguay",
+
+  "Perú",
+
+  "Polonia",
+
+  "Portugal",
+
+  "Reino Unido",
+
+  "República Centroafricana",
+
+  "República Checa",
+
+  "República del Congo",
+
+  "República Democrática del Congo",
+
+  "República Dominicana",
+
+  "República Sudafricana",
+
+  "Ruanda",
+
+  "Rumania",
+
+  "Rusia",
+
+  "Samoa",
+
+  "San Cristóbal y Nieves",
+
+  "San Marino",
+
+  "San Vicente y las Granadinas",
+
+  "Santa Lucía",
+
+  "Santo Tomé y Príncipe",
+
+  "Senegal",
+
+  "Serbia",
+
+  "Seychelles",
+
+  "Sierra Leona",
+
+  "Singapur",
+
+  "Siria",
+
+  "Somalia",
+
+  "Sri Lanka",
+
+  "Suazilandia",
+
+  "Sudán",
+
+  "Sudán del Sur",
+
+  "Suecia",
+
+  "Suiza",
+
+  "Surinam",
+
+  "Tailandia",
+
+  "Tanzania",
+
+  "Tayikistán",
+
+  "Timor Oriental",
+
+  "Togo",
+
+  "Tonga",
+
+  "Trinidad y Tobago",
+
+  "Túnez",
+
+  "Turkmenistán",
+
+  "Turquía",
+
+  "Tuvalu",
+
+  "Ucrania",
+
+  "Uganda",
+
+  "Uruguay",
+
+  "Uzbekistán",
+
+  "Vanuatu",
+
+  "Venezuela",
+
+  "Vietnam",
+
+  "Yemen",
+
+  "Yibuti",
+
+  "Zambia",
+
+  "Zimbabue"
+
+            };
+
+            cmbPais.Items.Clear();
+
+            cmbPais.Items.AddRange(paises);
+        }
+
         private bool DatosValidos()
         {
             bool ok = true;
 
             errorCrearCuenta.Clear();
 
-            if (txtNombre.Text == "" || txtNombre.Text == "Nombre")
+            if (txtNombre.Text == "" || txtNombre.Text == StringRecursos.nombrecuenta)
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtNombre, "Introduce Nombre");
             }
 
-            if (txtContra.Text == "" || txtContra.Text == "Contraseña")
+            if (txtContra.Text == "" || txtContra.Text == StringRecursos.contrasenya)
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtContra, "Introduce Contraseña");
             }
 
 
-            if (txtApellidos.Text == "" || txtApellidos.Text == "Apellidos")
+            if (txtApellidos.Text == "" || txtApellidos.Text == StringRecursos.apellidoscuenta)
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtApellidos, "Introduce Apellidos");
             }
 
-            if (cmbPais.Text == "" || cmbPais.Text == "País")
+            if (cmbPais.Text == "" || cmbPais.Text == StringRecursos.pais)
             {
                 ok = false;
-                errorCrearCuenta.SetError(cmbPais, "Introduce Pais");
+                errorCrearCuenta.SetError(cmbPais, "Introduce País");
             }
-            if (txtCorreo.Text == "" || txtCorreo.Text == "Correo electrónico")
+            if (txtCorreo.Text == "" || txtCorreo.Text == StringRecursos.correoelectronico)
             {
                 ok = false;
                 errorCrearCuenta.SetError(txtCorreo, "Introduce Correo");
@@ -110,7 +525,7 @@ namespace Proyecto_Cinnity
                         {
                             Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
                             string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
-                            EnviarCorreoRegistro(correoDestino);
+                            EnvioCorreos.EnviarCorreoRegistro(correoDestino);
                             ConexionBD.CerrarConexion();
 
                             FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
@@ -134,31 +549,7 @@ namespace Proyecto_Cinnity
 
         }
 
-        private void EnviarCorreoRegistro(string correoDestino)
-        {
-            MailMessage correo = new MailMessage();
-            correo.From = new MailAddress("cinnityapp@gmail.com", "Cinnity", System.Text.Encoding.UTF8); // Correo de salida
-            correo.To.Add(correoDestino); // Correo destino
-            correo.Subject = "Gracias por tu registro"; // Asunto del correo
-            string Body = "¡Gracias por registrarte en nuestra aplicación! [Nombre de Usuario]" +
-                "<br><br>Es bueno que nos hayas elegido, porque somos tu mejor APP para adquirir entradas de cine."; // Mensaje del correo con HTML y demas
-            correo.Body = Body;
-            correo.IsBodyHtml = true;
-            correo.Priority = MailPriority.Normal;
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            smtp.EnableSsl = true; // True si el servidor de correo permite SSL
-            smtp.Credentials = new NetworkCredential("cinnityapp@gmail.com", "caeiyxiguufehhke"); // Cuenta de correo de envío
-
-            try
-            {
-                smtp.Send(correo);
-                MessageBox.Show("Correo enviado");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            }
-        }
+        
 
         private void txtContra_Click(object sender, EventArgs e)
         {
@@ -230,10 +621,7 @@ namespace Proyecto_Cinnity
             }
         }
 
-        private void FrmCrearCuenta_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 
