@@ -147,6 +147,9 @@
   <data name="añcarrito" xml:space="preserve">
     <value>AÑADIR AL CARRITO</value>
   </data>
+  <data name="btnEliminar" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
   <data name="btnModificar" xml:space="preserve">
     <value>ACEPTAR Y MODIFICAR</value>
   </data>

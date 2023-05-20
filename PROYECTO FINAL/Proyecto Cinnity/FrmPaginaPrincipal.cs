@@ -210,7 +210,7 @@ namespace Proyecto_Cinnity
                 ConexionBD.AbrirConexion();
 
                 // Obtener la lista de películas del género seleccionado
-                List<Pelicula> peliculas = Pelicula.FiltrarPelicula(genero, consulta);
+                List<Pelicula> peliculas = Pelicula.FiltrarPelicula(consulta);
 
                 if (peliculas != null && peliculas.Count > 0)
                 {

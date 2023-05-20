@@ -42,7 +42,6 @@ C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\MySql.Data.dll
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Buffers.dll
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\System.IO.Pipelines.dll
@@ -476,3 +475,7 @@ C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.EN-GB.resources
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\EN-GB\Proyecto Cinnity.resources.dll
 C:\Users\laclcr\Documents\PROYECTO\PROG\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\EN-GB\Proyecto Cinnity.resources.dll
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\EN-GB\Proyecto Cinnity.resources.dll
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.resources
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.EN-GB.resources
+C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\EN-GB\Proyecto Cinnity.resources.dll

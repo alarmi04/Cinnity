@@ -59,9 +59,9 @@ namespace Proyecto_Cinnity
         {
             string info = "";
             string consulta = "";
-            if (asunto=="genero")
+            if (asunto == "genero")
             {
-                consulta = "SELECT genero from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT genero from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -96,7 +96,7 @@ namespace Proyecto_Cinnity
             }
             if (asunto == "reparto")
             {
-                consulta = "SELECT reparto from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT reparto from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -114,7 +114,7 @@ namespace Proyecto_Cinnity
             }
             if (asunto == "nombre")
             {
-                consulta = "SELECT nombrePeli from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT nombrePeli from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -132,7 +132,7 @@ namespace Proyecto_Cinnity
             }
             if (asunto == "duracion")
             {
-                consulta = "SELECT duracion from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT duracion from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -151,7 +151,7 @@ namespace Proyecto_Cinnity
 
             if (asunto == "sinopsis")
             {
-                consulta = "SELECT sinopsis from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT sinopsis from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -168,7 +168,7 @@ namespace Proyecto_Cinnity
             }
             if (asunto == "fechaEstreno")
             {
-                consulta = "SELECT fechaEstreno from Pelicula WHERE nombrePeli='"+nombre+"';";
+                consulta = "SELECT fechaEstreno from Pelicula WHERE nombrePeli='" + nombre + "';";
                 MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
 
@@ -197,7 +197,7 @@ namespace Proyecto_Cinnity
 
                 while (reader.Read())
                 {
-                   img = (byte[])(reader["fotoCaratula"]);
+                    img = (byte[])(reader["fotoCaratula"]);
 
                 }
             }
@@ -242,7 +242,7 @@ namespace Proyecto_Cinnity
             MySqlDataReader reader = comando.ExecuteReader();
             while (reader.Read())
             {
-                peli.idPelicula= Convert.ToInt32(reader["idPelicula"]);
+                peli.idPelicula = Convert.ToInt32(reader["idPelicula"]);
                 peli.nombre = reader.GetString(2);
                 peli.genero = reader.GetString(3);
                 peli.director = reader.GetString(4);
@@ -291,8 +291,8 @@ namespace Proyecto_Cinnity
             byte[] imgArr = ms.ToArray();
 
             string consulta = string.Format("UPDATE Pelicula SET nombrePeli='{0}',genero='{1}',director='{2}',reparto='{3}'," +
-                "duracion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", pel.nombre, pel.genero, pel.director, pel.reparto, 
-                pel.duracionMinutos,pel.sinopsis,pel.fechaEstreno.ToString("yyyy/MM/dd"), pel.IdPelicula);
+                "duracion={4},sinopsis='{5}',fechaEstreno='{6}',fotoCaratula=@fotoCaratula WHERE idPelicula={7}", pel.nombre, pel.genero, pel.director, pel.reparto,
+                pel.duracionMinutos, pel.sinopsis, pel.fechaEstreno.ToString("yyyy/MM/dd"), pel.IdPelicula);
 
 
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
@@ -409,7 +409,7 @@ namespace Proyecto_Cinnity
 
         }
 
-        public static List<Pelicula> FiltrarPelicula(string genero, string consulta)
+        public static List<Pelicula> FiltrarPelicula(string consulta)
         {
             List<Pelicula> lista = new List<Pelicula>();
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
@@ -449,6 +449,39 @@ namespace Proyecto_Cinnity
 
             reader.Close();
             return lista;
+        }
+
+
+
+        public static int EliminarPelicula(string titulo)
+
+        {
+            int retorno;
+            string consulta = string.Format("DELETE FROM Pelicula WHERE nombrePeli=@titulo;");
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            comando.Parameters.AddWithValue("titulo", titulo);
+            retorno = comando.ExecuteNonQuery();
+            return retorno;
+        }
+
+
+
+        public static bool ComprobarPelicula(string titulo)
+        {
+            string consulta = string.Format("SELECT e.* FROM Entradas e JOIN Pelicula p ON p.idPelicula = e.peliID WHERE p.nombrePeli = @titulo;");
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            comando.Parameters.AddWithValue("titulo", titulo);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            {
+                reader.Close();
+                return true;
+            }
+            else
+            {
+                reader.Close();
+                return false;
+            }
         }
     }
 }

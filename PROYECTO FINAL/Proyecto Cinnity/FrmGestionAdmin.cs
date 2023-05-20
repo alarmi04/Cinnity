@@ -35,6 +35,7 @@ namespace Proyecto_Cinnity
             btnLimpiar.Text = StringRecursos.limpiarAdmin;
             btnModificar.Text = StringRecursos.modificarAdmin;
             btnAgregar.Text = StringRecursos.agregarAdmin;
+            btnEliminar.Text = StringRecursos.btnEliminar;
             this.Text = StringRecursos.tituloVentanaGestionAdmin;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
@@ -89,28 +90,31 @@ namespace Proyecto_Cinnity
                     pel.Sinopsis = txtSinopsis.Text;
                     pel.FechaEstreno = dtpFechaEstreno.Value;
                     pel.Caratula = ptbImagen.Image;
-
-                    if (String.IsNullOrEmpty(txtId.Text))  // Estoy agregando un usuario nuevo
+                    if (DatosValidos())
                     {
-                        if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
+                        if (String.IsNullOrEmpty(txtId.Text))  // Estoy agregando un usuario nuevo
                         {
-                            MessageBox.Show("Esta película no se puede dar de alta. Ya existe");
+                            if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
+                            {
+                                MessageBox.Show("Esta película no se puede dar de alta. Ya existe");
+                            }
+                            else
+                            {
+                                resultado = pel.AgregarPelicula(pel);
+                            }
                         }
-                        else
+                        else // Estoy modificando un usuario editado
                         {
-                            resultado = pel.AgregarPelicula(pel);
+                            pel.IdPelicula = Convert.ToInt16(txtId.Text);
+                            resultado = pel.ActualizaPelicula(pel);
+                        }
+
+                        if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
+                        {
+                            LimpiarControles();
                         }
                     }
-                    else // Estoy modificando un usuario editado
-                    {
-                        pel.IdPelicula = Convert.ToInt16(txtId.Text);
-                        resultado = pel.ActualizaPelicula(pel);
-                    }
-
-                    if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
-                    {
-                        LimpiarControles();
-                    }
+                   
                     CargarDataGrid();
                     // Cierro la conexión
                     ConexionBD.CerrarConexion();
@@ -284,6 +288,51 @@ namespace Proyecto_Cinnity
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int resultado = 0;
+            try
+            {
+                if (ConexionBD.Conexion != null)
+                {
+                    ConexionBD.AbrirConexion();
+                    if (DatosValidos())
+                    {
+                        if (Pelicula.ComprobarPelicula(txtTitulo.Text))
+                        {
+                            MessageBox.Show("Esta película no se puede eliminar ya que tiene entradas asociadas.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            resultado = Pelicula.EliminarPelicula(txtTitulo.Text);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
+                {
+                    LimpiarControles();
+                }
+                CargarDataGrid();
+                ConexionBD.CerrarConexion();
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                ConexionBD.CerrarConexion();
+            }
         }
     }
 }

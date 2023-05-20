@@ -107,6 +107,8 @@ namespace Proyecto_Cinnity
                     if (Entradas.ComprobarEntrada(txtTitulo.Text))
                     {
                         resultado = Entradas.DevolverEntrada(txtTitulo.Text);
+                        txtTitulo.Clear();
+                        ptbImagenPeli.Image = null;
                     }
                     else
                     {
