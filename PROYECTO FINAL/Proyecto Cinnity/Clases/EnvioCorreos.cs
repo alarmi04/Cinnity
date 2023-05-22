@@ -38,7 +38,7 @@ namespace Proyecto_Cinnity
             smtp.EnableSsl = true; // True si el servidor de correo permite SSL
             smtp.Credentials = new NetworkCredential(CorreoEnvio, ContraseñaEnvio); // Cuenta de correo de envío
 
-            try
+          /*  try
             {
                 smtp.Send(correo);
                 MessageBox.Show("Correo enviado");
@@ -46,7 +46,7 @@ namespace Proyecto_Cinnity
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            }
+            }*/
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace Proyecto_Cinnity
             smtp.EnableSsl = true; // True si el servidor de correo permite SSL
             smtp.Credentials = new NetworkCredential(CorreoEnvio, ContraseñaEnvio); // Cuenta de correo de envío
 
-            try
+           /* try
             {
                 smtp.Send(correo);
                 MessageBox.Show("Correo enviado");
@@ -76,7 +76,7 @@ namespace Proyecto_Cinnity
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            }
+            } */
         }
 
         /// <summary>
@@ -98,7 +98,7 @@ namespace Proyecto_Cinnity
             smtp.EnableSsl = true; // True si el servidor de correo permite SSL
             smtp.Credentials = new NetworkCredential(CorreoEnvio, ContraseñaEnvio); // Cuenta de correo de envío
 
-            try
+          /*  try
             {
                 smtp.Send(correo);
                 MessageBox.Show("Correo enviado");
@@ -106,7 +106,7 @@ namespace Proyecto_Cinnity
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            }
+            }*/
         }
     }
 }
