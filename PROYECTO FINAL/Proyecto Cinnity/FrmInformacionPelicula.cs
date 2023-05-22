@@ -47,11 +47,29 @@ namespace Proyecto_Cinnity
 
             errorInformacionPelicula.Clear();
 
+            DateTime.TryParse(cmbSesion.Text, out DateTime sesion);
             if (cmbSesion.Text == "" || cmbSesion.Text == StringRecursos.seleccsesion)
             {
                 ok = false;
                 errorInformacionPelicula.SetError(cmbSesion, "Set a valid session");
             }
+            if (dttDiaEmision.Value < DateTime.Today)
+            {
+                ok = false;
+                errorInformacionPelicula.SetError(dttDiaEmision, "Set a valid day");
+            }
+            else
+            {
+                DateTime fechaEmision = new DateTime(dttDiaEmision.Value.Year, dttDiaEmision.Value.Month, dttDiaEmision.Value.Day,
+                                              sesion.Hour, sesion.Minute, sesion.Second);
+
+                if (fechaEmision < DateTime.Now)
+                {
+                    ok = false;
+                    errorInformacionPelicula.SetError(cmbSesion, "The session time must be greater than or equal to the current time");
+                }
+            }
+
 
             return ok;
         }

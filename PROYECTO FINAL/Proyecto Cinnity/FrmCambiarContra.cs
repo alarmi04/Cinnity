@@ -52,6 +52,8 @@ namespace Proyecto_Cinnity
                             FrmInicioDeSesion frm1 = new FrmInicioDeSesion();
                             ConexionBD.CerrarConexion();
                             this.Hide();
+                            frm1.StartPosition = FormStartPosition.CenterScreen;
+
                             frm1.Show();
                         } else
                         {

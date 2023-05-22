@@ -530,11 +530,7 @@ namespace Proyecto_Cinnity
                                     EnvioCorreos.EnviarCorreoRegistro(correoDestino);
                                     ConexionBD.CerrarConexion();
 
-                                    FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
-                                    this.Hide();
-                                    frmprincipal.StartPosition = FormStartPosition.CenterScreen;
-
-                                    frmprincipal.Show();
+                                    this.Close();
                                 } else
                             {
                                 MessageBox.Show("It is not possible to create an account with an email already in use.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

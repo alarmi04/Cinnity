@@ -124,7 +124,7 @@ namespace Proyecto_Cinnity
         {
             int idUser = Usuario.RecogerID();
             List<Entradas> lista = new List<Entradas>();
-            string consulta = String.Format("SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario=@idUser AND e.fecha_emision > DATE(NOW()) AND p.nombrePeli=@titulo;");
+            string consulta = String.Format("SELECT e.*, p.nombrePeli AS titulo FROM Entradas e INNER JOIN Pelicula p ON e.peliID = p.idPelicula WHERE e.idUsuario=@idUser AND e.fecha_emision >= DATE(NOW()) AND p.nombrePeli=@titulo;");
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
             comando.Parameters.AddWithValue("idUser", idUser);
             comando.Parameters.AddWithValue("titulo", titulo);

@@ -99,6 +99,8 @@ namespace Proyecto_Cinnity
         {
             FrmPaginaPrincipal frmPP = new FrmPaginaPrincipal();
             this.Close();
+            frmPP.StartPosition = FormStartPosition.CenterScreen;
+
             frmPP.Show();
         }
 
@@ -106,6 +108,8 @@ namespace Proyecto_Cinnity
         {
             FrmInicioDeSesion frmIni = new FrmInicioDeSesion();
             this.Close();
+            frmIni.StartPosition = FormStartPosition.CenterScreen;
+
             frmIni.Show();
         }
 

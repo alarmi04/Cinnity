@@ -92,7 +92,7 @@ namespace Proyecto_Cinnity
         private void btnCrearCuenta_Click(object sender, EventArgs e)
         {
             FrmCrearCuenta frmcuenta = new FrmCrearCuenta();
-            this.Hide();
+            
             frmcuenta.StartPosition = FormStartPosition.CenterScreen;
             frmcuenta.Show();
         }

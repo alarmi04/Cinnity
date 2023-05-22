@@ -94,6 +94,7 @@ namespace Proyecto_Cinnity
         private void lblCambiarContra_Click(object sender, EventArgs e)
         {
             FrmCambiarContra frm1 = new FrmCambiarContra(lblCorreo.Text);
+            this.Hide();
             frm1.StartPosition = FormStartPosition.CenterScreen;
             frm1.Show();
         }
