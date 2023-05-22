@@ -35,6 +35,7 @@ namespace Proyecto_Cinnity
             btnLimpiar.Text = StringRecursos.limpiarAdmin;
             btnModificar.Text = StringRecursos.modificarAdmin;
             btnAgregar.Text = StringRecursos.agregarAdmin;
+            btnEliminar.Text = StringRecursos.btnEliminar;
             this.Text = StringRecursos.tituloVentanaGestionAdmin;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
@@ -89,28 +90,31 @@ namespace Proyecto_Cinnity
                     pel.Sinopsis = txtSinopsis.Text;
                     pel.FechaEstreno = dtpFechaEstreno.Value;
                     pel.Caratula = ptbImagen.Image;
-
-                    if (String.IsNullOrEmpty(txtId.Text))  // Estoy agregando un usuario nuevo
+                    if (DatosValidos())
                     {
-                        if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
+                        if (String.IsNullOrEmpty(txtId.Text))  // Estoy agregando un usuario nuevo
                         {
-                            MessageBox.Show("Esta película no se puede dar de alta. Ya existe");
+                            if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
+                            {
+                                MessageBox.Show("This movie already exists in our database.");
+                            }
+                            else
+                            {
+                                resultado = pel.AgregarPelicula(pel);
+                            }
                         }
-                        else
+                        else // Estoy modificando un usuario editado
                         {
-                            resultado = pel.AgregarPelicula(pel);
+                            pel.IdPelicula = Convert.ToInt16(txtId.Text);
+                            resultado = pel.ActualizaPelicula(pel);
+                        }
+
+                        if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
+                        {
+                            LimpiarControles();
                         }
                     }
-                    else // Estoy modificando un usuario editado
-                    {
-                        pel.IdPelicula = Convert.ToInt16(txtId.Text);
-                        resultado = pel.ActualizaPelicula(pel);
-                    }
-
-                    if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
-                    {
-                        LimpiarControles();
-                    }
+                   
                     CargarDataGrid();
                     // Cierro la conexión
                     ConexionBD.CerrarConexion();
@@ -120,7 +124,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                    MessageBox.Show("There was an error connecting to the data base.");
                 }
             }
             catch (Exception ex)
@@ -169,43 +173,43 @@ namespace Proyecto_Cinnity
             if (txtTitulo.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtTitulo, "Introduce un título.");
+                errorGestionAdmin.SetError(txtTitulo, "Enter a title.");
             }
 
             if (txtGenero.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtGenero, "Introduce un genero.");
+                errorGestionAdmin.SetError(txtGenero, "Enter a genre.");
             }
 
             if (txtDirector.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtDirector, "Introduce un director.");
+                errorGestionAdmin.SetError(txtDirector, "Enter a director.");
             }
 
             if (txtReparto.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtReparto, "Introduce un reparto.");
+                errorGestionAdmin.SetError(txtReparto, "Enter the cast.");
             }
 
             if (nudDuracion.Value == 0)
             {
                 ok = false;
-                errorGestionAdmin.SetError(nudDuracion, "Introduce una duración.");
+                errorGestionAdmin.SetError(nudDuracion, "Enter the duration.");
             }
 
             if (txtSinopsis.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtSinopsis, "Introduce una sinopsis.");
+                errorGestionAdmin.SetError(txtSinopsis, "Enter a synopsis.");
             }
 
             if (ptbImagen.Image == null)
             {
                 ok = false;
-                errorGestionAdmin.SetError(ptbImagen, "Introduce una imagen.");
+                errorGestionAdmin.SetError(ptbImagen, "Select an image.");
             }
             return ok;
 
@@ -252,7 +256,7 @@ namespace Proyecto_Cinnity
                     }
                     else
                     {
-                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        MessageBox.Show("There was an error connecting to the data base.");
                     }
                     // Cerramos la conexion
                     ConexionBD.CerrarConexion();
@@ -284,6 +288,51 @@ namespace Proyecto_Cinnity
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarControles();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int resultado = 0;
+            try
+            {
+                if (ConexionBD.Conexion != null)
+                {
+                    ConexionBD.AbrirConexion();
+                    if (DatosValidos())
+                    {
+                        if (Pelicula.ComprobarPelicula(txtTitulo.Text))
+                        {
+                            MessageBox.Show("This movie cannot be deleted because there are tickets associated with it.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            resultado = Pelicula.EliminarPelicula(txtTitulo.Text);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
+                {
+                    LimpiarControles();
+                }
+                CargarDataGrid();
+                ConexionBD.CerrarConexion();
+
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message + "\n" + ex.StackTrace);
+            }
+            finally
+            {
+                ConexionBD.CerrarConexion();
+            }
         }
     }
 }

@@ -147,6 +147,9 @@
   <data name="añcarrito" xml:space="preserve">
     <value>ADD TO MY CART</value>
   </data>
+  <data name="btnEliminar" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="btnModificar" xml:space="preserve">
     <value>ACCEPT AND MODIFY</value>
   </data>
@@ -337,6 +340,9 @@ favorite movies at our cinema.</value>
   </data>
   <data name="terror" xml:space="preserve">
     <value>Horror</value>
+  </data>
+  <data name="tituloInicioSesion" xml:space="preserve">
+    <value>Log in</value>
   </data>
   <data name="tituloMayus" xml:space="preserve">
     <value>TITLE:</value>

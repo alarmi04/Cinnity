@@ -50,7 +50,7 @@ namespace Proyecto_Cinnity
             }
             else
             {
-                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("There was an error connecting to the data base.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -80,7 +80,7 @@ namespace Proyecto_Cinnity
                 else
 
                 {
-                    MessageBox.Show("Titulo de película introducido no existente", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("The title entered doesn't exist in the data base.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 ConexionBD.CerrarConexion();
@@ -89,7 +89,7 @@ namespace Proyecto_Cinnity
             else
 
             {
-                MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -107,15 +107,17 @@ namespace Proyecto_Cinnity
                     if (Entradas.ComprobarEntrada(txtTitulo.Text))
                     {
                         resultado = Entradas.DevolverEntrada(txtTitulo.Text);
+                        txtTitulo.Clear();
+                        ptbImagenPeli.Image = null;
                     }
                     else
                     {
-                        MessageBox.Show("Titulo de película introducido no existente", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("The title entered doesn't exist in the data base.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 ConexionBD.CerrarConexion();
                 CargaListaEntradasActivas();
@@ -176,7 +178,7 @@ namespace Proyecto_Cinnity
                     }
                     else
                     {
-                        MessageBox.Show("Esta película no tiene caratula.","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("This movie doesn't have an image associated.","Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     ConexionBD.CerrarConexion();
                 }

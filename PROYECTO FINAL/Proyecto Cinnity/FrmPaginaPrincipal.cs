@@ -53,7 +53,7 @@ namespace Proyecto_Cinnity
             cmbFiltrar.Items.Add(StringRecursos.aventura);
             cmbFiltrar.Items.Add(StringRecursos.drama);
             cmbFiltrar.Items.Add(StringRecursos.todas);
-            this.Text = StringRecursos.tituloventanaMiPerfil;
+            this.Text = StringRecursos.tituloventana;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
@@ -147,7 +147,7 @@ namespace Proyecto_Cinnity
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -210,7 +210,7 @@ namespace Proyecto_Cinnity
                 ConexionBD.AbrirConexion();
 
                 // Obtener la lista de películas del género seleccionado
-                List<Pelicula> peliculas = Pelicula.FiltrarPelicula(genero, consulta);
+                List<Pelicula> peliculas = Pelicula.FiltrarPelicula(consulta);
 
                 if (peliculas != null && peliculas.Count > 0)
                 {
@@ -253,7 +253,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No hay películas del género seleccionado.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There are no movies associated with the selected genre.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 ConexionBD.CerrarConexion();
@@ -384,7 +384,7 @@ namespace Proyecto_Cinnity
                 frm1.Show();
             } else
             {
-                MessageBox.Show("La contraseña no es correcta.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Wrong password.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

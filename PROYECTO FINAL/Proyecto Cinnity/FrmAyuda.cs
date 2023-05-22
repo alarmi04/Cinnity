@@ -33,6 +33,7 @@ namespace Proyecto_Cinnity
         {
             lblInformacion.Text = StringRecursos.informacion;
             lblInformacion2.Text = StringRecursos.descripcionayuda;
+            this.Text = StringRecursos.tituloventanaAyuda;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
 
 

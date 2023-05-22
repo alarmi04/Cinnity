@@ -65,7 +65,7 @@ namespace Proyecto_Cinnity
                 }
             } else
             {
-                MessageBox.Show("No existe conexión a la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return cantEntradasAdquiridas;

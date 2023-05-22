@@ -130,7 +130,7 @@ namespace Proyecto_Cinnity
             btnIniciarSesion.Text = StringRecursos.iniciarSesión;
             btnCrearCuenta.Text = StringRecursos.crearcuenta;
             toolStripLabel1.Text = StringRecursos.idioma;
-            this.Text = StringRecursos.tituloventanaMiPerfil;
+            this.Text = StringRecursos.tituloInicioSesion;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 

@@ -33,6 +33,7 @@ namespace Proyecto_Cinnity
             lblConfirmaContra.Text = StringRecursos.confirmaContra;
             btnAceptar.Text = StringRecursos.aceptarcambiar;
             chbMostrarContra.Text = StringRecursos.mostrarContra;
+            this.Text = StringRecursos.tituloventanaCambioContra;
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 

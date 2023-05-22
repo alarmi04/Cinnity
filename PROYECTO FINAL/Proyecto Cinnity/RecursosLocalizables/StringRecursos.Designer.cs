@@ -151,6 +151,15 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar.
+        /// </summary>
+        internal static string btnEliminar {
+            get {
+                return ResourceManager.GetString("btnEliminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ACEPTAR Y MODIFICAR.
         /// </summary>
         internal static string btnModificar {
@@ -743,6 +752,15 @@ namespace Proyecto_Cinnity.RecursosLocalizables {
         internal static string terror {
             get {
                 return ResourceManager.GetString("terror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inicio de sesión.
+        /// </summary>
+        internal static string tituloInicioSesion {
+            get {
+                return ResourceManager.GetString("tituloInicioSesion", resourceCulture);
             }
         }
         
