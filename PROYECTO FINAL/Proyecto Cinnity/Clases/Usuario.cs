@@ -21,18 +21,19 @@ namespace Proyecto_Cinnity
         public static string pais;
         public static DateTime fechaNaci;
 
+        
+        /// <summary>
+        /// Método para comprobar si se puede iniciar sesión correctamente con correo y contraseña.
+        /// </summary>
+        /// <param name="correo">Correo electrónico del usuario</param>
+        /// <param name="contraseña">Contraseña del usuario</param>
+        /// <returns>Devuelve true si es correcto y false si no hay.</returns>
         public static bool InicioSesionCorrecto(string correo, string contraseña)
-
         {
-
             bool correcto = false;
-
             string consulta = "SELECT * FROM Usuario WHERE correoElectronico LIKE '" + correo + "' && contrasenya LIKE '" + contraseña + "';";
-
             MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
-
             MySqlDataReader reader = comando.ExecuteReader();
-
             if (reader.HasRows)
             {
                 correcto = true;
@@ -46,12 +47,19 @@ namespace Proyecto_Cinnity
                     Usuario.fechaNaci = reader.GetDateTime("fechaNaci");
                 }
             }
-
             return correcto;
-
         }
 
-
+        /// <summary>
+        /// Método para registrar usuario.
+        /// </summary>
+        /// <param name="nombre">Nombre del usuario</param>
+        /// <param name="apellidos">Apellidos del usuario</param>
+        /// <param name="correo">Correo eléctronico del usuario</param>
+        /// <param name="contrasenya">Contraseña del usuario</param>
+        /// <param name="pais">País de residencia</param>
+        /// <param name="fechaNaci">Fecha de nacimiento</param>
+        /// <returns>Devuelve el número de filas afectadas</returns>
         public static int RegistrarUsuario(string nombre, string apellidos, string correo, string contrasenya, string pais, DateTime fechaNaci)
         {
             int retorno;
@@ -75,6 +83,10 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        /// <summary>
+        /// Método para obtener el Id del usuario.
+        /// </summary>
+        /// <returns>Devuelve el id del usuario.</returns>
         public static int RecogerID()
         {
             string consulta = "SELECT id from Usuario WHERE nombre='" + nombre + "' AND correoElectronico = '" + correo + "';";
@@ -95,16 +107,35 @@ namespace Proyecto_Cinnity
 
         }
 
+        /// <summary>
+        /// Método para validar las contraseñas.
+        /// </summary>
+        /// <param name="clave1">Clave</param>
+        /// <param name="clave2">Confirmar clave.</param>
+        /// <returns></returns>
         public static bool ClaveValidada(string clave1, string clave2)
         {
             return clave1 == clave2;
         }
 
+        /// <summary>
+        /// Método para validar el correo.
+        /// </summary>
+        /// <param name="correo1">Correo.</param>
+        /// <param name="correo2">Confirmar corrreo.</param>
+        /// <returns></returns>
         public static bool CorreoValidado(string correo1, string correo2)
         {
             return correo1 == correo2;
         }
 
+        /// <summary>
+        /// Método para cambiar la contraseña de un usuario.
+        /// </summary>
+        /// <param name="contraNueva">Contraseña nueva del usuario.</param>
+        /// <param name="contraVieja">Contraseña vieja del usuario.</param>
+        /// <param name="correo">Correo del usuario.</param>
+        /// <returns>Devuelve 0 o 1.</returns>
         public static int CambiarContraseña(string contraNueva, string contraVieja, string correo)
         {
             int retorno;
@@ -124,6 +155,13 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        /// <summary>
+        /// Método para cambiar los datos de un usuario.
+        /// </summary>
+        /// <param name="nuevoNombre">Nuevo nombre del usuario.</param>
+        /// <param name="nuevoCorreo">Nuevo correo del usuario.</param>
+        /// <param name="nuevosApellidos">Nuevos apellidos del usuario.</param>
+        /// <returns>Devuelve 0 o 1</returns>
         public static int CambiarDatos(string nuevoNombre, string nuevoCorreo, string nuevosApellidos)
         {
             int retorno;

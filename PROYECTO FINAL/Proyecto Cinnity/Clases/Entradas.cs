@@ -41,6 +41,10 @@ namespace Proyecto_Cinnity
 
         public Entradas() { }
 
+        /// <summary>
+        /// Método para generar la entrada en la base de datos.
+        /// </summary>
+        /// <param name="lista">Lista de las entradas a introducir en la base de datos.</param>
         public static void GenerarEntrada(List<Entradas> lista)
         {
             int idUsu = Usuario.RecogerID();
@@ -69,6 +73,12 @@ namespace Proyecto_Cinnity
 
         }
 
+
+        /// <summary>
+        /// Método para devolver una entrada.
+        /// </summary>
+        /// <param name="titulo">Titulo de la pelicula a la que pertenece la entrada.</param>
+        /// <returns>Devuelve 0 o 1</returns>
         public static int DevolverEntrada(string titulo)
 
         {
@@ -81,7 +91,11 @@ namespace Proyecto_Cinnity
         }
 
 
-
+        /// <summary>
+        /// Método para comprobar si hay una entrada de una película. 
+        /// </summary>
+        /// <param name="titulo">Título de la película</param>
+        /// <returns>Devuelve si existe la entrada o no.</returns>
         public static bool ComprobarEntrada(string titulo)
         {
             string consulta = string.Format("SELECT * FROM Entradas WHERE peliID IN (SELECT idPelicula FROM Pelicula WHERE nombrePeli=@titulo);");
@@ -101,9 +115,11 @@ namespace Proyecto_Cinnity
         }
 
 
-
-
-
+        /// <summary>
+        /// Método que busca la entrada por el título de la película.
+        /// </summary>
+        /// <param name="titulo">Título de la película</param>
+        /// <returns>Devuelve una lista de entradas.</returns>
         public static List<Entradas> BuscarEntrada(string titulo)
         {
             int idUser = Usuario.RecogerID();
@@ -125,6 +141,10 @@ namespace Proyecto_Cinnity
             return lista;
         }
 
+        /// <summary>
+        /// Método para ver las entradas activas que tiene un usuario.
+        /// </summary>
+        /// <returns>Devuelve la lista de entradas activas.</returns>
         public static List<Entradas> EntradasActivas()
          {
              int idUser = Usuario.RecogerID();
@@ -152,9 +172,13 @@ namespace Proyecto_Cinnity
          }
 
 
-        public static List<Entradas> EntradasAdquiridas(int idUsu)
+        /// <summary>
+        /// Método para visualizar la lista de entradas adquiridas por el usuario.
+        /// </summary>
+        /// <param name="idUser">Id del usuario.</param>
+        /// <returns>Devuelve la lista de entradas adquiridas.</returns>
+        public static List<Entradas> EntradasAdquiridas(int idUser)
         {
-            int idUser = Usuario.RecogerID();
             List<Entradas> listaAdquiridas = new List<Entradas>();
 
             if (idUser != -1)
@@ -165,7 +189,6 @@ namespace Proyecto_Cinnity
 
                 if (reader.HasRows)
                 {
-
                     while (reader.Read())
                     {
                         Entradas ent = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetString("hora_emision"), reader.GetDateTime("fecha_emision"));
@@ -177,6 +200,5 @@ namespace Proyecto_Cinnity
 
             return listaAdquiridas;
         }
- 
     }
 }

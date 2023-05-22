@@ -19,6 +19,10 @@ namespace Proyecto_Cinnity
         private const string CorreoEnvio = "cinnityapp@gmail.com";
         private const string ContraseñaEnvio = "akhwplovsjvdttsm";
 
+        /// <summary>
+        /// Método para enviar el correo de registro de cuenta.
+        /// </summary>
+        /// <param name="correoDestino">Correo del usuario registrado.</param>
         public static void EnviarCorreoRegistro(string correoDestino)
         {
             MailMessage correo = new MailMessage();
@@ -45,6 +49,10 @@ namespace Proyecto_Cinnity
             }
         }
 
+        /// <summary>
+        /// Método para enviar un correo de compra realizada.
+        /// </summary>
+        /// <param name="correoDestino">Correo del usuario que realiza la compra.</param>
         public static void EnviarCorreoCompra(string correoDestino)
         {
             MailMessage correo = new MailMessage();
@@ -71,6 +79,10 @@ namespace Proyecto_Cinnity
             }
         }
 
+        /// <summary>
+        /// Método para enviar correo de cambio de contraseña.
+        /// </summary>
+        /// <param name="correoDestino">Correo del usuario que cambia la contraseña.</param>
         public static void EnviarCorreoCambioContra(string correoDestino)
         {
             MailMessage correo = new MailMessage();

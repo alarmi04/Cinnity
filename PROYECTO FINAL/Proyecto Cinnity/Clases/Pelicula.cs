@@ -55,6 +55,12 @@ namespace Proyecto_Cinnity
         //Busqueda por nombre
         //Busqueda por filtro
 
+        /// <summary>
+        /// Método para buscar información.
+        /// </summary>
+        /// <param name="asunto">Tipo de información a buscar</param>
+        /// <param name="nombre">Nombre de la película</param>
+        /// <returns>Devuelve el genero seleccionado</returns>
         public static string BuscarInformacion(string asunto, string nombre)
         {
             string info = "";
@@ -186,6 +192,11 @@ namespace Proyecto_Cinnity
             return info;
         }
 
+        /// <summary>
+        /// Método para cargar la caratula de la película.
+        /// </summary>
+        /// <param name="nombre">Nombre de la película</param>
+        /// <returns>Devuelve la caratula.</returns>
         public static byte[] CargarCaratula(string nombre)
         {
             string consulta = "SELECT fotoCaratula from Pelicula WHERE nombrePeli='" + nombre + "';";
@@ -205,7 +216,11 @@ namespace Proyecto_Cinnity
             return img;
         }
 
-
+        /// <summary>
+        /// Método para añadir una película.
+        /// </summary>
+        /// <param name="pel">La película a añadir.</param>
+        /// <returns>Devuelve 0 o 1.</returns>
         public int AgregarPelicula(Pelicula pel)
         {
 
@@ -234,6 +249,12 @@ namespace Proyecto_Cinnity
             return retorno;
         }
 
+        /// <summary>
+        /// Método para obtener la película.
+        /// </summary>
+        /// <param name="conexion">Conexión de la base de datos.</param>
+        /// <param name="identificacion">Nombre de la película.</param>
+        /// <returns>Devuelve la película.</returns>
         public static Pelicula ObtenerPelicula(MySqlConnection conexion, string identificacion)
         {
             Pelicula peli = new Pelicula();
@@ -261,6 +282,12 @@ namespace Proyecto_Cinnity
             return peli;
         }
 
+        /// <summary>
+        /// Método para saber si la película ya existe.
+        /// </summary>
+        /// <param name="conexion">Conexión de la base de datos.</param>
+        /// <param name="nom">Nombre de la película.</param>
+        /// <returns>Devuelve si existe o no.</returns>
         public bool YaEsta(MySqlConnection conexion, string nom)
         {
             string consulta = string.Format("SELECT * FROM Pelicula" +
@@ -281,6 +308,11 @@ namespace Proyecto_Cinnity
 
         }
 
+        /// <summary>
+        /// Método para actualizar la película.
+        /// </summary>
+        /// <param name="pel">La película a actualizar.</param>
+        /// <returns>Devuelve 0 o 1.</returns>
         public int ActualizaPelicula(Pelicula pel)
         {
             int retorno;
@@ -301,6 +333,12 @@ namespace Proyecto_Cinnity
 
             return retorno;
         }
+
+        /// <summary>
+        /// Método para buscar la película.
+        /// </summary>
+        /// <param name="nombre">Nombre de la película a buscar.</param>
+        /// <returns>Devuelve la lista de películas con ese nombre o parecido.</returns>
         public static List<Pelicula> BuscarPelicula(string nombre)
         {
             List<Pelicula> lista = new List<Pelicula>();
@@ -344,6 +382,10 @@ namespace Proyecto_Cinnity
             return lista;
         }
 
+        /// <summary>
+        /// Método para cargar las películas de la base de datos.
+        /// </summary>
+        /// <returns>Devuelve la lista con las películas.</returns>
         public static List<Pelicula> CargarPeliculas()
         {
             List<Pelicula> lista = new List<Pelicula>();
@@ -389,6 +431,11 @@ namespace Proyecto_Cinnity
             return lista;
         }
 
+        /// <summary>
+        /// Método para recoger el id de la película.
+        /// </summary>
+        /// <param name="titulo">Título de la película.</param>
+        /// <returns>Devuelve el id de la película.</returns>
         public static int RecogerID(string titulo)
         {
             string consulta = "SELECT idPelicula from Pelicula WHERE nombrePeli='" + titulo + "';";
@@ -409,6 +456,11 @@ namespace Proyecto_Cinnity
 
         }
 
+        /// <summary>
+        /// Método para filtrar las películas.
+        /// </summary>
+        /// <param name="consulta">Consulta para pasarla al commando.</param>
+        /// <returns>Devuelve las listas de las películas filtradas.</returns>
         public static List<Pelicula> FiltrarPelicula(string consulta)
         {
             List<Pelicula> lista = new List<Pelicula>();
@@ -452,7 +504,11 @@ namespace Proyecto_Cinnity
         }
 
 
-
+        /// <summary>
+        /// Método para eliminar la película.
+        /// </summary>
+        /// <param name="titulo">Título de la película seleccionada.</param>
+        /// <returns>Devuelve número de filas afectadas.</returns>
         public static int EliminarPelicula(string titulo)
 
         {
@@ -465,7 +521,11 @@ namespace Proyecto_Cinnity
         }
 
 
-
+        /// <summary>
+        /// Método para comprobar si la película tiene entradas asociadas o no.
+        /// </summary>
+        /// <param name="titulo">Título o nombre de la película.</param>
+        /// <returns>Devuelve un booleano.</returns>
         public static bool ComprobarPelicula(string titulo)
         {
             string consulta = string.Format("SELECT e.* FROM Entradas e JOIN Pelicula p ON p.idPelicula = e.peliID WHERE p.nombrePeli = @titulo;");

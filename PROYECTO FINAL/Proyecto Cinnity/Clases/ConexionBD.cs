@@ -37,7 +37,7 @@ namespace Proyecto_Cinnity
         }
 
         /// <summary>
-        /// Función que permite abrir una conexión con la base de datos
+        /// Función que permite abrir una conexión con la base de datos.
         /// </summary>
         public static void AbrirConexion()
         {
@@ -45,7 +45,7 @@ namespace Proyecto_Cinnity
         }
 
         /// <summary>
-        /// Función que cierra una conexión abierta de la base de datos
+        /// Función que cierra una conexión abierta de la base de datos.
         /// </summary>
         public static void CerrarConexion()
         {
