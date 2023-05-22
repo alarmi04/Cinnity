@@ -41,6 +41,21 @@ namespace Proyecto_Cinnity
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
         }
 
+        private bool DatosValidos()
+        {
+            bool ok = true;
+
+            errorInformacionPelicula.Clear();
+
+            if (cmbSesion.Text == "" || cmbSesion.Text == StringRecursos.seleccsesion)
+            {
+                ok = false;
+                errorInformacionPelicula.SetError(cmbSesion, "Set a valid session");
+            }
+
+            return ok;
+        }
+
         private void btnAñadirEntrada_Click(object sender, EventArgs e)
         {
             if (ConexionBD.Conexion != null)
@@ -48,9 +63,14 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-                    Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value.Date);
-                    ConexionBD.CerrarConexion();
-                    this.Close();
+                    if (DatosValidos())
+                    {
+                        Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value.Date);
+                        ConexionBD.CerrarConexion();
+                        this.Close();
+                    }
+
+                    
                 }
                 catch (Exception ex)
                 {

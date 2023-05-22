@@ -29,6 +29,7 @@ namespace Proyecto_Cinnity
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbInfoPeli = new System.Windows.Forms.GroupBox();
             this.txtNombrePeli = new System.Windows.Forms.TextBox();
             this.lblFechaEstrenoInfo = new System.Windows.Forms.Label();
@@ -50,8 +51,10 @@ namespace Proyecto_Cinnity
             this.dttDiaEmision = new System.Windows.Forms.DateTimePicker();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblPrecioNum = new System.Windows.Forms.Label();
+            this.errorInformacionPelicula = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbInfoPeli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPeli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInformacionPelicula)).BeginInit();
             this.SuspendLayout();
             // 
             // gbInfoPeli
@@ -308,6 +311,10 @@ namespace Proyecto_Cinnity
             this.lblPrecioNum.TabIndex = 8;
             this.lblPrecioNum.Text = "10.00";
             // 
+            // errorInformacionPelicula
+            // 
+            this.errorInformacionPelicula.ContainerControl = this;
+            // 
             // FrmInformacionPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,6 +335,7 @@ namespace Proyecto_Cinnity
             this.gbInfoPeli.ResumeLayout(false);
             this.gbInfoPeli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbPeli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInformacionPelicula)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +364,6 @@ namespace Proyecto_Cinnity
         private System.Windows.Forms.TextBox txtNombrePeli;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblPrecioNum;
+        private System.Windows.Forms.ErrorProvider errorInformacionPelicula;
     }
 }
