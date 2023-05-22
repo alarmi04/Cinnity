@@ -147,7 +147,7 @@ namespace Proyecto_Cinnity
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -253,7 +253,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No hay películas del género seleccionado.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There are no movies associated with the selected genre.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
                 ConexionBD.CerrarConexion();
@@ -384,7 +384,7 @@ namespace Proyecto_Cinnity
                 frm1.Show();
             } else
             {
-                MessageBox.Show("La contraseña no es correcta.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Wrong password.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

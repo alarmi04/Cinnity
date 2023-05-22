@@ -96,7 +96,7 @@ namespace Proyecto_Cinnity
                         {
                             if (pel.YaEsta(ConexionBD.Conexion, pel.Nombre))  // Comprobamos si existe el usuario
                             {
-                                MessageBox.Show("Esta película no se puede dar de alta. Ya existe");
+                                MessageBox.Show("This movie already exists in our database.");
                             }
                             else
                             {
@@ -124,7 +124,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                    MessageBox.Show("There was an error connecting to the data base.");
                 }
             }
             catch (Exception ex)
@@ -173,43 +173,43 @@ namespace Proyecto_Cinnity
             if (txtTitulo.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtTitulo, "Introduce un título.");
+                errorGestionAdmin.SetError(txtTitulo, "Enter a title.");
             }
 
             if (txtGenero.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtGenero, "Introduce un genero.");
+                errorGestionAdmin.SetError(txtGenero, "Enter a genre.");
             }
 
             if (txtDirector.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtDirector, "Introduce un director.");
+                errorGestionAdmin.SetError(txtDirector, "Enter a director.");
             }
 
             if (txtReparto.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtReparto, "Introduce un reparto.");
+                errorGestionAdmin.SetError(txtReparto, "Enter the cast.");
             }
 
             if (nudDuracion.Value == 0)
             {
                 ok = false;
-                errorGestionAdmin.SetError(nudDuracion, "Introduce una duración.");
+                errorGestionAdmin.SetError(nudDuracion, "Enter the duration.");
             }
 
             if (txtSinopsis.Text == "")
             {
                 ok = false;
-                errorGestionAdmin.SetError(txtSinopsis, "Introduce una sinopsis.");
+                errorGestionAdmin.SetError(txtSinopsis, "Enter a synopsis.");
             }
 
             if (ptbImagen.Image == null)
             {
                 ok = false;
-                errorGestionAdmin.SetError(ptbImagen, "Introduce una imagen.");
+                errorGestionAdmin.SetError(ptbImagen, "Select an image.");
             }
             return ok;
 
@@ -256,7 +256,7 @@ namespace Proyecto_Cinnity
                     }
                     else
                     {
-                        MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos");
+                        MessageBox.Show("There was an error connecting to the data base.");
                     }
                     // Cerramos la conexion
                     ConexionBD.CerrarConexion();
@@ -302,7 +302,7 @@ namespace Proyecto_Cinnity
                     {
                         if (Pelicula.ComprobarPelicula(txtTitulo.Text))
                         {
-                            MessageBox.Show("Esta película no se puede eliminar ya que tiene entradas asociadas.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("This movie cannot be deleted because there are tickets associated with it.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -313,7 +313,7 @@ namespace Proyecto_Cinnity
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido abrir la conexión con la Base de Datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("There was an error connecting to the data base.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 if (resultado > 0) // Si se ha agregado o modificado limpiamos las cajas de texto
