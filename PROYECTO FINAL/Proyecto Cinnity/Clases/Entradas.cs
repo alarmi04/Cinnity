@@ -117,7 +117,7 @@ namespace Proyecto_Cinnity
             {
                 while (reader.Read())
                 {
-                    Entradas entrada = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(),
+                    Entradas entrada = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetString("hora_emision"),
                         reader.GetDateTime("fecha_emision"));
                     lista.Add(entrada);
                 }
@@ -141,7 +141,7 @@ namespace Proyecto_Cinnity
 
                      while (reader.Read())
                      {
-                         Entradas ent = new Entradas(reader.GetString("titulo"),reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
+                         Entradas ent = new Entradas(reader.GetString("titulo"),reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetString("hora_emision"), reader.GetDateTime("fecha_emision"));
                          listaActivas.Add(ent);
                      }
                  }
@@ -168,7 +168,7 @@ namespace Proyecto_Cinnity
 
                     while (reader.Read())
                     {
-                        Entradas ent = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetDateTime("hora_emision").ToString(), reader.GetDateTime("fecha_emision"));
+                        Entradas ent = new Entradas(reader.GetString("titulo"), reader.GetDouble("precio"), reader.GetDateTime("fecha_compra"), reader.GetString("hora_emision"), reader.GetDateTime("fecha_emision"));
                         listaAdquiridas.Add(ent);
                     }
                 }

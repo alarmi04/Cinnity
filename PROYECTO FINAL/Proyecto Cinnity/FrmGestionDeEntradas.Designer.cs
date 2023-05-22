@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVolverPrincipal = new System.Windows.Forms.Button();
@@ -42,10 +43,12 @@
             this.btnMostrar = new System.Windows.Forms.Button();
             this.ptbImagenPeli = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.entradasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenPeli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entradasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -95,13 +98,18 @@
             // dgvEntradasActivas
             // 
             this.dgvEntradasActivas.AllowUserToAddRows = false;
+            this.dgvEntradasActivas.AllowUserToDeleteRows = false;
+            this.dgvEntradasActivas.AllowUserToResizeColumns = false;
+            this.dgvEntradasActivas.AllowUserToResizeRows = false;
+            this.dgvEntradasActivas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEntradasActivas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntradasActivas.Location = new System.Drawing.Point(36, 191);
             this.dgvEntradasActivas.Name = "dgvEntradasActivas";
             this.dgvEntradasActivas.ReadOnly = true;
+            this.dgvEntradasActivas.RowHeadersVisible = false;
             this.dgvEntradasActivas.RowHeadersWidth = 51;
             this.dgvEntradasActivas.RowTemplate.Height = 24;
-            this.dgvEntradasActivas.Size = new System.Drawing.Size(726, 265);
+            this.dgvEntradasActivas.Size = new System.Drawing.Size(758, 265);
             this.dgvEntradasActivas.TabIndex = 1;
             this.dgvEntradasActivas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntradasActivas_CellContentClick);
             // 
@@ -208,6 +216,10 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+            // entradasBindingSource
+            // 
+            this.entradasBindingSource.DataSource = typeof(Proyecto_Cinnity.Entradas);
+            // 
             // FrmGestionDeEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradasActivas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenPeli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entradasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +266,6 @@
         private System.Windows.Forms.PictureBox ptbImagenPeli;
         private System.Windows.Forms.Label lblInformacion;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.BindingSource entradasBindingSource;
     }
 }

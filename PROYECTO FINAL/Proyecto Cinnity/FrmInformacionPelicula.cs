@@ -48,7 +48,7 @@ namespace Proyecto_Cinnity
                 try
                 {
                     ConexionBD.AbrirConexion();
-                    Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value);
+                    Carrito.AñadirAlCarrito(txtNombrePeli.Text, Convert.ToDouble(lblPrecioNum.Text), DateTime.Now, cmbSesion.Text, dttDiaEmision.Value.Date);
                     ConexionBD.CerrarConexion();
                     this.Close();
                 }
@@ -72,13 +72,13 @@ namespace Proyecto_Cinnity
 
             if (dttDiaEmision.Value.Day % 2 == 0)
             {
-                string[] sesiones1 = { "17:00", "18:00", "19:00", "21:00" };
+                string[] sesiones1 = { "17:00:00", "18:00:00", "19:00:00", "21:00:00" };
                 cmbSesion.Items.Clear();
                 cmbSesion.Items.AddRange(sesiones1);
             }
             else
             {
-                string[] sesiones2 = { "16:00", "17:30", "19:40", "22:00" };
+                string[] sesiones2 = { "16:00:00", "17:30:00", "19:40:00", "22:00:00" };
                 cmbSesion.Items.Clear();
                 cmbSesion.Items.AddRange(sesiones2);
             }
@@ -89,13 +89,13 @@ namespace Proyecto_Cinnity
         {
             if (dttDiaEmision.Value.Day % 2 == 0)
             {
-                string[] sesiones1 = { "17:00", "18:00", "19:00", "21:00" };
+                string[] sesiones1 = { "17:00:00", "18:00:00", "19:00:00", "21:00:00" };
                 cmbSesion.Items.Clear();
                 cmbSesion.Items.AddRange(sesiones1);
             }
             else
             {
-                string[] sesiones2 = { "16:00", "17:30", "19:40", "22:00" };
+                string[] sesiones2 = { "16:00:00", "17:30:00", "19:40:00", "22:00:00" };
                 cmbSesion.Items.Clear();
                 cmbSesion.Items.AddRange(sesiones2);
             }

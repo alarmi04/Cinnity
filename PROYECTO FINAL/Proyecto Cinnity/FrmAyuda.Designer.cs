@@ -62,8 +62,7 @@
             // 
             // btnCerrarSesion
             // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnCerrarSesion.Image = global::Proyecto_Cinnity.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(929, 11);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
@@ -74,8 +73,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnVolver.Image = global::Proyecto_Cinnity.Properties.Resources.casa__1_;
             this.btnVolver.Location = new System.Drawing.Point(852, 11);
             this.btnVolver.Name = "btnVolver";
@@ -86,8 +84,7 @@
             // 
             // btnMiPerfil
             // 
-            this.btnMiPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.btnMiPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMiPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnMiPerfil.Image = global::Proyecto_Cinnity.Properties.Resources.usuario;
             this.btnMiPerfil.Location = new System.Drawing.Point(17, 11);
             this.btnMiPerfil.Name = "btnMiPerfil";

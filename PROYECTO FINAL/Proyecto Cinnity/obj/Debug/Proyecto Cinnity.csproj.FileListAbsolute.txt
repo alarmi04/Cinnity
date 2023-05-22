@@ -479,3 +479,4 @@ C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\Proyecto_Cinnity.RecursosLocalizables.StringRecursos.EN-GB.resources
 C:\Users\Alberto\source\repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\obj\Debug\EN-GB\Proyecto Cinnity.resources.dll
+C:\Users\Alberto\Source\Repos\Cinnity\PROYECTO FINAL\Proyecto Cinnity\bin\Debug\MySql.Data.dll

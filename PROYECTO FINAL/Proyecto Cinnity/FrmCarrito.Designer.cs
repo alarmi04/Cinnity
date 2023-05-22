@@ -96,6 +96,10 @@
             // dgvEntradas
             // 
             this.dgvEntradas.AllowUserToAddRows = false;
+            this.dgvEntradas.AllowUserToDeleteRows = false;
+            this.dgvEntradas.AllowUserToOrderColumns = true;
+            this.dgvEntradas.AllowUserToResizeColumns = false;
+            this.dgvEntradas.AllowUserToResizeRows = false;
             this.dgvEntradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntradas.Location = new System.Drawing.Point(26, 16);
             this.dgvEntradas.Name = "dgvEntradas";
