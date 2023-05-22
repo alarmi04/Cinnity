@@ -190,6 +190,23 @@ namespace Proyecto_Cinnity
         }
 
 
+        public static bool ValidarCuenta(string correo)
+        {
+            string consulta = string.Format("SELECT * FROM Usuario" + " WHERE correoElectronico='{0}';", correo);
+
+            MySqlCommand comando = new MySqlCommand(consulta, ConexionBD.Conexion);
+            MySqlDataReader reader = comando.ExecuteReader();
+            if (reader.HasRows)
+            { 
+                reader.Close();   
+                return true;
+            }
+            else
+            {
+                reader.Close();  
+                return false;
+            }
+        }
     }
 
 }

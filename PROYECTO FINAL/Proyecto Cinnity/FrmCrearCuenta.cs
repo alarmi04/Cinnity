@@ -521,20 +521,26 @@ namespace Proyecto_Cinnity
                     if (DatosValidos())
                     {
 
-                        if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
-                        {
-                            Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
-                            string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
-                            EnvioCorreos.EnviarCorreoRegistro(correoDestino);
-                            ConexionBD.CerrarConexion();
+                            if (Usuario.ClaveValidada(txtContra.Text, txtConfirmarContra.Text) && Usuario.CorreoValidado(txtCorreo.Text, txtConfirmarCorreo.Text))
+                            {
+                                if (!Usuario.ValidarCuenta(txtCorreo.Text))
+                                {
+                                    Usuario.RegistrarUsuario(txtNombre.Text, txtApellidos.Text, txtConfirmarCorreo.Text, txtConfirmarContra.Text, cmbPais.Text, dtpFechaNacimiento.Value);
+                                    string correoDestino = txtConfirmarCorreo.Text; // Dirección de correo del usuario
+                                    EnvioCorreos.EnviarCorreoRegistro(correoDestino);
+                                    ConexionBD.CerrarConexion();
 
-                            FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
-                            this.Hide();
-                            frmprincipal.StartPosition = FormStartPosition.CenterScreen;
+                                    FrmPaginaPrincipal frmprincipal = new FrmPaginaPrincipal();
+                                    this.Hide();
+                                    frmprincipal.StartPosition = FormStartPosition.CenterScreen;
 
-                            frmprincipal.Show();
-
-                        }
+                                    frmprincipal.Show();
+                                } else
+                            {
+                                MessageBox.Show("It is not possible to create an account with an email already in use.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            }
+                        
                     }
                 }
                 catch (Exception ex)
