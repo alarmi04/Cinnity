@@ -480,7 +480,7 @@ namespace Proyecto_Cinnity
             }
 
 
-            if (dtpFechaNacimiento.Value == DateTime.Today)
+            if (dtpFechaNacimiento.Value == DateTime.Today || dtpFechaNacimiento.Value > DateTime.Today)
             {
                 ok = false;
                 errorCrearCuenta.SetError(dtpFechaNacimiento, "Enter a valid date");

@@ -27,7 +27,7 @@ namespace Proyecto_Cinnity
             Thread.CurrentThread.CurrentUICulture = idioma.CulturaActual;
             AplicarIdioma();
             ActualizarDataGrid();
-            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+            lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString("N") + "€";
             lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
 
         }
@@ -111,7 +111,7 @@ namespace Proyecto_Cinnity
             } else
             {
                 Carrito.listaCarrito.Clear();
-                lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString("N") + "€";
                 lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
 
                 dgvEntradas.DataSource = null;
@@ -138,7 +138,7 @@ namespace Proyecto_Cinnity
 
                         dgvEntradas.DataSource = null;
                         ActualizarDataGrid();
-                        lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString();
+                        lblPrecioTotal2.Text = Carrito.PrecioTotal().ToString("N") + "€";
                         lblTotalEntradas2.Text = Carrito.TotalEntradas().ToString();
                         MessageBox.Show("Purchased correctly.","Information",MessageBoxButtons.OK,MessageBoxIcon.Question);
                     }
