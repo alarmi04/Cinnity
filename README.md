@@ -1,5 +1,7 @@
 
-![CINNITY](https://github.com/user-attachments/assets/f360f536-0f43-4e8a-8ee1-837cd6e4b209)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f360f536-0f43-4e8a-8ee1-837cd6e4b209" alt="CINNITY" width="300" />
+</p>
 
 # Cinnity
 
