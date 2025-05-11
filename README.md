@@ -55,7 +55,7 @@ Este proyecto está bajo licencia MIT.
 
 ## 📧 Contacto
 
-Para preguntas o sugerencias, por favor contacta con el equipo a través de [albertoaracilmillan@gmail.com].
+Para preguntas o sugerencias, por favor contacta con el equipo a través de albertoaracilmillan@gmail.com.
 
 ---
 
