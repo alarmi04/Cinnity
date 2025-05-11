@@ -1,3 +1,6 @@
+
+![CINNITY](https://github.com/user-attachments/assets/f360f536-0f43-4e8a-8ee1-837cd6e4b209)
+
 # Cinnity
 
 **Cinnity** es el proyecto final del primer curso del ciclo de **Desarrollo de Aplicaciones Multiplataforma (DAM)**, desarrollado por el **Equipo Amarillo**. El objetivo del proyecto es aplicar los conocimientos adquiridos durante el curso mediante el desarrollo de una aplicación de escritorio funcional.
