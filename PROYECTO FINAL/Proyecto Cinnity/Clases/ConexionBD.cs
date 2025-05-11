@@ -23,11 +23,12 @@ namespace Proyecto_Cinnity
                     if (instancia == null)
                     {
                         instancia = new MySqlConnection();
-                        string server = "server=cinnityapp.caruzqlq1py9.us-east-1.rds.amazonaws.com;";
+                        /// Cuando teniamos avierto el módulo en AWS string server = "server=cinnityapp.caruzqlq1py9.us-east-1.rds.amazonaws.com;";
+                        string server = "server=localhost;";
                         string port = "port=3306;";
-                        string database = "database=Cinnity;";
-                        string usuario = "uid=admin;";
-                        string password = "pwd=3312Bestia1903*;";
+                        string database = "database=cinnity;";
+                        string usuario = "uid=root;";
+                        string password = "pwd=;";
                         string convert = "Convert Zero Datetime=True;";
                         instancia.ConnectionString = server + port + database + usuario + password + convert;
                     }
