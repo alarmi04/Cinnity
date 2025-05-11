@@ -11,15 +11,52 @@
 ## 📁 Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
-
 - `Proyecto Cinnity/`: Carpeta principal que contiene el proyecto de Visual Studio en C#.
-- `.sln`: Archivo de solución para abrir el proyecto en Visual Studio.
 
 ## 🚀 Cómo Ejecutar el Proyecto
 
 Sigue estos pasos para ejecutar Cinnity en tu equipo local:
 
 1. **Clona el repositorio** desde GitHub:
-
    ```bash
    git clone https://github.com/alarmi04/Cinnity.git
+   ```
+
+2. **Abre el proyecto** en Visual Studio:
+   * Ejecuta Visual Studio
+   * Selecciona "Abrir un proyecto o solución"
+   * Navega hasta la carpeta clonada y abre el archivo de solución (.sln)
+
+3. **Compila el proyecto**:
+   * En Visual Studio, presiona F6 o selecciona "Compilar > Compilar solución"
+
+4. **Ejecuta la aplicación**:
+   * Presiona F5 o selecciona "Depurar > Iniciar depuración"
+
+## ✨ Características Principales
+
+* Interfaz gráfica intuitiva
+* Gestión de datos
+* Persistencia de información
+* Operaciones CRUD
+
+## 👥 Equipo de Desarrollo
+
+El **Equipo Amarillo** está compuesto por:
+* Alberto Aracil Millán
+* Laia Clemente Crespo
+* Elizabeth López Perucho
+* Alberto Villegas
+* Marcel Torres
+
+## 📝 Licencia
+
+Este proyecto está bajo licencia MIT.
+
+## 📧 Contacto
+
+Para preguntas o sugerencias, por favor contacta con el equipo a través de [albertoaracilmillan@gmail.com].
+
+---
+
+© 2025 Equipo Amarillo - Proyecto DAM
