@@ -12,6 +12,7 @@
 - **Lenguaje de programación**: C#
 - **Entorno de desarrollo**: Visual Studio
 - **Control de versiones**: Git y GitHub
+- **Creación y control de BD**: MySQL y AWS
 
 ## 📁 Estructura del Proyecto
 
